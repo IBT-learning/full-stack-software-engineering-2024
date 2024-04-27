@@ -8,8 +8,8 @@ If you work on multiple computers, it will be possible to complete your coursewo
 
 - [Online user accounts (both Windows and Mac)](#online-user-accounts)
 - [Windows instructions](#windows)
-- [Apple/Mac instructions](#mac)
-- [GitHub SSH setup (both Windows and Mac)](#ssh)
+- [Apple/Mac instructions](#apple-macos)
+- [GitHub SSH setup (both Windows and Mac)](#github-ssh-setup)
 
 ## Online User Accounts
 
@@ -162,7 +162,7 @@ Hopefully, git was already installed by default when you installed homebrew.
 
 1.  If you see any other message, copy it and paste it into a Slack message to Danny
 
-## Github SSH Setup {#ssh}
+## Github SSH Setup
 
 In order to access Github we need to set up SSH Keys. We will follow GitHub's instructions to do so.
 
