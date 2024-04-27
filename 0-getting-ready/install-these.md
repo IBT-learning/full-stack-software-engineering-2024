@@ -6,12 +6,12 @@ If you work on multiple computers, it will be possible to complete your coursewo
 
 ##### NOTE: Only complete the sections that are applicable to your operating system!
 
-- [Online user accounts (both Windows and Mac)](#accounts)
+- [Online user accounts (both Windows and Mac)](#online-user-accounts)
 - [Windows instructions](#windows)
 - [Apple/Mac instructions](#mac)
 - [GitHub SSH setup (both Windows and Mac)](#ssh)
 
-## Online User Accounts (Applicable to all Operating Systems) {#accounts}
+## Online User Accounts
 
 ### Github User Account
 
@@ -36,7 +36,7 @@ Loom is a tool for creating short video snippets. **This is optional**, but I re
 5. On the "Who do you collaborate with?" you can click "not now". You don't need to add any team members to your workspace.
 6. Finally, you'll be prompted to either install a Loom browser extension or download the Loom Desktop App. Either method of recording a Loom is fine and it's your choice which method you want to use.
 
-## Windows {#windows}
+## Windows
 
 The instructions below will walk you through installing the following tools:
 
@@ -79,9 +79,7 @@ The following extensions for VS Code are helpful, but optional. You can learn ho
 
 [Video Installation Guide for Node.js on Windows](https://www.loom.com/share/57f2b35af8a74a3e98f4c8d2f4a63e6d)
 
----
-
-## Apple MacOS Installation {#mac}
+## Apple MacOS
 
 The instructions below will walk you through installing the following tools:
 

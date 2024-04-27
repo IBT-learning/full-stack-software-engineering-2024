@@ -1,7 +1,5 @@
 > This is based on Brad Traversy's command line tutorial. You can find his original gist [here](https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce), or his YouTube tutorial [here](https://www.youtube.com/watch?v=uwAqEzhyjtw)
 
-> I recommend coming back to this file later in the course, when you have more familiarity with the terminal. I have highlighted the commands that are essential for getting started.
-
 # Common Terminal Commands
 
 ## Key Commands & Navigation
@@ -36,18 +34,18 @@ You should be able to use the arrow keys or page up and down. When you are ready
 
 Commands to navigate your file system are very important. You will be using them all the time. You won't remember every single command that you use, but these are the ones that you should remember.
 
-| Command          | Description                                                                       |
-| ---------------- | --------------------------------------------------------------------------------- |
-| ==pwd==          | Lists the path to the working directory                                           |
-| ==ls==           | List directory contents                                                           |
-| ls -a            | List contents including hidden files (Files that begin with a dot)                |
-| ls -l            | List contents with more info including permissions (long listing)                 |
-| ls -r            | List contents reverse order                                                       |
-| ==cd==           | Change directory to home                                                          |
-| ==cd [dirname]== | Change directory to specific directory                                            |
-| cd ~             | Change to home directory                                                          |
-| ==cd ..==        | Change to parent directory                                                        |
-| cd -             | Change to previous directory (which could be different than the parent of course) |
+| Command      | Description                                                                       |
+| ------------ | --------------------------------------------------------------------------------- |
+| pwd          | Lists the path to the working directory                                           |
+| ls           | List directory contents                                                           |
+| ls -a        | List contents including hidden files (Files that begin with a dot)                |
+| ls -l        | List contents with more info including permissions (long listing)                 |
+| ls -r        | List contents reverse order                                                       |
+| cd           | Change directory to home                                                          |
+| cd [dirname] | Change directory to specific directory                                            |
+| cd ~         | Change to home directory                                                          |
+| cd ..        | Change to parent directory                                                        |
+| cd -         | Change to previous directory (which could be different than the parent of course) |
 
 Of course, you can group flags together. For example, if I want to see more info and view hidden files, I could do `ls -l -a` and even shorten it to `ls -la`.
 
@@ -55,8 +53,8 @@ Of course, you can group flags together. For example, if I want to see more info
 
 | Command                     | Description                                         |
 | --------------------------- | --------------------------------------------------- |
-| ==mkdir [dirname]==         | Make directory                                      |
-| ==touch [filename]==        | Create file                                         |
+| mkdir [dirname]             | Make directory                                      |
+| touch [filename]            | Create file                                         |
 | rm [filename]               | Remove file                                         |
 | rm -i [filename]            | Remove directory, but ask before                    |
 | rm -r [dirname]             | Remove directory                                    |
