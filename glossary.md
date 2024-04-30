@@ -1,6 +1,6 @@
 ## Engineering processes
 
-**stack:** The "stack" is the set of individual software components that is used to create a particular application or product. This may be as simple as a single server and client, or may include some combination of operating system, databases, processors, architectural layers, and more. They are called a stack because they are imagined as "layers" that stack on top of one another, with data passing from one layer to another, in the same order every time. (Or at least in a predictable order every time.)
+**stack:** The "stack" is the set of individual software components that are used to create a particular application or product. This may be as simple as a single server and client, or may include some combination of operating system, databases, processors, architectural layers, and more. They are called a stack because they are imagined as "layers" that stack on top of one another, with data passing from one layer to another, in the same order every time. (Or at least in a predictable order every time.)
 
 For example, in this program you will learn to make a web application using the "MERN" stack: MongoDB for the database, Express for the server, React as the front-end framework, and Node.js as the runtime environment.
 
@@ -18,7 +18,7 @@ For example, in this program you will learn to make a web application using the 
 
 ## Computer basics
 
-**hardware:** Any element of a computer that is physical. Includes all of the parts of the machine, such as hard drives, processors, video cards, microchips, etc. Hardware also includes all peripherals such as monitors, heyboards, speakers, etc. It refers to computers of all sizes, including phones, tablets, and computerized IoT devices.
+**hardware:** Any element of a computer that is physical. Includes all of the parts of the machine, such as hard drives, processors, video cards, microchips, etc. Hardware also includes all peripherals such as monitors, keyboards, speakers, etc. It refers to computers of all sizes, including phones, tablets, and computerized IoT devices.
 
 **software:** Any program or application that tells the computer what to do. Applies to "big" programs like operating systems and "small" programs like individual apps.
 
