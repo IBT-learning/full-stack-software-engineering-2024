@@ -35,3 +35,27 @@ For example, in this program you will learn to make a web application using the 
 - console
 - command line
 - command prompt
+
+## Source Control
+
+**source control:** The process of tracking changes to code. Source control provides a running history of versions of a code base. This is useful for merging contributions by collaborators without losing anything. It also allows you to roll back to previous versions when you discover errors.
+
+**version control:** A synonym for source control.
+
+**git:** The most common software used for source control. (Do not confuse this with GitHub!)
+
+**GitHub:** One of many providers of hosting for remote git repositories. GitHub provides a platform for people to collaborate using git. Competitors include Bitbucket, GitLab, AWS Code Commit, and many others.
+
+**repository:** A directory that is tracked using source control. Commonly called a "repo".
+
+**local, remote:** A _local_ repository is one that lives on your computer. A _remote_ repository lives on a host such as GitHub.
+
+**push, pull:** Pushing is the process of moving changes from a local repository onto a remote repository. Pulling is moving changes from the remote to the local.
+
+**merge:** Merging combines two versions of the code into a single version.
+
+**branch:** Git can manage multiple different and divergent versions of code at the same time. The versions are stored on inidividual "branches". Each branch has its own history of changes.
+
+**pull request:** This is confusingly named, it's not related to pulling. It's more like a "merge request." A pull request, or PR, is a process of marking a branch as ready to merge into another branch so teammates can approve it first. PRs are where code review happens.
+
+**code review:** When collaborators read, inspect, test, and review each others' code, this is called code review. Code review is the place for collaborators to ask questions to help understand each others' contributions, to point out errors in design or execution, or to suggest improvements that can be made.
