@@ -56,6 +56,14 @@ For example, in this program you will learn to make a web application using the 
 
 **branch:** Git can manage multiple different and divergent versions of code at the same time. The versions are stored on inidividual "branches". Each branch has its own history of changes.
 
+**commit:** Snapshot of changes since the most recent commit. Every commit includes:
+
+- author
+- date (timestamp)
+- commit message (always start your commit messages with a present tense verb!)
+- a branch (which can change over time)
+- a commit hash (long and short versions)
+
 **pull request:** This is confusingly named, it's not related to pulling. It's more like a "merge request." A pull request, or PR, is a process of marking a branch as ready to merge into another branch so teammates can approve it first. PRs are where code review happens.
 
 **code review:** When collaborators read, inspect, test, and review each others' code, this is called code review. Code review is the place for collaborators to ask questions to help understand each others' contributions, to point out errors in design or execution, or to suggest improvements that can be made.
