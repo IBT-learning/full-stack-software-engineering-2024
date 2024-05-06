@@ -63,6 +63,7 @@ For example, in this program you will learn to make a web application using the 
 - commit message (always start your commit messages with a present tense verb!)
 - a branch (which can change over time)
 - a commit hash (long and short versions)
+- contents / a diff (the difference from the previous commit)
 
 **pull request:** This is confusingly named, it's not related to pulling. It's more like a "merge request." A pull request, or PR, is a process of marking a branch as ready to merge into another branch so teammates can approve it first. PRs are where code review happens.
 
