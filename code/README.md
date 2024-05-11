@@ -3,7 +3,7 @@
 #### Where I live now: Benin City, Edo, Nigeria
 #### Where I live now: Benin City, Edo, Nigeria
 
-> A link to a song i like: {Lily Meola - Daydream (Official Lyric Video)}(https://youtu.be/WZjVRyIBIX0)
+> A link to a song i like: [Lily Meola - Daydream](https://youtu.be/WZjVRyIBIX0?)
 
 ####  My top three hobbies:
 
