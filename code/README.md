@@ -13,9 +13,9 @@
 
 #### If every job had the same pay,hours and education requirements, I would be a:
 
--Travel Photographer  
--Scriptwriter  
--Reaserach Analyst
+- Travel Photographer  
+- Scriptwriter  
+- Reaserach Analyst
 
 #### A photo of something I think is cool:
 
