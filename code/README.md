@@ -20,4 +20,4 @@
 
 #### A photo of someone I think is cool:
 
-![Ribeiro do Cavalo beach](images/granny-and-addie.jpg)
+![Granny Joan and Addie](images/granny-and-addie.jpg)
