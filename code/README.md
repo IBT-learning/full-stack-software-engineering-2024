@@ -18,6 +18,6 @@
 - Equine Therapist
 - Psychologist
 
-#### A photo of someone I admire:
+#### A photo of someone I admire: This is Carl Jung
 
 ![Carl Jung](https://miro.medium.com/v2/resize:fit:640/format:webp/1*Oj1X9TsgcTnH7VzDn_Vkig.jpeg)
