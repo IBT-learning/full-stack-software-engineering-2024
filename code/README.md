@@ -20,3 +20,4 @@
 #### A photo of someone I think is cool:
 
 ![Eunice Awuni](images/eunice_headshot.jpg)
+
