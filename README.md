@@ -9,3 +9,5 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 [FreeCodeCamp's git cheat sheet](https://www.freecodecamp.org/news/git-cheat-sheet/) (this one goes into more detail)
 
 [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
+
+[HTML Elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
