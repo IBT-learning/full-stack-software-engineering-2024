@@ -1,4 +1,4 @@
-> This is based on Brad Traversy's command line tutorial. You can find his original gist [here](https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce), or his YouTube tutorial [here](https://www.youtube.com/watch?v=uwAqEzhyjtw)
+> This is based on Brad Traversy's command line tutorial. You can find his original gist [here](https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce), or his YouTube tutorial [here][def]
 
 # Common Terminal Commands
 
@@ -173,3 +173,6 @@ You can also use the `!` to run a command from the history.
 ```
 
 This will run the command that is in the 100th position in the history.
+
+
+[def]: https://www.youtube.com/watch?v=uwAqEzhyjtw
