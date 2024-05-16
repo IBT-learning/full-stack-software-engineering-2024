@@ -8,13 +8,18 @@
 #### My top three hobbies:
 
 1. Singing
+
+
 1. Writing
 1. Playing my guitar
 
 #### If every job had the same pay, hours, and education requirements, I would be a:
 - Writer
+
+
 - Animal Scientist
 - Veterinarian
 
 #### A photo of someone I think is cool:
-![Rosa Parks] { images/Rosa.jpg }
+
+![Rosa]{https://images.app.goo.gl/BgXzVWcKXYh4hAiU8}
