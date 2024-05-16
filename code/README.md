@@ -3,7 +3,7 @@
 #### Where I live now: Nairobi, Kenya
 #### Where I'm from: Nairobi, Kenya 
 
-> A link to a song I like: [Ni/Co - On Purpose]{https://youtu.be/-RjM2SZUkao}
+> A link to a song I like: [Ni/Co - On Purpose](https://youtu.be/-RjM2SZUkao)
 
 #### My top three hobbies:
 
