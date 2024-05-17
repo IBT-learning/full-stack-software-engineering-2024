@@ -11,5 +11,5 @@ This is a simple website designed using HTML and CSS. It includes basic pages an
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone git@github.com:IBT-learning/full-stack-software-engineering-2024.git 
 
