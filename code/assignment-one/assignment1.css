@@ -1,0 +1,87 @@
+/* Giving entire body styling */
+body {
+    background-color: #F05941;
+    font-family: Arial, sans-serif;
+    color: #22092C;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Main heading section */
+header {
+    padding: 20px;
+    border: 5px solid #BE3144;
+    margin-bottom: 10px;
+}
+
+.about {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #872341;
+}
+
+/* Images */
+img {
+    width: 593px;
+    height: auto;
+}
+
+.girls {
+    background-color: #22092D;
+    border: 5px solid #BE3144;
+    padding: 20px;
+}
+
+#witty1 {
+    border: #F05941 solid 3px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+#witty2 {
+    border: #BE3144 double 5px;
+    margin-bottom: 20px;
+}
+
+#witty3 {
+    border: #BE3144 dotted 5px;
+    margin-right: 10px;
+}
+
+#witty4 {
+    border: #F05941 dashed 3px;
+}
+
+/*  Other heading and paragraph sections */
+
+.unique {
+    margin-top: 40px;
+}
+
+/* Anchor tags link styling */
+
+a {
+    color: #BE3118;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #380716;
+}
+
+/* a:visited {
+    color: grey
+} */
+
+/* footer section */
+footer {
+    color: #F05941;
+    background-color: #22092C;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    padding:5px;
+}
