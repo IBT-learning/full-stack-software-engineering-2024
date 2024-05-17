@@ -48,6 +48,7 @@ img {
 
 #witty3 {
     border: #BE3144 dotted 5px;
+    /* margin-bottom: 20px; */
     margin-right: 10px;
 }
 
@@ -85,3 +86,9 @@ footer {
     margin-bottom: 0px;
     padding:5px;
 }
+
+@media only screen and (max-width: 740px) {
+    #witty3 {
+      margin-bottom: 20px;
+    }
+  }
