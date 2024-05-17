@@ -2,6 +2,13 @@
 
 This is the central repository for IBT Learning's Full Stack Software Engineering program. This cohort begins on April 27, 2024.
 
+## Assignments
+
+| Week | Topic    | Link                                                          |
+| ---- | -------- | ------------------------------------------------------------- |
+| 2    | Markdown | [Markdown Assignmnet](0-getting-ready/markdown-assignment.md) |
+| 3    | HTML     | [HTML Assignment #1](1-html-css/basics/assignment-1.md)       |
+
 ## Useful links
 
 [GitHub's git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf) (this one is more succinct)
