@@ -1,0 +1,51 @@
+		body {
+			background-color: #3daea9;
+			font-family: Arial, sans-serif;
+			color: #22092C;
+			padding: 20px;
+			margin: 20px;			
+		}
+		h1, h2 {
+			color: #2A7876;
+			border: 5px solid #2a7876;
+			margin-bottom: 10px
+
+		}
+		#ashenda1 {
+			border:  #09222c solid 8px;
+			margin-bottom: 20px;
+			margin-right: 10px;
+		}
+		
+		#ashenda2 {
+			border: #09222c double 5px;
+			margin-bottom: 20px;
+		}
+		
+		#ashenda3 {
+			border: #09222c dotted 5px;
+			margin-right: 10px;
+		}
+		#ashenda4 {
+			border: #09222c solid 5px;
+			margin-right: 10px;
+		}
+		
+		a:hover {
+			color: #022524;
+		}
+		img {
+			height: 200px;
+			margin: 10px;
+			border: 1px solid #CED5D1;
+		}
+		#title {
+			background-color: #C3DCEA;
+			padding: 10px;
+			border: 1px solid #C8C6BE;
+		}
+		.ashenda-image {
+			width: 300px;
+			margin: 20px;
+		}
+        
