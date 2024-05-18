@@ -1,7 +1,7 @@
 
 # Kweva
 
-### I currently live in Meru Country, Kenya.
+### I currently live in Meru County, Kenya.
 
 ### Not to brag :sunglasses:, I'm from the capital of the country ; Nairobi.
 
