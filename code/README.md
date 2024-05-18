@@ -3,7 +3,7 @@
 #### Where I live now: Abeokuta, Ogun State, Nigeria
 #### Where I'm from: Abeouta, Ogun State, Nigeria
 
-> A link to a song I like: [FEELS LIKE LETTING GO, BY MATTHEW PERRYMAN JONES] {https://open.spotify.com/track/3BWViAta4hWlxnwwnOLGQS?si=2a07e434c3984e69}
+> A link to a song I like: [FEELS LIKE LETTING GO, BY MATTHEW PERRYMAN JONES] (https://open.spotify.com/track/3BWViAta4hWlxnwwnOLGQS?si=2a07e434c3984e69)
 
 #### My top three hobbies:
 
@@ -22,4 +22,4 @@
 
 #### A photo of someone I think is cool:
 
-![Rosa]{https://images.app.goo.gl/BgXzVWcKXYh4hAiU8}
+![Rosa](images/Rosa.jpg)
