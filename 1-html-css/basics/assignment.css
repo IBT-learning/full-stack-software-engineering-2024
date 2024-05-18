@@ -1,0 +1,49 @@
+body {
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+    color: beige;
+    border-radius: 4px;
+    background-color: hsl(155,100%,27%);
+    padding: 1em;
+    border: 5px 2px 5px 5px;
+}
+img {
+    width: 40%;
+    height: 20em;
+    margin-left: 27%;
+}
+
+p {
+    color: hsl(155,100%,27%);
+    margin-top: 3em;
+    margin-bottom: 4em;
+    text-align: justify;
+    width: 70%;
+    margin-left: 10em;
+    font-size: large;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li {
+    color: white;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    color: violet;
+}
+#lists {
+    background-color: hsl(155,100%,27%);
+    padding: 3em;
+    border-color: gray;
+    border: 5px 2px 2px 5px;
+}
+h4 {
+    color: wheat;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
