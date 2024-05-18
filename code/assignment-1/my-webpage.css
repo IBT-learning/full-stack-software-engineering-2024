@@ -84,8 +84,10 @@ body {
     padding-top: 0; margin-bottom: 20px; margin-left: 0; margin-right: 0;
     font-weight: bold;
 }
-*add a list on the body */
-.list-link {
-    list-style-type: none;
+
+/* add a footer to the webpage */
+footer {
+    text-align: center;
+    font-size: 15px;
 }
 
