@@ -19,8 +19,7 @@
 
 #### A photo of someone i think is cool:
 
-![Theologian, pastor and radio teacher R. C. Sproul](https://en.wikipedia.org/wiki/File:R._C._Sproul_(cropped).jpg)
-
+![Theologian, pastor and radio teacher R. C. Sproul](https://upload.wikimedia.org/wikipedia/commons/c/c2/R._C._Sproul_%28cropped%29.jpg)
 
 
 
