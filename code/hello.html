@@ -1,14 +1,36 @@
 <!DOCTYPE html>
+<!-- html5 spec -->
+This HTML file provides a basic structure for a web page, including various HTML
+elements such as headers, paragraphs, divs, spans, and an anchor link. It
+demonstrates the use of different header levels (h1 to h6), as well as the use
+of the pre-formatted text element. The file also includes an image element with
+placeholder attributes for the source and alternative text.
+This HTML file
+provides a basic structure and examples of common HTML elements and attributes.
+It includes: - HTML header elements (h1-h6) demonstrating different levels of
+headings - Paragraph (p) and division (div) elements - Inline span elements -
+Pre-formatted text - An anchor (a) element with an href attribute linking to the
+MDN Web Docs - An image (img) element with src and alt attributes This file
+serves as a starting point for building simple web pages and demonstrating basic
+HTML syntax and structure.
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <!-- angle bracket -->
-    <!-- html element or html ag -->
-    <!-- box module and dev tool -->
+  </head>
+  <body>
+    <!-- this type of tag is used to comment the code, the browser will will read it but will not interpret it so, it ignore the code inside the comment tag -->
+    <!-- angle bracket is required for html element and is used internally '>' -->
+    <!-- html tag is required for html document and it used internally,it also called root element -->
+    <!-- tags and elements are the same which is used to define the structure of a web page -->
+    <!-- html is the root element -->
+    <!-- head is the head element -->
+    <!-- body is the body element -->
+    <!-- head and body are the child elements of html -->
+    <!-- box module is the box model used to display the elements in a web page -->
+    <!-- dev tools are the tools used to inspect and debug web pages -->
+    <!-- html is the root element -->
     <h2>Hello Class!</h2>
     <h4>I welcome you all.</h4>
     <h1>We have different type of HTML headers</h1>
@@ -19,23 +41,83 @@
     <h5>HEADER 5</h5>
     <h6>HEADER 6</h6>
 
-    <!-- p -->
+    <!-- p is the paragraph element -->
     <p>This is paragraph</p>
-    <!-- div -->
+    <!-- div is the division element used to separate the content -->
+    <!-- div is the block element that is used to group block elements -->
     <div>This is division</div>
-    <!-- block element and in-line element-->
-    <!-- span  -->
+
+    <!-- block element is used to group block elements, and it is also called a block container -->
+    <!-- block element means a group of block elements -->
+    <!-- example of block element is div -->
+    <!-- inline block element is used to group inline elements, and it is also called an inline container -->
+    <!-- inline block element means a group of inline elements -->
+    <!-- span is the inline element that is used to group inline elements, and it is also called an inline container -->
+    <!-- span means a group of inline elements -->
     <span>This is span</span>
     <span>another span</span>
     <span>third span</span>
 
+    <!-- pre is the pre-formatted text element used to display text in a fixed-width font -->
     <pre>pre-formatted</pre>
 
     <!-- an attribute changes what the element does and looks like -->
     <!-- a is the anchor element and it has an attribute href that means hypertest reference -->
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN Web Docs for HTML Element Reference</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+      MDN Web Docs for HTML Element Reference
+    </a>
+    <!-- href attribute is used to link to another web page -->
+    <!-- attribute is used to define the properties of an element -->
+    <!-- href attribute is used to define the hypertext reference of an element -->
 
+    <!-- 'img' and 'hr' is an example of an empty tag, or void tag which means
+    it has no closing tag, it is also called self-closing tag -->
+    <hr />
+    <!-- hr is the horizontal rule element and it is used to display a horizontal line -->
+    <img
+        src="https://media2.giphy.com/media/hvEdKpliYKcY0s4Pak/giphy.webp?cid=790b7611w6iybs284b01pkq5xvi0i4tpn72p567px2511vz1&ep=v1_gifs_search&rid=giphy.webp&ct=g"
+        alt="HTML IMAGE Tag"
+    />
+    <img
+      src="https://www.simplilearn.com/ice9/free_resources_article_thumb/HTML_Image_Tag.jpg"
+      alt="HTML IMAGE Tag"
+    />
     <!-- img is the image element and it has an attribute src that means source and attribute alt that means alternative -->
-    <img src="" alt="">
-</body>
+    <!-- alt attribute is used to display an alternative text if the image is not available -->
+    <!-- src attribute is used to display the image by providing the source of the image -->
+    <hr/>
+    <!-- nested attribute is used to define
+    the properties of an element inside another element -->
+    <!-- these element types requires nesting -->
+    <!-- html nesting is ironically-->
+    <h1>Nested HTML Elements</h1>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- ol is the ordered list element and it is used to display a numbered list -->
+    <!-- li is the list item element and it is used to display a list item in the specified number -->
+    <ul>
+      <li>Item 1</li>
+
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <!-- ul is the unordered list element and it is used to display
+    a bulleted list -->
+    <!-- li is the unordered list element and it is used to display
+    a list item with the specified bullet -->
+    <!-- we can add any amount of nesting -->
+    <div>
+      <h1>Many nesting</h1>
+      <p>
+        <span><strong><a href="this is a paragraph which have span ,strong and anchor elements in it">this is a paragraph which have span ,strong and anchor elements in it</a></strong></span>
+        <span>another span in the paragraph</span>
+      </p>
+      <ul>
+        <li><em>this is embed in an unordered list of a list</em></li>
+      </ul>
+    </div>
+  </body>
 </html>
