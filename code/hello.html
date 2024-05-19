@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- doctype declaration is used to define the type of document, it is a block element-->
 <!-- html5 spec -->
 This HTML file provides a basic structure for a web page, including various HTML
 elements such as headers, paragraphs, divs, spans, and an anchor link. It
@@ -13,12 +14,50 @@ Pre-formatted text - An anchor (a) element with an href attribute linking to the
 MDN Web Docs - An image (img) element with src and alt attributes This file
 serves as a starting point for building simple web pages and demonstrating basic
 HTML syntax and structure.
+<!-- lang attribute is used to specify the language of the HTML document, it can be changed to any other language depending on the requirement -->
+<!-- html tag is used to indicate that the content is an HTML document, it is a block element-->
 <html lang="en">
-  <head>
+<!-- head tag is used to store metadata about the HTML document, such as the character set, viewport settings, and author information-->
+<!-- head does not include any content, it only contains metadata, note that it is not a block element-->
+<!-- head does not display contents in it, it contains link elements, meta elements, style elements, script elements, and title elements-->
+<!-- head is not a block element, it is an inline element-->
+<head>
+    <!--meta tag is used to provide metadata about the HTML document, such as the character set, viewport settings, and author information-->
     <meta charset="UTF-8" />
+    <!-- character set is used to specify the character set used in the HTML document, it can be changed to any other character set depending on the requirement -->
+    <!-- example is <meta charset="ISO-8859-1">-->
+    <!--utf8 is used to specify the character set used in the HTML document, it can be changed to any other character set depending on the requirement -->
+    <!--encoding is used to specify the character set used in the HTML document, it can be changed to any other character set depending on the requirement -->
+    <!--<meta charset="utf-8"> is the default, so we can take it out and it will not affect our page but it is better to include it-->
+    <!--<meta charset="utf-16">-->
+    <!--<meta charset="utf-32">-->
+    <!--<meta charset="utf-7">-->
+    <!--<meta charset="utf-15">-->
+    <!--<meta charset="utf-31">-->
+    <!--<meta charset="utf-63">-->
+    <!--<meta charser="ISO-8859-1">-->
+    <!--<meta charset="ISO-8859-2"> and so on-->
+    <!--namespace is used to specify the XML namespace for the HTML document -->
+    <!--<meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.8.28"> -->
+    <!-- author is used to specify the author of the HTML document -->
+    <!--<meta name="author" content="John Doe">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- meta name is used to specify the name of the metadata, it can be changed to any other name depending on the requirement -->
+    <!-- content is used to specify the content of the metadata, it can be changed to any other content depending on the requirement -->
+    <!--example is <meta name="description" content="This is a sample HTML document.">-->
+    <!--example is <meta name="keywords" content="HTML, CSS, JavaScript">-->
+    <!-- viewport is used to control the page's width and scale when the page is displayed on a small or large screen -->
+    <!-- width is used to specify the width of the viewport, it can be changed to any other width depending on the requirement -->
+    <!-- initial-scale is used to specify the initial scale of the viewport, it can be changed to any other scale depending on the requirement -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=0.5">-->
+    <!--title is used to specify the title of the HTML document, it can be changed to any other title depending on the requirement -->
+    <!--title means the title of the page, it is used to display the name of the page in the title bar of the browser -->
+    <!--<title>My HTML Document</title>-->
+    <title>HTML basic</title>
   </head>
+  <!-- body tag is used to define the body of the HTML document, it is used to contain the content of the HTML document -->
+  <!-- body is responsible for the layout and styling of the content -->
+  <!-- body is the container element that is used to group block elements -->
   <body>
     <!-- this type of tag is used to comment the code, the browser will will read it but will not interpret it so, it ignore the code inside the comment tag -->
     <!-- angle bracket is required for html element and is used internally '>' -->
