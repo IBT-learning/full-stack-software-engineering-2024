@@ -3,7 +3,6 @@
 }
 
 /*style the header and the subheader*/
-
 .header {
     background-color: #ffbe0b;
     text-align: center;
@@ -69,6 +68,7 @@ body {
     font-style: normal;
     font-family: 'Times New Roman', Times, serif;
 }
+
 /* style the side colomn and add three images with captions */
 .side-colomn {
     float: left;
@@ -89,5 +89,8 @@ body {
 footer {
     text-align: center;
     font-size: 15px;
+    margin: 15px 15px;
+    font-style: italic;
+    font-weight: bold;
 }
 
