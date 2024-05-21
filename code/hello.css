@@ -1,0 +1,53 @@
+/* this is CSS comment */
+/* how to use selector */
+/*
+    selector {
+        property: value;
+        property: value;
+    }
+*/
+/* using universal selector */
+/*      * {
+        background-color: lightblue;
+        color: aqua;
+    }
+*/
+
+/* using tags as selector */
+body { background-color: lightblue;
+    color: aqua;
+}
+
+h1 { color: red; }
+
+span {
+  color: green; 
+  font-size: 200%;
+  font-weight: bold;
+  margin: 8px;        
+}
+
+img {
+    width: 200px;
+    border: 5px dashed gray;
+    height: 300px;
+    margin: 10px;
+    padding: 10px !important;
+}
+/* class selector uses dot (.) */
+/* using class as selector */
+
+.orange {
+    color: orange;
+    font-size: 150%;
+}
+/* id selector uses # */
+/* using id as selector */
+
+#hash {
+    color: blueviolet;
+    background-color: chocolate;
+    margin: 10px;
+    padding: 15px;
+    border: 20px;
+}
