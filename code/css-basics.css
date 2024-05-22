@@ -1,0 +1,50 @@
+/* this is a comment in CSS */
+
+/* 
+Selector {
+    property value:
+    property value: 
+}
+*/
+
+body {
+    background-color: beige;
+    color: brown;
+}
+
+h1 {
+    color: blue;
+}
+
+span{
+    color: teal;
+    font-weight: 700;
+    margin: 30px;
+}
+
+img{
+    padding: 20px; 
+    /* padding-left: 20px;
+    padding-top: 10px; */
+    margin: 10px;
+    border: 10px dashed darkcyan;
+    width: 400px !important;
+}
+
+
+/* class selector */
+
+.orange-text {
+    color: orange;
+}
+
+.gray-background{
+    background-color: gray;
+}
+/* id selector */
+
+#block-wrapper {
+    background-color: bisque;
+    margin: 15px;
+    padding: 15px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML basic elements</title>
+    <!-- Three ways of including CSS -->
+    <!-- Least Useful: inline CSS -->
+    <!-- middle useful: a style tag in the header -->
+    <!-- most useful: a linked external syle sheet -->
+
+    <!-- this is where we would put CSS styles -->
+<style></style>
+
+ <link rel="stylesheet" href="css-basics.css"> 
+
+</head>
+<body>
+ hello class  how are you 
+ <div>division</div>
+<h1>heading one</h1>
+<h2>heading two</h2>
+<h6 class="orange-text">heading six</h6>
+
+<p class="gray-background">paragraph</p>
+
+<span>span</span> <span>another span</span> <span>third span</span>
+<pre class="orange-text gray-background">pre-formatted</pre>
+
+<!-- an attribute changes what the element does -->
+<a href="https://www.google.com/search?q=shortcut+to+open+dev+tools+on+windows+11+in+chrome&sca_esv=e11fd8c8d000e92d&sxsrf=ADLYWIIlHzo8AGmZ-l5-pIi354RaeQphDw%3A1715711084537&ei=bKxDZry3IN6rhbIPz4WzwAw&ved=0ahUKEwi8nezt4Y2GAxXeVUEAHc_CDMgQ4dUDCA8&uact=5&oq=shortcut+to+open+dev+tools+on+windows+11+in+chrome&gs_lp=Egxnd3Mtd2l6LXNlcnAiMnNob3J0Y3V0IHRvIG9wZW4gZGV2IHRvb2xzIG9uIHdpbmRvd3MgMTEgaW4gY2hyb21lMgUQIRigATIFECEYoAFI1fABUNEHWKvYAXAOeAGQAQGYAdMEoAGCigGqAQ0wLjEuNDAuMTcuNC4xuAEDyAEA-AEBmAJMoAK2hwGoAhTCAgcQIxgnGOoCwgIQEAAYAxi0AhjqAhiPAdgBAcICEBAuGAMYtAIY6gIYjwHYAQHCAgQQIxgnwgIKECMYgAQYJxiKBcICCxAAGIAEGJECGIoFwgIREC4YgAQYsQMY0QMYgwEYxwHCAg4QLhiABBixAxiDARiKBcICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgoQABiABBhDGIoFwgIQEAAYgAQYsQMYQxiDARiKBcICCBAuGIAEGLEDwgILEAAYgAQYsQMYigXCAggQABiABBixA8ICCxAuGIAEGLEDGNQCwgIFEAAYgATCAg4QABiABBiRAhixAxiKBcICBxAAGIAEGArCAgYQABgWGB7CAggQABgWGAoYHsICCxAAGIAEGIYDGIoFwgIIEAAYgAQYogTCAgkQABiABBgKGA3CAgYQABgNGB7CAgoQABgFGAoYDRgewgIHEAAYgAQYDcICBxAhGKABGArCAgQQIRgVmAMIugYGCAEQARgKkgcMMTQuMC40MS4xNy40oAfBrAM&sclient=gws-wiz-serp">MDN Web docs HTML Element reference</a>
+<img src="https://media2.giphy.com/media/JTTAjM197sku8MgrRa/200.webp?cid=790b7611kl9yceozd38fx4xt5dodprnqjjlveh2qj75fm61p&ep=v1_gifs_search&rid=200.webp&ct=g" alt="This is going to be us">
+<hr>
+<!--comment-->
+
+
+
+ <img 
+ style="width: 500px; border: 5px solid red"
+src="https://t4.ftcdn.net/jpg/02/19/15/89/360_F_219158969_kv2s7REq6A7arX6n9TX6tt6H9g7uujYU.jpg" 
+alt="Ocean waves"> 
+
+
+
+<hr>
+
+
+<!-- these elemnt types require nesting -->
+  
+
+<ol id="block-wrapper">
+    <li class="orange-text">thing 1</li>
+    <li>thing 2</li>
+    <li>thing 3</li>
+</ol>
+
+<ul>
+<li>thing 1</li>
+<li>thing 2</li>
+<li class="orange-text">thing 3</li>
+</ul>
+
+<li>outside of an ul or ol</li>
+
+<!-- we can also any amount of nesting -->
+<div id="block wrapper">
+    <h3 class="orange-text">This header is inside a div!</h3>
+    <p>
+        A paragraph usually won't block elements inside but 
+        might have inline elements such as <span>span</span> or <a href="">anchor tags</a>
+    </p>
+</div>
+</body>
+</html>

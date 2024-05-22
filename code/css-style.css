@@ -1,0 +1,40 @@
+body{
+    background-color: lightslategrey;
+    color: whitesmoke;
+    margin: 10px;
+}
+
+img{
+    width: 350px; height: 250px; border: 10px;
+    margin: 5px;
+}
+text{
+    padding-right: 100px;
+    color: cornflowerblue;
+    margin: 10px;
+    border: 10px;
+
+}
+a{
+    text-decoration: wavy;
+    color: darkred;
+    font-weight: bold;
+    font-style: oblique;
+    
+    
+    
+    
+}
+
+#Block-wrapper{
+    background-color: darkslategray;
+    padding: 20px;
+    margin: 20px;
+    font-weight: bolder;
+}
+
+h1{color:blue;font-weight: bold;}
+h2{ color:blue;font-weight: bold;}
+h3{color: blue;font-weight: bold;}
+
+.orange-text{color: bisque;}
