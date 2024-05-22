@@ -10,10 +10,21 @@ h1 {
 }
 h3 {
   color: navy;
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 div {
   margin-left: 20px;
+}
+#introduction {
+  /* background-color: brown; */
+  /* padding: 20px; */
+  width: 60%;
+}
+#introduction h3 {
+  color: cornflowerblue;
+}
+#introduction p {
+  background-color: cornflowerblue;
 }
 img {
   border: 5px solid brown;
@@ -25,4 +36,11 @@ p {
   text-align: justify;
   text-justify: inter-word;
   width: 50%;
+}
+#link-NTL {
+  color: palevioletred;
+  text-decoration: none;
+}
+#link-NTL:hover {
+  color: brown;
 }
