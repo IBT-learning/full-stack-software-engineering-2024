@@ -10,7 +10,7 @@ img{
 }
 text{
     padding-right: 100px;
-    color: cornflowerblue;
+    color:cornflowerblue;
     margin: 10px;
     border: 10px;
 
@@ -33,8 +33,12 @@ a{
     font-weight: bolder;
 }
 
-h1{color:blue;font-weight: bold;}
-h2{ color:blue;font-weight: bold;}
-h3{color: blue;font-weight: bold;}
+h1{color: teal;font-weight: bold;}
+h2{ color: teal;font-weight: bold;}
+h3{color: teal;font-weight: bold;}
 
-.orange-text{color: bisque;}
+.orange-text{color: white;}
+
+.type{border: 2px solid whitesmoke;}
+
+.style{font-weight: bolder;color: teal;}
