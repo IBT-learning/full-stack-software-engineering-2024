@@ -12,22 +12,21 @@ body {
 
 }
 
-.sub-head1 {
+/* .sub-head1 {
     font-family: 'Copperplate';
     color: #E26D5A;
     padding-left: 30px;
     font-size: 20px;
     margin: 5px;
     /*#EFA8B8; */
-}
 
-.sub-head2 {
+/* .sub-head2 {
     padding-left: 25px;
     margin: 10px;
     font-family: 'Copperplate';
     color: #E26D5A;
     /*#EFA8B8; */
-}
+
 #para {
     color: #EFA8B8;
     font-family: 'Copperplate';
@@ -35,6 +34,7 @@ body {
     padding-left: 22px;
     margin: 10px;
     border: 5px;
+    max-width: 800px;
 }
 p::first-letter {
     text-align: center;
@@ -49,5 +49,53 @@ p::first-letter {
     margin: 5px 10px 10px 30px;
     border: 3px chocolate solid;
     border-radius: 10px; ;
-    width: 600px;
+    max-width: 750px;
+}
+/* .span1 {
+    font-family: 'Copperplate';
+    color: #EFA8B8;
+    display: inline-block;
+    float: left;
+    width: 250px;
+    content: ; */
+
+.head3 {
+    text-align: center;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.div2 {
+    display: flex;
+    border: 3px solid chocolate; /* Add a border to the parent div */
+    border-radius: 10px; /* Optional: Add some border radius */
+    padding: 20px; /* Optional: Add some padding for better appearance */
+    gap: 10px; /* Optional: Add some space between the two child divs */
+    color: #EFA8B8;
+    margin: 30px;
+    max-width: 800px;
+}
+
+.span1 {
+    flex: 1; /* This will make the divs take equal space */
+}
+
+.span-left, .span-right {
+    padding: 10px; /* Optional: Add padding inside the child divs */
+}
+#vertical-line{
+    width: 2px;
+    background: chocolate;
+}
+#anchor {
+    font-size: 15px;
+    text-decoration: none;
+    color: gold;
+}
+#anchor:hover {
+    color: blue;
+}
+mark {
+    background-color: white;
+    color: saddlebrown;
 }
