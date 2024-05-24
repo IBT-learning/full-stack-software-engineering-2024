@@ -1,7 +1,7 @@
 # Pammey
 
-#### Where I live now: Abeokuta,Ogun State, Nigeria
-#### Where I"m from: Ikoro-Ekiti, Ekiti state, Nigeria
+#### Where I live now: Abeokuta, Ogun State, Nigeria.
+#### Where I"m from: Ikoro-Ekiti, Ekiti state, Nigeria.
 
 > A link to a song I like: [POV, by Ariana Grande](https://www.youtube.com/watch?v=nQJEp-k-ogs)
 
