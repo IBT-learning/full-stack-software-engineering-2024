@@ -18,3 +18,5 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 
 [HTML Elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+
+[CSS Tricks Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
