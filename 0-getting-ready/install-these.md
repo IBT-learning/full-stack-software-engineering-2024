@@ -6,10 +6,10 @@ If you work on multiple computers, it will be possible to complete your coursewo
 
 ##### NOTE: Only complete the sections that are applicable to your operating system!
 
-- [Online user accounts (both Windows and Mac)](#online-user-accounts)
-- [Windows instructions](#windows)
-- [Apple/Mac instructions](#apple-macos)
-- [GitHub SSH setup (both Windows and Mac)](#github-ssh-setup)
+-   [Online user accounts (both Windows and Mac)](#online-user-accounts)
+-   [Windows instructions](#wind ows)
+-   [Apple/Mac instructions](#apple-macos)
+-   [GitHub SSH setup (both Windows and Mac)](#github-ssh-setup)
 
 ## Online User Accounts
 
@@ -49,11 +49,11 @@ The instructions below will walk you through installing the following tools:
 
 1. Visit the [Git downloads page](https://git-scm.com/downloads/win)
 1. Download either the 32-bit or 64-bit "Standalone Installer"
-   - If you are not sure whether you have a 32-bit or 64-bit system, use [these instructions](https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808) to find out
+    - If you are not sure whether you have a 32-bit or 64-bit system, use [these instructions](https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808) to find out
 1. Open your downloads folder and run the installer
 1. In the installer, select the default options, just keep clicking "Next" and don't change anything
 1. Check to see if Git Bash was installed correctly by searching for the program and running it
-   - This is now your "terminal", this is the program you will open when you are instructed to open your terminal
+    - This is now your "terminal", this is the program you will open when you are instructed to open your terminal
 
 ### Visual Studio Code Text Editor
 
@@ -67,8 +67,8 @@ The instructions below will walk you through installing the following tools:
 
 The following extensions for VS Code are helpful, but optional. You can learn how to install extensions [from the official documentation](https://code.visualstudio.com/docs/editor/extension-marketplace).
 
-- [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+-   [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+-   [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ### Node.js JavaScript Engine
 
@@ -86,8 +86,8 @@ The instructions below will walk you through installing the following tools:
 1. Visual Studio Code
 2. Homebrew package manager
 3. Checking essential packages:
-   1. Node.js JavaScript Engine
-   1. Git Command Line
+    1. Node.js JavaScript Engine
+    1. Git Command Line
 
 ### Visual Studio Code Text Editor
 
@@ -99,18 +99,18 @@ The instructions below will walk you through installing the following tools:
 4. Run the VS Code Application from the `/Applications` directory, **do not run it from within your `Downloads` folder** as you will not be able to use all the features
 5. Add VS Code to your Dock by right-clicking on the icon to bring up the context menu and choosing Options, Keep in Dock
 6. Install the `code` command-line tool by performing the following
-   - Open VS Code if you have not yet done so.
-   - Open the `Command Palette` by typing the following <kbd>CMD</kbd>-<kbd>SHIFT</kbd>-<kbd>P</kbd>
-   - Type `install code command` and then typing <kbd>RETURN</kbd>
-   - You may be asked to confirm you want to install the `code` command
-   - See the [official documentation for additional help](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+    - Open VS Code if you have not yet done so.
+    - Open the `Command Palette` by typing the following <kbd>CMD</kbd>-<kbd>SHIFT</kbd>-<kbd>P</kbd>
+    - Type `install code command` and then typing <kbd>RETURN</kbd>
+    - You may be asked to confirm you want to install the `code` command
+    - See the [official documentation for additional help](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 
 #### Helpful VS Code Extensions
 
 The following extensions for VS Code are helpful, but optional. You can learn how to install extensions [from the official documentation](https://code.visualstudio.com/docs/editor/extension-marketplace).
 
-- [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+-   [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+-   [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ### MacOS Homebrew
 
@@ -122,7 +122,7 @@ These instructions are for recent versions of MacOS (MacOS v10.14 Mojave or newe
 
 1.  Visit <https://brew.sh>
 2.  Copy the **entire line** beneath "Install Homebrew"
-    - `tip`: use the clipboard icon to copy it
+    -   `tip`: use the clipboard icon to copy it
 3.  Open a **Terminal.app** window, paste the copied text, and hit <kbd>Return</kbd>
 4.  Follow the instructions in your terminal. Enter your password and hit <kbd>Return</kbd> as prompted, **you will not see the characters as you type your password**, this is default behavior in command-line applications.
 5.  Follow the default option for any further prompts
@@ -172,7 +172,15 @@ Click the link below and follow the steps to generate an SSH key. Be mindful of 
 
 [Generating a New SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-### Adding a new SSH Key
+### Adding SSH key to your SSH agent
+
+You can try following the instructions in the GitHub documentation, or you can run these two commands:
+
+`eval $(ssh-agent)`
+
+`ssh-add ~/.ssh/id_ed25519`
+
+### Adding a new SSH Key to GitHub
 
 After we've generated a new SSH Key we can then add it to our Github account. Make sure you select the correct OS and follow the "Web Browser" instructions.
 
