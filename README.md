@@ -4,10 +4,11 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
-| Week | Topic    | Link                                                          |
-| ---- | -------- | ------------------------------------------------------------- |
-| 2    | Markdown | [Markdown Assignmnet](0-getting-ready/markdown-assignment.md) |
-| 3    | HTML     | [HTML Assignment #1](1-html-css/basics/assignment-1.md)       |
+| Week | Topic    | Link                                                                                     |
+| ---- | -------- | ---------------------------------------------------------------------------------------- |
+| 2    | Markdown | [Markdown Assignmnet](0-getting-ready/markdown-assignment.md)                            |
+| 3    | HTML     | [HTML Assignment #1](1-html-css/basics/assignment-1.md)                                  |
+| 4    | CSS      | [CSS Assignment #1 (Flexbox)](1-html-css/flexbox/flexbox-assignment/css-assignment-1.md) |
 
 ## Useful links
 
