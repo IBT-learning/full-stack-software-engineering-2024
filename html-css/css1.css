@@ -18,18 +18,38 @@ body::before {
 }
 
 a{
-    color: #000000;
+    color: #366bd6;
     font-size: 1em;
-    text-decoration: dotted;
+    text-decoration:underline
 
 }
 
 a:hover{
     color: rgb(240, 88, 88);
-    
-    
+}
+
+.toc{                 /*this is for the main html file*/
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.main-toc{             /*this is for the table of content*/
+    padding: 10px;
+    text-align: center;
 
 }
+
+.main-toc ul{
+    
+    font-size: 1.4em;
+    list-style: none;
+    padding: 0;
+
+}
+
+
+
+
 /* Stylish heading */
 .heading1 {
     text-align: center;
