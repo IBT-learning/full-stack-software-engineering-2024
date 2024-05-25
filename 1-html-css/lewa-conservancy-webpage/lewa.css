@@ -1,0 +1,44 @@
+body {
+    font-family: verdana;
+    font-size: 130%;
+    background-color: #e4e7e0
+  }
+
+div {
+    margin: 50px;
+}
+
+h1 {
+    color: #011401;
+} 
+
+h2 {
+    color: orangered;
+}
+
+a {
+    color: orangered;
+    text-decoration:none;
+}
+
+a:hover {
+    color: #86C232
+}
+
+.responsive {
+    max-width: 400px;
+    height: auto;
+    padding: 10px;
+}
+
+#background {
+    padding: 25px;
+    color: rgb(221, 238, 238);
+    background-color: #011401 !important; 
+    h2 {
+        color: #86C232;
+    }
+    border-style: outset;
+    border-width: 5px;
+    border-color: orangered;
+} 
