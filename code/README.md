@@ -15,6 +15,7 @@
 
 - Architect
 - Pilot
+- Chef
 
 #### A photo of someone I think is cool:
 
