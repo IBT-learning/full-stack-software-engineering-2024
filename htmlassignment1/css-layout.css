@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+    color: white;
+    size: 2px;
+}
+
+img{
+    width: 450px;
+    height: 250px;
+    margin: 50px;
+    padding: 50px;
+    border: 10px dashed white;
+    background-color: cyan;
+}
+
+div {
+    border:10px thick cyan;
+}
+
+.locationtext{
+    font-style: italic;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+#mainheading{
+    background-color: cyan; 
+    border: 5px solid white;
+}
+
+.heading{
+    font-style: oblique;
+    margin:5px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    border-color: black;
+}
+
+.subheading {
+    font-family: sans-serif;
+    color: cyan;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+div {
+    font-family: sans-serif;
+}
+
+#link{
+    color: white;
+    text-align: center;
+}

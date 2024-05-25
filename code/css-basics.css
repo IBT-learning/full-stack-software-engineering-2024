@@ -1,0 +1,19 @@
+h1 {
+    color: green;
+}
+
+p {
+    color: midnightblue;
+    font-style: italic;
+    margin: 30px;
+} 
+
+img {
+    padding: 10px;
+}
+
+/* Class selector */
+
+.orange-text {
+    color: orange;
+}
