@@ -33,16 +33,17 @@ a:hover{
 }
 
 /*this is for the table of content*/
-.main-toc{             
-    padding: 300px;
+.main-toc{ 
+           
+    padding: 275px;
     text-align: justify;
-    
+        
 }
 
 .main-toc ul{
     
     font-size: 1.4em;
-    padding: 0;
+    padding: 0%;
     list-style-position: inside; /*keeps the bullets close to the itemised lists*/
    
 }
