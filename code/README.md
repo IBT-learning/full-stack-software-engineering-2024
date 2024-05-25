@@ -19,5 +19,4 @@
 
 #### Photo of someone I think is cool: 
 
-![Betelhem Dessie is an Ethiopian web and mobile technologies developer.](https://upload.wikimedia.org/wikipedia/commons/4/43/Betelhem_Dessie.jpg?20240513162252)
-
+![Betelhem Dessie is an Ethiopian web and mobile technologies developer.](images/betty.jpg)
