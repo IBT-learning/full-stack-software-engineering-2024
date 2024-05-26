@@ -1,7 +1,7 @@
 # Keabetswe M
 
 #### Where I live now: Kuruman, Northern Cape, South Africa.
-#### Where I'm from: Westonaria, Gauteng, South Africa.
+#### Where I'm from: Westonaria, Gauteng Province, South Africa.
 
 > Link to a song I like: [Violin sounds by Kelvin Momo and Stixx](https://youtu.be/pg7Ui-tKw-s)
 
