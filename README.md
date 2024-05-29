@@ -12,11 +12,12 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
-| Week | Topic    | Link                                                                                     |
-| ---- | -------- | ---------------------------------------------------------------------------------------- |
+| Week | Topic       | Link                                                                                     |
+| ---- | ----------- | ---------------------------------------------------------------------------------------- |
 | 2    | 📝 Markdown | [Markdown Assignment](0-getting-ready/markdown-assignment.md)                            |
 | 3    | 🌐 HTML     | [HTML Assignment #1](1-html-css/basics/assignment-1.md)                                  |
 | 4    | 🎨 CSS      | [CSS Assignment #1 (Flexbox)](1-html-css/flexbox/flexbox-assignment/css-assignment-1.md) |
+| 5    | 🎨 CSS      | [CSS Assignment #2 (Grid)](1-html-css/grid/grid-assignment/css-assignment-2.md)          |
 
 ## Useful links
 
@@ -29,3 +30,5 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 🔗 [HTML Elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 🔗 [CSS Tricks Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+🔗 [CSS Tricks Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
