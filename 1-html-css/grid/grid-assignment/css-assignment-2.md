@@ -1,4 +1,4 @@
-# CSS Assignment #1: Grid
+# CSS Assignment #2: Grid
 
 #### Project setup
 
