@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(255, 250, 230);
+    margin: 0px;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-size: 12px;
+    color:rgb(0, 35, 121);
+    text-align: justify;
+    min-width: 300px
+}
+
+div{
+    min-width: 40%;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(0, 35, 121);
+}
+a:hover{
+    padding:1px;
+    cursor: pointer;
+    border-radius: 2px;
+    background: rgb(255, 250, 230);
+    font-size: 16px;
+}
+
+#title a{
+    color: rgb(236, 126, 61);
+} 
+
+h1{
+    color:rgb(255, 95, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+.site-category{
+    color:rgb(236, 126, 61);
+    font-size: 16px;
+    margin: 0px 50px;
+}
+
+.container{
+    border: 0.01px solid rgb(255, 95, 0);
+    width: 80%;
+    height:280px;
+    background-color: rgb(255, 159, 102);
+    border-radius: 2px;
+    box-shadow: 0px 2px 1.5px 0 rgb(222, 178, 178);
+    padding: 2px;
+    margin:10px 60px 50px;
+}
+
+img{
+    width: 250px;
+    height: 200px;
+    resize: both;
+    margin: 0px 20px;
+    border-radius:4px ;
+    box-shadow: 1px 1px rgb(0, 35, 121);
+    padding: 5px;
+}
+
+.flex-box{
+    display:flex;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.site-title{
+    padding:0px 20px;
+    font-size: 16px;
+}
+
+.flex-box p{
+    padding: 0px 20px 0px 0px;
+    margin: 0;
+}
