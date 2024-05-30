@@ -4,6 +4,7 @@ body {
     background-size: cover; /* Ensures the background image covers the entire viewport */
    /* background-position: center; /* Centers the background image - temporarily excluding this*/
     background-attachment: fixed;
+    margin: 0;
 }
 
 body::before {
@@ -37,17 +38,18 @@ a:hover{
            
     padding: 275px;
     text-align: justify;
+    margin: auto;
+    width: fit-content;
+    
         
 }
 
 .main-toc ul{
-    
+    text-align: left;
     font-size: 1.4em;
     padding: 0%;
     list-style-position: inside; /*keeps the bullets close to the itemised lists*/
-   
 }
-
 
 
 
@@ -148,25 +150,6 @@ a:hover{
     line-height: 1.6; /* Increased line height for readability */
 }
 
-/* Stylish today's images grid */
-.todays-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 30px; /* Increased gap between photos */
-}
-
-/* Extravagant container for images */
-.container img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px; /* Rounded corners */
-    transition: transform 0.3s ease; /* Smooth transition on hover */
-}
-
-.container img:hover {
-    transform: scale(1.05); /* Enlarge image on hover */
-}
-
 
 /*Unveiling the Architectural Horrors of Cape Coast Castle*/
 
@@ -216,19 +199,31 @@ a:hover{
 }
 
 
+/* Stylish today's images grid */
 .todays-images {
-        top: 100px;
-        display: grid;
-        grid-template-columns: repeat(3, 3fr); /* Three columns of equal width */
-        gap: 60px; /* Adjust the gap between photos as needed */
-    }
-    
-.todays-images img {
-        width: 120%;
-        height: auto;
-        border: 4px solid #ccc; /* Optional: Add a border around photos */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-        transform: scale(0.5); /* Enlarge image on hover */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Increased gap between photos */
+    top: 100px;
+  /*  grid-template-columns: repeat(3, 3fr); /* Three columns of equal width */
+    justify-content: space-evenly;
+}
+
+
+/* Extravagant container for images */
+.container img {
+    width: 100%;
+    border-radius: 20px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    width: 130%;
+    height: 60vh;
+    border: 4px solid #ccc; /* Optional: Add a border around photos */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+    transform: scale(0.5); /* Enlarge image on hover */
+}
+
+.container img:hover {
+    transform: scale(1.05); /* Enlarge image on hover */
 }
 
 
