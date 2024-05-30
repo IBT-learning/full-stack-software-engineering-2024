@@ -14,8 +14,9 @@
 .challenge-3 {
     /* write code here */
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
+    flex-direction: row;
+    
 }
 
 .challenge-4 {
@@ -44,7 +45,6 @@ children of .challenge-6 elements.
     justify-content: center;
     align-items: center;
 }
-
 
 .challenge-7 {
     display: flex;
