@@ -1,15 +1,27 @@
-# Floxy's Website
+# Floxy
+### I'm a Ghanaian
+### I live in Ghana
+> My favorite music currently 😊 : [Caruso by Lara Fabian](https://youtu.be/zYZWbzEmWY0?si=pCGq8e7VMH-COdt9)
 
-## Description
-This is a simple website designed using HTML and CSS. It includes basic pages and styles to demonstrate a clean and responsive layout.
+### My top 3 favourite Ghanaian dishes:
 
-## Features
-- Responsive design
-- Basic layout with header, footer, and main content area
-- Simple CSS styling
+1. Omo tuo and Groundnut soup
+2. Tuo zafi
+3. Apkple
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:IBT-learning/full-stack-software-engineering-2024.git 
+### If I had the opportunity to choose whatever job I wanted, it'll be:
 
+- Sofware Engineer
+- Deveops Engineer
+- CEO of a multi-billion company 😍
+- Travel vlogger 
+- Airhostess
+
+### Photo of my favourite singer ❤️🥰
+![Lara Fabian](https://i.ytimg.com/vi/4B698KOn81g/oar2.jpg?sqp=-oaymwEYCJUDENAFSFqQAgHyq4qpAwcIARUAAIhC&rs=AOn4CLCyrBgfanbz7iSqXZdeJwQWsBwXrQ)
+
+
+
+### My most favourite place to visit ❤️😍🥰💙🩶
+
+![The Ocean](images/Ocean.png)
