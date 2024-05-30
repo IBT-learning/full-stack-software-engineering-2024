@@ -8,7 +8,7 @@ CSS has been provided for a mobile version of the site. Reduce your browser size
 
 ### Requirements:
 
-You will add three media queries to add three new responsive layouts. The regular, mobile version of the site doesn't use either flexbox or grid.
+You will add three media queries to add three new responsive layouts. The regular, mobile version of the site doesn't use either flexbox or grid to create the layout. It only uses flexbox for centering the header.
 
 ### 500px
 
