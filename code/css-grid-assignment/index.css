@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+body {
+   margin: 0 auto;
+   padding: 10px 30px;
+   font-family: Arial, sans-serif;
+
+}
+#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    max-width: 1200px;
+    
+    display: grid;
+    align-content: center;
+    grid-template-rows: auto;
+    grid-template-columns: 35vh 3fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "leftside main rightside"
+    "leftside main rightside"
+    "footer footer footer"
+    
+}
+
+/* Add new selectors and new CSS here */
+#header {
+ grid-area: header;
+}
+#left {
+   grid-area: leftside;
+}
+#main {
+  grid-area: main;
+  
+}
+#right {
+  grid-area: rightside;
+  }
+#footer {
+ grid-area: footer;
+}
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}
