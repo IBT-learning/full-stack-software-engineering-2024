@@ -20,8 +20,8 @@
 .challenge-4 {
     /* write code here */
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    flex-direction: row;
 }
 
 .challenge-5 {
