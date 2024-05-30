@@ -2,7 +2,6 @@
     /* write code here */
     display: flex;
     flex-direction: row;
-
 }
 
 .challenge-2 {
@@ -14,9 +13,8 @@
 .challenge-3 {
     /* write code here */
     display: flex;
-    justify-content: flex-end;
     flex-direction: row;
-    
+    justify-content: flex-end;
 }
 
 .challenge-4 {
