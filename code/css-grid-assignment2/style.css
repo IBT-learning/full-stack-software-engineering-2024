@@ -3,6 +3,8 @@
     gap: 1rem;
     /* Add new properties here */
     display: grid;
+    grid-template-columns: 30vh 1fr 30vh;
+    grid-template-rows: auto;
     grid-template-areas: 
      "header header header"
      "sidebar-left main sidebar-right"
