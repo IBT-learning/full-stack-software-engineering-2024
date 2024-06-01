@@ -24,10 +24,8 @@
     grid-column-start: 1;
     grid-column-end: 4;
     grid-area: header;
-<<<<<<< HEAD
+
     background-color: rgb(36, 117, 90);
-=======
->>>>>>> dc50dfc65584ed009d89acf8e87d0515d89cfbee
 }
 
 #left {
