@@ -1,7 +1,5 @@
 # HTML Assignment #1
 
-> Make sure you are on your git branch when you complete this assignment. When you are finished, commit and push your work.
-
 Make a web page about something you think is cool or interesting. It could be a historic site, cultural event, person, place, a book or movie, or even something from your own life. It can be as personal or impersonal as you like, but I would enjoy learning something about your home region.
 
 This is not a research project, feel free to copy and paste content from other websites such as wikipedia (but make sure to remove footnotes, etc.)
@@ -45,3 +43,7 @@ Remember to check the appearance of your page at different widths to see the imp
 -   remove the underline from links
 -   set a maximum width for one or more elements
 -   use a color palette generator such as coolors.co to find or generate a nice looking color palette (look up how to use hex codes as css color values)
+
+## To submit:
+
+Follow the instructions in the [Git Steps](../../git-steps.md) document.
