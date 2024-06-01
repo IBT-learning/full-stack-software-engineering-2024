@@ -1,0 +1,86 @@
+#wrapper {
+    /* style properties*/
+    font-size: 2em;
+    gap: 1rem;
+    height: 100vh;
+    width: 100vh;
+    align-content: stretch;
+
+    /*grid propertes*/
+    border: 10px;
+    display: grid;
+    grid-template-columns: 150px  1fr 1fr 1fr;
+    grid-template-rows: auto 1fr  auto;
+    grid-template-areas: 
+    "header header header header"
+    "left main main right"
+    "footer footer footer footer"
+    ;
+    /* Add new properties here */
+}
+
+
+#header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-area: header;
+}
+
+#left {
+    grid-row-end: 2;
+    grid-row-start: 1;
+    grid-area: left;
+}
+
+#main {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-area:main;
+
+}
+
+#right {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-area: right;
+}
+
+#footer {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    grid-area: footer;
+}
+/* Add new selectors and new CSS here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}
