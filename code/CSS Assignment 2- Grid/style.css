@@ -24,7 +24,7 @@
     grid-column-start: 1;
     grid-column-end: 4;
     grid-area: header;
-    background-color: aquamarine;
+    background-color: rgb(36, 117, 90);
 }
 
 #left {
