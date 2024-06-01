@@ -45,10 +45,49 @@ header {
   }
 
   .card img {
-    max-width: 70%;
+    max-width: 60%;
   }
 
   .card span {
     padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .card {
+    flex-direction: column;
+    max-width: 12rem;
+  }
+
+  .card img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #page-wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content 10vw 10vw;
+  }
+
+  header {
+    grid-column: 1 / 5;
+  }
+
+  #profile {
+    grid-column: 1 / 2;
+  }
+
+  #gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 2 / -1;
   }
 }
