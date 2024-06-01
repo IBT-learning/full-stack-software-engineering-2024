@@ -1,0 +1,42 @@
+body {
+    background-color: gray;
+}
+h1 {
+    background-color: white;
+    
+}
+h2 {
+    background-color: black;
+
+}
+p {
+    text-align: center;
+    
+}
+div {
+    background-color: blue;
+}
+a:link {
+    background-color: green;
+    text-decoration: none;
+
+    text-align: center;
+}
+a:hover {
+    background-color: red;
+}
+img {
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+
+}
+#change1 {
+color: white;
+}
+.white {
+    background-color: white;
+}
+div {
+    border: 10px black;
+}
