@@ -5,6 +5,7 @@
     height: 100vh;
     width: 100vh;
     align-content: stretch;
+    text-align: center;
 
     /*grid propertes*/
     border: 10px;
