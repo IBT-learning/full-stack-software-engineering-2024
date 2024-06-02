@@ -1,4 +1,4 @@
-# HTML Assignment #2
+# HTML & CSS Final Project
 
 Over the course of this program you will develop your own blogging web app. Eventually a user will be able to log into the app, create a profile, make posts, and see other people's profiles and posts. It is up to you whether this app will have a theme (such as a recipe sharing site, etc) or focus on particular kinds of content. However, do not plan for special features outside of the ability to create and edit a profile, and create and edit a blog post with or without photos.
 
