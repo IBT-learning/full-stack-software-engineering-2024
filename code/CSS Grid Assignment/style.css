@@ -1,0 +1,38 @@
+#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    /* Add new properties here */
+  }
+  
+  /* Add new selectors and new CSS here */
+  #wrapper{
+    display:grid;
+    grid-template-columns:4em 10em 1/2fr;
+    grid-template-rows: 
+}
+  #header{
+    grid-column-start:1;
+    grid-column-end:4;
+  }
+
+  #left{
+    width:4em;
+
+  }
+
+  #footer{
+        grid-column-start:1;
+        grid-column-end:4;
+      }
+
+  /* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+  #wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+  }
+  
+  article {
+    height: 85vh;
+  }
+  
