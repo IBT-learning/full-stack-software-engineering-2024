@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont;
+}
+
+:root {
+  --primary-color: #606c38;
+  --secondary-color: #283618;
+  --bg-color: #fefae0;
+  --vibrant-color: #dda15e;
+  --contrast-color: #bc6c25;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--primary-color);
+  list-style-type: none;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.hero {
+  padding: 1rem;
+  margin-top: 1.2rem;
+  color: #000;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+
+.hero h1,
+h2 {
+  font-family: "Chivo Mono", monospace;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+section.posts {
+  background-color: var(--vibrant-color);
+  padding: 1rem;
+}
+
+img {
+  width: 100vw;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.thumb-nail {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  margin-left: 1rem;
+  border: 2px solid #f9f7f7;
+}
+
+.hero p:first-of-type {
+  margin-top: 1.2rem;
+}
+
+.card {
+  background-color: var(--bg-color);
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.content {
+  padding: 0.8rem 0 0.8rem 0;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+footer li:first-of-type {
+  padding-top: 1rem;
+}
+
+footer li {
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  list-style-type: none;
+}
+
+footer p {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-style: italic;
+  cursor: pointer;
+}
+
+footer a:hover {
+  color: var(--vibrant-color);
+}
