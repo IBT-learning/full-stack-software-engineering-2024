@@ -44,10 +44,9 @@ header {
   .card-right {
     display: flex;
     flex-direction: row-reverse;
-    height: 24vh;
+    height: 22vh;
     border: 3px solid #006d9e;
     margin: 3px auto;
-    
 }
   .card-right > img {
     width: 350px;
@@ -70,35 +69,33 @@ header {
 }
 }
 @media  screen and (min-width: 750px) {
-   /** {
-    box-sizing: border-box;
-   }*/
     #gallery {
      display: flex;
-    justify-content: space-between;
+     justify-content:;
      flex-wrap: wrap;
      margin: 10px;
      padding: 0;
 }
    .card-right {
     flex-direction: column;
+    flex-grow: 1;
     width: 220px;
     height: auto;
-    margin: 3px 0.3rem;
+    margin: 3px;
 }
    .card {
     flex-direction: column;
+    flex-grow: 1;
     width: 220px;
     height: auto;
-    margin: 3px 0.3rem;
+    margin: 3px;
 }
    .card-right > img {
      width: 100%;
-     flex-grow: 1;
 }
-  .card > img {
+   .card > img {
      width: 100%;
-     flex-grow: 1;
+}
 }   
 @media screen and (min-width: 1000px) {
   #page-wrapper {
@@ -108,7 +105,7 @@ header {
     grid-template-areas: 
     "header header"
     "aside right"
-    "..... right";
+    ".... right"
   }
   header {
     grid-area: header;
@@ -118,7 +115,5 @@ header {
   }
   #gallery {
     grid-area: right;
-  }
-
   }
 }
