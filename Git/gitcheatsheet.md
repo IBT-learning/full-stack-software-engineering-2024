@@ -308,11 +308,12 @@ Show what revision and author last modified each line of a file
 - **Revert a commit by creating a new commit with contrary changes:**  
   ```
   git revert <commit-id>
-  
+ 
+Feel free to print this cheat sheet and keep it handy while working on your projects 🌟
 
-Feel free to print this cheat sheet and keep it handy while working on your projects! 🌟
 
-In Addition, there is a picture representation here too
+in addition, you could view a pictorial representation of the cheatsheet below 👇 ![here](Gitcommands.png)
+
 ________
 
 ________
