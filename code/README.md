@@ -9,7 +9,7 @@
 
 1. Baking
 2. Exercising
-3. Listening to music
+3. Engaging in self-improvement activities
 
 #### If every job had the same pay, hours, and education requirements, I would be a/an:
 
