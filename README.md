@@ -12,7 +12,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Tool
 
-- Git is a distributed version control system that tracks versions of files. It is often used to control source code by programmers collaboratively developing software.
+- Git is a distributed version control system that tracks versions of files. It is often used to control source code by programmers collaboratively developing software.for more information, click [here](Git/gitcheatsheet.md)
   
 ![Git](Git/Gitcommands.png)
 
