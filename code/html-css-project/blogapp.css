@@ -1,0 +1,19 @@
+body {
+    border: 1px solid black;
+}
+header {
+    border: 1px solid black;
+}
+.user-post {
+    border: 1px solid black;
+}
+#main-post-container {
+    border: 3px solid red;
+    margin: 5px 0;
+}
+.user1, .user2, .user3, .user4, .user5 {
+    border-bottom: 3px dashed black;
+}
+footer {
+    border: 1px solid black;
+}
