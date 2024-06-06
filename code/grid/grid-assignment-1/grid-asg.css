@@ -1,0 +1,38 @@
+#wrapper {
+  font-size: 2em;
+  gap: 1rem;
+  /* Add new properties here */
+  display: grid;
+  grid-template-columns: 10rem 4fr 1fr;
+  grid-template-rows: 10rem 2fr min-content;
+}
+
+/* Add new selectors and new CSS here */
+#header {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+#footer {
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+/* I realise that setting the positions for the left and right bar and main content didn't make any difference as the elements fell into place naturally after setting the position of the header and footer but I set it still just to be safe */
+#left {
+  grid-column: 1/2;
+}
+#main {
+  grid-column: 2/3;
+}
+#right {
+  grid-column: 3/4;
+}
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+  background-color: #ddd;
+  min-height: 15vh;
+  padding: 0.5em;
+}
+
+article {
+  height: 85vh;
+}

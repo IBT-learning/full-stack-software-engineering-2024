@@ -1,0 +1,17 @@
+body {
+  background-color: palevioletred;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  /* flex properties */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* style properties */
+  border: 2px solid black;
+  height: 50px;
+  width: 100px;
+}
