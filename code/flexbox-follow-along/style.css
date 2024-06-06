@@ -18,6 +18,8 @@
     /* align-content: space-evenly; */
     /* column-gap: 1em; */
     /* row-gap: 1em; */
+
+    /* row gets first value then column gets second value */
     gap: 1em 3em;
 }
 
