@@ -58,7 +58,7 @@ header {
     order: 2;
   }
 }
-@media screen and (min-width: 750px), (min-width: 1000px) {
+@media screen and (min-width: 750px) {
   #gallery {
     /* style properties */
     width: 100%;
@@ -73,6 +73,7 @@ header {
     width: 30%;
     /* flex properties */
     flex-direction: column;
+    flex-grow: 1;
   }
   .card img {
     width: 100%;
@@ -80,12 +81,14 @@ header {
   .right img {
     order: initial;
   }
-  .card:nth-child(7),
+  /* this is unnecessary, put the flex grow on .card instead */
+  /* .card:nth-child(7),
   .card:nth-child(8) {
     flex-grow: 0.42;
-  }
+  } */
 }
-@media screen and (min-width: 882px) and (min-width: 1100px) {
+/* this breakpoint is not necessary */
+/* @media screen and (min-width: 882px) and (min-width: 1100px) {
   .card {
     width: 23%;
   }
@@ -93,7 +96,7 @@ header {
   .card:nth-child(8) {
     flex-grow: initial;
   }
-}
+} */
 @media screen and (min-width: 1000px) {
   #page-wrapper {
     display: grid;
