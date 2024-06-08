@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+}
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5em 0;
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+.card {
+    border: 3px solid #006d9e;
+    margin: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 500px) {
+ #page-wrapper {
+ grid-template-columns: 1fr 1fr;
+grid-template-areas:
+"profile main";
+}
+    
+    #gallery {
+    grid-template-columns: 1fr 1fr;
+  gap: 10px;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+}
+    .card:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    .card:nth-child(even){
+        flex-direction: row;
+    }
+    .card img{
+        width: 50%;
+    }
+    }
+
+    @media (min-width: 750px) {
+        
+    
+        #profile {
+            grid-area: profile;
+        }
+    
+        #gallery {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
+        .card img {
+            max-width: 100%;
+            height: 100%;
+        }
+    
+        .card:nth-child(odd), .card:nth-child(even) {
+            flex-direction: column;
+        }
+    
+        #profile > img {
+            max-width: 100%;
+            height: auto;
+        }
+        .card:nth-child(7), .card:nth-child(8) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }      
+        
+    
+    @media (min-width: 1000px) {
+        #page-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 0;
+            padding: 0;
+            grid-template-areas:
+                "profile main";
+        }
+    
+        #profile {
+            grid-area: profile;
+        }
+    
+        #gallery {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+    
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
+        .card img {
+            max-width: 100%;
+            height: 100%;
+        }
+    
+        .card:nth-child(odd), .card:nth-child(even) {
+            flex-direction: column;
+        }
+    
+        #profile > img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+
+
+    
