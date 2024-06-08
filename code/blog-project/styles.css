@@ -251,6 +251,7 @@ footer a:hover {
 
   .card {
     margin-bottom: 2rem;
+    display: flex;
   }
 
   footer ul {
@@ -266,5 +267,37 @@ footer a:hover {
 
   footer p {
     margin-top: 0;
+  }
+
+  /* Home page */
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .desktop-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .desktop-img {
+    max-width: 50%;
+  }
+
+  .content-container {
+    max-width: 50%;
+    font-size: 1.2rem;
+    padding: 1rem;
   }
 }
