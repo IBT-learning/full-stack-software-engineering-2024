@@ -25,6 +25,12 @@ nav ul {
   list-style-type: none;
   padding: 1rem 0;
   font-size: 0.8rem;
+  color: #f8f2f2;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f2f2;
 }
 
 .hero {
@@ -113,3 +119,60 @@ footer a {
 footer a:hover {
   color: var(--vibrant-color);
 }
+
+/* Profile page css */
+
+.profile-posts-container {
+  padding: 0.3rem;
+}
+
+.profile h1 {
+  margin-bottom: 1rem;
+}
+
+.user-details {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.user-details p {
+  color: rgb(108, 106, 106);
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* .profile-posts-container {
+  display: grid;
+  grid-template-columns: 60% 30%;
+  gap: 1rem;
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.posts {
+  grid-column: 1 / 2;
+}
+
+.profile-column {
+  grid-column: 2 / 3;
+}
+
+.footer {
+  grid-column: 1 / -1;
+} */
