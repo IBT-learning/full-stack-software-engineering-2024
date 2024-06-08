@@ -1,32 +1,21 @@
 .challenge-1 {
     /* write code here */
-    display: flex;
-    flex-direction: row;
 }
 
 .challenge-2 {
     /* write code here */
-    display: flex;
-    flex-direction: row-reverse;
 }
 
 .challenge-3 {
     /* write code here */
-    display: flex;
-    justify-content: end;
 }
 
 .challenge-4 {
     /* write code here */
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .challenge-5 {
     /* write code here */
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 /* 
@@ -36,9 +25,6 @@ children of .challenge-6 elements.
 */
 .challenge-6 .bubble {
     /* write code here */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .challenge-7 {
@@ -47,20 +33,14 @@ children of .challenge-6 elements.
 
 .challenge-7 .red {
     /* write code here */
-    flex-grow: 200;
 }
 
 .challenge-8 {
     /* write code here */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .challenge-8 .red {
     /* write code here */
-    order: 1;
 }
 
 /* DO NOT CHANGE ANYTHING BELOW HERE */
