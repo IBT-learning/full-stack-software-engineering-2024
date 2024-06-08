@@ -13,9 +13,19 @@
   --contrast-color: #bc6c25;
 }
 
+html {
+  margin: 0 auto;
+  height: 100vh;
+}
+
 body {
   background-color: var(--bg-color);
   font-size: 1rem;
+}
+
+main,
+footer {
+  padding: 0.3rem;
 }
 
 nav ul {
@@ -25,12 +35,12 @@ nav ul {
   list-style-type: none;
   padding: 1rem 0;
   font-size: 0.8rem;
-  color: #f8f2f2;
+  color: var(--bg-color);
 }
 
 a {
   text-decoration: none;
-  color: #f8f2f2;
+  color: var(--bg-color);
 }
 
 .hero {
@@ -50,8 +60,9 @@ h2 {
 }
 
 section.posts {
-  background-color: var(--vibrant-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   padding: 1rem;
+  margin: 1rem 0.3rem;
 }
 
 img {
@@ -68,7 +79,7 @@ img {
   border-radius: 50%;
   transform: translateY(-50%);
   margin-left: 1rem;
-  border: 2px solid #f9f7f7;
+  border: 2px solid var(--bg-color);
 }
 
 .hero p:first-of-type {
@@ -91,6 +102,8 @@ img {
   font-size: 0.9rem;
   font-style: italic;
   font-weight: 700;
+  margin-top: 0.5rem;
+  color: var(--secondary-color);
 }
 
 footer li:first-of-type {
@@ -122,12 +135,12 @@ footer a:hover {
 
 /* Profile page css */
 
-.profile-posts-container {
-  padding: 0.3rem;
-}
-
 .profile h1 {
   margin-bottom: 1rem;
+}
+
+.profile-posts-container h2 {
+  font-size: 1.5rem;
 }
 
 .user-details {
@@ -148,31 +161,56 @@ footer a:hover {
 
 .profile button {
   padding: 0.5rem 1rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
   border: none;
   border-radius: 0.3rem;
   font-size: 1rem;
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 
-/* .profile-posts-container {
-  display: grid;
-  grid-template-columns: 60% 30%;
-  gap: 1rem;
+.profile button:hover {
+  background-color: var(--contrast-color);
 }
 
-.header {
-  grid-column: 1 / -1;
+.user-details {
+  margin-bottom: 0.5rem;
 }
 
-.posts {
-  grid-column: 1 / 2;
+.icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.profile-column {
-  grid-column: 2 / 3;
+.icon {
+  transition: transform 0.2s ease-in-out;
 }
 
-.footer {
-  grid-column: 1 / -1;
-} */
+.icon:hover {
+  transform: scale(1.5);
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    font-size: 1rem;
+  }
+
+  .thumb-nail {
+    width: 8rem;
+    height: 8rem;
+    margin-left: 2rem;
+  }
+
+  .profile p {
+    max-width: 80%;
+  }
+
+  .profile button {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
