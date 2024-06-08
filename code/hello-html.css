@@ -1,0 +1,39 @@
+/* We use the element selector in these cases to apply styles */
+body {
+    background-color: cornsilk;
+}
+h1 {
+    color: blue;
+    margin: 2px;
+}
+
+span {
+    color: teal;
+    font-weight: 200;
+    margin: 30px;
+}
+
+img {
+    padding: 20px;
+    margin: 20px;
+    border: 10px dashed darkcyan;
+    /* Anything with bang important overrides inline styling */
+    width: 350px !important;  
+}
+/* The element selector is useful but is not used quite as often as the class and id selector */
+
+/* class selector denoted by .*/
+.orange-text {
+    color: orange;
+}
+
+/* id selector denoted by # */
+#block-wrapper{
+    color: blueviolet;
+    background-color: bisque;
+    margin: 15px;
+}
+
+.another-wrapper {
+    font-style: italic;
+}
