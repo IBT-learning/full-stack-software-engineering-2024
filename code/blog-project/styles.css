@@ -59,7 +59,7 @@ h2 {
   margin-bottom: 1.2rem;
 }
 
-section.posts {
+.posts {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   padding: 1rem;
   margin: 1rem 0.3rem;
@@ -156,7 +156,6 @@ footer a:hover {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
-  align-items: center;
 }
 
 .profile button {
@@ -200,8 +199,8 @@ footer a:hover {
   }
 
   .thumb-nail {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
     margin-left: 2rem;
   }
 
@@ -212,5 +211,60 @@ footer a:hover {
   .profile button {
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .profile-posts-container {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+    margin-top: 2rem;
+  }
+
+  .profile-colum {
+    grid-column: 1 / 2;
+  }
+
+  .profile {
+    border-right: 1px solid #747272;
+    border-radius: 0;
+    padding-right: 20px;
+  }
+
+  .profile-buttons {
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: start;
+  }
+
+  section.posts {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    padding: 0rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+  }
+
+  footer a {
+    color: var(--bg-color);
+  }
+
+  footer p {
+    margin-top: 0;
   }
 }
