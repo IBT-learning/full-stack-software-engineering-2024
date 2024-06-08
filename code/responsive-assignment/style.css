@@ -74,7 +74,7 @@ header {
         width: 100%;
     }
 
-    .card:nth-last-child(-n+2){
+    .card:nth-last-child(-n+2) {
         display: flex;
         flex-grow: 1;
         width: 20%;
@@ -83,13 +83,13 @@ header {
 
 }
 
-@media screen and (min-width: 882px){
+@media screen and (min-width: 882px) {
     .card {
         width: 20%;
     }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
     #page-wrapper {
         display: flex;
     }
@@ -105,9 +105,8 @@ header {
     }
 }
 
-@media screen and (min-width: 1120px){
+@media screen and (min-width: 1120px) {
     .card {
         width: 20%;
     }
 }
-
