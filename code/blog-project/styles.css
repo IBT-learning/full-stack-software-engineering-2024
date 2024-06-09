@@ -5,6 +5,8 @@
   font-family: -apple-system, system-ui, BlinkMacSystemFont;
 }
 
+/* Color palette */
+
 :root {
   --primary-color: #606c38;
   --secondary-color: #283618;
@@ -42,6 +44,8 @@ a {
   text-decoration: none;
   color: var(--bg-color);
 }
+
+/* home page */
 
 .hero {
   padding: 1rem;
@@ -97,6 +101,25 @@ img {
   padding: 0.8rem 0 0.8rem 0;
 }
 
+.follow-button-container {
+  text-align: center;
+}
+
+.follow-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.follow-button:hover {
+  background-color: var(--contrast-color);
+}
+
 .author {
   display: flex;
   justify-content: space-between;
@@ -106,6 +129,8 @@ img {
   margin-top: 0.5rem;
   color: var(--secondary-color);
 }
+
+/* Footer */
 
 footer li:first-of-type {
   padding-top: 1rem;
@@ -195,6 +220,8 @@ footer a:hover {
   transform: scale(1.5);
 }
 
+/* Media queries */
+
 @media screen and (min-width: 768px) {
   nav ul {
     font-size: 1rem;
@@ -226,7 +253,7 @@ footer a:hover {
     margin-top: 2rem;
   }
 
-  .profile-colum {
+  .profile-column {
     grid-column: 1 / 2;
   }
 
@@ -242,7 +269,7 @@ footer a:hover {
     justify-content: start;
   }
 
-  section.posts {
+  .posts {
     grid-column: 3 / 4;
     grid-row: 1;
     padding: 0rem;
@@ -251,7 +278,7 @@ footer a:hover {
     flex-direction: column;
   }
 
-  .card {
+  .desktop-card {
     margin-bottom: 2rem;
     display: flex;
   }
@@ -306,6 +333,10 @@ footer a:hover {
   .content-container {
     max-width: 50%;
     font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .posts {
     padding: 1rem;
   }
 }
