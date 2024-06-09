@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+/* for flex property to work it must be applied to an element usually a div often times targetted with the class name wrapper */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2em;
+    background-color: aquamarine;
+    height: 30vh; /* Also a relative size in % of the view port (the window or phone screen*/
+    width: 70vw;
+    background-image: url();
+    background-size: 100vw;
+}
+
+/* we use the box class to target all the boxes (ie each div element which we used border to make as boxes and flex property to make it flexible and not be 
+stuck as a block element because many times we will be in need of where we want to element to behave as flexible items and not be block) */
+.box {
+    /* flex properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* style properties */
+    border: 3px solid #c20e0e76;
+    height: 4rem;
+    width: 6rem;
+    /* font-size: 2em; */
+}
+

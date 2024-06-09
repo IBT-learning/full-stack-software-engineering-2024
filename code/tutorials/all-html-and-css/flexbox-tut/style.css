@@ -1,0 +1,61 @@
+/* The two properties flex-direction and flex-wrap are used so often together that the shorthand property 'flex-flow' was created to combine them. This shorthand property accepts the value of the
+two properties separated by a space. eg flex-flow: row wrap; to set rows and wrap them */
+
+
+.flex-parent {
+    /* style properties. First we were only describing flex properties but some properties were difficult to visualize because the container itself was not styled to be different from the window */
+    background-color: lightblue;
+    height: 60vh;  /*vh means view height. This property makes the container bigger and creates more rows to */
+    border: 10px solid blue;
+
+    /* flex properties below */
+    display: flex; /*Notice that the items are now arragned in a row. They each take up, the the display source allows it, just their max width and height we degined. If the screen is larger they still will not change size
+    They will however squish if the window is smaller to fit all in one row (hence flexible box as defined by the parent container). Only the flex parent needs display set to flex. the children automatically become flex items */
+    flex-direction: row;  /* specifies how flex items are placed in containner. can be row or row-reverse or column/column-reverse */
+    flex-wrap: wrap; /* nowrap, wrap, wrap-reverse also controls whether flex items are squished if the window is smaller or they go to another line to maintain their sizes */
+    justify-content:space-evenly ; /* Determines how extra space in the container is to be used up or aligned. Hover to see options*/
+    align-items: stretch; /*Baseline is a property where all the child elements begin on the same line irrespective of size. General, think of align as justify-content version for the cross axis. Defines the default behavior of flex item along the cross axis if there is an extra space (say we define height of the container to be more than default (perpendicular to main axis)*/
+    align-content: flex-start; /*about how the rows are created within a container to stack up flex items */
+    column-gap: 1em;
+    row-gap: 1em;
+    gap: 1em; /* or gap xem yem for row and column respectively. combines column and row gap */
+}
+
+
+/* Everything under here are refering to items (children) within a flex container. We started with defining all these css properties first */
+.box {
+    /* The element we have targetted using 'box' class selector are all div elements */
+    height: 100px; /* Height and width determines the size of the element*/
+    width: 100px;
+    background-color: orchid; /* Sets the coloor of an element (element can be used as container so set the background)*/
+    border: 2px solid navy;
+    font-size: 3em;  /* We should get used to using 'em' and 'rem' for sizes */
+    border-radius: 10%; /* border radius rounds the corners of borders */
+    color: white; /* sets the color of an elements text */
+    margin: 10px; /* margin is used to add space btw indiv elements/containers */
+    
+    /* One thing to note is that every html element can be both a flex item and a flex container at the same time. Note the at the same time keyword 
+    ie a flex container can be inside another flex container and then it becomes a flex item of that container*/
+    /* Suppose the below are flex properties of these flex items that would now act as thier own flex container by making each one of them flex property */
+    display: flex;
+    align-items: center; /* we see that the text is centered vertically */
+    justify-content: center; /*we see that the text is centered within the box. so each one of the box is its own flex container. Because texts are not elements,
+     we cant give them flex child properties unlex we wrap them elements, but we can give the parents properties that would impact how the child is displayed */
+}
+#one {
+    font-size: 2em;
+}
+/* below are flex item properties */
+#two {
+    order: 2; /*order property specifies that flex items all have default order of 0 and items of same order are grouped together. 0s, 1s, 2s can be negative eg -1s, -50s etc*/
+}
+
+#four {
+    order: 2;
+    flex-shrink: 1; /*flex shrink has a default of 1. Be mindful because flex wrap woould make flex shrink to be visible */
+}
+
+#five {
+    flex-grow: 1; /*Makes a flex item take up all available space along main axis. thing about flex grow is that the amount for indivual flex grow only matters when put against another flex item with a flex grow property. */
+    align-self: flex-start; /*similar to align-content but just for indiv item where it aligns along the row line eg above it or below it */
+}
