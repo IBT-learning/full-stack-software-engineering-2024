@@ -7,18 +7,14 @@
   /* Add new selectors and new CSS here */
   #wrapper{
     display:grid;
-    grid-template-columns:4em 10em 1/2fr;
-    grid-template-rows: 
+    grid-template-columns:4em 10em auto;
 }
   #header{
     grid-column-start:1;
     grid-column-end:4;
   }
 
-  #left{
-    width:4em;
 
-  }
 
   #footer{
         grid-column-start:1;
