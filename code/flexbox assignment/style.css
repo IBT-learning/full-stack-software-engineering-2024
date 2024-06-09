@@ -45,6 +45,7 @@ children of .challenge-6 elements.
 .challenge-8 {
     display: flex;
     flex-direction: column;
+    align-items:center;
 }
 
 .challenge-8 .red {
