@@ -1,0 +1,75 @@
+.challenge-1 {
+    display:flex
+}
+
+.challenge-2 {
+    display:flex;
+    flex-direction: row-reverse;
+}
+
+.challenge-3 {
+    display:flex;
+    justify-content:flex-end;
+}
+
+.challenge-4 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.challenge-5 {
+    display:flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+/* 
+Tip: This is called the "child selector". 
+It selects all .bubble elements that are direct
+children of .challenge-6 elements. 
+*/
+.challenge-6 .bubble {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.challenge-7 {
+    display: flex;
+}
+
+.challenge-7 .red {
+    flex-grow: 1;
+}
+
+.challenge-8 {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.challenge-8 .red {
+    order: 1;
+}
+
+/* DO NOT CHANGE ANYTHING BELOW HERE */
+
+.bubble {
+    height: 5em;
+    width: 5em;
+    color: white;
+    border-radius: 50%;
+    border: 0.1em solid black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
