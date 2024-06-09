@@ -2,9 +2,35 @@
     font-size: 2em;
     gap: 1rem;
     /* Add new properties here */
+    display: grid;
+    grid-template-columns: 10rem 3fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "sidebar-left main sidebar-right"
+    "footer footer footer";
 }
 
 /* Add new selectors and new CSS here */
+#header {
+    grid-area: header;
+}
+
+#left {
+    grid-area: sidebar-left;
+
+}
+
+#main {
+    grid-area: main;
+}
+
+#right {
+    grid-area: sidebar-right;
+}
+
+#footer{
+    grid-area: footer;
+}
 
 /* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
 #wrapper > * {
