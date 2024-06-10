@@ -1,0 +1,60 @@
+body {
+    background-color: #fdfcdc;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 20% 40% 20%;
+    row-gap: 20px;
+    grid-template-areas: 
+    "head head"
+    "section ...."
+    "main main"
+    "footer footer";
+header {
+    grid-area: head;
+}
+section {
+    grid-area: section;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+}
+.profile-head {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.image-header {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXKzxBrv-nr-V2w6n-Hf14w-Mw-p4tD_f6GPvjOCW4CoikavWniBoh4rNfKid-VyUwH4&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: 100%;
+    margin-bottom: -2rem;
+    height: 7rem;
+}
+.profile-head img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.profile-head > span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 10px 0;
+
+}
+.profile-head > span:last-child{
+    margin-left: 25px;
+    
+}
+label[input-type="text"] {
+    display: block;
+}
