@@ -12,6 +12,8 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
+### HTML & CSS
+
 | Week | Topic            | Link                                                                                                        |
 | ---- | ---------------- | ----------------------------------------------------------------------------------------------------------- |
 | 2    | 📝 Markdown      | [Markdown Assignment](0-getting-ready/markdown-assignment.md)                                               |
@@ -20,6 +22,12 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 5    | 🎨 CSS           | [CSS Assignment #2 (Grid)](1-html-css/grid/grid-assignment/css-assignment-2.md)                             |
 | 5    | 🎨 CSS           | [CSS Assignment #3 (Responsive Design)](1-html-css/media-queries/responsive-assignment/css-assignment-3.md) |
 | 6    | 🌐 HTML & 🎨 CSS | [HTML & CSS Final Project](1-html-css/blog-project.md)                                                      |
+
+### JavaScript
+
+| Week | Topic               | Link                                                  |
+| ---- | ------------------- | ----------------------------------------------------- |
+| 7    | Strings and Numbers | [JS Assignment #1](./2-javascript/js-assignment-1.md) |
 
 ## Tools
 
