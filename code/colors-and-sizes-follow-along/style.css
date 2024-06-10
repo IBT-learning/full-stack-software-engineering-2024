@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    background-color: #dfdfdf;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2em;
+    /* the contents in the wrapper are what take up this color, and it's different from the back-ground color */
+    color: #e87f3e;
+    background-color: #627264;
+    height: 50vh;
+    /* width: 70vw; */
+}
+
+.box {
+    /* flex properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* style properties */
+    border: 2rem solid rgba(29, 38, 59, 0.572);
+    /* height: 50px; */
+    /* width: 100px; */
+    
+    /* use rem/em instead of px */
+    height: 4rem;
+    width: 6rem;
+    /* font-size: 2em; */
+}
+
+#one {
+    font-size: 3rem;
+    /* the one will take up 50% the size of it's parent */
+    width: 50%;
+}
+
+#six {
+    height: 3em;
+}
+
+#eight {
+    width: 30vw;
+    /* don't do this, it works but it's weird! */
+    height: 20vh;
+}
