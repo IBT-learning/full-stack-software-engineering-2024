@@ -62,8 +62,14 @@ header {
   }
 
   .card {
+    display: flex;
     flex-direction: column;
-    max-width: 12rem;
+    flex: 1 1 12rem;
+  }
+
+  .card:nth-child(7),
+  .card:nth-child(8) {
+    flex-grow: 1;
   }
 
   .card img {
