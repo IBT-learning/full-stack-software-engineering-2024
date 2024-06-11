@@ -1,0 +1,62 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 10rem 1fr 10rem;
+    /* why are the contents on my first row hiding behind row 2? */
+    grid-template-rows: 8vh 40vh 1fr 10vh min-content;
+}
+
+.box {
+    font-size: 3em;
+    padding: 0.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px #fff;
+}
+
+/* header */
+#one {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    background-color: red;
+}
+
+/* sidebar/table of contents */
+#two {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background-color: blue;
+}
+
+#three {
+    grid-column: 3 / 4;
+    background-color: green;
+}
+
+.main {
+    grid-row: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+#four {
+    /* grid-row: 2 /3; */
+    height: 50vh;
+    background-color: yellow;
+}
+
+#five {
+    /* grid-row: 3 / 5; */
+    height: 30vh;
+    background-color: purple;
+}
+
+#six {
+    grid-row: 4 / 5;
+    background-color: orange;
+}
+
+/* footer */
+#seven {
+    grid-column: 1 / 4;
+    background-color: hotpink;
+}
