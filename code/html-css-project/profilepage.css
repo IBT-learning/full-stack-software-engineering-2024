@@ -34,7 +34,7 @@ footer {
 .image-header {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXKzxBrv-nr-V2w6n-Hf14w-Mw-p4tD_f6GPvjOCW4CoikavWniBoh4rNfKid-VyUwH4&usqp=CAU");
     background-repeat: no-repeat;
-    background-position: fixed;
+    object-fit: cover;
     background-size: 100%;
     margin-bottom: -2rem;
     height: 7rem;
@@ -42,6 +42,7 @@ footer {
 .profile-head img {
     width: 70px;
     height: 70px;
+    object-fit: cover;
     border-radius: 50%;
     margin-left: 15px;
 }
@@ -52,9 +53,106 @@ footer {
 
 }
 .profile-head > span:last-child{
-    margin-left: 25px;
+    margin-left: 0;
     
 }
-label[input-type="text"] {
-    display: block;
+label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: auto;
 }
+fieldset {
+    width: 32rem;
+    height: 20rem;
+    border-radius: 5px;
+    
+}
+.bio {
+    height: 10rem;
+}
+input[type=text], input[type=email] {
+    height: 2rem;
+    padding-left: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+textarea {
+    height: 5rem;
+    padding-left: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+input[type=text]:hover, input[type=email]:hover {
+    background-color: #ffffff;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+textarea:hover {
+    background-color: #ffffff;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+input[type=submit] {
+    padding: 8px 20px;
+    background-color: green;
+    border-radius: 12px;
+    border: 2px solid #ffff;
+    color: #ffff;
+}
+.user1-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.user1-content {
+    margin-left: 35px;
+    margin-top: -20px;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 10px;
+    
+}
+.user1-content img {
+    width: 10rem;
+    aspect-ratio: 5/5;
+    object-fit: contain;
+    
+}
+.user1-content h3 {
+    width: 70%;
+    margin-top: -5px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.user1-content p {
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: oblique;
+    color: goldenrod;
+    
+
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 5,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 30
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 30
+}
+
