@@ -1,11 +1,12 @@
 body {
-    background-color: #fdfcdc;
+    background-color: #F8F9FA;
     font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 100%;
+    font-family: Tahoma, sans-serif;
+    max-width: 700px;
+    padding: 0;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20% 20% 40% 20%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 50% 10%;
     row-gap: 20px;
     grid-template-areas: 
     "head head"
@@ -24,7 +25,7 @@ main {
 footer {
     grid-area: footer;
 }
-}
+} 
 .profile-head {
     display: flex;
     flex-direction: column;
@@ -34,14 +35,21 @@ footer {
 .image-header {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXKzxBrv-nr-V2w6n-Hf14w-Mw-p4tD_f6GPvjOCW4CoikavWniBoh4rNfKid-VyUwH4&usqp=CAU");
     background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: #fca311;
+    border: 2px solid #fca311;
     object-fit: cover;
+    padding: 0 5px;
     background-size: 100%;
     margin-bottom: -2rem;
     height: 7rem;
+    border-radius: 5px;
+    color: #ffffff;
 }
 .profile-head img {
     width: 70px;
     height: 70px;
+    border: 2px solid #fca311;
     object-fit: cover;
     border-radius: 50%;
     margin-left: 15px;
@@ -53,8 +61,7 @@ footer {
 
 }
 .profile-head > span:last-child{
-    margin-left: 0;
-    
+    padding: 0 10px;
 }
 label {
     display: flex;
@@ -63,13 +70,14 @@ label {
     margin: auto;
 }
 fieldset {
-    width: 32rem;
+    width: 33rem;
     height: 20rem;
     border-radius: 5px;
-    
 }
 .bio {
     height: 10rem;
+    width: 32.4rem;
+    
 }
 input[type=text], input[type=email] {
     height: 2rem;
@@ -106,6 +114,12 @@ input[type=submit] {
     border: 2px solid #ffff;
     color: #ffff;
 }
+#user {
+    border: 2px solid rgba(0,0,0,0.3);
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
 .user1-profile img {
     width: 30px;
     height: 30px;
@@ -133,26 +147,36 @@ input[type=submit] {
     font-size: 1rem;
     line-height: 1.5;
 }
-.user1-content p {
+.time-icon  {
     font-size: 1rem;
     font-weight: lighter;
     font-style: oblique;
     color: goldenrod;
-    
+    margin-right: 3rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
 
 }
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 5,
-  'wght' 400,
+  'FILL' 0,
+  'wght' 500,
   'GRAD' 0,
   'opsz' 30
 }
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 500,
   'GRAD' 0,
   'opsz' 30
+}
+footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
 }
 
