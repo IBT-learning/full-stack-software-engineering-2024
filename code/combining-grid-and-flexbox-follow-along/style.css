@@ -5,7 +5,7 @@ body {
     color: #381d2a;
 }
 
-/* why is the wrapper taking up the entire space of the body making the effect of height disorient the contents/why is grid item defined by . not visible? */
+/* why is the wrapper taking up the entire space of the body making the effect of height disorient the contents/why is grid item defined by . not visible? or is that effect determined by my viewport? */
 #wrapper {
     display: grid;
     grid-template-columns: min-content 1fr min-content;
@@ -64,6 +64,11 @@ body {
 #tips {
     grid-area: tips;
     height: fit-content;
+    background-color: #f4f8fc;
+    padding: 1rem;
+    border: 3px solid #66a182;
+    margin-right: 1rem;
+    min-width: 7em;
 }
 
 #footer {
@@ -89,14 +94,6 @@ a:hover {
     color: #f7a072;
 }
 
-#tips {
-    /* grid-area: tips; */
-    background-color: #f4f8fc;
-    padding: 1rem;
-    border: 3px solid #66a182;
-    margin-right: 1rem;
-    min-width: 7em;
-}
 
 h4 {
     margin: 0;
