@@ -110,9 +110,8 @@ header {
     }
 
     #profile{
-        height: 60vh;   
-        
-        
+        height: 60vh;  
+        padding: 1.5em;
     }
 
     #gallery{
