@@ -1,0 +1,40 @@
+#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    /* Add new properties here */
+    display: grid;grid-template-columns: 10rem!important 1fr 10vh
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header header"
+    " left-sidebar main right-sidebar"
+    "footer footer footer ";  
+}
+
+header{ grid-area: header;
+        
+    
+         }
+.left-sidebar { grid-area: left-sidebar;
+        width: 10rem !important;
+        }
+.main{grid-area: main;
+         
+        }
+.right-sidebar{ grid-area: right-sidebar;
+        
+        }
+footer{ grid-area: footer;
+       
+        }
+/* Add new selectors and new CSS here */
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}
