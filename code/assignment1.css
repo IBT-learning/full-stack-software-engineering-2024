@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background2.jpg'); /* Replace 'background.jpg' with the path to your image file */
+      background-size: cover; /* Cover the entire background */
+       /* Center the background image */
+      background-repeat: no-repeat; /* Do not repeat the background image */
+  }
+  
+  header {
+    background-color: goldenrod;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 800px; /* Set maximum width */
+    margin: 0 auto; /* Center main content horizontally */
+  }
+  
+  section {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+
+  .conclusion{
+    margin-right: auto;
+    background-color: goldenrod; /* Change the background color of the special section */
+    padding: 20px;
+    font-weight: bold; /* Apply bold font weight to elements with class "special" */
+  }
+
+  a {
+    color: darkolivegreen; /* Change the color of links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth transition for color change */
+
+  }
+
+  a:hover {
+    color: var(goldenrod); /* Change link color on hover */
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  span{
+    color: bisque;
+  }
+
+  footer{
+    color: goldenrod;
+    border-top: 1px solid #333; /* Add border to footer */
+    padding: 20px;
+  }
+  
+  
+  
