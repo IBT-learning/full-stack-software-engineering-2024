@@ -1,0 +1,73 @@
+body{
+    background-color: #EBF7DE;
+    margin: auto;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: #8246A3;
+    font-weight: 700;
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+.main-section{
+    text-align: center;
+}
+.main-section img{
+    height: 250px;
+    max-width: 300px;
+    min-width: 300px;
+    margin: 10px;
+}
+h2{
+    color: #EBF7DE;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+h3{
+    color: #85f60d;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#details{
+    background-color: #76AC59;
+    padding: 20px;
+   
+}
+#details img{
+    margin: 10px;
+    max-width: 400px;
+    height: 400px;
+}
+
+.jollof, .wat{
+    background-color: #8246A3;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.kebab{
+    border: dashed #EBF7DE 10px;
+    padding: 20px;
+}
+.flexbox{
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+  color: #2e0544;  
+  text-decoration: none;
+  font-size: 16px;
+  
+
+}
+a:hover{
+    color: #8246A3 ;
+}
+.last-section{
+    background-color: #c90c48;
+    padding: 20px;
+}
+
