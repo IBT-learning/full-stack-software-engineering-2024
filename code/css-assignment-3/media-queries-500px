@@ -1,0 +1,31 @@
+@media screen and (min-width: 500px) {
+   body{
+      display: flex;
+      flex-direction: column;
+      }
+   #profile { 
+   img {
+       width: 85vw;
+    }   
+   }
+
+   #gallery {
+       .card.right {
+           display: flex;
+           flex-direction: row-reverse;
+       }
+       .card {
+           display: flex;
+           justify-content: flex-end;
+                      }
+       img {
+           width: 70vw;
+       }
+       span {
+           padding: 20px;
+           align-items: flex-start;
+       }
+
+   }
+
+   }
