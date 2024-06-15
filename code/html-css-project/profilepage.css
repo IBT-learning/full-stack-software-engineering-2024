@@ -1,9 +1,9 @@
 body {
+    max-width: 750px;
     background-color: #F8F9FA;
     font-size: 18px;
     font-family: Tahoma, sans-serif;
-    max-width: 700px;
-    padding: 0;
+    
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 50% 10%;

@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
 }
+
 body {
+    max-width: 750px;
+    height: 120vh;
     margin: auto;
     padding: 0;
     background-color: #F8F9FA;
@@ -29,7 +32,7 @@ body {
         grid-area: footer;
     }
 }
-
+ 
 .header {
     background-color: #fca311;
     color: #F8F9FA;
@@ -162,7 +165,7 @@ span.post-heading {
      
 } 
 .user1-content h3 {
-    width: 25rem;
+    width: 28rem;
     margin: unset;
     font-size: 1.1rem;
     line-height: 1.3;
@@ -203,4 +206,9 @@ footer {
     text-align: center;
     color: #F8F9FA;
 
+}
+@media screen and (min-width: 750px) {
+ body {
+    display
+ }
 }
