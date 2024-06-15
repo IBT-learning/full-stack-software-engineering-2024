@@ -20,7 +20,7 @@ console.log(myResult)
 
 // challenge 2;
 
-const radius = 2;
+const radius = 3;
 const radiusSquare = Math.pow(radius, 2);
 const circleArea = Math.PI * radiusSquare
 console.log(circleArea.toFixed(4))
