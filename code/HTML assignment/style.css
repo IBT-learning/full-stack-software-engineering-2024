@@ -1,0 +1,68 @@
+.myBody {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f6;
+    color: #5950cf;
+}
+
+.MyH1{
+    text-align: center;
+    color: #3877b6;
+    margin-top: 20px;
+}
+
+.myP {
+    margin: 20px;
+    text-align: justify;
+}
+
+.myH2 {
+    color: #107cc4;
+    margin-top: 10px;
+}
+
+.myOl {
+    margin: 20px;
+    padding-left: 40px;
+}
+
+.myLi {
+    margin-bottom: 20px;
+}
+#aId {
+    text-decoration: none;
+}
+
+.myImage{
+    display: flex;
+    padding: 20px;
+    margin: auto;
+    height: 50vh;
+    justify-items: space-evenly;
+    align-self: flex-end;
+    flex-direction: row;
+    flex-flow: row wrap;
+    display: inline-block;
+    max-width: 40%;
+    height: auto;
+    margin: 10px auto;
+    border: 2px #ed9c9c;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(62, 45, 45, 0.1);
+}
+
+
+.myDiv {
+    margin: 20px;
+    padding: 20px;
+    background: #b4acac;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.myFooter{
+    text-align: center;
+    font-weight: 200;
+    font-style: unset;
+}
