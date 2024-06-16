@@ -141,23 +141,7 @@ body{
       
   }
   
-  @media screen and (min-width: 750px) and (max-width:999px){
-      .landing-page{
-          display:grid;
-          grid-template-columns: 1fr 3fr;
-      }
-      .header{
-          grid-column-start: 1;
-          grid-column-end: 3;
-      }
-      .topics{
-          grid-column-start: 1;
-          grid-column-end: 3;
-          display:flex;
-      }
-      .communities,.trending,.profile{
-          width:200px;
-      }
+  @media screen and (min-width: 750px){
       .posts{
           display:flex;
           flex-direction: row;
@@ -166,15 +150,11 @@ body{
   }
   
   @media screen and (min-width: 1000px){
-      .landing-page{
+      .aboutme{
           display:grid;
           grid-template-columns: 1fr 3fr;
       }
-      .header{
-          grid-column-start: 1;
-          grid-column-end: 3;
-      }
-      .topics{
+      .user{
           grid-column: 1/2;
       }
       .posts{
