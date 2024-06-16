@@ -1,0 +1,178 @@
+head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "title title title" ;
+}
+
+.title {
+    display: grid;
+    grid-area: title;
+    font-style: italic;
+    font-size: xx-large;
+    font-weight: 300;
+    justify-content: center;
+    color: #9030E9;
+    background-color: #DBD3B3;
+}
+
+
+#banner {
+    flex-wrap: wrap;
+    border: 100px;
+    border-color: #0000FF;
+    max-height: 30vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "move pages meditation";
+    font-size: 2rem;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+#profile {
+    font-weight: lighter;
+    align-items: center;
+    padding-right: 10px;
+    justify-content: space-evenly;
+    
+    
+}
+
+
+#page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+     "tools updates ";
+}
+.move {
+    grid-area: move;
+    width: 32vw;
+    background-image: url(https://th.bing.com/th/id/OIP.saXhdwpGuzfNfuBaHZczCQHaHa?w=210&h=210&c=7&r=0&o=5&pid=1.7);
+    background-size: 25vw;
+    height: 30vh;
+}
+.pages {
+    grid-area: pages;
+    width: 35vw;
+    background-image: url(https://th.bing.com/th/id/OIP.GaGhS2PbjgtefEVvPHDhwAHaHa?w=195&h=194&c=7&r=0&o=5&pid=1.7);
+    background-size: 50vw;
+    height: 30vh;
+
+
+}
+.meditation {
+    grid-area: meditation;
+    width: 30vw;
+    background-image: url(https://th.bing.com/th?id=OIP.oVgsq0bWUwzvizRVBf0GQQHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
+    background-size: 45vw;
+    height: 30vh;
+
+}
+.tools {
+    grid-area: tools;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: 50px;
+    background-color: #30D5C8;
+    row-gap: 0;
+    border-radius: 4px;
+
+}
+#updates {
+    grid-area: updates;
+    border: 0.5rem solid #63D5E4 ;
+    
+
+}
+
+.username {
+    grid-area: username;
+    color: #2A96D2;
+    font-family: "Playwrite FR Moderne", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+      }
+      
+}
+
+.text {
+    grid-area: main;
+}
+
+.vallerie{
+    padding: 25px;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-areas: 
+     "username username"
+     "time time"
+     "main main";
+    
+}
+.time {
+    grid-area: time;
+    justify-content: flex-start;
+    color: #4DA9DC;
+}
+.thomas {
+    padding: 25px;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-areas: 
+     "username username"
+     "time time"
+     "main main";
+}
+.jane {
+    padding: 25px;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-areas: 
+     "username username"
+     "time time"
+     "main main";
+}
+.my {
+    font-size: 1.5rem;
+    margin: 0%;
+}
+.posts {
+    font-size: 1.5rem;
+    margin: 0%;
+}
+.search {
+    font-size: 1.5rem;
+    margin: 0%;
+}
+.connect {
+    font-size: 1.5rem;
+    margin: 0%;
+}
+.settings {
+    font-size: 1.5rem;
+    margin: 0%;
+}
+
+@media screen and (min-width: 750px) {
+#page-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas: 
+         "profile profile"
+         "updates updates";
+    }
+    #profile {
+        grid-area: profile;
+        height: 10%;
+        margin-bottom: 10px;
+    }
+    #updates {
+        grid-area: updates;
+    }
+   
+
+}

@@ -1,0 +1,156 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    
+}
+#user-photo {
+    grid-area:user-photo;
+    width: 25vw;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    border: 0.5rem solid #4BAD77;
+    margin-bottom: 20px;
+    width: fit-content;
+    border-radius: 10px;
+
+}
+#bio {
+    border: 0.5rem solid #60EC0C;
+    width:50vw ;
+    margin-bottom: 1rem;
+}
+.h1 {
+font-size: large;
+}
+.h2 {
+    font-size: large;
+}
+.h3 {
+    font-size:large ;
+}
+.h4 {
+    font-size: large;
+}
+.h5 {
+    font-size: large;
+}
+.title-posts {
+    color: #008B8B;
+    margin-bottom: 1rem;
+    border: 0.2rem solid #808080;
+    width: fit-content;
+    border-radius: 2px;
+    background-color: #ECE6E6;
+    height: 20px;
+}
+.edit {
+    color: #008B8B;
+    border: 0.2rem solid #808080;
+    width: fit-content;
+    border-radius: 2px;
+    background-color: #ECE6E6;
+    height: 20px;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.posts {
+    display: flex;
+    flex-direction: row;
+    row-gap: 2rem;
+    border: 0.4rem solid #63D5E4;
+    width: 200vw;
+    height: 120vh;
+    font-size:larger;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 
+    "post1 post1"
+    "post2 post2"
+    "post3 post3";
+    width: 90%;
+}
+.username {
+    grid-area: name;
+    color: #2A96D2;
+    font-family: "Playwrite FR Moderne", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.time {
+    grid-area: time;
+    color: #4DA9DC;
+}
+.first {
+    grid-area: first;
+}
+.post1 {
+    grid-area: post1;
+    column-gap: 1rem;
+    padding: 25px;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: 
+     "name"
+     "time"
+     "first";
+}
+.post2 {
+    grid-area: post2;
+    padding: 25px;
+    margin-top: 1rem ;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: 
+     "name"
+     "time"
+     "first";
+}
+.post3 {
+    grid-area: post3;
+    padding: 25px;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: 
+     "name"
+     "time"
+     "first";
+}
+@media screen and (min-width: 750px) {
+.layout {display: grid;
+       grid-template-columns: 1fr 2fr;
+       grid-template-areas: 
+       "photo bio"
+       "title edit"
+       "posts posts";
+    }
+
+#bio {
+margin-bottom: 80px;
+grid-area: bio;
+
+}
+.title-posts {
+    flex-direction: row;
+    height: 5vh;
+    align-items: flex-end;
+    grid-area: title;
+    height: fit-content;
+}
+.edit {
+    display: edit;
+}
+.posts {
+    align-items: flex-end;
+    row-gap: 20px;
+    grid-area: posts;
+    height: 40%;
+}
+#user-photo {
+    width: fit-content;
+    grid-area: photo;
+}
+
+}
+    
