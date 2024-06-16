@@ -119,8 +119,7 @@ header {
         flex-flow: row wrap;
         padding: 1%;
         margin: 0;
-        width: auto;
-        
+        width: auto;    
     }
 
     #gallery img{
