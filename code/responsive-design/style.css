@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+}
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5em 0;
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+.card {
+    border: 3px solid #006d9e;
+    margin: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 500px){
+
+    #gallery img{
+        width: 70%;
+    }
+
+.card.right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-label{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+}
+
+@media screen and (min-width: 750px){
+    #gallery{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1%;
+        margin: 0;
+        width: auto;
+        
+    }
+
+    #gallery img{
+        width: 100%;
+        
+    }
+
+.card.right{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    flex: 1 1 200px;
+
+    
+}
+
+.card{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 200px;
+    width: 100%;
+}
+
+.photo-label{
+    
+    padding: 1em;
+}
+
+}
+
+@media screen and (min-width: 1000px){
+
+    #page-wrapper{
+        display: grid;
+            grid-template-columns: min-content 1fr;
+            grid-template-rows: min-content  1fr ;
+            grid-template-areas:  
+                "header "
+                "content content content";
+                
+    }
+
+    #profile{
+        height: 60vh;  
+        padding: 1.5em;
+    }
+
+    #gallery{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1%;
+        margin: 0;
+        width: auto;
+        
+    }
+
+    #gallery img{
+        width: 100%;
+        
+    }
+
+.card.right{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    flex: 1 1 200px;
+}
+
+.card{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 200px;
+    width: 100%;
+}
+
+.photo-label{
+    
+    padding: 1em;
+}
+    
+}
