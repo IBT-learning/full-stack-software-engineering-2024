@@ -105,8 +105,7 @@ header {
             grid-template-rows: min-content  1fr ;
             grid-template-areas:  
                 "header "
-                "content content content";
-                
+                "content content content";     
     }
 
     #profile{
