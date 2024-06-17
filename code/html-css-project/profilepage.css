@@ -1,9 +1,10 @@
 body {
-    max-width: 750px;
+    
+    margin: auto;
     background-color: #F8F9FA;
     font-size: 18px;
     font-family: Tahoma, sans-serif;
-    
+    padding: 0 5px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 20% 50% 10%;
@@ -29,8 +30,6 @@ footer {
 .profile-head {
     display: flex;
     flex-direction: column;
-    
-
 }
 .image-header {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXKzxBrv-nr-V2w6n-Hf14w-Mw-p4tD_f6GPvjOCW4CoikavWniBoh4rNfKid-VyUwH4&usqp=CAU");
@@ -41,10 +40,12 @@ footer {
     object-fit: cover;
     padding: 0 5px;
     background-size: 100%;
-    margin-bottom: -2rem;
+    margin: 0 0 -2rem;
     height: 7rem;
     border-radius: 5px;
     color: #ffffff;
+    font-size: 1.3rem;
+    text-shadow: 2px 3px 2px #212529;
 }
 .profile-head img {
     width: 70px;
@@ -58,7 +59,6 @@ footer {
     font-size: 1.2rem;
     font-weight: 500;
     margin: 10px 0;
-
 }
 .profile-head > span:last-child{
     padding: 0 10px;
@@ -71,13 +71,17 @@ label {
 }
 fieldset {
     width: 33rem;
-    height: 20rem;
+    height: 22rem;
     border-radius: 5px;
+    border: 1px solid #212529;
 }
 .bio {
     height: 10rem;
     width: 32.4rem;
-    
+}
+label {
+    margin: 10px auto 0;
+
 }
 input[type=text], input[type=email] {
     height: 2rem;
@@ -114,11 +118,17 @@ input[type=submit] {
     border: 2px solid #ffff;
     color: #ffff;
 }
+main {
+    background-color: #ADB5BD;
+    border-radius: 10px;
+    padding: 0 5px;
+}
 #user {
     border: 2px solid rgba(0,0,0,0.3);
-    margin: 5px 0;
+    margin: 5px auto;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #F8F9FA;
 }
 .user1-profile img {
     width: 30px;
@@ -133,31 +143,26 @@ input[type=submit] {
     display: flex;
     flex-flow: row wrap;
     column-gap: 10px;
-    
 }
 .user1-content img {
     width: 10rem;
     aspect-ratio: 5/5;
     object-fit: contain;
-    
 }
 .user1-content h3 {
     width: 70%;
     margin-top: -5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 .time-icon  {
-    font-size: 1rem;
-    font-weight: lighter;
-    font-style: oblique;
-    color: goldenrod;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #212529;
     margin-right: 3rem;
     margin-left: 2rem;
     display: flex;
-    align-items: first baseline;
     justify-content: space-between;
-
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -172,6 +177,24 @@ input[type=submit] {
   'wght' 500,
   'GRAD' 0,
   'opsz' 30
+}
+.content-btn {
+    margin: 0 220px;
+    text-align: center;
+    margin: 20px auto 50px;
+}
+.content-btn button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #CED4DA;
+    border: 2px solid gold;
+}
+.content-btn button:hover {
+    background-color: #F8F9FA;
+    border: 2px solid #000;
 }
 footer {
     background-color: #000;
@@ -179,4 +202,3 @@ footer {
     text-align: center;
     font-size: 0.8rem;
 }
-
