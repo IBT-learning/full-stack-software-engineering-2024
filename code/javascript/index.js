@@ -13,7 +13,6 @@ console.log((((num * 2)+8)/2)-num);
 
 console.log()
 
-
 console.log("* Challenge 2:");
 // formular for area of a circle A=πr**2
 const radius = 6 
