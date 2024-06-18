@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+}
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5em 0;
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+.card {
+    border: 3px solid #006d9e;
+    margin: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+/* Flexbox styles for screens 500px and wider */
+
+@media screen and (min-width: 500px) {
+    #gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo-label {
+        margin: 1rem;
+    }
+    .card img {
+        width: 75%;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+    }
+    .right {
+        flex-direction: row-reverse;
+    
+    }
+   
+}
+
+/* Flexbox styles for screens 750px and wider */
+@media screen and (min-width: 750px) {
+    #page-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        
+    }
+    #gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: flex-end;
+        width: fit-content;
+    
+    }
+
+    .card {
+        flex-direction: column;
+        width: 220px;
+        
+        
+    }
+
+    .card:nth-child(7),
+    .card:nth-child(8) {
+        /* flex-basis: 50%; */
+    }
+
+    .card img {
+        width: 100%;
+    }
+    .photo-label {
+        margin: 1rem;
+        max-width: 150px;
+    }
+}
+
+/* Flexbox styles for screens 1000px and wider */
+
+@media screen and (min-width: 1000px) {
+    #page-wrapper {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 0;   
+    }
+
+    #profile {
+        height: min-content;
+    }
+
+}
