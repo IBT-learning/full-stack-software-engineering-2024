@@ -4,6 +4,7 @@
         justify-items: center;
         align-items: center;
     
+    
     }
     .right {
         flex-direction: row-reverse
@@ -24,18 +25,22 @@
     body {
         display: flex;
         flex-direction: column;
+       
     }
     #gallery {
         display: flex;
         flex-direction: row;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        flex-wrap: wrap;
+       
+        /* display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; */
       
     }
     .card {
         align-items: start;
         flex-direction: column;
-       
+       width: 13rem;
+       flex-grow: 1;
 
     }
     .right {
@@ -52,16 +57,12 @@
 }
 
 @media screen and (min-width: 1000px) {
-    #gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(-1fr, 1fr));
-        margin: 0.7em 0;
-    }
     #page-wrapper {
         display: flex;
     }
     #profile {
         height: min-content;
+        max-width: 12vw;
     }
 }
     
