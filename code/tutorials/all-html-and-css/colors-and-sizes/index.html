@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Colors and Sizes</title>
+</head>
+<body>
+    <p>Note that "em" and "rem" are units for defining relative sizes and not limited to font-sizes. Also used for other size definitions such as height, width etc as long as you we want relative sizing. Fairly common to use "rem" for sizes that are not text related and "em" for things text related. Also sizes can be defined in terms of view height (vh) and (vw). <b>block items take all the width taken by its container and as much height required to display its content except if the container's height and width sizes have been defined. A block element in a body tag takes all the with which always apears to be the whole with of the screen but if size in height and width are defined, it may be less  than the screen</b></p>
+    <p>Another point to always remember is that "em" and "rem" units are inherently tied to font sizes</p>
+    <p>In web design, 'em' (em dash) and 'rem' (root em) are units of measurement in CSS. They are often preferred over 'px' (pixels).</p>
+    <h4>Em Units (em)</h4>
+    <p>The 'em' unit is defined as size relative to the font size of its closest parent. For example, if the parent element has a font size of 16px, then 1em equals 16px. If the font size of the parent changes, the size defined in 'em' will scale accordingly. <b>Usage:</b> Em units are commonly used for typography and element sizing to ensure scalability and responsiveness. </p>
+    <h4>Rem Units (rem)</h4>
+    <p>The 'rem' units is relative to the root element's font size (usually the <html> element). For example if the root element has a font size of 16px (we define this size using css) then 1rem equals 16px regardless of the fint size of the parent elements. <b>Usage:</b> Rem units are useful for maintaining consistency across different components, as they all relate to a single font size. 
+        Component refers to reusable building blocks that make up the user interface (UI) e.g headers and footers, navigation menus, buttons, forms, cards, modals and dialogues, typography.</html></p>
+    <ul><b>Scalability:</b>
+        <li><b>Em and Rem:</b> These units allow for scalable and responsive designs that adjust accordingly to the font size of their repoective elements. This means that our design can adapt more fluidly to different screen sizes and user settings.</li>
+        <ul><b>Px:</b>Pixels are fixed units, which can make scaling difficult. Fised sizes don't adjust based on user preferences, leading to potental accessibility issues.</ul>
+    </ul>
+    <ol><b>Responsiveness:</b>
+        <ul><b>Em and Rem: </b>They contribute to responsive design by making it easier to create layouts that adapt to different decive sizes. Since they are relative units, changing the base font size will will proportionally scale the entire design.</ul>
+        <ul><b>Px: </b>Fixed pixel values do not adapt to varying screen sizes or resolutions, making it harder to create reponsive layouts.</ul>
+    </ol>
+    <ol><b>Accessibility:</b>
+        <ul><b>Em and Rem: </b>These units respect user settings for font sizes. If a user increases the default font size in their browser for better readability, em and rem units will scale appropriately, enhancing accessibility.</ul>
+        <ul><b>Px: </b>Fixed pixel sizes do not respond to user preferences,, which can lead to issues for users who need larger text or other accommodations.</ul>
+    </ol>
+    <ol><b>Consistency:</b>
+        <ul><b>Em and Rem: </b>By using rem units, we can ensure consistent sizing across different compnents of our website, as all rem values are based on the root font size. This makes it easier to manage and maintain a consistent design system.</ul>
+        <ul><b>Px: </b>Managing sizes with pixels can become cumbersome, especially when maintaining consistency across different sections of a site.</ul>
+    </ol>
+    <p>In conclusion, "em" and "rem" units in web design allows for greater flexibilty, scalability and accessibility compared to using fixed pixel sizes. They can enable responsive designs that can adapt to different screen sizes and user preferences, ultimately providing a better user experience.</p>
+    
+    <div class="wrapper">
+       <div class="box" id="one">1</div> 
+       <div class="box" id="two">2</div>
+       <div class="box" id="three">3</div>
+       <div class="box" id="four">4</div>
+       <div class="box" id="five">5</div>
+       <div class="box" id="six">6</div>
+       <div class="box" id="seven">7</div>
+       <div class="box" id="eight">8</div>
+    </div>
+</body>
+</html>
