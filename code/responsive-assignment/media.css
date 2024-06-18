@@ -62,7 +62,7 @@
     }
     #profile {
         height: min-content;
-        max-width: 12vw;
+        width: 12vw;
     }
 }
     
