@@ -1,0 +1,11 @@
+* {
+    background-color: #FFFAE6;
+}
+header{
+    display: flex;
+}
+ .profile-pic{
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+}
