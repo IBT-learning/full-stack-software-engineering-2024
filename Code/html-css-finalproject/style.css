@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#site{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar blogcard"
+        "footer footer";
+
+}
+
+
+#header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+    font-size: xx-large;
+    background-color:#0A0708;
+    color: #ffffff;
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+#sidebar{
+    grid-area: sidebar;
+    background-color: #B2D2A4;
+}
+
+.container{
+    position: relative;
+    text-align: center;
+
+}
+
+h1{
+    background-image:url(images/longpoint.jpg);
+    background-size: cover;
+    color: #ffffff;
+    height: 20vh;
+    position: relative;
+
+}
+
+#blogcard{
+    display: flex;
+    grid-area: blogcard;
+    flex-direction: row;
+}
+
+span{
+    margin-right: 2em;
+}
+
+.topic {
+    white-space: nowrap;
+    padding: 0 0.5em;
+}
+
+.card {
+    border: 2px;
+    margin: 1em;
+    border-radius: 10px;
+    box-sizing: content-box;
+    flex-grow: 0;
+}
+
+.card >img{
+    height: 20vh;
+    width: auto;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.5rem;
+    background-attachment: fixed;
+    background-color: #6bab61;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1 rem;
+    padding: 1px;
+}
