@@ -1,0 +1,9 @@
+h1 {
+    color:rgb(3, 250, 250)
+}
+img { width: 300px; border:red;height: 5cm;margin: 1px;padding: 2px;border: 1cm;}
+h2 {color: rgba(6, 59, 90, 0.733);}
+span {color: blueviolet;}
+ol {background-color: rgb(153, 153, 11);}
+body {background-color: bisque;}
+a { color: rgb(255, 0, 0);}
