@@ -28,6 +28,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | Week | Topic               | Link                                                  |
 | ---- | ------------------- | ----------------------------------------------------- |
 | 7    | Strings and Numbers | [JS Assignment #1](./2-javascript/js-assignment-1.md) |
+| 9    | Booleans            | [JS Assignment #2](./2-javascript/js-assignment-2.md) |
 
 ## Tools
 
