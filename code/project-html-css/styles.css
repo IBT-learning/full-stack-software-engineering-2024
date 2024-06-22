@@ -1,0 +1,91 @@
+body
+           {/*top right bottom left  */
+    margin: 1% 10% 0 10%;
+    display: grid;
+    grid-template-columns: 60% 1fr 2fr ;
+    outline: 1px solid red;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    
+}
+
+.home-heads h2{
+    display: flex;
+    justify-content: center;
+}
+
+.home-heads ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type:none; /* remove the bullet symbols*/
+    justify-content: space-evenly;
+    gap: 50px;
+    margin: 10% 0% 10% 0%;
+    padding-left: 0;
+    background-color: yellow;
+}
+
+.home-heads ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.lorem{
+    display: flex;
+    text-align: justify;
+}
+
+.user span{
+    margin-right: 80%;
+}
+
+/*.home-content p{
+    display: flex;
+    justify-content: ce;
+}*/
+
+
+
+#trend{
+    margin-left: 90%;
+}
+
+.trend-topics{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.trend-follow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.trend-company{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.home-content ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1% ;
+}
+
+
+
+
+
