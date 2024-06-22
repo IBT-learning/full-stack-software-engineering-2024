@@ -1,7 +1,5 @@
 # JavaScript Assignment #2: Booleans
 
-In this assignment you will perform some basic operations and `console.log()` the results.
-
 You may do these challenges all together in one file, or in separate files, according to your preference. You will turn them in all together.
 
 ## Challenge #1
