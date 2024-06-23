@@ -1,4 +1,4 @@
-//CHALLENGE 1
+//CHALLENGE-1
 
 //STRINGS
 const myName = "Solomon"
@@ -13,7 +13,7 @@ console.log(`When my friends see me they shout ${upCaseName}!`)
 const num = 20
 console.log((((num * 2) + 8) / 2) - num)
 
-//CHALLENGE 2
+//CHALLENGE-2
 
 //Area of a cirle is given by pi * r**2
 let pi = Math.PI
