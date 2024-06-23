@@ -1,4 +1,4 @@
-# JavaScript Assignment #1
+# JavaScript Assignment #1: Strings and Numbers
 
 In this assignment you will perform some basic operations and `console.log()` the results.
 
