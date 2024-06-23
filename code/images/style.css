@@ -1,0 +1,26 @@
+section {
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    flex-grow:1;
+}
+
+/* see how inline elements like link behave when we sets its container to display flex */
+.child {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.child a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.child a:hover {
+    background-color: #ddd;
+    color: black;
+}

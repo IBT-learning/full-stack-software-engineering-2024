@@ -1,0 +1,86 @@
+/* This uses the smae styles shee from combining CSS Grid & Flexbox lesson */
+/* Plus ... */
+
+/* This lesson is about being able to make our webpage dynamic in (ie changing the layout of the screen depending on the size of the screen) */
+
+/* Breakpoint: The point at which one media query swithes to another is called the breakpoints */
+@media screen and (max-width: 1024px) {
+    #wrapper {
+        grid-template-columns: min-content 1fr;
+        grid-template-areas: 
+            "header header"
+            "contents main"
+            "contents tips"
+            "footer footer";
+        
+        gap: 0.5rem;
+    }
+    #contents {
+        margin-left: 0.5rem;
+    }
+    #main {
+        margin-right: 0.5rem;
+    }
+
+    #tips {
+        margin-right: 0.5rem;
+    }
+}
+
+/* The rules and CSS defined for 1024px  also applies to 500px. We only touch those that seem off when we use our dev tools*/
+/* phone layout */
+@media screen and (max-width: 500px) {
+    #wrapper {
+        grid-template-columns: unset;
+        grid-template-areas:
+            "header"
+            "contents"
+            "main"
+            "tips"
+            "footer";
+        gap: 0;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+
+    #contents {
+        margin: 0;
+        flex-direction: row;
+        font-size: 0.8em;
+        justify-content: space-evenly;
+    }
+
+    /* child selector. Any h4 that is a a direct child of contents. display none means hide it from view */
+    #contents > h4 {
+        display: none;
+    }
+
+    .topic {
+        padding: 0;
+    }
+
+    #main {
+        /* specifying two values like this for padding, 1st value means top/bottom while 2nd value is left/right */
+        padding: 0 1rem;
+    }
+
+    #tips {
+        margin: 0.5rem;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0.5rem;
+    }
+
+    #footer > a {
+        margin: 0.2rem;
+    }
+
+    a {
+        font-weight: 100;
+    }
+}

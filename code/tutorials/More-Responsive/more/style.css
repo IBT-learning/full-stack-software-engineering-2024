@@ -1,0 +1,86 @@
+/* General Styling */
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Lato' sans-serif;
+    color: #2e354f;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2
+strong {
+    font-weight: 900;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+a {
+    color: #ef5839;
+}
+
+a:hover, 
+a:focus {
+    color: #d4b44c;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+.btn-accent {
+    background: #ef5839;
+    color: #fff;
+}
+
+.btn-white:hover {
+    color: #2e354f;
+    background-color: #999;
+}
+
+/* Layout */
+
+header {
+    background: #2e354f;
+    padding: 45px 0; 
+    color: #fff;
+
+}
+
+section {
+    padding: 45px 0;
+}
+
+
+/*we just defined the width of each container to be 50% of its parent (section) meaning 50% extra space left
+ also header, section-one and section-two are all block level so they take 100% of screen size therefore 50% 
+ width for their child equals */
+
+.container {
+    width: 90%;  
+    margin: 0 auto;
+    /* border: 2px solid magenta; */
+}
+
+.section-two {
+    background: #2e354f;
+    color: #fff;
+}

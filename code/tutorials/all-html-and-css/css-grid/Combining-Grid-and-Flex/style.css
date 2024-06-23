@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background-color: #ebf2fa;
+    font-size: 1.1em;
+    color: #381d2a;
+}
+
+/* make a container a grid. Could have been body but frowned upon. Usually best to have a div eben though it spans the whole body */
+#wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;       /*started with 1fr as dummy come back to fill. target is to define grid-template areas which when defined would guide us on number of columns and rows we need*/
+    grid-template-rows: min-content 1fr min-content min-content;
+    grid-template-areas: 
+        "header header header"
+        "contents main ."
+        "contents main tips"
+        "footer footer footer";
+    min-height: 100vh;  /*the content did not take up the whole view port so we told the wrapper to be bigger. If we used just height, it could overflow*/
+    gap: 1em; /*used to add gap between rows and columns of grid or flex*/
+}
+
+/* we only look for direct child of the grid container to give grid areas */
+#header {
+    grid-area: header;
+
+    background-color: #05668d;
+    padding: 0.5rem;
+    color: #ebf2fa;
+
+    /* started using flex here */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#contents {
+    grid-area: contents;
+
+    margin-left: 1rem;
+    padding: 0.5rem;
+    background-color: #66a182;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;   /*reason for using gap instead of padding here is because padding adds all around the children which would look wierd for the 1st and last item but gap only adds between the items*/
+}
+
+.topic {
+    white-space: nowrap;
+    padding: 0 0.5em;
+}
+
+/* child selector. only affects h4 element that are direct children of contents */
+#contents > h4 {
+    text-decoration: underline;
+    padding: 0.5em 0;
+}
+
+#main {
+    grid-area: main;
+
+}
+
+#tips {
+    grid-area: tips;
+
+    height: fit-content;
+}
+
+#footer {
+    grid-area: footer;
+
+    background-color: #427aa1;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* descendent way of selection irrespective of how deeply nested an anchor tag is */
+.navigation a {
+    color: #ebf2fa;
+    margin: 0.5rem;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #f7a072;
+}
+
+#tips {
+    background-color: #f4f8fc;
+    padding: 1rem;
+    border: 3px solid #66a182;
+    margin-right: 1rem;
+    min-width: 7em;
+}
+
+h4 {
+    margin: 0;
+}
