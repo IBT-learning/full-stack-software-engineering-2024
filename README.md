@@ -29,7 +29,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | ---- | ------------------- | ----------------------------------------------------- |
 | 7    | Strings and Numbers | [JS Assignment #1](./2-javascript/js-assignment-1.md) |
 | 9    | Booleans            | [JS Assignment #2](./2-javascript/js-assignment-2.md) |
-| 9    | Conditionals        | [JS Assignment #2](./2-javascript/js-assignment-3.md) |
+| 9    | Conditionals        | [JS Assignment #3](./2-javascript/js-assignment-3.md) |
 | 9    | Loops               | [JS Assignment #4](./2-javascript/js-assignment-4.md) |
 
 ## Tools

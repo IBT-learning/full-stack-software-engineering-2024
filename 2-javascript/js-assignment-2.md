@@ -7,7 +7,7 @@ You may do these challenges all together in one file, or in separate files, acco
 -   Create a constant variable called `personAge` and assign it a number between 1 and 100
 -   Create a constant variable called `isAdult` and assign it a _boolean expression_ determining whether that number is above or below 18
 -   Create a constant variable called `isElderly` and assign it a _boolean expression_ determining whether that number is above or below 60
--   Create a template string that will read like this: `Is this person is an adult? true. Is this person elderly? false` (but fill in the correct variables for true and false)
+-   Create a template string that will read like this: `Is this person an adult? true. Is this person elderly? false` (but fill in the correct variables for true and false)
 -   **TIP**: Make sure you test by changing the value of `personAge` to make sure it works for children, adults below 60, and adults over 60
 
 #### Extra challenges (you may do either or neither or both!)
@@ -30,8 +30,8 @@ For this challenge
 -   create a constant variable called `lyric` and assign it your favorite song lyric.
 -   create a constant variable called `includesLove` and assign it a JS expression determining whether your lyric includes the word "love"
 -   do the same thing with the words "heart", "life", "baby", and "yeah".
--   create and log a constant variable called `isTypical` and assign it a boolean expression determining whether ANY of the coniditions are true
--   create and log a constant variable called `isVeryTypical` and assign it a boolean expression determining whether ALL of the coniditions are true
+-   create and log a constant variable called `isTypical` and assign it a boolean expression determining whether ANY of the conditions are true
+-   create and log a constant variable called `isVeryTypical` and assign it a boolean expression determining whether ALL of the conditions are true
 
 #### Extra challenges
 

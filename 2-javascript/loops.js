@@ -36,9 +36,9 @@ for (let i = 3; i <= 1000; i) {
 }
 
 // for..of loop
-// iterable means it can be iterated over, from "iteration"
-
 // for (element of iterable) {}
+
+// iterable means it can be iterated over, from "iteration"
 // element is a new variable that we are creating on this line
 // iterable is a variable that already exists somewhere
 

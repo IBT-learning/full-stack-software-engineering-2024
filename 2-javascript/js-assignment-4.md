@@ -5,7 +5,7 @@ You may do these challenges all together in one file, or in separate files, acco
 ## Challenge #1
 
 -   Paste this line into your code:
-    -   `["every", "word", "in", "this", "array", "should", "be", "capitalized"]`
+    -   `const wordList = ["every", "word", "in", "this", "array", "should", "be", "capitalized"]`
 -   Write a for..of loop that logs each word in the array
 -   Now, within the loop, capitalize each word
 
@@ -17,9 +17,8 @@ You may do these challenges all together in one file, or in separate files, acco
 
 ## Challenge #2
 
--   Write a loop that will execute exactly 10 times. You can do this with either a while loop or a "classic" for loop.
+-   Write a loop that will execute exactly 10 times. You can do this with either a while loop or a "classic" for loop
 -   For each loop, console log whether the number is divisible by 3. (You can do this with modulo)
-
     -   you will need a conditional inside your loop for this!
     -   you can log "true" and "false", or if you prefer, "yes" and "no"
 
@@ -27,5 +26,5 @@ You may do these challenges all together in one file, or in separate files, acco
 
 -   Solve FizzBuzz without looking up a solution! This is one of the classic beginning programming challenges
 -   [Here](https://en.wikipedia.org/wiki/Fizz_buzz) is an explanation of the children's math game FizzBuzz
--   Write a JS loop that will go 30 times, and for each number console log the number, and either Fizz, Buzz, or FizzBuzz next to it
+-   Write a JS loop that will go 40 times, and for each number console log the number, and either Fizz, Buzz, or FizzBuzz next to it
 -   Be mindful of the order of your conditions!
