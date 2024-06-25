@@ -6,7 +6,7 @@ const isElderly = personAge > 60
 
 console.log(`Is this person an adult? ${isAdult}`) // true
 console.log(`is this person elderly? ${isElderly}`) // false
-// Extra challenge in another file
+// Extra challenge in another file(Boolean1-extra.js )
 
 
 // JS Boolean Assignment #2
@@ -24,25 +24,8 @@ console.log(isTypical)
 
 const isVeryTypical = includesLove == true && includesHeart == true && includesBaby == true && includesLife == true && includesYeah && true
 console.log(isVeryTypical)
-// Extra Challenge in another file 
+// Extra Challenge saved in another file(Boolean2-extra.js)
 
-
-// JS Conditionals Assignment #3
-// Challenge 1
-const movieTitle = "Game of thrones" 
-const isScary = false
-const isRomantic = true
-
-if (isScary == true && isRomantic == true) {
-    console.log(`${movieTitle} is both romantic and scary`)
-} else if (isScary == false && isRomantic == true)  {
-    console.log(`${movieTitle} is romantic`)
-} else if (isScary == true && isRomantic == false) {
-    console.log(`${movieTitle} is scary`)
-} else {
-    console.log(`${movieTitle} is neither romantic nor scary`)
-} 
-// Extra Challenge in another file 
 
 
 

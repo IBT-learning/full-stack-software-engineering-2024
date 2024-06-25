@@ -1,4 +1,4 @@
-// Extra challenges
+// Boolean 1 Extra challenges
 // make personAge a random number between 0 and 100
 const personAge = Math.floor(Math.random() * 100)
 console.log(personAge)
