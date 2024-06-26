@@ -1,0 +1,57 @@
+#wrapper {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "sidebar-left main  sidebar-right"
+    "sidebar-left main  ."
+    "footer footer footer" ;
+
+    font-size: 2em;
+    gap: 1rem;
+    
+    
+
+
+    /* Add new properties here */
+}
+
+/* Add new selectors and new CSS here */
+
+#header{
+    grid-area: header;
+    }
+    
+
+#left{
+   grid-area: sidebar-left
+
+}
+
+#right{
+    grid-area: sidebar-right;
+}
+
+#main{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2em;
+
+}
+
+#footer{
+    grid-area: footer;
+}
+
+
+
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}
