@@ -11,6 +11,7 @@ console.log ("When my friends see me they shout "+ name.toUpperCase()  + "!" )
 const num1 = (4*2+8)/2-4;
 console.log ( " The answer is " + num1);
 
+
 // Challenge 2:
 const radius = 2;
 const area = (22/7)*radius**2;
