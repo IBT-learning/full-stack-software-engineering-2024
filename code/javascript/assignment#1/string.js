@@ -1,7 +1,7 @@
 //assignemnet #1 using my name
 console.log("whats your name")
 console.log("danny uche")
-// now i was just trying to remember my name
+// now i was just trying to remember my name now
 
 const name= "Danny U"
 console.log(name.length)

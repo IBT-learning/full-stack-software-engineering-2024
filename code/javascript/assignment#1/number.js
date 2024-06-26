@@ -25,7 +25,7 @@ const radius = 11
 console.log(radius**2)
 
 
-// therefore
+// therefore this
 
 const radiusSquare = radius**2
 const area = radiusSquare * Math.PI
