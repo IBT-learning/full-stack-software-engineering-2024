@@ -19,3 +19,7 @@ console.log(result1);
 const radius = 7
 const result2 = Math.PI * radius ** 2
 console.log(result2.toFixed(4));
+
+// or 
+const result3 = 22 / 7 * (radius ** 2)    //PEMDAS
+console.log(result3.toFixed(4));
