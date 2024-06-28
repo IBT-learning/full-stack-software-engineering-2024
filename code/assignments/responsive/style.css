@@ -40,13 +40,13 @@ header {
     }
   .right {
     display: flex;
-    height: 35vh;
+    height: 25vh;
     border: 3px solid #006d9e;
     margin: 5px;
 
 }
    .card > img {
-    width: 50%;
+    width: 10rem;
   }
   .card > span {
     padding: 10px;
@@ -69,30 +69,12 @@ header {
   @media  screen and (min-width: 750px) {
     #gallery {
      display: flex;
-     justify-content:space-between;
      flex-wrap: wrap;
-     margin: 10px;
-
-}
-   .card-right {
-    flex-direction: column;
-    flex-grow: 1;
-    width: 250px;
-    height: auto;
-    margin: 3px;
+     flex-direction: column;
 }
    .card {
-    flex-direction: column;
+  
     flex-grow: 1;
-    width: 220px;
-    height: auto;
-    margin: 3px;
-}
-   .card-right > img {
-     width: 100%;
-}
-   .card > img {
-     width: 100%;
 }
 }   
 
