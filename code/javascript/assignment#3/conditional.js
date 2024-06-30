@@ -24,9 +24,13 @@ console.log(` is "Life" typical? ${includeLife}`);
 console.log(` is "Baby" typical? ${includeBaby}`);
 console.log(` is "Yeah" typical? ${includeYeah}`);
 
+// step 6
+
+const isTypical = ( includeHeart || includeYeah ||includeLove || includeBaby || includeLife)
+console.log(` is  the condition typical ${isTypical ? `yes`: `no`}`);
 
 // for isVeryTypical
-//step 5
+//step 7
 
 const isVeryTypical = includeBaby && includeHeart && includeLife && includeLove && includeYeah
 console.log(` ${includeBaby}`);
@@ -35,7 +39,7 @@ console.log(` ${includeLife}`);
 console.log(` ${includeLove}`);
 console.log(` ${includeYeah}`);
 
-console.log(`is condition typical to the lyrics ? ${isVeryTypical}`);
+console.log(`is condition very typical to the lyrics ? ${isVeryTypical ? `yes`: `no`}`);
 
 
 
