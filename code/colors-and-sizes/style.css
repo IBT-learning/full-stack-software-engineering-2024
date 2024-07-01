@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;  /* make it of same size in any page size */
+    font-size: 2em;
+    color: blueviolet;
+    background-color: aquamarine;
+    height: 50vh;
+    width: 70vw;
+}
+.box {
+    /* file properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* style properties */
+    border: 0.5rem solid black;
+    height: 4rem; /* it can ben 50px or 2em */
+    width: 6rem; /* it can ben 100px or 3em */
+    /* - en - em */
+}
+
+#one {
+    width: 50%;
+    font-size: 3rem; /* form relative to the page default */
+}
+
+#six {
+    height: 3em;
+}
+
+#eight {
+    /* dont do this! it works but it weird */
+    height: 30vw;
+}
