@@ -1,0 +1,66 @@
+#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    /* Add new properties here */
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Add new selectors and new CSS here */
+#header{
+    grid-row: 1/2;
+    grid-column: 1/6;
+}
+
+
+#left{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+#main{
+    grid-row: 2/3;
+    grid-column: 2/5;
+}
+
+#right{
+    grid-row: 2/3;
+    grid-column: 5/6;
+}
+
+
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    /* Add new properties here */
+    
+    
+}
+
+/* Add new selectors and new CSS here */
+#footer{
+    grid-column: 1/6;
+    grid-row: 3/6;
+}
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}
