@@ -7,9 +7,10 @@ console.log (personAge)
 console.log (isAdult)
 console.log (isElderly)
 
-if (personAge >= 18 ) {
+if (personAge == 18 ) {
     console.log (" This person is an adult")
-} else if (personAge >= 60){
+}
+ else if (personAge >= 60){
     console.log ("This person is elderly")
 } else if (personAge < 18) {
     console.log ("This person is a child")
