@@ -1,3 +1,4 @@
+/* General and Index.html Styling Begins */
 *{
     margin: 0;
 }
@@ -26,6 +27,16 @@ header{
     width: 15rem;
     margin-left: 1rem;
     border-radius: 5px;
+}
+menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav{
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 2em;
 }
 .icon{
     height: 3rem;
@@ -97,6 +108,56 @@ time{
     border-radius: 1rem;
     margin-bottom: 10px;
 }
+/* General and Index.html Styling Ends */
+
+
+/* Profile.html Styling Begins */
+.main{
+    background-color: #14213d;
+    text-align: left;
+    padding: 2rem;
+}
+.profile{
+    color: #e5e5e5;
+}
+.icon.big{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 0px;
+}
+.profile h1:first-of-type{
+    margin: 1.5rem 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.profile h1:nth-of-type(2){
+    margin: 1.5rem 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style:normal;
+}
+.bio{
+    margin: 1.5rem 0;
+}
+.mainprofile .blogpost{
+    margin-top: 1.5rem;
+}
+.blogpost > h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.recent{
+    margin-top: 1.5rem;
+}
+.fa.fa-edit{
+    font-size: 20px;
+}
+/* Profile.html Styling Ends */
+
+
+/* Media Query for Tablet */
 
 @media only screen and (min-width: 600px) {
     .icon{
@@ -141,6 +202,8 @@ time{
     }
     
 }
+
+/* Media Query for Desktop */
 @media only screen and (min-width: 768px) {
     .wrapper{
         display: grid;
@@ -160,6 +223,10 @@ time{
         height: 5rem;
         width: 7rem;
         margin: 2rem;
+    }
+    menu{
+        display: flex;
+        flex-direction: column;
     }
     .icon{
         height: 5rem;
