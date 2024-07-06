@@ -1,0 +1,29 @@
+//CHALLENGE 1
+const wordList = ["every", "word", "in", "this", "array", "should", "be", "capitalized"]
+
+for (word of wordList){
+    console.log (word.toUpperCase())
+}
+
+// CHALLENGE 2 
+for (let i = 0; i <= 10; i++){
+    console.log (i)
+    if (i % 3 == 0){
+        console.log (Boolean (true))
+    } else {
+        console.log (Boolean(false))
+    }
+}
+
+//EXTRA CHALLENGE
+for (let i = 0; i <= 40 ; i++){
+    if (i % 3 == 0) {   
+        console.log (i + " " + "Fizz")
+    } else if (i % 5 == 0){
+        console.log (i + " " + "Buzz")
+    }else if (i % 3 == 0 && i % 5 == 0){
+        console.log (i + " " + "FizzBuzz")
+    }else {
+      console.log (i)
+    }
+}
