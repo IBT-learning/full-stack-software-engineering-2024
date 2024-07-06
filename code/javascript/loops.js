@@ -27,8 +27,17 @@ const finalWordList = "";
 // }
 // console.log(capitalizedWordList);
 
-for (word of wordList) {
-  let capitalizeWord = word.charAt(0).toUpperCase() + word.slice(1);
-  finalWordList.push(capitalizeWord);
+// for (word of wordList) {
+//   let capitalizeWord = word.charAt(0).toUpperCase() + word.slice(1);
+//   finalWordList.push(capitalizeWord);
+// }
+// console.log(finalWordList); //not working
+
+for (let i = 11; i <= 20; i++) {
+  if (i % 3 === 0) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+  console.log(i);
 }
-console.log(finalWordList); //not working 
