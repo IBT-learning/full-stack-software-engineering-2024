@@ -13,5 +13,14 @@ function divisible(dividend, divisor) {
     console.log("true");
   } else console.log("false");
 }
-divisible(6, 3)
-divisible(15, 4)
+divisible(6, 3);
+divisible(15, 4);
+
+function greeting(firstName, status) {
+  if (status === "friend") {
+    console.log(`Hello ${firstName}`);
+  } else console.log(`Go away ${firstName}!!`);
+}
+
+greeting("Ruto", "enemy");
+greeting("Okiya", "friend");
