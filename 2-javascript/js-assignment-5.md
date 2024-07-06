@@ -1,4 +1,4 @@
-# JavaScript Assignment #5: Function
+# JavaScript Assignment #5: Functions
 
 You may do these challenges all together in one file, or in separate files, according to your preference. You will turn them in all together.
 
