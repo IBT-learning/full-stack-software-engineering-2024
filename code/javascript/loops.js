@@ -33,11 +33,22 @@ const finalWordList = "";
 // }
 // console.log(finalWordList); //not working
 
-for (let i = 11; i <= 20; i++) {
-  if (i % 3 === 0) {
-    console.log("true");
-  } else {
-    console.log("false");
-  }
-  console.log(i);
+// for (let i = 11; i <= 20; i++) {
+//   if (i % 3 === 0) {
+//     console.log("true");
+//   } else {
+//     console.log("false");
+//   }
+//   console.log(i);
+// }
+
+
+for (let i = 11; i <= 50; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("fizzbuzz");
+  } else if (i % 5===0) {
+    console.log("buzz");
+  } else if (i % 3 === 0) {
+    console.log("fizz");
+  } else console.log(i);
 }
