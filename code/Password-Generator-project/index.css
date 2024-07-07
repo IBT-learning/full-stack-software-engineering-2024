@@ -1,0 +1,147 @@
+body {
+    margin: 0 auto;
+    background: #1C1C1C;
+}
+#wrapper {
+    max-width: 400px;
+    background: #1F2937;
+    padding: 60px;
+    margin: 30px auto;
+    border: 3px solid #ffff;
+    border-radius: 10px;
+}
+h1 {
+    font-family: Karla;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -0.025em;
+    color: #ffff
+}
+h1 > span {
+    display: block;
+    color: #10B981;
+}
+#button-el {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 10px;
+
+}
+#charLengthInput{
+    width: 5em;
+    background: #273549;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    color: #ffff;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 5px;
+
+}
+#button-el button {
+    padding: 10px 20px 10px 9px;
+    cursor: pointer;
+    font-family: Inter;
+    margin-block-end: 3.5em;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    border: none;
+    border-radius: 6px;
+    background: #10B981;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+button:active {
+    border: none;
+}
+
+div p {
+    color: #D5D4D8; 
+    font-family: Inter;
+    margin-block-start: -0.5em;
+    margin-block-end: 3em;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+}
+#empty-el {
+    content: " ";
+    border: 1px solid #2F3E53;
+    margin-bottom: 40px
+}
+.password-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+}
+.password-btn span {
+    flex-grow: 1;
+    width: max-content;
+    padding: 10px 15px;
+    background: #273549;
+    text-align: center;
+    border-radius: 6px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #55F991;
+}
+#alertmsg-container {
+    background: #D5D4D8;
+    border-radius: 8px;
+    width: 30vh;
+    height: 20vh;
+    border: 3px solid #2F3E53;
+    padding: 15px;
+    text-align: center;
+    margin: 5px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#message-el {
+    font-family: Karla;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+.button-div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+
+}
+#yes-btn, #no-btn {
+    padding: 5px 20px;
+    background: #10B981;
+    color: #ffffff;
+    border: 1px solid #D5D4D8;
+    border-radius: 5px;
+    justify-self: flex-start;
+}
+#close-btn {
+    padding: 5px 20px;
+    background: #10B981;
+    color: #ffffff;
+    border: 1px solid #D5D4D8;
+    border-radius: 5px;
+    justify-self: flex-end;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-family: Karla;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #D5D4D8;
+}
