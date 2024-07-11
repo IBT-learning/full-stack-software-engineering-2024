@@ -1,0 +1,245 @@
+/* General and Index.html Styling Begins */
+*{
+    margin: 0;
+}
+body{
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.wrapper{
+    display: grid;
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    ;
+}
+header{
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 2rem;
+    width: 15rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav{
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 2em;
+}
+.icon{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.intro{
+    background-color: #fca311;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.intro > img{
+    margin-top: 1rem;
+    height: 3rem;
+    width: 25rem;
+    border-radius: 5px;
+}
+.intro > h1{
+    font-size: 4em;
+    padding: 2rem 0;
+}
+.intro > p{
+    font-size: 1.5em;
+    padding: 0 0 2rem 0;
+    width: 60%;
+    margin: auto;
+}
+.blogpost{
+    background-color: #14213d;
+    color: #fff;
+    padding: 2rem 1rem;
+    
+    
+}
+.post{
+    margin: 0 auto 1rem;
+    border: solid 1px #e5e5e5;
+    border-radius: 1rem;
+    padding: 10px;
+}
+.post.even{
+    background-color: #000;
+    color: #fca311;
+}
+time{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.post > h3{
+    margin: 10px 0;
+}
+.poster{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.content p{
+    margin-bottom: 10px;
+}
+.content img{
+    height: 120px;
+    width: 80%;
+    display: block;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+}
+/* General and Index.html Styling Ends */
+
+
+/* Profile.html Styling Begins */
+.main{
+    background-color: #14213d;
+    text-align: left;
+    padding: 2rem;
+}
+.profile{
+    color: #e5e5e5;
+}
+.icon.big{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 0px;
+}
+.profile h1:first-of-type{
+    margin: 1.5rem 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.profile h1:nth-of-type(2){
+    margin: 1.5rem 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style:normal;
+}
+.bio{
+    margin: 1.5rem 0;
+}
+.mainprofile .blogpost{
+    margin-top: 1.5rem;
+}
+.blogpost > h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.recent{
+    margin-top: 1.5rem;
+}
+.fa.fa-edit{
+    font-size: 20px;
+}
+/* Profile.html Styling Ends */
+
+
+/* Media Query for Tablet */
+
+@media only screen and (min-width: 600px) {
+    .icon{
+        height: 4rem;
+        width: 4rem
+    }
+    .blogpost{
+        background-color: #fff;
+        color: #000;
+    }
+    .post{
+        border: solid 2px #fca311;
+        margin-bottom: 1rem;
+    }
+    .post > h3{
+        text-align: center;
+        font-size: 2em;
+    }
+    .post.even{
+        background-color: #14213d;
+        color:#fff;
+    }
+    .poster{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .post.even .content{
+        flex-direction: row-reverse;
+    }
+    
+    .content img{
+        height: 130px;
+        width: 30%;
+        margin-right: 10px;
+    }
+    
+}
+
+/* Media Query for Desktop */
+@media only screen and (min-width: 768px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "sidebar main"
+        ;
+    }
+    header{
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .logo{
+        height: 5rem;
+        width: 7rem;
+        margin: 2rem;
+    }
+    menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .icon{
+        height: 5rem;
+        width: 5rem
+    }
+    .main{
+        grid-area: main;
+    }
+    .intro > img{
+        height: 5rem;
+        width: 30rem;
+    }
+    .post > h3{
+        font-size: 3em;
+    }
+}
