@@ -1,0 +1,47 @@
+#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    /* Add new properties here */
+    display: grid;
+    grid-template-columns:2fr 6fr 3fr;
+    grid-template-rows: 20vh 90vh 20vh ;
+    grid-template-areas: 
+    "header header header"
+    "left-sidebar main-content right-sidebar"
+    "footer footer footer";
+}
+
+/* Add new selectors and new CSS here */
+#header{
+    grid-area: header;
+   
+}
+
+#left{
+    grid-area: left-sidebar;
+    
+}
+
+#right{
+    grid-area: right-sidebar;
+    
+}
+
+#main{
+    grid-area:main-content;
+    
+}
+
+#footer{
+    grid-area:footer
+}
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}
