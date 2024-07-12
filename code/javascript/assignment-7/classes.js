@@ -17,7 +17,11 @@ class BankAccount {
   // The method should increase the balance by that amount.
 
   deposit(amount) {
-    this.balance += amount;
+    if (typeof amount !== "number") {
+      console.log("This is not a valid amount");
+    } else {
+      this.balance += amount;
+    }
   }
 
   // Now do the same, with a withdaw method that reduces the balance.
@@ -25,7 +29,9 @@ class BankAccount {
   // and if there isn't enough money, cancel the transaction and print a message
   // that says "Insufficient Funds"
   withdrawal(amount) {
-    if (this.balance >= amount) {
+    if (typeof amount !== "number") {
+      console.log("This is not a valid amount");
+    } else if (this.balance >= amount) {
       this.balance -= amount;
     } else {
       console.log("Insufficient Funds");
@@ -46,3 +52,19 @@ console.log(person.balance); // 100
 
 person.withdrawal(80);
 console.log(person.balance); // 20
+
+// Extra challenges
+
+// What happens if you give the deposit and withdraw methods arguments that are not numbers?
+// Can you handle those cases?
+person.deposit("xxx");
+console.log(person.deposit); // This is not a valid amount
+
+person.withdrawal("yyy");
+console.log(person.withdrawal); // This is not a valid amount
+
+// What happens if you pass a negative number to the deposit method?
+// Can your method detect that situation, and call this.withdraw instead? (Math.abs() might help you here.)
+// Can you keep a log of the user's transactions?
+//  Try storing this information in whatever way seems appropriate to you.
+// How about a printTransactions method that gives the users a nicely formatted list of transations?
