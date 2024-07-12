@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+}
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5em 0;
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+.card {
+    border: 3px solid #006d9e;
+    margin: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+    .card{
+        display: flex;
+        justify-content: center;
+    }
+
+    .right{
+        flex-direction: row-reverse;
+    }
+    
+    .card img{
+        width:70vw;
+        height:20vh;
+        object-fit: cover;
+    }
+
+    .photo-label{
+        padding:1rem;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    #gallery{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+    }
+    
+    .card{
+        flex-direction: column;
+        width: 13em;
+        flex-grow: 1;
+        
+    }
+    .card img{
+        width: auto;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #page-wrapper{
+        display:grid;
+        grid-template: min-content min-content / 20% auto;
+        grid-template-areas: 
+        "profile gallery"
+        ". gallery"
+      
+        ;
+    }
+
+    #profile{
+        grid-area: profile;
+
+    }
+
+    #gallery{
+        grid-area: gallery;
+        width: auto;
+        margin: 0.8em;
+    }
+    
+}
