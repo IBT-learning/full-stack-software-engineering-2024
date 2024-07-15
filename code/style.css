@@ -1,5 +1,6 @@
 .challenge-1 {
 display: flex;
+flex-direction: row;
 }
 
 .challenge-2 {
