@@ -1,8 +1,8 @@
 // Challenge #1: Practice.filter()
 // number array from 1-10
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// array with only numbers greater than 7
 
+// array with only numbers greater than 7
 const firstArray = numbers.filter(x => (x > 7))
 console.log(firstArray) // [ 8, 9, 10 ]
 
@@ -24,7 +24,6 @@ const fifthArray = numbers.map(y => (y * 0.5))
 console.log(fifthArray) // [ 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 ]
 
 // Challenge #3: Using .filter() to filter objects
-
 const prices = [
     { product: "shoes", price: 50, inStock: true },
     { product: "light bulb", price: 3, inStock: true },
@@ -46,6 +45,7 @@ const productsArray = prices.filter(product => (product.inStock === true && prod
 console.log(productsArray)
 
 // Challenge #4: Using .map() to map objects
+
 // array with same object but with 25% price reduction
 const salesDiscountArray = prices.map(product => {
    return {...product, price: product.price - (product.price * 0.25)}
@@ -54,10 +54,40 @@ console.log(salesDiscountArray)
 
 // array with same object but with products that are in stock
 const discountedSales = prices.map(product => {
-      if (product.price > 10) {
-        return {...product, price: product.price * 0.75}
-      } else {
-        return {...product, price: product.price}
-      }
+    if (product.price > 10) {
+      return {...product, price: product.price * 0.75}
+    } else {
+      return {...product, price: product.price}
+    }
 })
 console.log(discountedSales)
+
+// array of string that logs out a string
+const adForSale = salesDiscountArray.map(product => {
+
+  return `${product.product} are on sale for only $${product.price}`
+})
+console.log(adForSale)
+/*
+[
+  'shoes are on sale for only $37.5',
+  'light bulb are on sale for only $2.25',
+  'stuffed animal are on sale for only $11.25',
+  'jacket are on sale for only $56.25',
+  'keychain are on sale for only $3'
+] 
+*/
+
+// Extra Challenges
+const longString = adForSale.reduce(
+  (accumulatedval, eachString) => 
+    accumulatedval + eachString + ", ", []
+)
+console.log(longString)
+/*
+shoes are on sale for only $37.5, 
+light bulb are on sale for only $2.25, 
+stuffed animal are on sale for only $11.25, 
+jacket are on sale for only $56.25, 
+keychain are on sale for only $3,
+*/
