@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Generate Password Project</title>
+         <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+    <div id="wrapper">
+           <h1>Generate a <span>random password</span></h1>
+           <p>Never use an insecure password again</p>
+            <div id="button-el">
+                <button id="generate-el">Generate password</button>
+                <button id="option-el">Select Options
+                <!-- <input type="number" id="charLengthInput"> -->
+                </button>
+            </div>
+            <div id="alertmsg-container" style="display: none;">
+                <span id="message-el"></span>
+                <div class="button-div">
+                <button id="yes-btn">YES</button>
+                <button id="close-btn" style="display: none;">OK</button>
+                <button id="no-btn">NO</button>
+                </div>
+            </div>
+           <p id="empty-el"></p>
+           <div class="password-btn">
+                <span id="password1-el">Password1</span>
+                <span id="password2-el">Password2</span>
+            </div>
+            <div class="checkbox-wrapper">
+                <label for="number-char">Number
+                    <input type="checkbox" id="number-char">
+                </label>
+                <label for="symbol-char">Symbol
+                    <input type="checkbox" id="symbol-char">
+                </label>
+                <label for="Char-Length">length
+                    <input type="checkbox" id="Char-Length">
+                </label>
+            </div>
+        </div>
+      <script src="index.js"></script>
+    </body>
+</html>
