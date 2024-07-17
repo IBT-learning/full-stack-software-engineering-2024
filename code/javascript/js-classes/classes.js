@@ -8,6 +8,7 @@ class BankAccount{
     constructor(ownerName){
     this.ownerName = ownerName;
     this.balance = 0;
+    //Can you keep a log of the user's transactions? 
     this.transactionsLogs = [];
     }
 
@@ -15,11 +16,12 @@ class BankAccount{
     deposit(amount) {
         // What happens if you give the deposit and withdraw methods arguments that are not numbers? Can you handle those cases?
         if (typeof amount !== 'number') {
-            console.log("You have entered an invalid input, please try again.");
+            console.log("Please input amount in figures");
             return;
         }
         if (amount > 0){
          this.balance += amount;
+         //Can you keep a log of the user's transactions? 
          this.transactionsLogs.push({ typeOfTransaction: 'deposit', amount, date: new Date().toLocaleDateString() });
 
         console.log(`An amount of GHS ${this.balance}.00 has been deposited to your account. Your current balance is GHS ${this.balance}.00`);
@@ -43,11 +45,12 @@ class BankAccount{
     withdraw(amount){
         // What happens if you give the deposit and withdraw methods arguments that are not numbers? Can you handle those cases?
         if (typeof amount !== 'number') {
-            console.log("You have entered an invalid input, please try again.");
+            console.log("Please input amount in figures");
             return;
         }
             if (amount > 0 && amount <= this.balance){
                 this.balance -= amount;
+                //Can you keep a log of the user's transactions? 
                 this.transactionsLogs.push({ typeOfTransaction: 'withdraw', amount, date: new Date().toLocaleDateString() });
                 
                 console.log(`An amount of GHS ${amount}.00 has been debited from your account. Your current balance is GHS ${this.balance}.00`);
