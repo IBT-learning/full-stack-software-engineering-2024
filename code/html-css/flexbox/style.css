@@ -1,0 +1,66 @@
+.challenge-1 {display: flex;flex-direction:row;
+    /* write code here */
+}
+
+.challenge-2 { display: flex;flex-direction: column-reverse; align-items: flex-end;
+    /* write code here */
+}
+
+.challenge-3 {display: flex;justify-content: right;
+    /* write code here */
+}
+
+.challenge-4 {display: flex;flex-direction: row;justify-content: space-evenly;
+    /* write code here */
+}
+
+.challenge-5 {display: flex;flex-direction:row ;justify-content: space-between;gap: 20px;
+    /* write code here */
+}
+
+/* 
+Tip: This is called the "child selector". 
+It selects all .bubble elements that are direct
+children of .challenge-6 elements. 
+*/
+.challenge-6 .bubble {display: flex;justify-content: center;align-items: center;
+    /* write code here */
+}
+
+.challenge-7 {
+    display: flex; flex-direction: row;
+}
+
+.challenge-7 .red {flex-grow: 1;width:100%;height: auto;border-radius: 0;
+    /* write code here */
+}
+
+.challenge-8 {display: flex;flex-direction: column;align-items: center;
+    /* write code here */
+}
+
+.challenge-8 .red {order: 1;
+    /* write code here */
+}
+
+/* DO NOT CHANGE ANYTHING BELOW HERE */
+
+.bubble {
+    height: 5em;
+    width: 5em;
+    color: white;
+    border-radius: 50%;
+    border: 0.1em solid black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
