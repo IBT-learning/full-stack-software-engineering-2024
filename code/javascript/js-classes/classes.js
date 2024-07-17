@@ -54,7 +54,7 @@ class BankAccount{
                 }
 
         else if (amount > 0 && amount > this.balance){
-                console.log(`Insufficient Funds. Your account balance is GHS ${this.balance}.00`);
+                console.log(`Insufficient Funds.`);
                 }
         
         // What happens if you give the deposit and withdraw methods arguments that are not numbers? Can you handle those cases?
