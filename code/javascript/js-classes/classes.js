@@ -51,7 +51,7 @@ class BankAccount{
             if (amount > 0 && amount <= this.balance){
                 this.balance -= amount;
                 //Can you keep a log of the user's transactions? 
-                this.transactionsLogs.push({ typeOfTransaction: 'withdraw', amount, date: new Date().toLocaleDateString() });
+                this.transactionsLogs.push({ typeOfTransaction: 'withdrawal', amount, date: new Date().toLocaleDateString() });
                 
                 console.log(`An amount of GHS ${amount}.00 has been debited from your account. Your current balance is GHS ${this.balance}.00`);
                 }
