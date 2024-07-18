@@ -33,7 +33,7 @@ const restaurant = {
    
    delete restaurant.website
    console.log(restaurant);
-//Challenge#3 Creating a new object
+   //Challenge#3 Creating a new object
 const menu = {
     items: {
       fries: 150,
@@ -42,6 +42,7 @@ const menu = {
       chapati: 50,
       chicken: 500,
     },   
+
 
 //Challenge#4 Creating an object method    
     order(orderItems) {
