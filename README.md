@@ -33,6 +33,9 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 9    | Loops               | [JS Assignment #4](./2-javascript/js-assignment-4.md) |
 | 10   | Functions           | [JS Assignment #5](./2-javascript/js-assignment-5.md) |
 | 11   | Objects             | [JS Assignment #6](./2-javascript/js-assignment-6.md) |
+| 11   | Classes             | [JS Assignment #7](./2-javascript/js-assignment-7.md) |
+| 12   | Callbacks           | [JS Assignment #8](./2-javascript/js-assignment-8.md) |
+| 12   | JS Final Project    | [JS Final Project](./2-javascript/js-final-project.md)|
 
 ## Tools
 
