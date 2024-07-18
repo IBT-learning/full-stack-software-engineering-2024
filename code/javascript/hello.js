@@ -38,5 +38,5 @@ console.log (bestFoods)
 bestFoods.pop()
 console.log (bestFoods)
 
-bestFoods.slice(2)
+bestFoods.slice()
 console.log (bestFoods)
