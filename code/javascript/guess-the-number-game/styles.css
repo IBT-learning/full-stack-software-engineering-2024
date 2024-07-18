@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./images/numbers.jpg");
+  object-fit: cover;
+}
+
+.container {
+  margin: 4rem auto;
+  max-width: 1200px;
+  width: 600px;
+  background-color: #fff;
+}
+
+.row {
+  border: 2px solid #bf00ff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  margin: 1rem;
+  background-color: #fff;
+}
+
+h1 {
+  color: #fe00b0;
+}
+
+h2 {
+  color: #ff7209;
+}
+
+h3 {
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+ol {
+  padding: 0 3rem;
+}
+
+.start {
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.start button {
+  border-radius: 2rem;
+  padding: 1rem;
+  border: none;
+  background-color: blueviolet;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
