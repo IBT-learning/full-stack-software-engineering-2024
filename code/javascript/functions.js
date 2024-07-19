@@ -5,14 +5,14 @@ function capitalize(word) {
 }
 console.log(capitalize("hello"))
 
-// Challenge #2: 
 
+// Challenge #2: 
 function percentCalc(amount, percentage) {
 
     return  amount * percentage / 100
-
 }
 console.log(percentCalc(200, 20))
+ 
 
 // Challenge #3
 function divisible(dividend, divisor) {
@@ -22,7 +22,6 @@ function divisible(dividend, divisor) {
     else {
         return false
     }
-
 }
 console.log(divisible(6, 3))
 console.log(divisible(15, 4))
