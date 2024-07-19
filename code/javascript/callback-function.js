@@ -21,7 +21,7 @@ console.log(shop.filter(shopItem => shopItem.inStock == true))
 
 console.log(shop.filter(shopItem => shopItem.inStock == true && shopItem.price < 20))
 
-console.log(shop.map(shopItem => shopItem.price * 75 / 100))
+console.log(shop.map(shopItem =>({ ...shopItem, price: shopItem.price * 0.75 })))
 
 
 
@@ -34,12 +34,12 @@ const shop1 = shop.map(shopItem => (
 const saleAds = shop1.map(shopItem =>
 `${shopItem.product} are on sale for only $${shopItem.price.toFixed(2)}!`
  );
-
+ console.log(shop1)
+ console.log(saleAds)
 // Step 4: Use .reduce() to join all the strings into one long string
 const adString = saleAds.reduce((acc, ad) => acc + " " + ad);
 
 // Output the result
  console.log(adString);
-
 
 
