@@ -1,8 +1,9 @@
+// array of numbers from 1-100
 const arrayNumbers = [];
   for (let i = 1; i <= 100; i++) {
     arrayNumbers.push(i);
   }
-
+// function to call the game version for player to choose from;
 function gameVersion() {
       alert(`Welcome to the Guessing Game`)
       let userName = prompt(`please enter your NAME`)
@@ -67,9 +68,10 @@ Type C if your choosen number is Equal to ${computerGuess}`)
 The Computer guessed the number correctly after ${numberOfGuesses} attempts
 `)
 
-// conditionals for user to start a new game or not
+// conditionals for user to start a new game round or not
 // if yes, a new round of game will start
-// if no, the game will end
+// if no, the game will switch to another version
+// if x, the game will end
 const newGameRound = prompt(`Do you want to play another Round 
 or switch to User version? 
 Type YES to play another round
@@ -99,8 +101,8 @@ Type Exit to exit the game`)
   else {
   alert(`You have entered a wrong input
 Please follow instruction`)
-  }
-}
+   }
+ }
 }
 
 // THE USER GUESS VERSION
@@ -128,8 +130,10 @@ function userGuessGame() {
         alert(`CONGRATULATIONS!!! ${computerGuess} is the Computer PICK
 You got it right after ${numberOfGuesses} attempts`)
 
-// this conditional ask user if they will like to go another round 
-// NB: break the game if no
+// conditionals for player to start a new game round or not
+// if yes, a new round of game will start
+// if no, the game will switch to computer version
+// if x, the game will end
     const newGameRound = prompt(`Do you want to play another Round 
 or switch to computer version? 
 Type YES to play another round
