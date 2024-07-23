@@ -1,13 +1,13 @@
 // CHALLENGE 1
 // Part A
 const personAge = 25
-const isAdult = personAge >=18
+const isAdult = personAge >= 18
 const isElderly = personAge >= 60
 
 console.log(`Is this person an adult? ${isAdult}. Is this person elderly? ${isElderly}`);
 
-// // // Part B - Extra challenges
-// // // 1.
+// Part B - Extra challenges
+// 1.
 const personAge2 = (Math.random() * 100)
 const isAdult2 = personAge2 >=18
 const isElderly2 = personAge2 >= 60
@@ -15,7 +15,7 @@ const isElderly2 = personAge2 >= 60
 console.log(Math.floor(personAge2));
 console.log(`Is this person an adult? ${isAdult2}. Is this person elderly? ${isElderly2}`);
 
-// // //  2.
+//  2.
 const personAge3 = (Math.random() * 100)
 if (personAge3 >= 18 && personAge3 < 60) {
     console.log(Math.floor(personAge3));
@@ -55,10 +55,10 @@ console.log(isVeryTypical);
 
 // Part C - Extra Challenges
 // 1.
-if (lyric.includes("love") || lyric.includes("heart") ||  lyric.includes("life") || lyric.includes("baby") || lyric.includes("yeah")) {
-    console.log("This song is typical");
-} else if (lyric.includes("love") && lyric.includes("heart") &&  lyric.includes("life") && lyric.includes("baby") && lyric.includes("yeah")) {
+if (lyric.includes("love") && lyric.includes("heart") &&  lyric.includes("life") && lyric.includes("baby") && lyric.includes("yeah")) {
     console.log("This song is very typical");
+} else if  (lyric.includes("love") || lyric.includes("heart") ||  lyric.includes("life") || lyric.includes("baby") || lyric.includes("yeah")) {
+    console.log("This song is typical");
 } else {
     console.log("This song is not typical");
 }
