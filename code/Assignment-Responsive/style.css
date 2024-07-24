@@ -1,0 +1,231 @@
+
+body {
+    margin: 0;
+}
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+    border: rgba(9, 97, 211, 0.418) solid
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5em 0;
+    
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.card {
+    border: 3px solid #006d9e;
+    margin: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.card.right {
+    display: flex;
+    
+}
+
+
+
+
+@media screen and  (min-width: 500px) 
+{
+
+    }
+
+        .card.right {
+            flex-direction: row-reverse;  
+         }
+    
+         .photo-label {
+            padding: 1em;
+            flex: 1;
+         }
+    
+         .card {
+            display: flex;
+            flex-direction: row;
+         }
+    
+         .card img {
+
+            width: 70%;
+            
+         }
+    
+         /* 750 */
+
+    @media screen and  (min-width: 750px) 
+    {
+        #page-wrapper {
+                display: grid;
+                width: auto;
+                flex-grow: 2;
+            
+        }
+
+        #profile {  
+            flex-direction: row;
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            
+        } 
+
+        .card {
+           flex-wrap: wrap;
+           width: 100%;
+           flex-direction: row;
+           flex-grow: 1;
+           display: flex;
+           flex: 1;
+         
+           
+         }
+
+         .card.right {
+            width: 100%;
+            align-items: center;
+            flex-direction: row;
+            flex: 1;
+            display: flex;
+            
+         }
+
+         .photo-label {
+            padding: 1.2em;
+            flex-direction: row-reverse;
+            flex: 1;
+            
+         }
+    
+         .card img {
+            width: 100%;
+            
+         }
+
+    
+        }
+    
+        /*1000px */
+
+        @media screen and (min-width: 1000px)
+        {
+            #page-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                gap: 20px;
+                grid-area: 2;
+            }
+        
+            #profile {
+                grid-column: 1 / 2;
+                text-align: left;
+            }
+        
+            #gallery {
+                grid-column: 2 / 3;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                flex-grow: 1;
+                grid-area: auto;
+            }
+        
+            .card {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                flex-grow: 1;
+            }
+        
+            .card img {
+                width: 100%;
+                height: auto;
+                margin: 0;
+            }
+        
+            .photo-label {
+                padding: 10px;
+            }
+        }
+        
+
+
+
+       /* {
+
+            #page-wrapper {
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20%;
+                grid-template-rows: 20% 20% 20% 20%;
+                width: 40%;
+                
+            }
+    
+            #profile {
+                display: grid;
+                grid-template-columns: 40% 20% 20%;
+                grid-template-rows: 40% 20% 20%;
+            }
+
+            #gallery {
+                display: grid;
+        
+            }
+
+            .card {
+                display: grid;
+               flex-direction: column-reverse;
+               width: 1
+             }
+
+             .card.right {
+                flex-direction: column-reverse;
+                width: 40%;
+             }
+
+             .photo-label {
+                padding: 1em;
+                width: 50%;
+                flex-direction: row;
+                align-items: end;
+
+                
+             }
+        
+             .card img{
+                width: 100%;
+                height: auto;
+             }
+    
+        
+        }*/
