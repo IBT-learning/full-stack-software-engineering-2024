@@ -48,4 +48,6 @@ if (isFunny1) {
     } else {
         console.log(`${movieTitle} is both romantic and scary`);  //checks if isFunny1 is false
         } 
-// how do I add the fifth condition - is not funny, romantic or scary
+//  TODO: how do I add the fifth condition - is not funny, romantic or scary
+
+
