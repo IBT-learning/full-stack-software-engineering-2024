@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+}
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5em 0;
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;  
+}
+
+.card {
+    border: 3px solid #006d9e;
+    margin: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+    #gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* how come the card container is growing to fit the gallery container without the flex-grow property being set ie, before it hits the 750px mark, and the img inside the profile container as well? */
+    .card {
+        display: flex; /* default flex-direction is row */
+    }
+
+    .card > img {
+        width: 20rem;
+    }
+
+    span {
+        padding: 1rem;
+    }
+
+    .right > img {
+        order: 1;
+    } 
+}
+
+/* why is the img inside the profile container growing without the flex-grow property set? */
+@media screen and (min-width: 750px) {
+    #gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex-direction: column;
+        flex-grow: 1;
+        margin: 0.4rem;
+        width: 12rem;
+    }
+
+    .card > img {
+        width: 100%;
+    }
+
+    .right > img {
+        order: unset;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #page-wrapper {
+        display: grid;
+        grid-template-columns: 240px 3fr;
+    }
+
+    #gallery {
+        margin: 1.1em;
+    }
+
+    #profile {
+        display: flex;
+        flex-direction: column;
+        height: min-content;
+        margin: 1.1em;
+        padding: 0 1em;
+    }
+ 
+    /* Is it possible that some elements have a padding withoug padding being set? This is because, when I unset the padding-bottom below, I can still see padding on the top, left and right of the span... No padding had been set on the span from the very beginning apart from the padding-bottom */
+    #profile > span {
+        padding-bottom: unset;
+        padding-left: 0;
+    }
+
+    #profile > img {
+        margin: 1em 0;
+    }
+
+    #profile > p {
+        padding-bottom: 1.5em;
+    }
+}
