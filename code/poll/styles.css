@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 600px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 4rem 0;
+  border-bottom: 0.1rem solid #616060;
+}
+
+.alert {
+  color: rgb(247, 7, 7);
+}
+
+.hide {
+  display: none;
+}
