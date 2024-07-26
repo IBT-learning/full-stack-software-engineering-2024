@@ -16,7 +16,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 | Week | Topic                                 | Link                                                      |
 | ---- | ------------------------------------- | --------------------------------------------------------- |
-| 13   | DOM, Query Selectors, Event Listeners | [Web API Assignment #1](./3-web-apis/web-assignment-1.md) |
+| 13   | DOM, Query Selectors, Event Listeners | [Web API Assignment #1](./3-web-apis/assignments/web-assignment-1.md) |
 
 ### JavaScript
 
