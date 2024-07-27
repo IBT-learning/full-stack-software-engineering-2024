@@ -11,9 +11,41 @@
   margin: 0 auto;
 }
 
+h1 {
+  text-align: center;
+  padding: 2rem;
+  color: rgb(244, 70, 7);
+}
+
 .row {
-  margin: 4rem 0;
-  border-bottom: 0.1rem solid #616060;
+  margin: 4rem auto;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+input {
+  outline: none;
+  padding: 2px;
+  background-color: aliceblue;
+  border: none;
+  font-size: 1.3rem;
+  color: rgb(244, 70, 7);
+}
+
+button {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(165, 195, 222);
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out,
+    transform 200ms ease-in-out; */
+}
+
+button:hover {
+  background-color: rgb(61, 62, 62);
+  color: #fff;
 }
 
 .alert {
@@ -22,4 +54,13 @@
 
 .hide {
   display: none;
+}
+
+.result {
+  border: 8px inset rgb(244, 70, 7);
+  padding: 1.5rem;
+}
+
+.result-html {
+  margin-bottom: 1rem;
 }

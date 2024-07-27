@@ -6,6 +6,7 @@ let userName = document.getElementById("name");
 let userAlert = document.getElementById("user-alert");
 
 let userList = [];
+let alertShown = false;
 
 yesBtn.addEventListener("click", () => {
   voteTracker(jsCounter);
@@ -25,5 +26,8 @@ const voteTracker = (userVote) => {
     } else {
       userAlert.classList.remove("hide");
     }
+  } else {
+    if (!alertShown) alert("You need to register with your name");
+    alertShown = true;
   }
 };

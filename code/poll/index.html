@@ -9,19 +9,20 @@
   </head>
   <body>
     <div class="container">
+      <h1>JavaScripts vs HTML</h1>
+      <hr />
       <div class="row">
         <label for="name">What is your name?</label>
         <input type="text" id="name" placeholder="Type your name" required />
         <p id="user-alert" class="hide">This person has already voted.</p>
       </div>
       <div class="row">
-        <h1>Is JavaScript better more enjoyable than HTML?</h1>
+        <p>Is JavaScript better more enjoyable than HTML?</p>
         <button id="yes">Yes</button>
         <button id="no">No</button>
-        <hr />
       </div>
-      <div class="row">
-        <p>I prefer HTML: <span id="html">0</span></p>
+      <div class="row result">
+        <p class="result-html">I prefer HTML: <span id="html">0</span></p>
         <p>I prefer JavaScript: <span id="js">0</span></p>
       </div>
     </div>
