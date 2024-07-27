@@ -71,8 +71,8 @@ function UserGuessTheNumber(){
             alert(`${guess} is too high`)
         }else if (guess === num){
             alert(`Whoooo! You guessed me right! You guessed in ${attempt} attempts.`)
-        } else if (guess > 100 || guess < 0 || guess !=number){
-            alert(`Invalid input.${guess} `)
+        } else {
+            alert("Invalid input.")
         }
     };
     if(confirm(" Please Click OK if you would you love to play again")){
