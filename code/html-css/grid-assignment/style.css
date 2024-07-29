@@ -1,0 +1,45 @@
+#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 2rem 5rem 5rem 5rem 5rem;
+    grid-template-rows: auto;
+   
+   
+    /* Add new properties here */
+}
+
+
+/* Add new selectors and new CSS here */
+#header {
+    grid-area: 1 / 1 / span 1 / span 8;
+}
+
+#left {
+    grid-area: 2 / 1 / span 2 / span 3;
+
+}
+
+#main {
+    grid-area: 2 / 4 / span 2 / span 4;
+}
+
+#right {
+    grid-area: 2 / 8 / span 2 / span 1;
+}
+
+#footer {
+    grid-area: 4 / 1 / span 1 / span 8 ;
+
+}
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper>* {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}
