@@ -15,11 +15,11 @@ console.log((num * 2 + 8) / 2 - num);
 const result1 = (num * 2 + 8) / 2 - num   //PEMDAS
 console.log(result1);
 
-// Area of circle (22/7 R**2)
+// Area of circle (PI R**2)
 const radius = 7
 const result2 = Math.PI * radius ** 2
 console.log(result2.toFixed(4));
 
-// or 
-const result3 = 22 / 7 * (radius ** 2)    //PEMDAS  --- how come without the brackets it still gives the same result yet multiplication should happen before division? ie. 7 * radius ** 2, then divide the result by 22
+// or (22/7 R**2)
+const result3 = 22 / 7 * radius ** 2   //PEMDAS  --- how come without the brackets it still gives the same result yet multiplication should happen before division? ie. 7 * radius ** 2, then divide the result by 22
 console.log(result3.toFixed(4));
