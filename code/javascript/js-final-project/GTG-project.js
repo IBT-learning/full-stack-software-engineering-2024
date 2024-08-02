@@ -1,57 +1,34 @@
-const input = document.getElementById("guess-button")
-const result = document.getElementById("result")
+const input = document.getElementById("guess-button");
+const result = document.getElementById("result");
 
 let lower = 1;
 let higher = 100;
-const GuessNum = 86;
+let GuessNum;
 
-
-function generateNum(){
-    let midNum = Math.floor((lower + higher)/2);
-    while (lower <= higher){
-        if (midNum == GuessNum){
-            return midNum;
-        }
-        else if (midNum > GuessNum){
-            higher = midNum -1;
-        }
-        else{
-            lower = midNum + 1;
-        }
-    }
-    return -1; //err when num is not found
+function generateNum() {
+  GuessNum = Math.floor((lower + higher) / 2);
 }
-
 
 input.addEventListener("click", () => {
-    midNum = generateNum()
-    result.textContent =`Number is ${midNum}`;
-
-    
-const guess =() =>{
-setTimeout(() => {
-    const guessPropmt = prompt("Is the number higher than, lower than, or exactly 50?. Enter 'h', 'l' or 'c'")
-    if (guessPropmt){
-        if (guessPropmt === 'c'){
-            alert("You're correct")
-        }
-
-        else if(guessPropmt === 'l'){
-                alert("Number is lower")
-                guess()      
-            }
-
-        else if(guessPropmt === 'h'){
-            alert("Number is higher")
-            guess()
-            }
-
-        else {
-            alert("Wrong answer. Try again!")
-            guess()  
-        }
+  while (true) {
+    generateNum();
+    const guessPropmt = prompt(
+      `Is the number higher than, lower than, or exactly ${GuessNum}?. Enter 'h', 'l' or 'c'`
+    );
+    if (guessPropmt) {
+      if (guessPropmt === "c") {
+        alert("You're correct");
+        break;
+      } else if (guessPropmt === "l") {
+        higher = Number(GuessNum) - 1;
+        alert("Number is lower");
+      } else if (guessPropmt === "h") {
+        lower = Number(GuessNum) + 1;
+        alert("Number is higher");
+      } else {
+        alert("Wrong answer. Try again!");
+      }
     }
- } , 1000)
-}
-guess()
-})
+  }
+  result.textContent = `Number is ${midNum}`;
+});
