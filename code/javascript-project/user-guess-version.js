@@ -66,7 +66,7 @@ You have guessed ${userGuesses.join(' | ')}`)
 You have guessed ${userGuesses.join(' | ')}`)
     }
     else {
-        newGameUserVersion;
+        newGameUserVersion();
     }
   }
 }
