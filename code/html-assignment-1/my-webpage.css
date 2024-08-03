@@ -1,0 +1,96 @@
+* { 
+    box-sizing: border-box
+}
+
+/*style the header and the subheader*/
+.header {
+    background-color: #ffbe0b;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 5px solid black;
+    font-size: larger;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/*add and style navigation bar that contains links*/
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    padding: 0 0;
+    border-bottom: 2px solid #ffbe0b;
+}
+
+/* style the links in the navigation bar and remove the default underline */
+a {
+    background-color: black;
+    display: block;
+    float: left;
+    padding: 10px 12px;
+    color: bisque;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #e0e1dd;
+}
+
+/* style the links to change color when mouse hover it */
+a:hover {
+    background-color: aquamarine;
+    color: black;
+}
+/* style the body of the website with another color */
+body {
+    background-color: #e0e1dd;
+}
+
+/* add a id to house two colomns */
+#row {
+    padding: 2px 5px;
+}
+
+/* style the main colomn and add an image */
+.main-colomn {
+    float: left;
+    width: 65%;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    max-width: 100%;
+}
+
+/* style the header of the main colomn */
+.main-colomn, h3 {
+    margin-top: 5px;
+}
+
+/* style the paragragh of the main colomn */
+.main-colomn, p {
+    margin: 15px 0;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* style the side colomn and add three images with captions */
+.side-colomn {
+    float: left;
+    width: 35%;
+    padding-top: 30px; padding-left: auto; padding-right: auto; padding-bottom: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+/* style the caption to give space between the images */
+.side-colomn, .caption {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 0; margin-bottom: 20px; margin-left: 0; margin-right: 0;
+    font-weight: bold;
+}
+
+/* add a footer to the webpage */
+footer {
+    text-align: center;
+    font-size: 15px;
+    margin: 15px 15px;
+    font-style: italic;
+    font-weight: bold;
+}
+

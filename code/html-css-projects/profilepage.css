@@ -1,0 +1,204 @@
+body {
+    
+    margin: auto;
+    background-color: #F8F9FA;
+    font-size: 18px;
+    font-family: Tahoma, sans-serif;
+    padding: 0 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 50% 10%;
+    row-gap: 20px;
+    grid-template-areas: 
+    "head head"
+    "section ...."
+    "main main"
+    "footer footer";
+header {
+    grid-area: head;
+}
+section {
+    grid-area: section;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+} 
+.profile-head {
+    display: flex;
+    flex-direction: column;
+}
+.image-header {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfXKzxBrv-nr-V2w6n-Hf14w-Mw-p4tD_f6GPvjOCW4CoikavWniBoh4rNfKid-VyUwH4&usqp=CAU");
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-color: #fca311;
+    border: 2px solid #fca311;
+    object-fit: cover;
+    padding: 0 5px;
+    background-size: 100%;
+    margin: 0 0 -2rem;
+    height: 7rem;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-shadow: 2px 3px 2px #212529;
+}
+.profile-head img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #fca311;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.profile-head > span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.profile-head > span:last-child{
+    padding: 0 10px;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: auto;
+}
+fieldset {
+    width: 33rem;
+    height: 22rem;
+    border-radius: 5px;
+    border: 1px solid #212529;
+}
+.bio {
+    height: 10rem;
+    width: 32.4rem;
+}
+label {
+    margin: 10px auto 0;
+
+}
+input[type=text], input[type=email] {
+    height: 2rem;
+    padding-left: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+textarea {
+    height: 5rem;
+    padding-left: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+}
+input[type=text]:hover, input[type=email]:hover {
+    background-color: #ffffff;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+textarea:hover {
+    background-color: #ffffff;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+input[type=submit] {
+    padding: 8px 20px;
+    background-color: green;
+    border-radius: 12px;
+    border: 2px solid #ffff;
+    color: #ffff;
+}
+main {
+    background-color: #ADB5BD;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+#user {
+    border: 2px solid rgba(0,0,0,0.3);
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #F8F9FA;
+}
+.user1-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.user1-content {
+    margin-left: 35px;
+    margin-top: -20px;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 10px;
+}
+.user1-content img {
+    width: 10rem;
+    aspect-ratio: 5/5;
+    object-fit: contain;
+}
+.user1-content h3 {
+    width: 70%;
+    margin-top: -5px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.time-icon  {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #212529;
+    margin-right: 3rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 30
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 30
+}
+.content-btn {
+    margin: 0 220px;
+    text-align: center;
+    margin: 20px auto 50px;
+}
+.content-btn button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #CED4DA;
+    border: 2px solid gold;
+}
+.content-btn button:hover {
+    background-color: #F8F9FA;
+    border: 2px solid #000;
+}
+footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+}

@@ -68,6 +68,13 @@ const adForSale = salesDiscountArray.map(product => {
   return `${product.product} are on sale for only $${product.price}`
 })
 console.log(adForSale)
+/*
+['shoes are on sale for only $37.5',
+  'light bulb are on sale for only $2.25',
+  'stuffed animal are on sale for only $11.25',
+  'jacket are on sale for only $56.25',
+  'keychain are on sale for only $3'] 
+*/
 
 // Extra Challenges
 const longString = adForSale.reduce(
