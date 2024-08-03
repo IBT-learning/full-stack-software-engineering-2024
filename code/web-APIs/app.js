@@ -18,14 +18,5 @@ lightBtn.addEventListener('click', () =>{
 })
 
 
-// Extra Challenges
+// Extra Challenges in another file
 
-
-
-darkBtn.addEventListener('click', () => {
-    modeSwitch('Dark Mode', 'light gray', 'black')
-})
-
-lightBtn.addEventListener('click', () => {
-    modeSwitch('Light Mode', 'dark', 'White')
-})
