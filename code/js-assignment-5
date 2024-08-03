@@ -1,0 +1,72 @@
+function Capitalize(word) {
+
+    return word.toUpperCase();
+  }
+  
+  console.log(capitalizedWord);
+
+#!/usr/bin/node
+console.log ("C is fun");
+console.log ("Python is cool");
+console.log ("JavaScript is amazing");
+#!/usr/bin/node
+const numArgs = process.argv.length - 2;
+if (numArgs === 0) {
+  console.log("No argument");
+} else if (numArgs === 1) {
+  console.log("Argument found");
+} else {
+  console.log("Arguments found");
+} //
+#!/usr/bin/node
+const firstArg = process.argv[2];
+const secondArg = process.argv[3];
+console.log(`${firstArg || 'undefined'} is ${secondArg || 'undefined'}`);
+
+
+#!/usr/bin/node
+const firstArg = process.argv[1];
+if (Number.isInteger(Number(firstArg))) {
+  console.log(`My number: ${firstArg}`);
+} else {
+  console.log("Not a number");
+}//
+
+#!/usr/bin/node
+const numOccurrences = isNaN(parseInt(process.argv[1])) ? 0 : parseInt(process.argv[1]);
+
+for (let i = 0; i < numOccurrences; i++) {
+  console.log('C is fun');
+}
+#!/usr/bin/node
+const firstArg = process.argv[1];
+
+if (isNaN(parseInt(firstArg))) {
+  console.log("Missing size");
+} else {
+  const size = parseInt(firstArg);
+  let square = "";
+
+  for (let i = 0; i < size; i++) {
+    square += "X".repeat(size) + "\n"; // Add a row of Xs and a newline
+  }
+
+  console.log(square.slice(0, -1)); // Remove the last newline character
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+const firstArg = parseInt(process.argv[1]);
+const secondArg = parseInt(process.argv[2]);
+
+if (isNaN(firstArg) || isNaN(secondArg)) {
+  console.log("Error: Please provide two numbers");
+} else {
+  const sum = add(firstArg, secondArg);
+  console.log(`The sum of ${firstArg} and ${secondArg} is ${sum}`);
+}
+
+
+  
