@@ -46,7 +46,7 @@ const countries = {
     },
 
     _errorHandling(countryCode){
-        // starting a method name with an underscore is an indkcator that it is "private"
+        // starting a method name with an underscore is an indk cator that it is "private"
         // private methods are intended for use within the object, not to be accessed from outside
         // some languages enforce this, JS will not
 
