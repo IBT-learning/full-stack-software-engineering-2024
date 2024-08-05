@@ -1,9 +1,33 @@
+/* 
+ Refreshers
+Center the header and button on the page, both vertically and horizontally
+Change the font of the banner
+ Give the buttons a font size of 1.5rem and a padding of 0.5rem */
+
 body{
+    height: 100vh;
     background-color: #d3d3d3;
     color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    
+}
+
+#banner{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#toggle-class{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+
 }
 
 .dark-mode{
     background-color: #000000;
     color: #d3d3d3;
 }
+
