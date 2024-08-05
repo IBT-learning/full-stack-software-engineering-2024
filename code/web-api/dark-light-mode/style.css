@@ -10,6 +10,7 @@ body{
     background-color: darkgray; 
     color: rgb(0, 0, 0); 
     text-shadow: 2px 2px 4px rgba(213, 213, 213, 0.9);
+    
 }
 
 
@@ -17,6 +18,7 @@ h1{
     font-size:40px ;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 
 div{
     gap: 0.5rem;

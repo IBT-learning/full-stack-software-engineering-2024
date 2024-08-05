@@ -40,7 +40,6 @@ switchButton.addEventListener("click", () =>{
     else{
         theme.textContent = "Light Mode";
         switchButton.textContent = "Activate Dark Mode";
-        
     }
 })
 
