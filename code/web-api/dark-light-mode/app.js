@@ -35,7 +35,6 @@ switchButton.addEventListener("click", () =>{
     if(document.body.classList.contains("dark-mode")){
         theme.textContent = "Dark Mode";
         switchButton.textContent = "Activate Light Mode"
-       
     }
 
     else{
