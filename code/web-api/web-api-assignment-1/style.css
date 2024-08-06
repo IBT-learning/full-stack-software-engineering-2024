@@ -1,0 +1,23 @@
+body {
+  color: #545454;
+  background-color: #cacaca;
+  
+}
+#banner{
+    font-family: 'Courier New', Courier, monospace;
+}
+#switch-btn{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.dark-mode {
+  color: #cacaca;
+  background-color: #545454;
+}
+.content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
