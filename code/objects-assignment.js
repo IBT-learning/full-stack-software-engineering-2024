@@ -91,10 +91,16 @@ console.log(restaurant.menu.order(ordering))
 
 menu.order = function (ordered) {
   let total = 0
-  const list = Object.keys(this)
+  //  const list = Object.keys(this)
+  // for (let i = 0; i < ordered.length; i++) {
+  //   if (list.includes(ordered[i])) {
+  //     total += this[ordered[i]]
+  //   }
+  // }
+  // return total
 
   for (let i = 0; i < ordered.length; i++) {
-    if (list.includes(ordered[i])) {
+    if (ordered[i] in this) {
       total += this[ordered[i]]
     }
   }
