@@ -45,7 +45,7 @@ const restaurant = {
         for (meal in this){
             if (typeof this[meal] !== "function"){
                 return this[menu1] + this[menu2]
-            }else{
+            }else if (typeof this[meal] !== "number"){
                 return "This order is not available in the menu"
             }
         }
@@ -57,6 +57,6 @@ const restaurant = {
   console.log (menu.order(["coke", "burger"]))
   console.log (menu.order(["burger", "pepsi"]))
 
+  //extra challenge
   restaurant.menu = menu
-  //console.log(restaurant)
   console.log(restaurant.menu.order(["fish", "burger"]))
