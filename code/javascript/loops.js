@@ -65,8 +65,8 @@ for (day of dayOfWeek){
 const vowels = "aeiou"
 let justVowels = ""
 
-for (letter of word){
-    for (vowel of vowels){
+for (letter of word){ // this layer (outer loop) is going over the whole word
+    for (vowel of vowels){ // the inner loop goes all the way through the whole loop EVERY TIME
         if (letter == vowel){
             justVowels += letter
         }
