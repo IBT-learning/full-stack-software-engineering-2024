@@ -26,7 +26,7 @@ class BankAccount {
          console.log (`Your total amount is now ${this.balance}`)
      }
     }
-
+    //extra challenge
     printTransaction(withdrawal, deposited){
         return `Account owner : ${this.ownerName}.\nDeposit: $${Math.abs(deposited)}\nWithdrawal: $${withdrawal}.\nBalance: $${this.balance}`
        
