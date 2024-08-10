@@ -57,7 +57,15 @@ Requests include:
 
 ### HTTP Responses
 
-... we'll come back to this!
+Responses include:
+
+- a status line
+  - HTTP version / specification
+  - status code
+  - reason phrase
+  - ex: `HTTP/1.1 200 OK`
+- headers
+- body (most of the time)
 
 ### HTTP Methods
 
@@ -75,3 +83,23 @@ But there are more....
 - HEAD
 - CONNECT
 - TRACE
+
+## API: Application Programming Interface
+
+An API is a tool for a client to communicate with a server. The API is provided by the server, because the server decides what information it wants to make available and what it wants to do with information it receives.
+
+The most common type of API is a REST API. REST stands for REpresentational State Transfer. It is not a protocol, it is merely a set of architectural principles.
+
+> When an API design adheres closely to REST principles, it may be called a "RESTful API".
+
+These design principles include:
+
+- uses the HTTP request-response lifecycle
+- provides a uniform interface (the client can make predictable manipulations of a resource using an HTTP request)
+- clear delineation between the client's operations and the server's operations
+  - the client provides a user interface and gathers all of the information needed to make requests, and then makes the requests
+  - the server handles database operations, security, etc., and sends responses
+- stateless operation
+- allow cacheing
+- layered server systems
+- ... and more
