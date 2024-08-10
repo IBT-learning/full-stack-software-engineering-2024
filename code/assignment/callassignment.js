@@ -60,7 +60,7 @@ const prices = [
   const salePrice = prices.map(sale)
   console.log (salePrice)
   
-  const sales = [`Shoes are on sale for only $${salePrice[0]}]`, `Stuffed animals are on sale for only $${salePrice[2]}\n`,
+  const sales = [`Shoes are on sale for only $${salePrice[0]}]\n`, `Stuffed animals are on sale for only $${salePrice[2]}\n`,
     `Jackets are on sale for only $${salePrice[3]}`]
   console.log(sales)
 
