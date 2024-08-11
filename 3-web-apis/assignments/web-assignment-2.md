@@ -14,7 +14,7 @@
 1. If the item has a `completed` status of `true`, change the style in some way to make it look done. You could use `text-decoration: line-through`, or change the color, or anything you like that makes it look different.
    - **note:** you could do this by adding a class from a linked css sheet, but I don't think it's necessary!
 
-### Extra challenges
+### Extra challenges (optional)
 
 #### Check off more items
 

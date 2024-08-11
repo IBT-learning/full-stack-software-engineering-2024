@@ -17,7 +17,7 @@ You will complete all of these challenges in the same file.
 
   - Don't let people overdraft! Have the `withdraw` method first check the balance, and if there isn't enough money, cancel the transaction and print a message that says "Insufficient Funds"
 
-#### Extra challenges
+#### Extra challenges (optional)
 
 - What happens if you give the deposit and withdraw methods arguments that are not numbers? Can you handle those cases?
 - What happens if you pass a negative number to the `deposit` method? Can your method detect that situation, and call `this.withdraw` instead? (Math.abs() might help you here.)
