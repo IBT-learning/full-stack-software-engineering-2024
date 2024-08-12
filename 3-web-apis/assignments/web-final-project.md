@@ -12,7 +12,7 @@ In this app, we will replace the text of the blog posts with lorem ipsum from th
 
 ### Requirements
 
-When I load the Home page, at least one API call should automatically happen to fetch data from one or more of these endpoints:
+When I load the Home page, at least one API call should automatically happen, which fetches data from one or more of these endpoints:
 
 - ` https://jsonplaceholder.typicode.com/posts` (this endpoint gets all 100 posts from the database)
 - `https://jsonplaceholder.typicode.com/posts/1` (change the number at the end to get a single blog post by its id)
@@ -36,3 +36,7 @@ The user data in this database doesn't have a bio or profile, or images, so you 
 - `https://jsonplaceholder.typicode.com/posts?userId=1` (for users 1-10)
 
 Can you replace the blog posts on the profile page with all of the posts that are actually associated with a single user?
+
+### Refresher
+
+The posts from JSONPlaceholder may be much shorter than the lorem ipsum that you used when you made your blog prototype. In terms of the visual style, how does it look with short posts? If you choose to update the CSS, make sure you like the way blog posts look when they are short _and_ when they are long!
