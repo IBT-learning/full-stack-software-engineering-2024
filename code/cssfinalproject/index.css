@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 3vh;
+}
+.header > div:first-child {
+    font-size: 4vh;
+  }
+
+
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    font-size: 20px;
+}
+
+img{
+    height: 50vh;
+}
+
