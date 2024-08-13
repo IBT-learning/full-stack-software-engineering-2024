@@ -42,11 +42,12 @@ const game2 = () => {
 
   let attempts = 0;
   let userResponse;
-  let min = 1;
-  let max = 100;
+  let min = 1
+  let max = 100
 
   while (true) {
-    let guessedNumber = Math.floor(Math.random() * 100);
+    let guessedNumber = Math.floor(Math.random() * (max + min)/2);
+    // let guessedNumber = Math.floor((max - min)/2);
     // TODO: 
     // instead of guessing a random number
     // choose one that's halfways in between min and max
@@ -58,8 +59,10 @@ const game2 = () => {
     attempts++;
     if (userResponse == "H") {
       // TODO: change the min
+      min = 50
     } else if (userResponse == "L") {
       // TODO: change the max
+      max = 50
     } else if (userResponse == "C") {
       alert(`I did it after ${attempts} attempts, Game Over!`);
       break;
