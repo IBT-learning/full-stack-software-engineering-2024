@@ -33,7 +33,7 @@ const isFunny1 = true
 const isRomantic1 = true      
 const isScary1 = true
 
-// the else statements start being executed from the innermost if clause ie. it check if the the if clause is true or false as it moves to the outer if clause till it gets to th first if clause, so check for that when writing the else conditions 
+// the else statements start being executed from the innermost if clause ie. it checks if the the if clause is true or false as it moves to the outer if clause till it gets to the first if clause, so check for that when writing the else conditions 
 
 if (isFunny1) {
         if (isRomantic1) {
