@@ -10,35 +10,40 @@ const toDoList = async () => {
   const element = document.getElementById("to-do-list");
 
   data.forEach((item) => {
+    let wrapper = document.createElement("div");
     let listItem = document.createElement("li");
     let toggle = document.createElement("button");
+    let emoji = document.createElement("span");
 
     // set the text as the todo text
     listItem.innerText = item.title;
 
-    updateList(listItem, toggle, item.completed);
+    updateList(listItem, toggle, emoji, item.completed);
 
     // single button that toggles
     toggle.addEventListener("click", () => {
       item.completed = !item.completed;
-      updateList(listItem, toggle, item.completed);
+      updateList(listItem, toggle, emoji, item.completed);
     });
 
+    wrapper.appendChild(listItem);
+    wrapper.appendChild(emoji);
+    wrapper.appendChild(toggle);
+
     // append it to the <ul> on the page
-    element.appendChild(listItem);
-    element.appendChild(toggle);
+    element.appendChild(wrapper);
   });
 };
 
-const updateList = (listItem, toggle, completed) => {
+const updateList = (listItem, toggle, emoji, completed) => {
   if (completed) {
     listItem.style.color = "green";
     toggle.innerText = "Unresolved";
-    toggle.style.backgroundColor = "grey";
+    emoji.innerText = "✔🟢";
   } else {
     listItem.style.color = "red";
     toggle.innerText = "Resolved";
-    toggle.style.backgroundColor = "grey";
+    emoji.innerText = "❌🔴";
   }
 };
 
