@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <script src="profile.js" defer></script>
     <script
       src="https://kit.fontawesome.com/2f8dbc5d0f.js"
       crossorigin="anonymous"
@@ -34,7 +35,7 @@
           <div class="card profile">
             <img src="./images/will-profile-bg.jpg" alt="" />
             <img class="thumb-nail" src="./images/will-profile.jpg" alt="" />
-            <h1>Will Johnson</h1>
+            <h1 id="name"></h1>
             <p>
               I am a trail runner and travel enthusiast who loves exploring new
               terrains and cultures. From the forests of the Pacific Northwest
@@ -43,7 +44,8 @@
               trials to my trails!
             </p>
             <div class="user-details">
-              <p>Madrid, Spain</p>
+              <p id="city"></p>
+              <p id="user-name"></p>
               <p>304 Followers</p>
             </div>
             <div class="profile-buttons">
@@ -62,21 +64,21 @@
                 <i class="fa-solid fa-user-pen icon"></i>
                 <i class="fa-solid fa-trash icon"></i>
               </div>
-              <h3>Run with Friends</h3>
-              <p class="content">
-                Running solo can definitely have its moments of zen, but there’s
+              <!-- <h3>Run with Friends</h3> -->
+              <div id="post-container">
+                <!-- Running solo can definitely have its moments of zen, but there’s
                 nothing quite like having a buddy by your side when the going
                 gets tough. Having that support system makes such a difference.
                 When it’s just you, it’s easy to start making excuses and
                 wanting to bail. But when you know someone’s counting on you to
                 show up, it’s a whole other story. Plus, a little healthy
                 competition never hurt anyone – having someone to push you to go
-                that extra mile or pick up the pace can really work wonders.
-              </p>
+                that extra mile or pick up the pace can really work wonders. -->
+              </div>
               <hr />
               <div class="author">
                 <p>4 mins ago</p>
-                <p>by Will Johnson</p>
+                <p id="name">by Will Johnson</p>
               </div>
             </div>
           </div>
@@ -88,9 +90,9 @@
                 <i class="fa-solid fa-user-pen icon"></i>
                 <i class="fa-solid fa-trash icon"></i>
               </div>
-              <h3>The 50k - a long marathon, or a short ultra?</h3>
-              <p class="content">
-                As I swallow a handful of ibuprofen and exchange stories with
+              <!-- <h3>The 50k - a long marathon, or a short ultra?</h3> -->
+              <div id="post-container">
+                <!-- As I swallow a handful of ibuprofen and exchange stories with
                 the other racers (Troy congratulated nearly every racer who
                 finished), I've concluded a few things. First, the ultra is a
                 very different animal than the marathon and under races. One
@@ -102,12 +104,12 @@
                 consistent race end-to-end, and were fully aware of their
                 capabilities along the way. I've got some practicing to do, but
                 I have no doubt I will be trying another 50k....or maybe a 50
-                miler....let the addiction begin...
-              </p>
+                miler....let the addiction begin... -->
+              </div>
               <hr />
               <div class="author">
                 <p>June 5, 2024</p>
-                <p>by Will Johnson</p>
+                <p id="name">by Will Johnson</p>
               </div>
             </div>
           </div>
