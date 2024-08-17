@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+#dark-btn {
+    padding: 0.5rem;
+    background-color: black;
+    color:  white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+#light-btn {
+    padding: 0.5rem;
+    background-color: black;
+    color:  white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+#dark-btn:hover{
+cursor: pointer;
+}
+
+#light-btn:hover{
+    cursor: pointer;
+    }
+
+#banner{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* .dark-mode{
+    background-color:darkgrey ;
+    color: white;
+} */
+
+#switch-btn {
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: black;
+    color:  white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+#switch-btn:hover{
+    cursor: pointer;
+    }
+
+.light-mode {
+    background-color: lightgray;
+    color: black;
+}
+
+.dark-mode {
+    background-color: darkgray;
+    color: white;
+}
