@@ -1,0 +1,16 @@
+#box {
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid black;
+}
+
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.transparent{
+    opacity: 50%;
+}
+
