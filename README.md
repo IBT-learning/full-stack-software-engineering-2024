@@ -12,13 +12,19 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
+### Server
+
+| Week | Topic              | Link                                                                  |
+| ---- | ------------------ | --------------------------------------------------------------------- |
+| 17   | Using npm packages | [Server Assignment #1](./4-server/assignments/server-assignment-1.md) |
+
 ### Web APIs
 
 | Week | Topic                                 | Link                                                                    |
 | ---- | ------------------------------------- | ----------------------------------------------------------------------- |
 | 13   | DOM, Query Selectors, Event Listeners | [Web API Assignment #1](./3-web-apis/assignments/web-assignment-1.md)   |
-| 15   | Fetching API Data                     | [Web API Assignment #2](./3-web-apis/assignments/web-assignment-2.md)   |
-| 15   | Web APIs Final Project                | [Web APIs Final Project](./3-web-apis/assignments/web-final-project.md) |
+| 16   | Fetching API Data                     | [Web API Assignment #2](./3-web-apis/assignments/web-assignment-2.md)   |
+| 16   | Web APIs Final Project                | [Web APIs Final Project](./3-web-apis/assignments/web-final-project.md) |
 
 ### JavaScript
 

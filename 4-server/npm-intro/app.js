@@ -3,7 +3,7 @@
 // but the string passed to require() DOES have to match
 
 // const cowsay = require("cowsay") // CommonJS style import
-import cowsay from "cowsay" // ES Module
+import cowsay from "cowsay" // ES Module style import
 
 // every package will look different, and have different attributes
 // here we can see that cowsay is just an object with 3 methods
