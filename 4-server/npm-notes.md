@@ -4,6 +4,8 @@
 
 npm is a program that exists on your computer, it came with node. "npm" can also refer to "the npm registry", which is like the remote repository of all public npm packages. The npm organization is responsible for hosting and distributing public npm packages.
 
+We can install any npm package into _any npm project_. An npm project is just a directory on your file system, with a properly configured `package.json` in it.
+
 ### To make a new npm project:
 
 - create a new folder for your project
@@ -20,6 +22,8 @@ npm is a program that exists on your computer, it came with node. "npm" can also
 
 ## Important things to remember
 
-- everything is just files
-- there is nothing you can't fix with `rm -rf node_modules` and `npm i`
-- **YOUR WORKING DIRECTORY MATTERS!!** Wherever your terminal is when you run `npm init`, that's where the package.json gets made
+- Everything is just files
+- There is nothing you can't fix with `rm -rf node_modules` and `npm i`
+- **YOUR WORKING DIRECTORY MATTERS!!**
+  - Wherever your terminal is when you run `npm init`, that's where the package.json gets made
+  - When you run a script such as `npm start` it will look for the nearest ancestor package.json with a matching script defined. If you accidentally make nested npm projects, it can get confusing!
