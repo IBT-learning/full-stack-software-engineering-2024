@@ -1,7 +1,9 @@
 // in order to use the packages we install, we must first import them with require()
 // the variable name doesn't have to match the package
 // but the string passed to require() DOES have to match
-const cowsay = require("cowsay")
+
+// const cowsay = require("cowsay") // CommonJS style import
+import cowsay from "cowsay" // ES Module
 
 // every package will look different, and have different attributes
 // here we can see that cowsay is just an object with 3 methods
