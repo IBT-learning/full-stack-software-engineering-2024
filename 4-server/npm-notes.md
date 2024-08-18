@@ -15,6 +15,7 @@ We can install any npm package into _any npm project_. An npm project is just a 
   - the presence of a package.json file is what makes a folder an "npm project"
 - specify a bash script by adding it to "scripts" in the package.json
   - you will need at least a "start" script, and maybe a "dev" script
+- add `"type": "module",` to enable ES Modules
 - install dependencies / packages
   - install existing dependencies with `npm install` or `npm i`
   - install new dependencies with `npm install <package-name>`
