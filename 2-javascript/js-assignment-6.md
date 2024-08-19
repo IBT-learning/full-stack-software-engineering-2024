@@ -24,7 +24,7 @@ const restaurant = {
       "phone number": "345-456-5678",
     },
   },
-};
+}
 ```
 
 ## Challenge #1: Accessing Data
@@ -52,7 +52,7 @@ const restaurant = {
 const menu = {
   burger: 5.0,
   fries: 3.5,
-};
+}
 ```
 
 ## Challenge #4: Creating an object method
@@ -65,7 +65,7 @@ const menu = {
   - `console.log(menu.order(["burger", "fries"])) // 8.5`
   - `console.log(menu.order(["burger", "fries", "fries"])) // 12`
 
-#### Extra challenges
+#### Extra challenges (optional)
 
 - Use dot or bracket notation to add the menu to the restaurant object
   - Make an order using `restaurant.menu.order()`
