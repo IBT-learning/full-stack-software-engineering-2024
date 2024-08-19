@@ -14,23 +14,17 @@ const post = async () => {
   try {
     const reply = await fetch(api);
     const data = await reply.json();
-    console.log(data);
 
+    // For each post, populate with the API details
     postElements.forEach(async (element, id) => {
-      if (id < data.length && titleElements[id] && userNameElements[id]) {
-        const postData = data[id];
-        element.innerText = postData.body;
-        titleElements[id].innerText = postData.title;
-
-        // Fetch user data based on the post's userId
-        const userData = await fetchUser(postData.userId);
-
-        // Set the user name or username in the userNameElements
-        userNameElements[
-          id
-        ].innerText = `${userData.name} ${userData.username}`;
-      }
+      const postData = data[id];
+      element.innerText = postData.body;
+      titleElements[id].innerText = postData.title;
+      const userData = await fetchUser(postData.userId);
+      userNameElements[id].innerText = `${userData.name} ${userData.username}`;
     });
+
+    // Console log any errors
   } catch (error) {
     console.error(error);
   }

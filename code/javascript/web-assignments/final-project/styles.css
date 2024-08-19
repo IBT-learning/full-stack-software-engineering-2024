@@ -71,7 +71,6 @@ h2 {
 }
 
 img {
-  width: 100vw;
   border-radius: 0.5rem;
   margin: 0 auto;
   object-fit: cover;
@@ -273,13 +272,11 @@ footer a:hover {
     grid-column: 3 / 4;
     grid-row: 1;
     padding: 0rem;
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
   }
 
   .desktop-card {
-    margin-bottom: 2rem;
     display: flex;
   }
 
@@ -314,26 +311,32 @@ footer a:hover {
   }
 
   .content {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 2rem;
     font-size: large;
   }
 
-  .desktop-container {
+  .desktop-card {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   .desktop-img {
     max-width: 50%;
   }
 
+  .post-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
   .content-container {
-    max-width: 50%;
+    width: 100%;
     font-size: 1.2rem;
     padding: 1rem;
+    margin-top: 3rem;
   }
 
   .posts {
