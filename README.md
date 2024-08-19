@@ -14,9 +14,10 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ### Server
 
-| Week | Topic              | Link                                                                  |
-| ---- | ------------------ | --------------------------------------------------------------------- |
-| 17   | Using npm packages | [Server Assignment #1](./4-server/assignments/server-assignment-1.md) |
+| Week | Topic                   | Link                                                                  |
+| ---- | ----------------------- | --------------------------------------------------------------------- |
+| 17   | Using npm packages      | [Server Assignment #1](./4-server/assignments/server-assignment-1.md) |
+| 17   | My First Express Server | [Server Assignment #2](./4-server/assignments/server-assignment-2.md) |
 
 ### Web APIs
 
