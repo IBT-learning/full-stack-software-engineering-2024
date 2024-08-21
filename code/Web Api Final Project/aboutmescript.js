@@ -54,4 +54,4 @@ const createPostElement = (post, user) => {
     document.querySelector('.posts').appendChild(postContainer);  // Corrected the typo here
 }
 
-fetchData(4);
+fetchData(1);

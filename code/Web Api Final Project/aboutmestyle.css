@@ -1,39 +1,6 @@
 body {
   font-family: roboto;
 }
-
-button {
-  text-align: center;
-  padding: 20px;
-  border-radius: 30px;
-  background-color: #001524;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-button:active {
-  background-color: #DD0426;
-}
-
-.trending, .communities, .profile {
-  display: block;
-  margin: 20px auto;
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  line-height: 22px;
-  padding: 16px 24px;
-  border-radius: 30px;
-  transition: all 200ms ease;
-  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
-  cursor: pointer;
-  opacity: 75%;
-}
-
-.trending:hover, .communities:hover, .profile:hover {
-  background-color: #DD0426;
-}
-
 img {
   width: 40px;
   height: 40px;
@@ -47,12 +14,10 @@ img {
   border-bottom: 1px solid;
   border-color: #e6ecf0;
   font-size: 15px;
-  margin: 0 auto;
   border-radius: 3px;
   padding: 30px;
   display: flex;
-  flex-direction: column; /* Ensure posts stack vertically */
-  gap: 10px;
+  flex-direction: column; 
 }
 
 .user-header {
@@ -74,7 +39,7 @@ img {
 .user-header-info p {
   font-weight: normal;
   margin-left: 5px;
-  word-wrap: break-word; /* Prevent text overflow */
+  
 }
 
 .user-header-info-edit:hover {
@@ -95,8 +60,7 @@ img {
   border: 1px solid;
   border-color: #9197AE;
   border-radius: 20px;
-  display: block; /* Ensure posts display as blocks */
-  width: 100%; /* Adjust width to fill container */
+  display: block; 
   background-color: #EFF6EE;
 }
 
