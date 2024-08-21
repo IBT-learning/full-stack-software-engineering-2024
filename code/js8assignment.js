@@ -198,7 +198,7 @@ const reducedPrice_more10 = function (x) {
 }
 console.log(prices.map(reducedPrice_more10));
 
-// PART C TODO:how do i 
+// PART C TODO:how do i prevent the products not on sale from logging undefined
 const ad = function (x) {
     if (x.price > 10) {
         return `${x.product}s are on sale for only $${x.price}`
