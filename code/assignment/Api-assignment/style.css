@@ -1,14 +1,18 @@
-
+body{
+    height: auto;
+}
 .dark{
-    background-color: #505050;
+    background-color: #505050 ;
     color: white;
 }
 .light{
     background-color: #cccccc;
+    height: fit-content;
     color: black;
 }
 h1{
     text-align : center;
+    justify-content: center;
 }
 .btn{
     display: flex;
