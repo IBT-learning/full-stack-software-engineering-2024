@@ -42,6 +42,7 @@ class BankAccount {
       });
     }
   }
+
   
   // Create a new instance of the class for an imaginary person
   const person = new BankAccount("Ella Doe");
