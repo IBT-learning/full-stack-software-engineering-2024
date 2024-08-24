@@ -16,8 +16,8 @@ app.get("/about", (req, res) => {
 
 // url params
 app.get("/greet/:username", (req, res) => {
-    const yourname = req.params.username
-    res.send(`Hello ${yourname}! It's a pleasure to meet you...):`)
+    const yourName = req.params.username
+    res.send(`Hello ${yourName}! It's a pleasure to meet you...):`)
 })
 
 // query params
