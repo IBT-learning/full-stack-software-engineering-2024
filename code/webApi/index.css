@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  #mode-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  body.dark-mode {
+    background-color: lightgray;
+  }
+  
+  h1.dark-mode {
+    color: darkgray;
+  }
