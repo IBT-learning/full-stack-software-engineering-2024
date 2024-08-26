@@ -13,19 +13,13 @@ console.log(success('success'));
 console.log((chalk.red('Hello', 'World!')));
 console.log
 (chalk.green(
-	'green here ' +
-	chalk.black.underline.bold('with a black substring') +
-	' green here too'
+    'green here ' +
+    chalk.black.underline.bold('with a black substring') +
+    ' green here too'
 ));
 import {modifierNames, foregroundColorNames} from 'chalk';
 
-console.log(modifierNames.includes('strikethrough'));
-//=> true
+console.log(modifierNames.includes('strikethrough'));//=> true
 
-console.log(foregroundColorNames.includes('white'));
-//=> true
-console.log(foregroundColorNames.includes('purple'));
-//=> false
-
-
-
+console.log(foregroundColorNames.includes('white'));//=> true
+console.log(foregroundColorNames.includes('purple'));//=> false

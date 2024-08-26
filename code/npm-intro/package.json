@@ -10,8 +10,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "chalk": "^5.3.0"
-  }
+  },
+  "description": ""
 }
