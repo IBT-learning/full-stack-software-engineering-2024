@@ -19,13 +19,11 @@ console.log
 ));
 import {modifierNames, foregroundColorNames} from 'chalk';
 
-console.log(modifierNames.includes('strikethrough'));
-//=> true
+console.log(modifierNames.includes('strikethrough')); //=> true
 
-console.log(foregroundColorNames.includes('white'));
-//=> true
-console.log(foregroundColorNames.includes('purple'));
-//=> false
+console.log(foregroundColorNames.includes('white')); //=> true
+
+console.log(foregroundColorNames.includes('purple'));//=> false
 
 
 
