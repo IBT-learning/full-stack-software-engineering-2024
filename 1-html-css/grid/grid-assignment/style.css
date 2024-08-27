@@ -1,0 +1,18 @@
+#wrapper {
+    font-size: 2em;
+    gap: 1rem;
+    /* Add new properties here */
+}
+
+/* Add new selectors and new CSS here */
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}

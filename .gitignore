@@ -1,2 +1,10 @@
 notes/
-notes.md
+<<<<<<< .merge_file_pofHSe
+notes.*
+
+.vscode/
+
+node_modules/
+=======
+notes.*
+>>>>>>> .merge_file_WieM7Q
