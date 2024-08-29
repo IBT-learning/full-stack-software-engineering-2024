@@ -13,9 +13,9 @@ const BOOK_PATH = "./static/books.json"
   * Delete (DELETE)
 */
 
-// this middleware lets express interpret request bodies as JSON
+// this middleware allows express to interpret request bodies as JSON
 app.use(express.json())
-// this middleware pareses request payloads that are "url encoded"
+// this middleware parses request payloads that are "url encoded"
 // which includes form data
 app.use(express.urlencoded({ extended: true }))
 
