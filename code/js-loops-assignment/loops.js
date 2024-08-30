@@ -22,7 +22,7 @@ for (const word of wordList) {
     const capitalizeWord=word.slice(0,1).toUpperCase() + word.slice(1)
     console.log(capitalizeWord)
 
-    // appending the capitalize word to a 
+    // appending the capitalize word to an array
     newWordList.push(capitalizeWord)
 }
 console.log(newWordList)
