@@ -1,0 +1,17 @@
+body.dark-mode {
+  background-color: darkgray;
+}
+
+#banner.dark-mode {
+  color: lightgray;
+  
+}
+
+#controller {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  border: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
