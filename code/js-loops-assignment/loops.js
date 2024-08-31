@@ -26,3 +26,46 @@ for (const word of wordList) {
     newWordList.push(capitalizeWord)
 }
 console.log(newWordList)
+
+// Challenge #2
+
+//using the classic loop
+for (let i = 0; i <10; i++) {
+    
+    if (i%3==0) {
+        console.log(`${i}%3==0 - True`);
+        
+    } else {
+        console.log(`${i}%3==0 - False`);
+    }
+}
+
+
+// using the while loop
+let i
+i=0
+while (i<10) {
+    i++    
+    if (i%3==0) {
+        console.log(`${i}%3=0 - True`);
+    } else {
+        console.log(`${i}%3==0 - False`);
+    }
+}
+
+
+// Extra challenges
+FizzBuzz=[]
+for (let index = 1; index <= 40; index++) {
+    
+   if (index%3==0 && index%5==0) {
+    FizzBuzz.push('FizzBuzz')
+   } else if(index%5==0){
+    FizzBuzz.push('Buzz')
+   }else if (index%3==0){
+    FizzBuzz.push('Fizz')
+   }else{
+    FizzBuzz.push(index)
+   }
+}
+console.log(FizzBuzz)
