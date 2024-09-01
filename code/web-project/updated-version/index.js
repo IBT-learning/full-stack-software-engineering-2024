@@ -9,3 +9,4 @@ close.addEventListener('click', ()=> {
     sidebar.style.display = 'none'
     close.style.opacity = 0
 })
+

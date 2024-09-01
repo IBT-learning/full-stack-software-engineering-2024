@@ -108,7 +108,6 @@ nav ul > li:hover{
     grid-template-areas: 
     "main main aside"
     "section section section";
-    /* "footer footer footer"; */
     main{
         grid-area: main;
     }
@@ -118,9 +117,6 @@ nav ul > li:hover{
     section{
         grid-area: section;
     }
-    /* footer{
-        grid-area: footer
-    } */
 }
 #main-user-section{
     width: 100%;
@@ -238,7 +234,7 @@ hr{
 }
 .user-1{
     max-width: 100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2),
@@ -294,6 +290,7 @@ hr{
 }
 .post-content{
     width: 100%;
+    height: 250px;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
