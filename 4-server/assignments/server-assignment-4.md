@@ -1,4 +1,4 @@
-# Web API Assignment #2: Locally stored to-do list
+# Server Assignment #4: Locally stored to-do list
 
 For this assignment, you'll use your [Web APIs assignmnent #2](../../3-web-apis/assignments/web-assignment-2.md) to-do list as your starting place. We will create our own to-do list and fetch that data instead of using jsonplaceholder.
 
