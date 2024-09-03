@@ -1,28 +1,24 @@
 const toDoList = document.getElementById("to-do-list");
 const header = document.querySelector(".header");
 const selectUser = document.getElementById("select-user");
-const selectUserValue = selectUser.value;
-const user = `https://jsonplaceholder.typicode.com/todos?userId=${selectUserValue}`;
-console.log(user);
 
-const fetchTodos = async () => {
-  const res = await fetch(user);
+selectUser.addEventListener("change", () => {
+  const selectUserValue = selectUser.value;
+  const fetchTodos = async () => {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/todos?userId=${selectUserValue}`
+    );
 
-  const toDos = await res.json();
+    const toDos = await res.json();
 
-  selectUser.addEventListener("change", () => {
     toDoList.innerHTML = "";
-    // console.log(user);
 
     toDos.forEach((toDo) => {
       listToDos(toDo);
     });
-  });
-};
-
-// const selectUser = () => {
-//   const select
-// }
+  };
+  fetchTodos();
+});
 
 const addHeader = () => {
   const head = document.createElement("h1");
@@ -31,10 +27,6 @@ const addHeader = () => {
   header.appendChild(head);
 };
 addHeader();
-
-// const incompleteTask = (button, textContent) => {
-
-// };
 
 const addCompleteButton = (item, listContent, toDoMark) => {
   if (toDoMark.completed === true) {
@@ -45,7 +37,7 @@ const addCompleteButton = (item, listContent, toDoMark) => {
     listContent.style.textDecoration = "line-through";
 
     completeButton.addEventListener("click", () => {
-      toDoMark.completed === false;
+      // toDoMark.completed === false;
       completeButton.textContent = "Mark as Complete";
       completeButton.classList.toggle("incomplete-button");
       listContent.style.textDecoration = "none";
@@ -59,7 +51,7 @@ const addCompleteButton = (item, listContent, toDoMark) => {
     item.appendChild(completeButton);
 
     completeButton.addEventListener("click", () => {
-      toDoMark.completed === true;
+      // toDoMark.completed === true;
       completeButton.textContent = "Mark as Incomplete";
       completeButton.classList.toggle("button");
       listContent.style.textDecoration = "line-through";
@@ -68,9 +60,6 @@ const addCompleteButton = (item, listContent, toDoMark) => {
 };
 
 const listToDos = async (toDoItem) => {
-  const res = await fetch(user);
-
-  const toDos = await res.json();
   const list = document.createElement("li");
   toDoList.appendChild(list);
   list.classList.add("to-do-item");
@@ -84,5 +73,3 @@ const listToDos = async (toDoItem) => {
   //   listText.style.textDecoration = "line-through";
   // }
 };
-
-fetchTodos();
