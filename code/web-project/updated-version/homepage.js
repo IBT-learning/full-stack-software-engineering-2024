@@ -1,22 +1,23 @@
 const apiCall = 'https://jsonplaceholder.typicode.com/posts?userId=1'
 const apiCall2 = 'https://jsonplaceholder.typicode.com/users/1'
 
-let data = []
+// fetch data from api 
 const fetchData = async (url) => {
  try {
     const res = await fetch (url);
-    data = await res.json();
+     const data = await res.json();
     useData(data)
   }
   catch (error) {
     window.alert(`error: ${error}`)
   }
 }
-
+// Invoke the fetchData function 
 fetchData(apiCall)
 const cardContainer = document.getElementById('other-users-section')
 const MainCard = document.getElementById('main-user-section')
 
+// Populate the homepage html with title and body of post from the users
 let element = []
 const useData = (data) => {
     data.forEach(item => {
