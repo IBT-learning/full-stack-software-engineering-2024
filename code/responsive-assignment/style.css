@@ -93,7 +93,7 @@ header {
         flex-direction: column;
         flex-basis: 24%;
         flex-grow: 1;
-        flex-wrap: wrap;
+       flex-wrap: wrap;
         justify-content: space-evenly;
        
     }
@@ -126,7 +126,7 @@ header {
     #profile > span {
         margin-right: 1em;
         margin-bottom: 5%;
-    }
+    }  
 
     #profile > img {
         margin-bottom: 1.5em;
