@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background: #101114;
+    --primary-color: #1c1d20;
+    --secondary-color: #4a4d57;
+    --accent-color: #00ffc4;
+    --text-color: #f9f9f9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+    color: var(--text-color)
+}
+
+body{
+    background: var(--background);
+    margin: 20px auto;
+    width: 60vw;
+    padding-left: 15px;
+    max-width: 60%;
+
+    position: relative;
+}
+
+#to-do-list{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    margin-bottom: 2em;
+}
+li:first-child{
+    margin-top: 2em;
+}
+li{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+li::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: var(--accent-color);
+    top: 5px;
+    left: -20px;
+    border-radius: 500px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li:active {
+    background-color: var(--secondary-color);
+}
+li:hover {
+    background-color: var(--text-color);
+    color: var(--background);
+}
+
+.completed-todo{
+    text-decoration: line-through;
+    color: var(--secondary-color);
+}
+.undo-button{
+    padding: 2px 20px;
+    width: fit-content;
+    margin: 5px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    border: none;
+    color: var(--background);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: 100(ease-in-out);
+}
+.undo-button:active{
+    text-decoration: none;
+}
+label {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 1.3rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+select{
+    font-size: 1.2rem;
+    height: 100%;
+    padding: 10px;
+    background: var(--accent-color);
+    border: none;
+    color: var(--background);
+}
+select:focus {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
