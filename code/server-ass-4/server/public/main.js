@@ -1,55 +1,58 @@
-const apiUrl = 'https://jsonplaceholder.typicode.com/todos?'
+const apiUrl = 'http://localhost:4000/newtodo'
 
 const todoList = document.getElementById('to-do-list')
 const userId = document.getElementById('user-Id')
 
-// api call to get all users data
-// variable data is the return Promise
-let data = [];
+// The first api call to get all users todos from the server
+// return a promise object stored in the data variable
 const fetchData = async (url) => {
   try {
     const response = await fetch(url)
-    data = await response.json()
+    let data = await response.json()
     useData(data)
+    data = [];
   }  
   catch (error) {
     window.alert(`error loading page: ${error}`)
   }
 }
 
-// New api call to get user data by their Id
-// NewData variable is the return Promise
-// overwrites previous data when user select each user Id
+// New api call to get each user todos by their Id
+// return a promise object which is stored in the newData variable
 const fetchNewData = async (url, Id) => {
   try {
-    const res = await fetch (`${url}userId=${Id}`)
-    const newData = await  res.json()
-    data = newData
+    const res = await fetch (`${url}/search?userid=${Id}`)
+    let newData = await  res.json()
     useData(newData)
+    newData = [];
   } 
   catch (error) {
     window.alert(`error loading Page: ${error}`)
   }
 }
 
-// Event listener on select Element
-// when user select each userId, the Todo for each user is called
-// when user select all userId, the todo for all users is called
-userId.addEventListener('change', ()=> {
-    selectedUser = userId.value
-    eachUserTodo()
-    if(selectedUser == 11) {
-    allUserTodo()
-    }
-})
-
-// the Promise return value is used to iterate all users Todos
-// function useData uses the data from the two api call
+// the promise object return value is used to iterate all users Todos
+// function useData use the data from the two apis as a parameter
 function useData(userData) {
-    userData.forEach(todo => {
-    createElement(todo)
-  })
+  userData.map(todo => {
+  const userTodos =  createElement(todo)
+  return userTodos
+})
 }
+
+// add an Event listener on select Element that listen for change in userId value
+// when user select an option, the data for that user is fetched
+// when user select all users option, the todo for all users is fetched
+userId.addEventListener('change', ()=> {
+  const user = userId.value
+  console.log(user)
+  if(user < 6) {
+    fetchNewData(apiUrl, user)
+  } 
+  if (user == 6) {
+    fetchData(apiUrl)
+  }
+})
 
 // creates a list element to be dynamically displayed on the webpage
 function createElement(todo) {
@@ -84,6 +87,4 @@ function createElement(todo) {
     })
 }
 
-// call both api fetch function for all users and each userId
-const allUserTodo = () => {fetchData(apiUrl)}
-const eachUserTodo = () => {fetchNewData(apiUrl, selectedUser)}
+

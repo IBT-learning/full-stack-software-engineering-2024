@@ -32,9 +32,11 @@ body{
     font-size: 2rem;
     font-weight: 800;
     color: var(--accent-color);
-    
+    margin-bottom: 2em;
 }
-
+li:first-child{
+    margin-top: 2em;
+}
 li{
     font-size: 1rem;
     font-weight: 400;
@@ -44,7 +46,7 @@ li{
     padding-left: 15px;
     display: flex;
     justify-content: space-between;
-    column-gap: 20px;
+    column-gap: 30px;
 }
 
 li::before{
