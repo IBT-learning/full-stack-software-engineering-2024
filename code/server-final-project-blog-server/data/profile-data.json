@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Run with Friends",
+    "body": "Running solo can definitely have its moments of zen, but there’s nothing quite like having a buddy by your side when the going gets tough. Having that support system makes such a difference. When it’s just you, it’s easy to start making excuses and wanting to bail. But when you know someone’s counting on you to show up, it’s a whole other story. Plus, a little healthy competition never hurt anyone – having someone to push you to go that extra mile or pick up the pace can really work wonders.",
+    "date": "4 mins ago",
+    "image": "../static/images/will-johnson.jpg"
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "title": "The 50k - a long marathon, or a short ultra?",
+    "body": "As I swallow a handful of ibuprofen and exchange stories with the other racers (Troy congratulated nearly every racer who finished), I've concluded a few things. First, the ultra is a very different animal than the marathon and under races. One shouldn't think of it as a 'marathon plus', but instead give it the respect it deserves as a full-blown endurance event. Second, I still have a lot to learn about the pacing and mental game of the ultra. The 'fast walk' is a crucial skill as well, and one that should be practiced. Troy and many of the others ran a very consistent race end-to-end, and were fully aware of their capabilities along the way. I've got some practicing to do, but I have no doubt I will be trying another 50k....or maybe a 50 miler....let the addiction begin...",
+    "date": "June 5, 2024",
+    "image": "../static/images/will-post2.jpg"
+  }
+]
