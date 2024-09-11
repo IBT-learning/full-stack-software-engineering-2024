@@ -19,7 +19,7 @@ body {
   font-weight: 600;  
 }
 
-#post {
+.post {
   border: 0.1px solid #FDFFE2;
   border-radius: 10px;
   border-color: #5A72A0;
