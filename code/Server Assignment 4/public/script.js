@@ -13,14 +13,16 @@ const populateUserSelect = () => {
 //Fetch to do from api
 const fetchData = async (userId) => {
     try{
-        const response = await fetch(`https://jsonplaceholder.typicode.com/todos?userId=${userId}`);
+        const response = await fetch(`/todos.json`);
     
     
         const data = await response.json();
         const toDoList = document.getElementById("to-do-list");
         toDoList.innerHTML='';
     
-        data.forEach(todo =>{
+        const filteredTodos = data.filter(todo => todo.userId == userId);
+
+        filteredTodos.forEach(todo =>{
             createToDoElement(todo);
            
         });
