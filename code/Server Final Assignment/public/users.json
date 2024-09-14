@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "name":"Rea Maroga",
+        "username":"reapunzell",
+        "country":"South Africa",
+        "city":"Johannesburg",
+        "profilePicture":"images/rea-profilepic.jpg",
+        "blogPosts":[
+            {
+                "title": "Morning Routines",
+        "content": "Starting the day with a positive mindset can change everything. A cup of coffee and a good read work wonders."
+            },
+            {
+                 "title": "Travel Tips",
+        "content": "Always pack light! You’ll never regret having fewer things to worry about when moving between destinations."
+            },
+            {
+                "title": "Urban Gardens",
+                "content": "Creating a small garden in a busy city space has been the most refreshing experience of my life."
+              }
+        ]
+        
+    },
+    {
+        "id":2,
+        "name": "Carlos Gomez",
+        "username":"carlg",
+        "country": "Spain",
+        "city": "Barcelona",
+        "profilePicture":"images/CarlG-profilepic.jpg",
+        "blogPosts": [
+          {
+            "title": "Love for Tapas",
+            "content": "Barcelona's tapas scene is unmatched. My favorite spot offers the best patatas bravas in town."
+          },
+          {
+            "title": "Street Art",
+            "content": "The vibrant murals of El Raval tell stories of the city’s evolving art culture."
+          },
+          {
+            "title": "Sunset Spots",
+            "content": "Nothing beats watching the sun set over the Mediterranean from a quiet rooftop in Gràcia."
+          }
+        ]
+      },
+      {
+        "id":3,
+        "name": "Amina Bakir",
+        "username":"amybaks",
+        "country": "Kenya",
+        "city": "Nairobi",
+        "profilePicture":"images/Amina-profilepic.jpg",
+        "blogPosts": [
+          {
+            "title": "City Vibes",
+            "content": "Nairobi is buzzing with life, from the markets to the nightlife. There's always something new to explore."
+          },
+          {
+            "title": "Savanna Adventures",
+            "content": "A weekend safari to the Maasai Mara is a must for every nature lover visiting Kenya."
+          },
+          {
+            "title": "Coffee Culture",
+            "content": "Kenya’s coffee is world-renowned, and it’s easy to see why. My go-to spot serves the best local brews."
+          }
+        ]
+      }
+]
