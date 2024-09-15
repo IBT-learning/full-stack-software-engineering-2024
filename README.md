@@ -12,6 +12,42 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
+<<<<<<< HEAD
+=======
+### Server
+
+| Week | Topic                        | Link                                                                   |
+| ---- | ---------------------------- | ---------------------------------------------------------------------- |
+| 17   | Using npm packages           | [Server Assignment #1](./4-server/assignments/server-assignment-1.md)  |
+| 17   | My First Express Server      | [Server Assignment #2](./4-server/assignments/server-assignment-2.md)  |
+| 18   | Getting started with Postman | [Server Assignment #3](./4-server/assignments/server-assignment-3.md)  |
+| 19   | Locally stored to-do list    | [Server Assignment #4](./4-server/assignments/server-assignment-4.md)  |
+| 20   | Cookies                      | [Server Assignment #5](./4-server/assignments/server-assignment-5.md)  |
+| 20   | Server Final Project         | [Server Final Project](./4-server/assignments/server-final-project.md) |
+
+### Web APIs
+
+| Week | Topic                                 | Link                                                                    |
+| ---- | ------------------------------------- | ----------------------------------------------------------------------- |
+| 13   | DOM, Query Selectors, Event Listeners | [Web API Assignment #1](./3-web-apis/assignments/web-assignment-1.md)   |
+| 16   | Fetching API Data                     | [Web API Assignment #2](./3-web-apis/assignments/web-assignment-2.md)   |
+| 16   | Web APIs Final Project                | [Web APIs Final Project](./3-web-apis/assignments/web-final-project.md) |
+
+### JavaScript
+
+| Week | Topic               | Link                                                   |
+| ---- | ------------------- | ------------------------------------------------------ |
+| 7    | Strings and Numbers | [JS Assignment #1](./2-javascript/js-assignment-1.md)  |
+| 9    | Booleans            | [JS Assignment #2](./2-javascript/js-assignment-2.md)  |
+| 9    | Conditionals        | [JS Assignment #3](./2-javascript/js-assignment-3.md)  |
+| 9    | Loops               | [JS Assignment #4](./2-javascript/js-assignment-4.md)  |
+| 10   | Functions           | [JS Assignment #5](./2-javascript/js-assignment-5.md)  |
+| 11   | Objects             | [JS Assignment #6](./2-javascript/js-assignment-6.md)  |
+| 11   | Classes             | [JS Assignment #7](./2-javascript/js-assignment-7.md)  |
+| 12   | Callbacks           | [JS Assignment #8](./2-javascript/js-assignment-8.md)  |
+| 12   | JS Final Project    | [JS Final Project](./2-javascript/js-final-project.md) |
+
+>>>>>>> 8f8e60016886992755c740bfa18e83953eafaa70
 ### HTML & CSS
 
 | Week | Topic            | Link                                                                                                        |
@@ -23,6 +59,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 5    | 🎨 CSS           | [CSS Assignment #3 (Responsive Design)](1-html-css/media-queries/responsive-assignment/css-assignment-3.md) |
 | 6    | 🌐 HTML & 🎨 CSS | [HTML & CSS Final Project](1-html-css/blog-project.md)                                                      |
 
+<<<<<<< HEAD
 ### JavaScript
 
 | Week | Topic               | Link                                                  |
@@ -32,6 +69,8 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 9    | Conditionals        | [JS Assignment #3](./2-javascript/js-assignment-3.md) |
 | 9    | Loops               | [JS Assignment #4](./2-javascript/js-assignment-4.md) |
 
+=======
+>>>>>>> 8f8e60016886992755c740bfa18e83953eafaa70
 ## Tools
 
 Git is a distributed version control system that tracks versions of files. It is often used to control source code by programmers collaboratively developing software.for more information, click [here](git-resources/gitcheatsheet.md)
