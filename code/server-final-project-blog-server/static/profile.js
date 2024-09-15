@@ -1,5 +1,5 @@
-const userIdApi = "https://jsonplaceholder.typicode.com/posts?userId=7";
-const userAPI = "https://jsonplaceholder.typicode.com/users/7";
+const userIdApi = "http://localhost:4000/post-data";
+const userAPI = "http://localhost:4000/user-data";
 
 // Select HTML element (container)
 const userPost = document.querySelectorAll("#post-container");

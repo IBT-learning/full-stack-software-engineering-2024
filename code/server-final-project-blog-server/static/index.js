@@ -1,32 +1,34 @@
-const api = "https://jsonplaceholder.typicode.com/posts";
+const api = "http://localhost:4000/post-data";
 
 let postElements = document.querySelectorAll(".post-content");
 let titleElements = document.querySelectorAll("#post-title");
 let userNameElements = document.querySelectorAll("#user-name");
 
-const fetchUser = async (userId) => {
-  const userApi = `https://jsonplaceholder.typicode.com/users/${userId}`;
-  const reply = await fetch(userApi);
-  return await reply.json();
-};
-
 const post = async () => {
   try {
     const reply = await fetch(api);
+    if (!reply.ok) {
+      throw new Error("Failed to fetch posts data");
+    }
+
     const data = await reply.json();
+    console.log("Fetched posts data:", data);
 
-    // For each post, populate with the API details
-    postElements.forEach(async (element, id) => {
-      const postData = data[id];
-      element.innerText = postData.body;
-      titleElements[id].innerText = postData.title;
-      const userData = await fetchUser(postData.userId);
-      userNameElements[id].innerText = `${userData.name} ${userData.username}`;
+    data.forEach((postData, index) => {
+      if (index >= postElements.length) return;
+
+      postElements[index].innerText = postData.body;
+      titleElements[index].innerText = postData.title;
+
+      const user = postData.user;
+      if (user) {
+        userNameElements[index].innerText = `${user.name}`;
+      } else {
+        userNameElements[index].innerText = "User data missing";
+      }
     });
-
-    // Console log any errors
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching posts data:", error);
   }
 };
 
