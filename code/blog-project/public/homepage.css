@@ -87,7 +87,8 @@ nav ul {
   font-weight: 600;
   text-decoration: none;
 }
-nav ul li .endpoint-1 {
+nav ul li .endpoint-1,
+.endpoint-2 {
   text-decoration: none;
   color: inherit;
 }
@@ -151,7 +152,7 @@ nav ul > li:hover {
   width: 100%;
   height: 100%;
   display: flex;
-  gap: 0.5rem;
+  gap: 1.5rem;
   margin-top: 3em;
 }
 .title {
@@ -172,7 +173,7 @@ nav ul > li:hover {
 }
 .read-more-btn {
   padding: 20px;
-  width: 15em;
+  width: 25em;
   height: 3.5em;
   color: var(--text-color);
   background-color: var(--accent-color);
@@ -188,27 +189,22 @@ nav ul > li:hover {
 }
 #other-content {
   width: 100%;
-  min-height: fit-content;
-  max-height: 100%;
+  height: 100%;
+  max-height: 700px;
+  overflow-y: scroll;
   background-color: var(--secondary-bg-color);
-  color: var(--secondary-color);
+  color: var(--accent-color);
   display: flex;
-  flex-direction: column;
-  padding: 0 5em;
-  text-align: start;
-  border-radius: 10px;
-}
-.top {
-  margin: 0.2em 0;
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 0.8mm;
-  line-height: 2cm;
-  color: var(--accent-color);
+  flex-direction: column;
+  padding: 0.3em 1em;
+  border-radius: 10px;
 }
 .side-title {
   font-size: 1.8rem;
   font-weight: 600;
+  color: var(--secondary-color);
   letter-spacing: 0.5mm;
   line-height: 1.5cm;
   margin-top: 1em;
@@ -229,7 +225,7 @@ hr {
 }
 #other-users-section {
   width: 100%;
-  min-height: fit-content;
+  max-height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   align-items: flex-start;
@@ -238,7 +234,8 @@ hr {
 }
 .user-1 {
   max-width: 100%;
-  height: 100%;
+  height: 600px;
+  max-height: 600px;
   display: flex;
   flex-direction: column;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(0, 0, 0, 0.1);
@@ -248,7 +245,7 @@ hr {
 .image-1-container {
   width: 100%;
   max-width: 100%;
-  max-height: 50%;
+  max-height: 60%;
   padding: 1em;
 }
 .image-1-container img {
@@ -257,43 +254,47 @@ hr {
   background-size: cover;
   background-position: center;
   object-fit: fit;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4/4;
   border-radius: 10px;
 }
 .profile-1 {
   display: flex;
+  height: 85%;
   flex-direction: column-reverse;
   justify-content: flex-end;
 }
 .profile-header {
   display: flex;
+  height: 15%;
   justify-content: flex-start;
   align-items: center;
   gap: 1em;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: var(--secondary-text-color);
   padding: 0 1em;
 }
 .profile-header img {
   border-radius: 30%;
-  height: 50%;
+  height: 70%;
   background-size: cover;
+  background-position: center;
   object-fit: fit;
+  aspect-ratio: 1/2;
 }
 .profile-name {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--text-color);
   letter-spacing: 0.6mm;
 }
 .username {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.5mm;
 }
 .post-content {
   width: 100%;
-  height: 250px;
+  height: 150px;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -301,12 +302,12 @@ hr {
 }
 .user-1-post-title {
   width: 100%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 0.5mm;
 }
 .user-1-post-body {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-top: 0.3em;
   line-clamp: 3;
   display: -webkit-box;

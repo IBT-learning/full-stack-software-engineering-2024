@@ -1,26 +1,59 @@
-const apiCall = "http://localhost:4000/main/userposts";
-// const apiCall2 = "https://jsonplaceholder.typicode.com/users/1";
+const api1 = "http://localhost:4000/main/userposts";
+const api2 = "http://localhost:4000/main/userposts/new";
 
+const cardContainer = document.getElementById("other-users-section");
+const MainCard = document.getElementById("main-user-section");
 const userPostsUrl = document.querySelector(".endpoint-1");
+const newPostUrl = document.querySelector(".endpoint-2");
+const top_El = document.getElementById("other-content");
 
+// event handler fire the endpoint to fetch data from the server
 userPostsUrl.addEventListener("click", () => {
   console.log("clicked");
-  fetchData(apiCall);
+  fetchData(api1);
 });
 
-// fetch data from api
+// event handler fires to the endpoint to fetch data from the server
+newPostUrl.addEventListener("click", () => {
+  console.log("clicked");
+  fetchData2(api2);
+});
+
+// fetch data from api1
 const fetchData = async (url) => {
   try {
     const res = await fetch(url);
     const data = await res.json();
     useData(data);
   } catch (error) {
-    window.alert(`error: ${error}`);
+    console.error(`${error}:data not found`);
+  }
+};
+// fectch data from api2
+const fetchData2 = async (url) => {
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    useData2(data);
+  } catch (error) {
+    console.error(`${error}:data not found`);
   }
 };
 
-const cardContainer = document.getElementById("other-users-section");
-const MainCard = document.getElementById("main-user-section");
+// dynamically populate popular posts html with api data
+let popularPosts = [];
+const useData2 = (data) => {
+  data.map((item) => {
+    popularPosts += `
+        <div class="side-title">${item.title} </div>
+        <div class="side-body">
+          ${item.body}
+        </div>
+        <hr />
+      `;
+    top_El.innerHTML = popularPosts;
+  });
+};
 
 // Populate the homepage html with title and body of post from the users
 let element = [];
@@ -51,7 +84,7 @@ const useData = (data) => {
     `;
     cardContainer.innerHTML = element;
   });
-
+  // dynamically populate main users content using the data from the server
   data.forEach((item) => {
     element = `  
           <div class="image-container">
