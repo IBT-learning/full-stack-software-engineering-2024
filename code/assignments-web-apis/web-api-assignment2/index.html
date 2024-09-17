@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <title>Web API Assignment 2</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #c5ba8d90;
+        font-family: Open Sans, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      #div1 {
+        display: flex;
+        justify-content: center;
+      }
+
+      #div2 {
+        background-color: #f7f7f798;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .complete {
+        text-decoration: line-through;
+        color: #5096f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <form>
+        <label for="user-id">Choose a user:</label>
+        <select name="user-id" id="user-id">
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=1">
+            User 1
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=2">
+            User 2
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=3">
+            User 3
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=4">
+            User 4
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=5">
+            User 5
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=6">
+            User 6
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=7">
+            User 7
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=8">
+            User 8
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=9">
+            User 9
+          </option>
+          <option value="https://jsonplaceholder.typicode.com/todos?userId=10">
+            User 10
+          </option>
+        </select>
+      </form>
+    </div>
+    <div id="div2">
+      <ul id="to-do-list"></ul>
+    </div>
+  </body>
+</html>
