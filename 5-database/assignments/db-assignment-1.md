@@ -1,4 +1,4 @@
-# Server Assignment #1: mongodb practice
+# Database Assignment #1: mongodb practice
 
 We're going to set up a very simple server, connect to the database, and add some data. I didn't show this in the lesson, but the driver methods that get the database and collection are actually "get or create" methods. That means that if you try to get a database or collection that doesn't exist, mongodb will actually create them for you. In this exercise we'll create a new database and collection through the mongodb driver.
 
