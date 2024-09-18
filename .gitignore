@@ -1,2 +1,10 @@
 notes/
+<<<<<<< HEAD
 notes.*
+=======
+notes.*
+
+.vscode/
+
+node_modules/
+>>>>>>> a6cb92e3e5106711e0b966269f2aebae8cbc1aee
