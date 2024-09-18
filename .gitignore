@@ -1,10 +1,20 @@
 notes/
+<<<<<<< HEAD
 <<<<<<< .merge_file_pofHSe
+=======
+<<<<<<< HEAD
+notes.*
+=======
+>>>>>>> main
 notes.*
 
 .vscode/
 
 node_modules/
+<<<<<<< HEAD
 =======
 notes.*
 >>>>>>> .merge_file_WieM7Q
+=======
+>>>>>>> a6cb92e3e5106711e0b966269f2aebae8cbc1aee
+>>>>>>> main

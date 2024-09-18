@@ -10,7 +10,7 @@ In the web client, you can try making requests to remote APIs! Click the "new" b
 
 1. Make a GET request to `https://jsonplaceholder.typicode.com/users`. You should get a JSON response with many "user" objects
 1. Make a GET request to `https://jsonplaceholder.typicode.com/users/5`. You should get a JSON response with a single "user" object (specifically for Chelsey Dietrich)
-1. IMke a POST request to `https://jsonplaceholder.typicode.com/users`. You should get a response like this: `{ id: 11 }`
+1. Make a POST request to `https://jsonplaceholder.typicode.com/users`. You should get a response like this: `{ id: 11 }`
 
 ### Step 2: Start using a client
 
