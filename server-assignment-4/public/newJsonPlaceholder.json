@@ -1,0 +1,63 @@
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "I wake up very early in the morning",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "I start my day by praying",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "I pray and take my bath",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 4,
+        "title": "I medtate for 30minutes",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 5,
+        "title": "I prepare my breakfast",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 6,
+        "title": "I go through my list of activities for the day",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 7,
+        "title": "I take my sister to school",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 8,
+        "title": "I pass by Java and grab coffee",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 9,
+        "title": "I pass by a fast food store and pick my packed lunch",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 10,
+        "title": "I get to the office for some mind engaging work",
+        "completed": true
+    }
+   
+]
