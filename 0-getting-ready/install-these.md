@@ -7,7 +7,7 @@ If you work on multiple computers, it will be possible to complete your coursewo
 ##### NOTE: Only complete the sections that are applicable to your operating system!
 
 -   [Online user accounts (both Windows and Mac)](#online-user-accounts)
--   [Windows instructions](#wind ows)
+-   [Windows instructions](#windows)
 -   [Apple/Mac instructions](#apple-macos)
 -   [GitHub SSH setup (both Windows and Mac)](#github-ssh-setup)
 
