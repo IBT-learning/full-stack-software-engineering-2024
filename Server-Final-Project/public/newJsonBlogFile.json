@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "First Blog Post",
+      "body": "Meditation is a practice in which an individual uses a technique such as mindfulness."
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "Second Blog Post",
+      "body": " No matter how we choose to be active, every effort to move counts toward achieving recommended physical activity goals ."
+    },
+    {
+        "id": 3,
+        "userId": 3,
+        "title": "Second Blog Post",
+        "body": "We wake up with a ton of stuff floating around in our minds.We need to channel that energy and get it out. ."
+      }
+  
+  ]
+
+
+  
