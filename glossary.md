@@ -63,7 +63,16 @@ For example, in this program you will learn to make a web application using the 
 - commit message (always start your commit messages with a present tense verb!)
 - a branch (which can change over time)
 - a commit hash (long and short versions)
+- contents / a diff (the difference from the previous commit)
 
 **pull request:** This is confusingly named, it's not related to pulling. It's more like a "merge request." A pull request, or PR, is a process of marking a branch as ready to merge into another branch so teammates can approve it first. PRs are where code review happens.
 
 **code review:** When collaborators read, inspect, test, and review each others' code, this is called code review. Code review is the place for collaborators to ask questions to help understand each others' contributions, to point out errors in design or execution, or to suggest improvements that can be made.
+
+## Languages
+
+**markup language:** A markup language specifies the structure and formatting of a document. Markup can determine the visual display of a document, or add structure that facilitates automated processing. HTML and Markdown are examples of markup languages that are primarily for display, XML and YAML are examples of markup languages that are primarily for transferring and interpreting data.
+
+**style sheet:** A style sheet specifies a document's visual elements, such as layout, fonts and font sizes, colors, etc. The style sheet takes the content and structure from the markup document, and applies visual styling.
+
+**hypertext:** Hypertext refers to text displayed on a digital screen which has, embedded within the text, the ability to navigate between different documents or between areas of a document. In a browser this simply means links on a web page.

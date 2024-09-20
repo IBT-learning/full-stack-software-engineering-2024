@@ -1,0 +1,63 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 10rem 1fr 10rem;
+    grid-template-rows: 8vh 40vh 1fr 10vh min-content;
+    grid-template-areas:
+        "header header header"
+        "sidebar-left main sidebar-right"
+        "sidebar-left main . "
+        "sidebar-left main note"
+        "footer footer footer";
+}
+
+.box {
+    font-size: 3em;
+    padding: 0.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#one {
+    grid-area: header;
+    background-color: red;
+}
+
+#two {
+    grid-area: sidebar-left;
+    background-color: blue;
+}
+
+#three {
+    grid-area: sidebar-right;
+    background-color: green;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#four {
+    height: 50vh;
+    background-color: yellow;
+}
+
+#five {
+    height: 30vh;
+    background-color: purple;
+}
+
+#six {
+    grid-area: note;
+    background-color: orange;
+}
+
+#seven {
+    grid-area: footer;
+    background-color: hotpink;
+}
