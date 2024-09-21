@@ -1,2 +1,9 @@
 notes/
 notes.md
+
+notes/
+notes.*
+
+.vscode/
+
+node_modules/
