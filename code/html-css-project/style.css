@@ -1,0 +1,152 @@
+#container {
+    display: grid;
+    background-color: #F7DAD9;
+    color: #443730;
+    /* font-size: 1.2em; */
+    /* padding: 0; */
+    
+    
+
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "main"
+    "main"
+    "main"
+    ;
+}
+
+h1{
+    color: #A5907E;
+    font-weight: bolder;
+}
+
+#header {
+    text-align: center;
+}
+
+#main{
+    grid-area: main;
+}
+
+.nav-link{
+    padding: 0;
+}
+
+.link {
+    display: inline;
+    margin-right: 15px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #550C18;
+}
+
+a:hover {
+    color: #786452;
+}
+
+/* profile page */
+#container2 {
+    display: grid;
+    background-color: #F7DAD9;
+    color: #443730;
+
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "profile"
+    ;
+}
+
+#header2 {
+    grid-area: header;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#profile {
+    grid-area: profile;
+}
+
+.noto-serif-georgian {
+    font-family: "Noto Serif Georgian", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+@media screen and (min-width: 350px) {
+    #container {
+        font-size: 1.2em;
+    }  
+    
+    #main {
+        padding: 12px;
+    }
+
+    #profile {
+        font-size: 1.2em;
+        padding: 12px;
+    }
+
+    img {
+        width: 200x;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #main {
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    #profile {
+        padding: 14px;
+    }
+
+    #header2 {
+        font-size: 2.2em;
+    }
+
+    img {
+        width: 200x;
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #container {
+        font-size: 1.4em;
+    } 
+
+    #main {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #profile {
+        font-size: 1.4em;
+        padding: 16px;
+    }
+
+    #header2 {
+        font-size: 2.5em;
+    }
+
+    img {
+        width: 200x;
+        height: 150px;
+    }
+}
