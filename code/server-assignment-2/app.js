@@ -31,11 +31,12 @@ app.get("/greet/:userName", (req, res) => {
 
 app.get("/favourite", (req, res) => {
   // res.send(req.query);
+  let responseText = ""
 
   for (const key in req.query) {
-    // res.send(`My favourite ${key} is ${req.query[key]}`);
-    console.log(`My favourite ${key} is ${req.query[key]}`);
+    responseText += `My favourite ${key} is ${req.query[key]}<br>`;
   }
+  res.send(responseText);
 });
 
 app.listen(4000, () => {
