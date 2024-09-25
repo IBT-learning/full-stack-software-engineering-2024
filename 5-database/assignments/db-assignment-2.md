@@ -7,7 +7,7 @@ For this assignment, you'll set up a simple CRUD app with five endpoints for our
 You'll want to start with some starter data, so before you begin...
 
 1. pull the most recent `main` into your personal branch. You can find instructions for that on [server assignment #1](../../4-server/assignments/server-assignment-1.md)
-1. open Compass, and use the `➕` symbol to "add database". You can name your database and the collection both "recipes"
+1. open Compass, and use the `+` symbol to "add database". You can name your database and the collection both "recipes"
 1. click the green "Add Data" button, and select "Import JSON or CSV file"
 1. Navigate to the `recipes.json` file that is in this repository, and upload it
 1. You should now see several documents with recipes!
@@ -40,11 +40,11 @@ Import the Recipe schema into your controller, and set up a "get all" endpoint w
 
 ### Create your CRUD endpoints
 
-Set up five endpoints:
+Set up and implement five endpoints:
 
 - Get all (return all documents)
-- Get one by ID
-- Create a new document
+- Get one by ID (return a single document)
+- Create a new document (add a new document to the database)
 - Update an existing document by ID
 - Delete an existing document by ID
 
