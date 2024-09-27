@@ -57,8 +57,6 @@ katie.compete(2020, "silver");
 katie.compete(2020, "silver");
 katie.compete(2020);
 
-console.log(katie);
-console.log(katie.describe());
 
 console.log(faith);
 console.log(faith.describe());
