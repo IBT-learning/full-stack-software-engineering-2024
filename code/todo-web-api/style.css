@@ -1,0 +1,30 @@
+.completed {
+    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
+}
+
+.not-completed {
+    text-decoration: none;
+    color: green;
+    padding: 0.5em;
+    border-style: dashed;
+    padding: 0.5em;
+    border-color: black;
+    font-weight: bolder;
+}
+#to-do-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    border-style: double; 
+    background-color: #ccc;
+    margin-left: 10em;
+}
+
+img {
+    max-width: 10%;
+}
