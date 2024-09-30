@@ -1,16 +1,24 @@
-const darkButton = document.getElementById("dark-btn")
-const lightButton = document.getElementById("light-btn")
-const banner = document.getElementById("banner")
-const body = document.querySelector("body")
+import express, { urlencoded } from "express"
 
 
-    darkButton.addEventListener("click", () => {
-        banner.innerText = "Dark Mode"
-        body.classList.toggle("dark")
+const app = express()
+
+const PORT = 4000
+
+app.use(express.static("public"))
+app.use(express.urlencoded({extended: true}))
+
+app.get("/send", (req, res) => {
+    res.send("sent!")
+})
+
+app.get("/mode", (req, res) => {
+    res.cookie("color", req.query.banner, {
+        maxAge: 10000,
     })
-    
-    lightButton.addEventListener ("click", () => {
-        banner.innerText = "Light Mode"
-        body.classList.toggle("light")
-    })
+    res.redirect("/")
+})
 
+app.listen(4000, () => {
+    console.log(`listening on port ${PORT}`)
+})
