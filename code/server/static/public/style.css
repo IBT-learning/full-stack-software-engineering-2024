@@ -1,0 +1,39 @@
+body{
+    margin: 3% 10% 0% 5%;
+    background-color: rgb(236, 227, 227);
+    font-size: 1.1rem;
+    
+}
+
+#todo{
+    margin-left: 15%;
+    font-size: 2rem;
+    text-decoration:underline;
+    color: rgb(215, 59, 59);
+    font-family:cursive
+}
+
+span{
+    font-size: 1.2rem;
+    color: rgb(205, 3, 3);
+    padding: 0.7%;
+    font-style:oblique;
+    font-weight:550;
+}
+
+#reset{
+    border-radius: 20%;
+    padding: 0.7%;
+    font-size: 0.9rem;
+    color: rgb(205, 3, 3);
+    font-style:oblique;
+    font-weight:550;
+}
+
+#inpt{
+    border-radius: 20%;
+    padding: 0.2%;
+    font-size: 0.9rem;
+    color: rgb(143, 10, 10);
+    
+}
