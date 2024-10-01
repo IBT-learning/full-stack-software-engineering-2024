@@ -1,0 +1,12 @@
+{
+  "name": "full-stack-software-engineering-2024",
+  "version": "1.0.0",
+  "description": "This is the central repository for IBT Learning's Full Stack Software Engineering program. This cohort begins on April 27, 2024.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,45 @@
+/* Apply a base style to the body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Default font for the page */
+    background-color: lightgray;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: darkgray;
+    color: white;
+}
+
+/* Centered content container */
+.container {
+    text-align: center;
+}
+
+/* Header font style */
+#banner {
+    font-family: 'Courier New', Courier, monospace; /* Change font here */
+    margin-bottom: 1rem;
+}
+
+/* Button styling */
+#toggle-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#toggle-btn:hover {
+    background-color: #555;
+}
