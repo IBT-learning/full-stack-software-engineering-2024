@@ -1,71 +1,119 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  /* background-color: yellow; */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  background-color: #f4ecec;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #333;
+  font-size: 1.5rem;
+  color: #2b2b2b;
+  padding: 0.5em 0;
+  text-align: center;
+  height: 10vh;
+  background-image: url(pexels.jpg);
+  background-size: 100vh;
 }
 
 nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
+  color: #eef1c8f9;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 main {
-    padding: 10px;
+  padding: 0.5em;
+}
+footer {
+  padding: 0.5em;
+  background-color: #f1f2ddde;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0.5rem;
 }
 
+.recent-posts {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.6em;
+  margin: 0.5rem;
+}
+
+.profile-photo {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 95%;
+  margin: 1em;
+}
 h1 {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.posts {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0.1rem;
 }
 
 .post {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
+  background-color: #b3b5b5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.6em;
 }
 
 h2 {
-    font-size: 1.2em;
-    margin: 0 0 5px;
+  font-size: 1.2em;
+  margin: 0 0 5px;
 }
 
 p {
-    margin: 0 0 10px;
+  margin: 0 0 10px;
 }
 
 small {
-    color: #555;
+  color: #555;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  float: left;
 }
 
 /* Responsive styles */
-@media (min-width: 600px) {
-    .posts {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+@media screen and (min-width: 320px) {
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .post {
-        flex: 1 1 calc(50% - 10px);
-    }
+  .wrapper {
+    background-color: antiquewhite;
+    border-radius: 6px;
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    background-color: #eae8e8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.6em;
+    margin: 0.5rem;
+  }
 }
 
-@media (min-width: 900px) {
-    .post {
-        flex: 1 1 calc(33.333% - 10px);
-    }
+@media screen and (min-width: 900px) {
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    background-color: bisque;
+  }
 }
