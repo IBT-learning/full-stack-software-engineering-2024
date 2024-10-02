@@ -21,7 +21,6 @@ app.listen(PORT, () =>{
 })
 
 
-
 // Server Assignment #5: Light and Dark Mode with Cookies
 // Much like the last assignment, we're going to revisit a previous assignment, Dark mode, Light mode, and build a back-end to support our existing client. This one will involve adding more code to the client as well as building a server with a new endpoint.
 

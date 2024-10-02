@@ -6,7 +6,6 @@ const switchButton = document.getElementById("switch-btn")
 const bgColor = document.getElementById("bg-Color")
 const resetButton = document.getElementById("reset-btn")
 
-
 // Step #3
 const getCookieVal = (keyName) => {
     if (document.cookie.includes(keyName)){
