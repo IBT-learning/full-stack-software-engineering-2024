@@ -1,0 +1,17 @@
+body {
+  background-color: #ddd;
+  margin: 1em 2em;
+}
+
+input,
+hr {
+  margin: 1rem 0;
+}
+
+.red {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}

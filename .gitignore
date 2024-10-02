@@ -1,3 +1,6 @@
 notes/
 notes.*
-.vscode
+
+.vscode/
+
+node_modules/
