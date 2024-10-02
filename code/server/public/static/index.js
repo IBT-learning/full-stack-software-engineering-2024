@@ -72,7 +72,6 @@ function applyTheme() {
     }
 }
 
-
 bgColor.addEventListener("change", preference);
 
 resetButton.addEventListener("click", () => {
