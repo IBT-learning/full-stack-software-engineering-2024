@@ -1,0 +1,23 @@
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: rgb(124, 174, 245);
+}
+.to-do-list {
+  font-size: 1em;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.input-box{
+    margin-top: 2em;
+    font-size: 14px;
+    padding: 1em;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    
+}
