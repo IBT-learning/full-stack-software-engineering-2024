@@ -1,0 +1,60 @@
+/* em is a measurement based on the size of an em dash 
+    - en dash – em dash */
+
+/* em is relative to the font size of the given container 
+    rem, for "root em" is relative to the page's default font size 
+    (or the "root font size")
+    therefore em is more flexible, but also easier to screw up! */
+
+/* 
+vh - 1% of the viewport height
+vw - 1% of the viewport width
+% - a percentage of the parent's value
+px - one pixel, use sparingly! 
+*/
+
+body {
+    /* the page's default margin makes our 100vw and 100vh spill over the page */
+    margin: 0;
+    background-color: #dfdfdf;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2em;
+    color: #e87f3e;
+    background-color: rgb(98, 114, 100);
+    height: 50vh;
+    width: 70vw;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b0/Rottenburg_a.N._-_Wurmlingen_-_Kapellenberg_-_Ansicht_von_OSO_im_April_mit_Gegenlicht.jpg);
+    background-size: 70vw;
+}
+
+.box {
+    /* flex properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* style properties */
+    border: 1rem solid #1d263b8a;
+    /* The two extra digits are for the "alpha channel"
+    which controls opacity */
+    height: 4rem;
+    width: 6rem;
+}
+
+#one {
+    font-size: 3rem;
+    width: 50%;
+}
+
+#six {
+    height: 3em;
+}
+
+#eight {
+    /* don't do this! it works but it's weird! */
+    height: 30vw;
+}

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5em 0;
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+.card {
+    border: 3px solid #006d9e;
+    margin: 0.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
