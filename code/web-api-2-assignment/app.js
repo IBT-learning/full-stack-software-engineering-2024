@@ -59,16 +59,3 @@ json.forEach((jsonArrayElement) => {
 
 fetchTodos()
 
-
-
-
-
-
-
-
-// let objectIndex;
-
-// for (objectIndex = 0; objectIndex < json.length; objectIndex++) {
-//     let toDoItem = json[objectIndex].title;
-//     orderedList += toDoItem
-// }
