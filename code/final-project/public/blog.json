@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "userId": 1,
+        "body": "Save the earth",
+        "image": "./profpic.jpg"
+    },
+
+    {
+        "id": 2,
+        "userId": 2,
+        "body": "It's lovely to be here",
+        "image": "./profpic.jpg"
+    },
+
+    {
+        "id": 3,
+        "userId": 3,
+        "body": "My dream is to travel to see a Billie Eilish concert",
+        "image": "./profpic.jpg"
+    }
+]
