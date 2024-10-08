@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 400px;
+    height: 120vh;
+    background-color: #F8F9FA;
+    font-family: Tahoma, sans-serif;
+    font-size: 15px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-rows: 15vh 0.5fr 2fr 15vh;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+      "head head"
+      "section1 section1"
+      "section2 section2"
+      "footer footer";
+    header {
+        grid-area: head;
+    }
+    section {
+        grid-area: section1;
+    }
+    main {
+        grid-area: section2;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+ 
+.header {
+    background-color: #fca311;
+    color: #F8F9FA;
+    padding-left: 10px;
+    border-radius: 5px;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-right: 2rem;
+    padding-block-end: 2rem;
+    border: 3px solid ;
+    border-style: outset;
+}
+.header h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 5px 2px #212529;
+}
+.header button {
+    padding: 10px;
+    font-size: 500;
+    color: #F8F9FA;
+    font-weight: bolder;
+    background-color: #212529;
+    border: 1px solid #F8F9FA;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    border-style: outset;
+    margin: 0 3px;
+}
+.header button:hover {
+    background-color: #F8F9FA;
+    border: 2px solid #212529;
+    color: #212529;
+}
+
+#user-content {
+    border-radius: 10px 10px 0 0;
+    padding: 0 10px;
+}
+
+.user-post {
+    background-color: #CED4DA;
+    padding: 5px 15px;
+    border: 2px solid #212529;
+    border-radius: 5px;
+}
+
+.user-post > img {
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+#user-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+span.post-heading {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.post-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.15;
+}
+.timestamp {
+    font-size: 0.8em;
+    font-weight: bold;
+    font-style: italic;
+    float: right;
+    margin: 30px 20px 15px 0;
+}
+main {
+    background-color: #ADB5BD;
+    border-radius: 10px;
+}
+#main-container {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 10px;
+}
+.others {
+    font-size: 1rem;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.user1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.user1-profile {
+    display: flex;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+}
+.user1-profile img {
+    width: 50px;
+    align-self: flex-start;
+    height: 50px;
+    border-radius: 50%;
+}
+.user1-profile span {
+    font-size: 20px;
+    margin: 15px;
+    
+}
+.user1-profile p {
+    margin-right: 2em;
+    margin-left: 10rem;
+    font-style: italic;
+    font-weight: 500;
+}
+.user1-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.user1-content img {
+    width: 12rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
+} 
+.user1-content h3 {
+    width: 30rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+.user1-content > p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 30
+}
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 30
+}
+.content-btn {
+    margin: 0 220px;
+    text-align: center;
+    margin: 20px auto 50px;
+}
+.content-btn button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    background-color: #CED4DA;
+    border: 2px solid gold;
+}
+.content-btn button:hover {
+    background-color: #F8F9FA;
+    border: 2px solid #000;
+}    
+footer {
+    background-color: #212529;
+    text-align: center;
+    color: #F8F9FA;
+
+}
+@media screen and (min-width: 751px) {
+  #main-container {
+     display: flex;
+     flex-flow: row wrap;
+     column-gap: 5px;
+     padding: 0 10px;
+  }
+  .user1 {
+    width: 32vh;
+    border-radius: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    margin: 10px auto;
+}
+ .user1-content img {
+    width: 30vh;
+    height: 25vh;
+}
+.user1-content > p {
+    font-size: 1.2rem;
+}
+}
