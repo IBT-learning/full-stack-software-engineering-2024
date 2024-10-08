@@ -1,19 +1,12 @@
 import express from "express"
 const router = express.Router()
 
-router.get("/auth/login", (req, res) => {
-    res.send("You hit the get endpoint")
-}
-)
+router.post("/login", (req, res) => {
+  res.send("you hit the post endpoint")
+})
 
-router.post("/auth/login", (req, res) => {
-    res.send("You hit the post endpoint")
-}
-)
-
-router.delete("/auth", (req, res) => {
-    res.send("You hit the delete endpoint")
-}
-)
+router.post("/register", (req, res) => {
+  res.send("you hit the post endpoint")
+})
 
 export default router

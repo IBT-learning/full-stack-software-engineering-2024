@@ -1,18 +1,16 @@
 import express from "express"
 const router = express.Router()
 
-router.get("/users", (req, res) => {
-    res.send("You hit the get endpoint")
-}
-)
+router.get("/", (req, res) => {
+  res.send("you hit the get endpoint")
+})
 
-router.put("/users", (req, res) => {
-    res.send("You hit the put endpoint")
-}
-)
+router.put("/", (req, res) => {
+  res.send("you hit the put endpoint")
+})
 
-router.delete("/users", (req, res) => {
-    res.send("You hit the delete endpoint")
-}
-)
+router.delete("/", (req, res) => {
+  res.send("you hit the delete endpoint")
+})
+
 export default router
