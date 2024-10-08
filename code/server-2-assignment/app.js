@@ -22,10 +22,9 @@ app.get("/greet/:username", (req, res) => {
 
 // query params
 app.get("/favorite", (req, res) => {
+    const fave = req.query.fave
     if (req.query.fave) {
-        const fave = req.query.fave
-        res.send(`My favorite thing is ${fave}`);
-        
+        res.send(`My favorite thing is ${fave}`); 
     } else {
         res.send("Are you self aware?")
     }
