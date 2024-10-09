@@ -1,5 +1,5 @@
 {
-  "name": "mongo-driver",
+  "name": "mongoose-schemas",
   "version": "1.0.0",
   "main": "app.js",
   "type": "module",
@@ -13,6 +13,6 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.0",
-    "mongodb": "^6.9.0"
+    "mongoose": "^8.6.3"
   }
 }
