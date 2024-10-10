@@ -12,12 +12,26 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
+### Databases
+
+| Week | Topic                       | Link                                                                           |
+| ---- | --------------------------- | ------------------------------------------------------------------------------ |
+| 21   | Building our recipe archive | [Before we begin...](./5-database/assignments/db-assignment-0.md)              |
+| 21   | Using the MongoDB driver    | [MongoDB practice](./5-database/assignments/db-assignment-1.md)                |
+| 22   | Mongoose Schemas            | [Create a CRUD app with Mongoose](./5-database/assignments/db-assignment-2.md) |
+| 23   | User Authentication         | [Add users to your recipe app](./5-database/assignments/db-assignment-3.md)    |
+| 23   | Database Final Project      | [Database Final Project](./5-database/assignments/db-final-project.md)         |
+
 ### Server
 
-| Week | Topic                   | Link                                                                  |
-| ---- | ----------------------- | --------------------------------------------------------------------- |
-| 17   | Using npm packages      | [Server Assignment #1](./4-server/assignments/server-assignment-1.md) |
-| 17   | My First Express Server | [Server Assignment #2](./4-server/assignments/server-assignment-2.md) |
+| Week | Topic                        | Link                                                                   |
+| ---- | ---------------------------- | ---------------------------------------------------------------------- |
+| 17   | Using npm packages           | [Server Assignment #1](./4-server/assignments/server-assignment-1.md)  |
+| 17   | My First Express Server      | [Server Assignment #2](./4-server/assignments/server-assignment-2.md)  |
+| 18   | Getting started with Postman | [Server Assignment #3](./4-server/assignments/server-assignment-3.md)  |
+| 19   | Locally stored to-do list    | [Server Assignment #4](./4-server/assignments/server-assignment-4.md)  |
+| 20   | Cookies                      | [Server Assignment #5](./4-server/assignments/server-assignment-5.md)  |
+| 20   | Server Final Project         | [Server Final Project](./4-server/assignments/server-final-project.md) |
 
 ### Web APIs
 
