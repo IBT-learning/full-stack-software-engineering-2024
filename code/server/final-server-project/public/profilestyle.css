@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background-color: #ddd;
+    font-size: 1.1em;
+    font-family: serif, sans-serif, arial;
+    gap: 1em;
+  }
+  header {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    color: #ffff;
+    background-color: #18045d;
+    padding: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffff;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #18045f;
+  }
+
+  .container {
+    display: grid;
+    height: 150vh;
+    gap: 1em;
+    grid-template-columns: 1fr 3fr 0.3fr;
+    grid-template-rows: 0.2fr 4fr 1fr;
+    grid-template-areas:
+      "nav nav nav"
+      "profile-picture main ."
+      "footer footer footer";
+  }
+  #nav {
+    background-color: #fd6005;
+    grid-area: nav;
+    position: sticky;
+    top: 0px;
+  }
+  .nav-tools {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 0.4em;
+  }
+  #user {
+    display: flex;
+    justify-content: center;
+    background-color: #18045d;
+
+  }
+  .profile {
+    background-color: #fd6005;
+    grid-area: profile-picture;
+    height: min-content;
+  }
+  .main {
+    background-color: #ffff;
+    grid-area: main;
+    padding: 0.5em;
+  }
+  .footer {
+    background-color: #18045d;
+    grid-area: footer;
+    height: 30vh;
+  }
+  .post {
+    border: 2px solid #d1c6c06b;
+    border-radius: 10px;
+  }
+  .post:nth-child(3) {
+    margin-top: 20px;
+  }
+  .post:nth-child(2) {
+    margin-top: 20px;
+  }
+  .post-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    margin-top: 4px;
+    margin: 3px;
+  }
+  /* .post-content {
+  } */
+  .profile-picture {
+    border-radius: 5000px;
+    width: 50px;
+    border: 2px solid #18045d;
+  }
+  #post-image {
+    width: 100%;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    color: #ffff;
+    padding: 0.3em;
+  }
+  .profile img {
+    max-width: 100%;
+    border: 3px solid #ffff;
+    /* margin: 5px; */
+  }
+
+  /* mobile responsive */
+  @media screen and (min-width: 412px) {
+    .container {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: min-content 4fr min-content;
+      grid-template-rows: 0.2fr 70vh min-content min-content;
+      grid-template-areas:
+        "nav nav nav"
+        ". profile-picture . "
+        ". main ."
+        "footer footer footer";
+    }
+    .profile img {
+      width: 50%;
+    }
+    .main {
+      margin-top: 4em;
+    }
+  }
+
+  /* tablet responsive */
+  @media screen and (min-width: 760px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr 0.3fr;
+      grid-template-rows: 0.2fr 4fr 1fr;
+      grid-template-areas:
+        "nav nav nav"
+        "profile-picture main ."
+        "footer footer footer";
+    }
+    .main {
+      margin-top: 0;
+    }
+  }
+  /* desktop responsive*/
+  @media screen and (min-width: 1000px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr 0.3fr;
+      grid-template-rows: 0.2fr 4fr 1fr;
+      grid-template-areas:
+        "nav nav nav"
+        "profile-picture main ."
+        "footer footer footer";
+    }
+  }
