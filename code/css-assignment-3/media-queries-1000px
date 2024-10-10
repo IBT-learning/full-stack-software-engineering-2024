@@ -1,0 +1,27 @@
+ @media screen and (min-width: 1000px) {
+    #page-wrapper {
+       display: grid;
+       flex-grow: 1;
+       grid-template-columns: 1fr  2fr;
+       grid-template-areas: 
+       "header header"
+       "profile main";  
+    }
+    header {
+        grid-area: header;
+      }
+    #profile {
+        grid-area: profile;
+        width: 20vw;
+        img {
+            width: 20vw;
+        }
+      }
+    #gallery {
+        grid-area: main;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+    
+}
