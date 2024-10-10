@@ -1,23 +1,34 @@
+require('dotenv').config(); // Load environment variables
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+// Import routes
+const recipeRoutes = require('./routes/recipes');
+const userRoutes = require('./routes/users');
+
+// Initialize express app
 const app = express();
 
 // Middleware
-app.use(express.json());
+app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://jemitigo23:3Adp4lP5d9tGcdeR@cluster0.q4cqf.mongodb.net/recipe')
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.log('MongoDB connection error: ', err));
+// Routes
+app.use('/api/recipes', recipeRoutes);  
+app.use('/api/users', userRoutes);
 
-// Start the server
-const PORT = 4000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+// Default route
+app.get('/', (req, res) => {
+  res.send('Welcome to the Recipe App!');
 });
 
-const recipeRoutes = require('./routes/recipeRoutes');
-app.use('/recipes', recipeRoutes);
-
-
+// Server listening
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
