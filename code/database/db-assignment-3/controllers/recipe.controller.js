@@ -1,5 +1,8 @@
+import express from "express";
 import { mongoose } from "../db.js";
 import Recipe from "../models/recipe.model.js";
+
+const router = express.Router;
 
 export const getAllRecipes = async (req, res) => {
   try {
@@ -87,7 +90,6 @@ export const updateRecipe = async (req, res) => {
   }
 };
 
-// delete recipe endpoint
 export const deleteRecipe = async (req, res) => {
   const { docId } = req.params;
 

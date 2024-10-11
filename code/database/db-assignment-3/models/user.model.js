@@ -2,7 +2,7 @@ import { mongoose } from "../db.js";
 
 const userSchema = new mongoose.Schema(
   {
-    fullName: {
+    fullname: {
       type: String,
       required: true,
       maxlength: 60,
@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema(
       maxlength: 50,
       unique: true,
     },
+    password: {
+      type: String,
+      required: true,
+    },
     gender: {
       type: String,
       required: false,
@@ -30,6 +34,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-const User = mongoose.model("users", userSchema);
+const User = mongoose.model("user", userSchema);
 
 export default User;
