@@ -1,5 +1,4 @@
 async function fetchTodos() {
-
       const response = await fetch('https://jsonplaceholder.typicode.com/todos?userId=1');
       const todos = await response.json();
 
@@ -11,7 +10,7 @@ async function fetchTodos() {
 
           if (todo.completed) {
               listItem.style.textDecoration = 'line-through';
-              listItem.style.color = 'gray';
+              listItem.style.color = 'red';
           }
 
           todoList.appendChild(listItem);
