@@ -77,10 +77,10 @@ export const loginToAccount = async (req, res) => {
     } else {
       generateTokenandSetCookies(user._id, res);
 
-      console.log(`login succesfull`);
+      console.log(`${user.fullname} login succesfully`);
       return res.status(200).json({
         success: true,
-        message: user.username + " logged in succesfully",
+        message: user,
       });
     }
   } catch (error) {

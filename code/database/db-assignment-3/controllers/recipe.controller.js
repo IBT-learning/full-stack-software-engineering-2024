@@ -38,6 +38,7 @@ export const getOneRecipe = async (req, res) => {
 };
 
 export const createRecipe = async (req, res) => {
+  const userId = req.user._id.toString();
   const recipe = req.body;
 
   if (
@@ -51,10 +52,17 @@ export const createRecipe = async (req, res) => {
       .json({ success: false, message: "please provide all fields" });
 
   try {
-    const newRecipe = new Recipe(recipe);
-    console.log(newRecipe);
+    const newRecipe = new Recipe({
+      title: recipe.title,
+      author: recipe.author,
+      ingredients: recipe.ingredients,
+      instructions: recipe.instructions,
+      createdBy: userId,
+    });
     await newRecipe.save();
-    res.status(201).send({ success: true, data: newRecipe });
+    res
+      .status(201)
+      .send({ msg: "recipe created successfully", data: newRecipe });
   } catch (error) {
     console.error(`Error in fetching data, ${error}`);
     res.status(400).json({ message: error.message });
@@ -62,6 +70,7 @@ export const createRecipe = async (req, res) => {
 };
 
 export const updateRecipe = async (req, res) => {
+  const userId = req.user._id.toString();
   const { docId } = req.params;
   const body = req.body;
   const options = { new: true };
@@ -71,17 +80,20 @@ export const updateRecipe = async (req, res) => {
   }
 
   try {
-    const updatedRecipe = await Recipe.findByIdAndUpdate(
-      { _id: docId },
-      body,
-      options
-    );
-
-    if (!updatedRecipe) {
+    const recipe = await Recipe.findById(docId);
+    if (!recipe) {
+      return res.status(404).json({ msg: "recipe not found" });
+    }
+    if (userId !== recipe.createdBy.toString()) {
       return res
-        .status(400)
-        .json({ success: true, message: "recipe not found" });
+        .status(401)
+        .json({ error: "unathorised access to update recipe" });
     } else {
+      const updatedRecipe = await Recipe.findByIdAndUpdate(
+        { _id: docId },
+        body,
+        options
+      );
       res.status(200).json({ success: true, data: updatedRecipe });
     }
   } catch (error) {
@@ -91,6 +103,7 @@ export const updateRecipe = async (req, res) => {
 };
 
 export const deleteRecipe = async (req, res) => {
+  const userId = req.user._id.toString();
   const { docId } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(docId || "")) {
@@ -100,15 +113,24 @@ export const deleteRecipe = async (req, res) => {
   }
 
   try {
-    const deleted = await Recipe.findByIdAndDelete({ _id: docId });
-    if (!deleted) {
+    const recipe = await Recipe.findById(docId);
+
+    if (!recipe) {
       return res
-        .status(400)
+        .status(404)
         .json({ success: false, message: "recipe not found" });
     }
-    res
-      .status(200)
-      .json({ success: true, message: "recipe deleted succesfully" });
+
+    if (userId !== recipe.createdBy.toString()) {
+      return res
+        .status(402)
+        .json({ Error: "Unathorised Access to delete recipe" });
+    } else {
+      await Recipe.findByIdAndDelete({ _id: docId });
+      return res
+        .status(200)
+        .json({ success: true, message: "recipe deleted succesfully" });
+    }
   } catch (error) {
     console.error(`Server Error, ${error}`);
     res.status(500).json({ message: error.message });
