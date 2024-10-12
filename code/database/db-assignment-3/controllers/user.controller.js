@@ -79,8 +79,10 @@ export const loginToAccount = async (req, res) => {
 
       console.log(`${user.fullname} login succesfully`);
       return res.status(200).json({
-        success: true,
-        message: user,
+        fullname: user.fullname,
+        username: user.username,
+        email: user.email,
+        gender: user.gender,
       });
     }
   } catch (error) {

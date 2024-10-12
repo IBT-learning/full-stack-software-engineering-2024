@@ -9,31 +9,31 @@ export const getAllRecipes = async (req, res) => {
     const recipes = await Recipe.find();
     res.status(200).send(recipes);
   } catch (error) {
-    console.error(`Error in fetching data: ${error}`);
-    res.status(400).json({ message: error.message });
+    console.log("Error in getAllrecipe controller", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
-export const getOneRecipe = async (req, res) => {
-  const { docId } = req.params;
+export const getOneUserRecipe = async (req, res) => {
+  const { userId } = req.params;
 
-  if (!mongoose.Types.ObjectId.isValid(docId))
+  if (!mongoose.Types.ObjectId.isValid(userId))
     return res
       .status(400)
-      .json({ success: false, message: "pls provide valid id" });
+      .json({ success: false, message: "pls provide valid user id" });
 
   try {
-    const recipe = await Recipe.findOne({ _id: docId });
+    const recipe = await Recipe.find({ createdBy: userId });
     if (!recipe) {
       return res
-        .status(400)
-        .json({ success: false, message: "recipe not found" });
+        .status(404)
+        .json({ success: false, message: "recipe for user not found" });
     } else {
-      return res.status(200).send(recipe);
+      return res.status(200).json({ success: true, data: recipe });
     }
   } catch (error) {
-    console.error(`Error in fetching data: ${error}`);
-    res.status(400).json({ message: error.message });
+    console.error(`Error in getOneUserRecipe controller: ${error}`);
+    res.status(500).json({ message: error.message });
   }
 };
 
@@ -64,8 +64,8 @@ export const createRecipe = async (req, res) => {
       .status(201)
       .send({ msg: "recipe created successfully", data: newRecipe });
   } catch (error) {
-    console.error(`Error in fetching data, ${error}`);
-    res.status(400).json({ message: error.message });
+    console.log("Error in createRecipe controller", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
@@ -97,8 +97,8 @@ export const updateRecipe = async (req, res) => {
       res.status(200).json({ success: true, data: updatedRecipe });
     }
   } catch (error) {
-    console.error(`Server Error, ${error}`);
-    res.status(500).json({ message: error.message });
+    console.log("Error in updateRecipe controller", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
@@ -132,8 +132,8 @@ export const deleteRecipe = async (req, res) => {
         .json({ success: true, message: "recipe deleted succesfully" });
     }
   } catch (error) {
-    console.error(`Server Error, ${error}`);
-    res.status(500).json({ message: error.message });
+    console.log("Error in delete controller", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
