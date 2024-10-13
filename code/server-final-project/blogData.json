@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "user": {
+        "name": "Will Jack",
+        "profileUrl": "profile.html"
+      },
+      "title": "8 Tips for a Healthier Lifestyle",
+      "date": "June 1, 2024",
+      "body": [
+        "Healthy eating and drinking.",
+        "Giving up smoking.",
+        "Get plenty of fresh air.",
+        "Keeping physically active.",
+        "Be socially active.",
+        "Drink plenty of water.",
+        "Keeping your brain active.",
+        "Have regular health checks."
+      ],
+      "image": "images/healthy_lifestyle.jpg"
+    },
+    {
+      "id": 2,
+      "user": {
+        "name": "Jane Mkandoe",
+        "profileUrl": "profile.html"
+      },
+      "title": "Top 5 Exercises for Building Muscle",
+      "date": "May 25, 2024",
+      "body": [
+        "Squats.",
+        "Deadlift.",
+        "Bicep curl.",
+        "Bench press.",
+        "Dumbbell shoulder."
+      ],
+      "image": "images/muscles.jpg"
+    }
+  ]
+  
