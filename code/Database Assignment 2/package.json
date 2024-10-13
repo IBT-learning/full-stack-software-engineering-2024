@@ -1,17 +1,16 @@
 {
-  "name": "database-assignment-1",
+  "name": "database-assignment-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
-    "mongodb": "^6.9.0"
+    "mongoose": "^8.7.1"
   }
 }
