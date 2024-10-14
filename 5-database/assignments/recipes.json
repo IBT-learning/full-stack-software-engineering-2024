@@ -1,14 +1,41 @@
-[
-  {
-    "title": "Teriyaki tofu",
-    "author": "Danny Burrow",
-    "ingredients": ["firm tofu", "teriyaki sauce", "cornflour", "frying oil"],
-    "instructions": "Press excess water from tofu. Cut into bite-size pieces. Dredge in cornflour. Deep fry. Drain excess oil, then coat in teriyaki sauce. Serve over rice."
+[{
+  "_id": {
+    "$oid": "670cf6661a6bb627a30da6d3"
   },
-  {
-    "title": "BBQ Pulled Pork",
-    "author": "Danny Burrow",
-    "ingredients": ["whole pork shoulder", "bbq spice mix"],
-    "instructions": "Pat pork shoulder dry and liberally coat with salt and spices. Place on a rack in oven at 225F for 8-12 hours, until roast is fall-apart tender. Cool slightly, then shred. Mix with skimmed and strained pan drippings as desired. "
-  }
-]
+  "title": "Teriyaki tofu",
+  "author": "Danny Burrow",
+  "ingredients": [
+    "firm tofu",
+    "teriyaki sauce",
+    "cornflour",
+    "frying oil"
+  ],
+  "instructions": "Press excess water from tofu. Cut into bite-size pieces. Dredge in cornflour. Deep fry. Drain excess oil, then coat in teriyaki sauce. Serve over rice."
+},
+{
+  "_id": {
+    "$oid": "670cf6661a6bb627a30da6d4"
+  },
+  "title": "BBQ Pulled Pork",
+  "author": "Danny Burrow",
+  "ingredients": [
+    "whole pork shoulder",
+    "bbq spice mix"
+  ],
+  "instructions": "Pat pork shoulder dry and liberally coat with salt and spices. Place on a rack in oven at 225F for 8-12 hours, until roast is fall-apart tender. Cool slightly, then shred. Mix with skimmed and strained pan drippings as desired. "
+},
+{
+  "_id": {
+    "$oid": "670cfaa91a6bb627a30da6d5"
+  },
+  "title": "Jollof Rice",
+  "author": "Vicky",
+  "ingredients": [
+    "Groundnut oil",
+    "Onions",
+    "Pepper mix",
+    "tomato paste",
+    "spices"
+  ],
+  "description": "Saute onions in hot oil, pour in tomato paste and stir..."
+}]
