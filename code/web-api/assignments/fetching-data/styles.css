@@ -1,0 +1,26 @@
+body {
+  background-color: #deb887;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+div {
+  background-color: #fff;
+  padding: 1rem 0;
+  width: 70%;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+
+#to-do-list {
+  list-style-type: square;
+}
+.check {
+  background-color: burlywood;
+  border: none;
+  color: #000;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.1rem 1rem;
+}

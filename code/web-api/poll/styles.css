@@ -1,0 +1,9 @@
+body {
+  background-color: beige;
+}
+.color-red {
+  color: red;
+}
+.hidden {
+  display: none;
+}

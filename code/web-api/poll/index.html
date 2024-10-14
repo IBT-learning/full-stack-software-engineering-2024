@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poll</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <label for="voter-name">What is your name?</label>
+      <input type="text" id="voter-name" name="voter-name" required />
+    </div>
+
+    <br />
+
+    <span>Is Javascript more fun than HTML?</span>
+    <button class="yes-btn">Yes</button>
+    <button class="no-btn">No</button>
+    <p class="color-red hidden">This person already voted!</p>
+
+    <hr />
+    <h3>HTML is more fun: <span id="html">0</span></h3>
+    <h3>JS is more fun: <span id="js">0</span></h3>
+
+    <script src="app.js"></script>
+  </body>
+</html>
