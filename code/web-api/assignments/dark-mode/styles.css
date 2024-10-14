@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#banner {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#switch-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.white-text {
+  color: #fff;
+}
+.dark-bg {
+  background-color: darkgray;
+}

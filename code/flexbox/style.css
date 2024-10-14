@@ -1,0 +1,24 @@
+body {
+  /* background-color: pink; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.flex-parent {
+  /* style prperties */
+  background-color: rgba(181, 211, 211, 0.404);
+  /* height: 40vh; */
+  /* flex properties */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box {
+  background-color: pink;
+  border: 2px solid navy;
+  border-radius: 10%;
+  font-size: 4rem;
+  height: 100px;
+  margin: 10px;
+  text-align: center;
+  width: 100px;
+}

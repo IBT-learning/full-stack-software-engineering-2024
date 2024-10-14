@@ -1,0 +1,43 @@
+body {
+  background-color: #007688;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+form {
+  margin: auto;
+  width: 80%;
+}
+
+h1 {
+  margin: 1rem auto;
+  text-align: center;
+  width: 50%;
+}
+label {
+  display: inline-block;
+  width: 60%;
+}
+textarea {
+  width: 90%;
+  margin: auto;
+}
+#submit-order {
+  margin: 5px 0;
+}
+#tricks {
+  display: block;
+}
+@media (min-width: 600px) {
+  form {
+    width: 55%;
+  }
+
+  label {
+    width: 50%;
+  }
+
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,19 @@
+h4,
+.log-in-form {
+  width: 30%;
+  margin: auto;
+}
+#email,
+#password {
+  display: block;
+  margin: 15px 0;
+}
+.output-message {
+  color: red;
+  width: 30%;
+  margin: 10px auto;
+}
+
+.authenticated {
+  color: green;
+}

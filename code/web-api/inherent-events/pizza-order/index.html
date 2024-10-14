@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms & Inherent Events</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Luffy's Pizza Place</h1>
+    <form
+      action="https://webhook.site/5ee6bab9-6fc5-4e59-872b-8afa91fea172"
+      method="post"
+    >
+      <!-- URL based on user's response
+    https://webhook.site/5ee6bab9-6fc5-4e59-872b-8afa91fea172?size=medium&chicken=chicken&beef=beef&spice=xspicy&cheese=supercheesy&delivery=Grenadine+Estate 
+
+    the query paramenters begin with ? and each parameter is separated by &
+    ?size=medium&chicken=chicken&beef=beef&spice=xspicy&cheese=supercheesy&delivery=Grenadine+Estate 
+    -->
+      <fieldset>
+        <legend>Customise Your Pizza</legend>
+        <div class="form-wrapper">
+          <div class="size-container">
+            <h4>Size</h4>
+            <div>
+              <label for="medium">Medium</label>
+              <input id="medium" type="radio" value="medium" name="size" />
+            </div>
+            <div>
+              <label for="large">Large</label>
+              <input id="large" type="radio" value="large" name="size" />
+            </div>
+            <div>
+              <label for="xlarge">Extra-Large</label>
+              <input id="xlarge" type="radio" value="xlarge" name="size" />
+            </div>
+          </div>
+
+          <div class="filling-container">
+            <h4>Filling</h4>
+            <div>
+              <label for="chicken">Chicken</label>
+              <input
+                id="chicken"
+                type="checkbox"
+                value="chicken"
+                name="chicken"
+              />
+            </div>
+            <div>
+              <label for="mushroom">Mushroom</label>
+              <input
+                id="mushroom"
+                type="checkbox"
+                value="mushroom"
+                name="mushroom"
+              />
+            </div>
+            <div>
+              <label for="beef">Beef</label>
+              <input id="beef" type="checkbox" value="beef" name="beef" />
+            </div>
+            <div>
+              <label for="veggie">Veggie</label>
+              <input id="veggie" type="checkbox" value="veggie" name="veggie" />
+            </div>
+          </div>
+
+          <div class="spice-container">
+            <h4>Spice</h4>
+            <div>
+              <label for="mild">Mild</label>
+              <input id="mild" type="radio" value="mild" name="spice" />
+            </div>
+            <div>
+              <label for="spicy">Spicy</label>
+              <input id="spicy" type="radio" value="spicy" name="spice" />
+            </div>
+            <div>
+              <label for="xspicy">Extra-spicy</label>
+              <input id="xspicy" type="radio" value="xspicy" name="spice" />
+            </div>
+          </div>
+
+          <div class="cheese-container">
+            <h4>Cheese</h4>
+            <div>
+              <label for="nocheese">No Cheese</label>
+              <input
+                type="radio"
+                name="cheese"
+                id="nocheese"
+                value="nocheese"
+              />
+            </div>
+            <div>
+              <label for="cheesy">Cheesy</label>
+              <input type="radio" name="cheese" id="cheesy" value="cheesy" />
+            </div>
+            <div>
+              <label for="supercheesy">Super-Cheesy</label>
+              <input
+                type="radio"
+                name="cheese"
+                id="supercheesy"
+                value="supercheesy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h4>Delivery Instructions</h4>
+        <textarea
+          name="delivery"
+          id="delivery"
+          placeholder="Type your address e.g. Block 2, Grenadine Estate..."
+        ></textarea>
+        <input type="submit" id="submit-order" value="Submit Order" />
+      </fieldset>
+    </form>
+
+    <a href="https://www.google.com/" target="_blank" id="tricks"
+      >This goes to google</a
+    >
+    <script src="app.js"></script>
+  </body>
+</html>
