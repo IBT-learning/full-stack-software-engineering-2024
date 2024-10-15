@@ -1,0 +1,32 @@
+[
+    {
+        "userId": "7",
+        "id" : "1",
+        "title": "Clean house",
+        "completed" : "true"
+    },
+    {
+        "userId": "7",
+        "id" : "2",
+        "title": "Cook",
+        "completed" : "true"
+    },
+    {
+        "userId": "7",
+        "id" : "3",
+        "title": "LBC Review session",
+        "completed" : "false"
+    },
+    {
+        "userId": "7",
+        "id" : "4",
+        "title": "Edit video",
+        "completed" : "false"
+    },
+    {
+        "userId": "7",
+        "id" : "5",
+        "title": "Treat my hair",
+        "completed" : "true"
+    }
+]
