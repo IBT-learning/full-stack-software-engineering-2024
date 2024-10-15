@@ -24,6 +24,26 @@ router.get("/find/:recipeId", async (req, res) => {
     }
 })
 
+router.get("/user/:userId", async (req,res)=> {
+  const userId = req.params.userId
+
+  if(!mongoose.Types.ObjectId.isValid(userId)){
+    res.status(400).send("Invalid user ID")
+  }
+
+  try{
+    const userRecipes = await Recipe.find({ createdBy: userId})
+    
+    if (userRecipes.length ===0){
+      res.status(404).send("no recipes found for this user")
+    }
+
+    return res.json(userRecipes)
+  } catch (err){
+    console.error(err)
+    res.status(500).send("server error")
+  }
+})
 
 router.post("/", tokenValidation, async (req, res) => {
     console.log("Incoming request body:", req.body);
