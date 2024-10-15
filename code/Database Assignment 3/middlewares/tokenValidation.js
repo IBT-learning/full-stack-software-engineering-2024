@@ -1,8 +1,9 @@
 import jwt from "jsonwebtoken"
+import User from "../model/User.js"
 
 const JWT_KEY = 'this is a secret'
 
-const tokenValidation = (req,res,next) => {
+const tokenValidation = async (req,res,next) => {
     try{
 
         let token = req.headers.authorization
@@ -11,10 +12,12 @@ const tokenValidation = (req,res,next) => {
         } else {
             if (token.includes("Bearer")) token = token.split(" ")[1]
 
-            const payload = jwt.verify(token, JWR_KEY)
+            const payload = jwt.verify(token, JWT_KEY)
             if(!payload) {
                 res.status(401).send("user not authorized")
             } else {
+                const user = await User.findById(payload.userId);
+                req.user = user;
                 next()
             }
         }

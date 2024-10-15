@@ -15,7 +15,8 @@ const User = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    createdBy: mongoose.Schema.ObjectId
 })
 
 export default mongoose.model("user", User)

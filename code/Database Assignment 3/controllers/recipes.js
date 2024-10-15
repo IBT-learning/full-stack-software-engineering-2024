@@ -1,6 +1,7 @@
 import express from 'express';
-import Recipe from "../models/Recipe.js"
+import Recipe from "../model/Recipe.js"
 import { mongoose } from '../db.js';
+import tokenValidation from '../middlewares/tokenValidation.js';
 
 const router =  express.Router();
 
@@ -23,11 +24,14 @@ router.get("/find/:recipeId", async (req, res) => {
     }
 })
 
-router.post("/", async (req, res) => {
+
+router.post("/", tokenValidation, async (req, res) => {
     console.log("Incoming request body:", req.body);
     try{
 
-        const newRecipe = new Recipe(req.body)
+        const newRecipe = new Recipe({
+          ...req.body,
+        createdBy: req.user._id});
         await newRecipe.save()
         res.send(`added ${req.body.title} by ${req.body.author}`)
     } catch (err){
@@ -36,30 +40,46 @@ router.post("/", async (req, res) => {
 })
 
 
-router.put("/update/:recipeId", async (req, res)=> {
+router.put("/update/:recipeId", tokenValidation, async (req, res)=> {
     if (mongoose.Types.ObjectId.isValid(req.params.recipeId)){
         const filter = {_id: req.params.recipeId}
         const body = req.body
         const options = { upsert: true }
-        const recipe = await Recipe.updateOne(filter, body, options)
-        console.log(recipe)
 
-        if (recipe.modifiedCount === 1) {
-            res.send("recipe successfully updated")
-          } else if (recipe.upsertedCount === 1) {
-            res.send("recipe successfully added")
-          } else {
-            res.send("operation failed")
+        const recipe = await Recipe.findById(req.params.recipeId)
+        if (!recipe) {
+          return res.status(404).send("Recipe not found");
+      }
+
+        if (recipe.createdBy.toString() !== req.user._id.toString()){
+          res.status(403).send(`You are not authorized to update this`)
+        }
+
+        const updatedRecipe = await Recipe.updateOne(filter, req.body);
+
+        if (updatedRecipe.modifiedCount === 1) {
+          res.send("Recipe successfully updated");
+         } else {
+          res.send("Operation failed");
           }
-        } else {
+    } else {
           res.status(404).send("invalid recipe id")
     }
 })
 
-router.delete("/delete/:recipeId", async (req, res) => {
+router.delete("/delete/:recipeId", tokenValidation, async (req, res) => {
     if (mongoose.Types.ObjectId.isValid(req.params.recipeId)) {
-      const filter = { _id: req.params.recipeId }
-      const result = await Recipe.deleteOne(filter)
+      const recipe = await Recipe.findById(req.params.recipeId);
+        if (!recipe) {
+            return res.status(404).send("Recipe not found");
+        }
+
+      if (recipe.createdBy.toString() !== req.user._id.toString()) {
+        return res.status(403).send("You are not authorized to delete this recipe");
+    }
+
+    const result = await Recipe.deleteOne({ _id: req.params.recipeId });
+
       if (result.deletedCount === 1) {
         res.send("successfully deleted")
       } else {

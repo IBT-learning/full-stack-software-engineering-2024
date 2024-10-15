@@ -31,7 +31,7 @@ router.post("/login" ,  async (req, res)=>{
         if (!user){
             res.send("unknown username")
         }else{
-            const verified = await bcrypt.compate(password, user.password)
+            const verified = await bcrypt.compare(password, user.password)
             if (!verified){
                 res.send("incorrect password")
             } else {
