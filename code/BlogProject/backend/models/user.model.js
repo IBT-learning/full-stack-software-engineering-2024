@@ -11,11 +11,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       maxLength: 30,
+      unique: true,
     },
     email: {
       type: String,
       required: true,
       maxLength: 50,
+      unique: true,
     },
     gender: {
       type: String,
@@ -31,7 +33,6 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-      maxLength: 15,
     },
     coverimage: {
       type: String,
@@ -44,9 +45,17 @@ const userSchema = new mongoose.Schema(
       default: "",
     },
     Bio: {
-      type: string,
+      type: String,
       required: false,
       default: "",
+    },
+    followers: {
+      type: Array,
+      default: [],
+    },
+    followings: {
+      type: Array,
+      default: [],
     },
   },
   { timestamps: true }

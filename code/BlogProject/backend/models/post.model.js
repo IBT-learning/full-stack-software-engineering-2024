@@ -15,19 +15,12 @@ const PostSchema = new mongoose.Schema(
     image: {
       type: String,
       required: false,
+      default: "",
     },
     user: {
       type: mongoose.Types.ObjectId,
       ref: User,
       enum: ["comment", "likes", "bookmark"],
-    },
-    followers: {
-      type: Array,
-      default: [],
-    },
-    followings: {
-      type: Array,
-      default: [],
     },
   },
   { timestamps: true }
