@@ -20,8 +20,32 @@ const PostSchema = new mongoose.Schema(
     user: {
       type: mongoose.Types.ObjectId,
       ref: User,
-      enum: ["comment", "likes", "bookmark"],
+      required: true,
     },
+    likes: {
+      type: mongoose.Types.ObjectId,
+      ref: User,
+    },
+    comments: [
+      {
+        text: {
+          type: String,
+          required: true,
+        },
+        user: {
+          type: mongoose.Schema.ObjectId,
+          ref: User,
+          required: true,
+        },
+      },
+    ],
+    bookmarks: [
+      {
+        type: mongoose.Schema.ObjectId,
+        ref: "Post",
+        default: [],
+      },
+    ],
   },
   { timestamps: true }
 );
