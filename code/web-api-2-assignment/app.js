@@ -27,9 +27,19 @@ const getToDoTitles = (jsonElement) => {
     orderedList.innerText = jsonElement.title
     unorderedList.appendChild(orderedList)
 
-    if (jsonElement.completed === true) {
-        orderedList.style.color = "red"
-    }
+
+    const button = document.createElement("button")
+    button.textContent = "check status"
+    unorderedList.appendChild(button)
+
+    button.addEventListener("click", () => {
+        if (jsonElement.completed === true) {
+            orderedList.style.color = "red"
+            button.textContent = "completed"
+        } else {
+            orderedList.style.color = null
+        }
+    })
 }
 
 /*
@@ -50,9 +60,20 @@ json.forEach((jsonArrayElement) => {
     orderedList.innerText = jsonArrayElement.title
     unorderedList.appendChild(orderedList)
 
-    if (jsonArrayElement.completed === true) {
-        orderedList.style.textDecoration = "line-through"
-    }
+    const button = document.createElement("button")
+    button.textContent = "check status"
+    unorderedList.appendChild(button)
+
+    button.addEventListener("click", () => {
+        if (jsonArrayElement.completed === true) {
+            orderedList.style.textDecoration = "line-through"
+            button.textContent = "completed"
+        } else {
+            orderedList.style.textDecoration = null
+        }
+
+    })
+
 });
     
 }  
