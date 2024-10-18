@@ -4,8 +4,10 @@ const PORT = 4000
 
 app.use(express.json())
 
-import booksRouter from "./controllers/books.js"
-app.use("/books", booksRouter)
+
+
+import booksRouter from "./controllers/book.js"
+app.use("/book", booksRouter)
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`)
