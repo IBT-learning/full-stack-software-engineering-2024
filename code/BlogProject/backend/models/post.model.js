@@ -22,10 +22,13 @@ const PostSchema = new mongoose.Schema(
       ref: User,
       required: true,
     },
-    likes: {
-      type: mongoose.Types.ObjectId,
-      ref: User,
-    },
+    likes: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: User,
+        default: [],
+      },
+    ],
     comments: [
       {
         text: {
@@ -50,6 +53,6 @@ const PostSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Post = mongoose.model("Post", PostSchema);
+const Post = mongoose.model("post", PostSchema);
 
 export default Post;

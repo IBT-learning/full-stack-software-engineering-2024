@@ -69,31 +69,39 @@ export const userLogin = async (req, res) => {
     const { username, email, password } = req.body;
 
     const user = await User.findOne({ username });
+    if (!user) {
+      return res
+        .status(404)
+        .json({ msg: "bad credentials! Pls provide correct username" });
+    }
 
     const existingEmail = await User.findOne({ email });
+    if (!existingEmail) {
+      return res
+        .status(404)
+        .json({ msg: "bad credentials! Pls provide correct email" });
+    }
 
     const correctPassword = await bcrypt.compare(password, user.password);
-
-    if (!user || !existingEmail || !correctPassword) {
+    if (!correctPassword) {
       return res
-        .status(400)
-        .json({ msg: "bad credentials! Pls provide valid inputs" });
-    } else {
-      generateTokenAndCookie(user._id, res);
-      res.status(200).json({
-        _id: user._id,
-        profilename: user.profilename,
-        username: user.username,
-        email: user.email,
-        gender: user.gender,
-        location: user.location,
-        coverimage: user.coverimage,
-        profileimage: user.profileimage,
-        Bio: user.Bio,
-        followings: user.followings,
-        followers: user.followers,
-      });
+        .status(404)
+        .json({ msg: "bad credentials! Pls provide correct password" });
     }
+    generateTokenAndCookie(user._id, res);
+    return res.status(200).json({
+      _id: user._id,
+      profilename: user.profilename,
+      username: user.username,
+      email: user.email,
+      gender: user.gender,
+      location: user.location,
+      coverimage: user.coverimage,
+      profileimage: user.profileimage,
+      Bio: user.Bio,
+      followings: user.followings,
+      followers: user.followers,
+    });
   } catch (error) {
     console.log(`error in login controller: ${error}`);
     res.status(500).json({ "server error": error.message });

@@ -1,5 +1,4 @@
 import express from "express";
-// import { protectRoute } from "../middlewares/protectRoute.js";
 
 import {
   getProfile,
@@ -7,10 +6,12 @@ import {
   deleteProfile,
 } from "../controllers/user.controller.js";
 
+import protectRoute from "../middlewares/protectRoute.js";
+
 const router = express.Router();
 
-router.get("/profile", getProfile);
-router.put("/update", updateProfile);
-router.delete("/delete", deleteProfile);
+router.get("/profile/:username", protectRoute, getProfile);
+router.put("/update/:username", protectRoute, updateProfile);
+router.delete("/delete/:username", protectRoute, deleteProfile);
 
 export default router;
