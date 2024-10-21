@@ -1,0 +1,20 @@
+
+body{
+    background-color: white;
+}
+
+body.dark{
+    background-color: black;
+    color:white;
+}
+
+#dark-btn{
+    color: black;
+}
+
+#dark-button.dark{
+    
+   color: white;
+}
+
+/* #light-btn */
