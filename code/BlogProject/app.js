@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import path from "path";
+import cors from "cors";
 
 import { connectDB } from "./db.js";
 
@@ -13,10 +15,12 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
+app.use(express.static(path.join(import.meta.dirname, "./frontend/public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+app.use(cors());
 app.use("/api/user/auth", authRoute);
 app.use("/api/post", postRoute);
 app.use("/api/user", userRoute);
