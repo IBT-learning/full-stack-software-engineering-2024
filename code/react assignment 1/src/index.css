@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.mood-board {
+  text-align: center;
+  margin: 20px;
+}
+
+.emoji-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
