@@ -14,9 +14,10 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ### React
 
-| Week | Topic          | Link                                                                       |
-| ---- | -------------- | -------------------------------------------------------------------------- |
-| 22   | Intro to React | [Controlling Data with State](./6-react/assignments/react-assignment-1.md) |
+| Week | Topic                   | Link                                                                       |
+| ---- | ----------------------- | -------------------------------------------------------------------------- |
+| 22   | Intro to React          | [Controlling Data with State](./6-react/assignments/react-assignment-1.md) |
+| 22   | Lifting state to parent | [To-do app](./6-react/assignments/react-assignment-2.md)                   |
 
 ### Databases
 
