@@ -8,7 +8,18 @@ Revisit the [instructions from the previous assignment](./react-assignment-1.md)
 
 ## Write a to-do list
 
-You'll probably want to start with some beginning data to work with while you develop. You will always be able to take this out later
+I'm not going to give you a lot of details on how to implement this app, part of the challenge will be to design the solution yourself.
+
+#### Requirements:
+
+- there is an input field on the page
+- when I submit a value from the input field, it will be added to the to-do list
+- there is a way to mark an item as "completed"
+- when I mark an item as completed, the display will change
+
+#### Test data:
+
+You'll probably want to start with some beginning data to work with while you develop. You will always be able to take this out later. I suggest this data structure, but feel free to adjust it as your app calls for.
 
 ```javascript
 const tasks = [
@@ -17,15 +28,6 @@ const tasks = [
   { id: 3, task: "finish homework", completed: false },
 ]
 ```
-
-I'm not going to give you a lot of details on how to implement this, part of the challenge will be to design the solution yourself.
-
-Requirements:
-
-- there is an input field on the page
-- when I submit a value from the input field, it will be added to the to-do list
-- there is a way to mark an item as "completed"
-- when I mark an item as completed, the display will change
 
 ### Extra challenges (optional)
 
