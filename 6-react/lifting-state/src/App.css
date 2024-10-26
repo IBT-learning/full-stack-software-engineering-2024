@@ -18,3 +18,11 @@
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
+
+.short {
+  font-size: 0.7rem;
+}
+
+.long {
+  font-size: 0.9rem;
+}
