@@ -27,13 +27,13 @@ Choose any of these challenges to tackle, if you like.
 
 The endpoint that gives us a random quote will work with multiple, comma-separated tags. The HTML select element has a [multiple attribute](https://www.w3schools.com/tags/att_select_multiple.asp) that allows users to select multiple items from a dropdown list. Can you adjust our API call to work with multiple tags?
 
-With extra parameters, it is possible to select a combination of tags that will return no quotations. (For example, `empathy,fear` will have no quotes.) Make sure the page can handle this outcome!
+It is possible to select a combination of tags that will return no quotations. (For example, `empathy,fear` will have no quotes.) Make sure the page can handle this outcome!
 
 #### Get multiple quotes
 
 Look at the last endpoint in the API documentation. You can see that it's possible to get multiple quotes at the same time. Start by getting three quotes instead of one. Now try one or both of the following challenges:
 
-- Now that there are multiple quotes on the page, use a new component to display the quote. (It's okay if the component is very simple!)
+- Now that there are multiple quotes on the page, use a Quote component to display each quote. (It's okay if the component is very simple!)
 - Introduce another input field where the user can select the number of quotes they would like to see. The API will support up to 50 at a time, I recommend offering the user no more than 10.
 
 #### Get quotes by author
