@@ -41,16 +41,12 @@ function App() {
     // clicking the button to update count )
     fetch(`https://jsonplaceholder.typicode.com/users/${count}`)
       .then((res) => res.json())
-      .then((data) => {
-        setCurrentUser(data)
-      })
+      .then((data) => setCurrentUser(data))
       .catch((err) => console.warn(err))
 
     fetch(`https://jsonplaceholder.typicode.com/posts?userId=${count}`)
       .then((res) => res.json())
-      .then((data) => {
-        setPosts(data)
-      })
+      .then((data) => setPosts(data))
       .catch((err) => console.warn(err))
   }, [count])
   // because count is listed as a dependency, the component will re-render
