@@ -1,11 +1,9 @@
 
 const getData = async () => {
   const todo = document.getElementById("to-do-list");
-  const response = await fetch(
-    "https://jsonplaceholder.typicode.com/todos?userId=4"
-  );
+  const response = await fetch("http://localhost:4001/todo");
   const data = await response.json();
-  console.log(data);
+  todo.innerHTML = "<h1>To Do List</h1>";
 
   data.forEach((item) => {
     const list = document.createElement("li");
@@ -17,4 +15,4 @@ const getData = async () => {
     todo.appendChild(list);
   });
 };
-getData();
+window.addEventListener("load", getData);
