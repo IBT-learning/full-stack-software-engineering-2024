@@ -1,0 +1,59 @@
+main {
+    width: 100%;
+    height: fit-content;
+}
+
+.content-list {
+    width: 100%;
+    min-height: 40px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #6e8bcc;
+    position: relative;
+    margin: 2px 0;
+}
+
+.content-list input[type="checkbox"] {
+    cursor: pointer;
+    text-align: center;
+    width: 40px;
+    height: 30px;
+    outline: none;
+}
+
+.content-list>label {
+    width: 250px;
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #1b1919dc;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.content-list label:hover {
+    text-decoration: underline;
+}
+
+.content-list button {
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    background-color: #1023c9;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #1b1919dc;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.content-list button:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background: #eb2f0e;
+    scale: 1.03;
+    transition: 0.3s;
+}
