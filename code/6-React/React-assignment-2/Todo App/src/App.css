@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #c0c8d3;
+  border: 1px solid #2284da;
+  height: 100vh;
+  max-width: 400px;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-rows: 15% 10% 65% 10%;
+  grid-template-columns: 100%;
+}

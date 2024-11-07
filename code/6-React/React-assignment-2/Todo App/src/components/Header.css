@@ -1,0 +1,24 @@
+.header {
+    background: #1023c9;
+    width: 100%;
+    height: 100px;
+}
+
+.header h1 {
+    color: #ffffffda;
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    font-size: 2.0rem;
+    font-weight: 800;
+}
+
+.header h5 {
+    width: 100%;
+    height: 32px;
+    background: #3b60c7;
+    color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
