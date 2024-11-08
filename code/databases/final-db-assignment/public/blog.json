@@ -1,0 +1,72 @@
+[
+    {
+    "id": 27,
+    "user": {
+    "name": "James Tyla",
+    "username": "Tyla",
+    "profilePhoto": "https://i.pinimg.com/564x/a7/48/68/a7486874c411c7b0269b350650faad0e.jpg"
+  },
+    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://img.freepik.com/free-photo/view-3d-camera_23-2151067031.jpg?"
+  },
+    {
+    "id": 28,
+    "user": {
+    "name": "Lukas Graham",
+    "username": "Luke",
+    "profilePhoto": "https://i.pinimg.com/564x/e0/9d/89/e09d8944831c19d757596dcb8713099a.jpg"
+  },
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://img.freepik.com/free-photo/black-camera-lens-brown-wooden-table_417767-6.jpg?t=st=1726502602~exp=1726506202~hmac=948a0a0e551345963bd9d2cfc706c0d408fcdbd0a838ace114c06f6ca6ffc225&w=740"
+  },
+    {
+    "id": 29,
+    "user": {
+    "name": "Gotah Benjamin",
+    "username": "Benjamin",
+    "profilePhoto": "https://i.pinimg.com/564x/d3/ad/3d/d3ad3d748159b4679363e04b46f10554.jpg"
+  },
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://img.freepik.com/free-photo/bee-eaters-with-multicolored-feathers-sitting-tree-branch_181624-30060.jpg?t=st=1726502661~exp=1726506261~hmac=ce968582fbcbc1c86753d0631dc9599da77875cca20766f13eb6724b9f06d341&w=740"
+  },
+    {
+    "id": 30,
+    "user": {
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "profilePhoto": "https://i.pinimg.com/564x/83/35/2f/83352f4eab90bc5e239029e348f5a750.jpg"
+  },
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://img.freepik.com/free-photo/beautiful-shot-orange-tent-rocky-mountain-surrounded-by-trees-sunset_181624-3908.jpg?t=st=1726502703~exp=1726506303~hmac=79678a9b0de93f726b45033c364099bc8693334128d18ebbf5db7b163ee6b824&w=740"
+  },
+    {
+    "id": 31,
+    "user": {
+    "name": "Eniola Great",
+    "username": "EnnyGreat",
+    "profilePhoto": "https://i.pinimg.com/564x/21/6f/54/216f548a9ad487eeb7f0722e0b4c63cd.jpg"
+  },
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://img.freepik.com/free-photo/full-shot-students-preparing-exam_23-2149647062.jpg?t=st=1726502731~exp=1726506331~hmac=13c4d1e4aec8ba49c206c9f518d9b0b5dfd4a6a29af67fd4204bad78548f132c&w=740"
+  },
+    {
+    "id": 32,
+    "user": {
+    "name": "Danny Burrow",
+    "username": "Burrowdown",
+    "profilePhoto": "https://i.pinimg.com/564x/0d/8c/b1/0d8cb1839cb78e3bfe289e22cd2448fb.jpg"
+  },
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://img.freepik.com/free-photo/faceless-man-making-notes-book_23-2147779360.jpg?t=st=1726502769~exp=1726506369~hmac=3f0093611557b17729133009cdf19e563b2097deac487e77acff188203faf429&w=740"
+  },
+    {
+    "id": 33,
+    "user": {
+    "name": "Leanne Jerry",
+    "username": "Leanne",
+    "profilePhoto": "https://i.pinimg.com/564x/92/b6/b7/92b6b7b9185c396b49acfa113a000d2a.jpg"
+  },
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "image": "https://img.freepik.com/premium-photo/wild-animal-field_1048944-25026778.jpg?w=740"
+  }
+]
