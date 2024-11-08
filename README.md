@@ -19,6 +19,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 25   | Intro to React                   | [Controlling Data with State](./6-react/assignments/react-assignment-1.md) |
 | 26   | Lifting state to parent          | [To-do app](./6-react/assignments/react-assignment-2.md)                   |
 | 27   | useEffect / fetching remote data | [Quotation generator](./6-react/assignments/react-assignment-3.md)         |
+| 27   | React Router                     | [Client for Recipe API](./6-react/assignments/react-assignment-4.md)       |
 
 ### Databases
 
