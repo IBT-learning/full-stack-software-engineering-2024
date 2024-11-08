@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom"
 function BookDetail() {
   const [book, setBook] = useState({})
 
+  // useParams is a hook provided by React Router
+  // it pulls all url params into a JS object we can destructure
   const { id: bookId } = useParams()
   const url = `http://localhost:4000/books/find/${bookId}`
-
-  console.log(url)
 
   useEffect(() => {
     fetch(url)

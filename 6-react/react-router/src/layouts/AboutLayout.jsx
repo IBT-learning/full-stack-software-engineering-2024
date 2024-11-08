@@ -1,6 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom"
 
 function AboutLayout() {
+  // This is a nested layout
+  // It is included as a child of AppLayout, so it will load in the "Outlet" of AppLayout
+  // And the nested routes here (in this case About, FAQ, and Staff)
+  //    will be rendered inside this Outlet
   return (
     <div id="about-wrapper">
       <nav id="about-nav">
