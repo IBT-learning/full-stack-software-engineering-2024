@@ -1,0 +1,31 @@
+.App {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  button {
+    margin-left: 0.5rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+  
