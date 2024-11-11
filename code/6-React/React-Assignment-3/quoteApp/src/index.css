@@ -57,10 +57,27 @@ html{
     padding: 0 12px;
     font-size: 1rem;
     cursor: pointer;
+    overflow: hidden;
 }
+
+.select-container select option {
+    width: 150px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-container select option:checked{
+    background-color: #df1ebee7;
+    border: none;
+    padding: 15px;
+}
+
 .select-container select:hover{
     border: 1px solid #f505a5ea;
 }
+
 .theme-container{
     width: 60px;
     height: 35px;

@@ -59,7 +59,12 @@ function App() {
  }
 
 const handleChange = (e) => {
-   setSelectedTag(e.target.value);
+    const multipleTags = [];
+    for (let i = 0; i < e.target.selectedOptions.length; i++) {
+      multipleTags.push(e.target.selectedOptions[i].value);
+      const selectedValues = multipleTags.join(',');
+      setSelectedTag(selectedValues);
+   }
  }
 
 const handleClick = (index) => {
@@ -95,17 +100,21 @@ const handleClick = (index) => {
               color: darkMode ? "#f0f8ffde": "#302e2ecc",
               transition: "1s"}}>
           {availableTags && !selectedTag && 
-          <h4 style=
+          <p style=
               {{fontSize: "1.5rem", margin: "auto", 
               textAlign: "center", 
-              padding: "0 5px"}}>
-                  Pls select a tag to get your favourite quote here
-            </h4>}
-            {selectedTag &&
+              padding: "0 10px",
+              fontStyle: 'italic'}}>
+                  Pls select a tag to get your favourite quote here.
+                  PS: Hold down the ctrl key(on window) and cmd key(on mac) 
+                  to select multiple tags.
+            </p>}
+            {selectedTag && randomQuote &&
               <QuoteCard 
               selectedTag={selectedTag} 
               randomQuote={randomQuote} 
               tagName={tagName}
+              isError={isError}
               />}
           </main>
       </div>
