@@ -8,6 +8,9 @@ function Books() {
   const { token } = useContext(UserContext)
 
   useEffect(() => {
+    // because this endpoint requires user authentication
+    // we must include the token under the "authorization" header
+    // we'll only even attempt to hit this enpoint if there's a token
     if (token) {
       fetch("http://localhost:4000/books/", {
         headers: {

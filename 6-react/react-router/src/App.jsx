@@ -57,6 +57,8 @@ const router = createBrowserRouter(
   )
 )
 
+// This is a "context" object that will keep track of state across the whole app
+// it can be accessed by any component that it's provided to
 export const UserContext = createContext("")
 
 function App() {
@@ -64,11 +66,15 @@ function App() {
   const [user, setUser] = useState({})
 
   useEffect(() => {
+    // one time, when the app loads, we will check localStorage for a JWT
     const savedToken = localStorage.getItem(TOKEN_KEY)
     setToken(savedToken)
   }, [])
 
   return (
+    // The context's "Provider" is a component that wraps some or all of the app
+    // anything inside the provider will have access to the context
+    // just by importing it
     <UserContext.Provider value={{ token, setToken, user, setUser }}>
       <RouterProvider router={router} />
     </UserContext.Provider>

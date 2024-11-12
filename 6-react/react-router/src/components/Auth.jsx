@@ -4,11 +4,16 @@ import { useNavigate } from "react-router-dom"
 
 import { TOKEN_KEY } from "../constants/authConstants"
 
+// This component will handle the login/logout operations
+// and display differently depending on login state
 function Auth() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
   const { token, setToken, user, setUser } = useContext(UserContext)
+
+  // this nav function will change the current route
+  // to whatever string we pass as its argument
   const nav = useNavigate()
 
   const handleLogin = () => {
@@ -21,17 +26,22 @@ function Auth() {
     })
       .then((res) => res.json())
       .then((data) => {
+        // when a user logs in, we'll save their JWT to localStorage
         localStorage.setItem(TOKEN_KEY, data.token)
+        // ... and save it to state/context
         setToken(data.token)
+        // ... and save the user's info to state/context
         setUser(data.user)
-        console.log(data.user)
       })
       .catch((err) => console.error(err))
   }
 
   const handleLogout = () => {
+    // set the state/context token as ""
     setToken("")
+    // remove JWT from localStorage
     localStorage.removeItem(TOKEN_KEY)
+    // navigate to the books home page
     nav("")
   }
 

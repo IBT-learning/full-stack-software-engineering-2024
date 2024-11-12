@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import Auth from "../pages/Auth"
+import Auth from "../components/Auth"
 
 function BookLayout() {
   return (
