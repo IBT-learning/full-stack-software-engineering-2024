@@ -51,6 +51,7 @@ function App() {
             <button onClick={() => toggleTaskCompletion(task.id)}>
               {task.completed ? "Undo" : "Complete"}
             </button>
+            
             <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
           </li>
         ))}
