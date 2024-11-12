@@ -18,8 +18,13 @@ import {
   RouterProvider,
 } from "react-router-dom"
 
+import { createContext, useEffect, useState } from "react"
+
+import { TOKEN_KEY } from "./constants/authConstants"
+
 import AboutLayout from "./layouts/AboutLayout"
 import AppLayout from "./layouts/AppLayout"
+import BookLayout from "./layouts/BookLayout"
 
 import About from "./pages/about/About"
 import Books from "./pages/Books"
@@ -37,7 +42,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<AppLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="books">
+      <Route path="books" element={<BookLayout />}>
         <Route path="" element={<Books />} />
         {/* URL parameters are delineated with a colon, just like in Express */}
         <Route path=":id" element={<BookDetail />} />
@@ -52,8 +57,22 @@ const router = createBrowserRouter(
   )
 )
 
+export const UserContext = createContext("")
+
 function App() {
-  return <RouterProvider router={router} />
+  const [token, setToken] = useState("")
+  const [user, setUser] = useState({})
+
+  useEffect(() => {
+    const savedToken = localStorage.getItem(TOKEN_KEY)
+    setToken(savedToken)
+  }, [])
+
+  return (
+    <UserContext.Provider value={{ token, setToken, user, setUser }}>
+      <RouterProvider router={router} />
+    </UserContext.Provider>
+  )
 }
 
 export default App
