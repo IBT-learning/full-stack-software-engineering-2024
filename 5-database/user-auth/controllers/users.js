@@ -5,8 +5,8 @@ import jwt from "jsonwebtoken"
 
 import User from "../model/User.js"
 
-const SALT = 12
-const JWT_KEY = "this is a secret"
+const SALT = Number(process.env.SALT)
+const JWT_KEY = process.env.JWT_KEY
 
 // create new account
 router.post("/register", async (req, res) => {
