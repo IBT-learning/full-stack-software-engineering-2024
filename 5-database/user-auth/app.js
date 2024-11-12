@@ -3,6 +3,7 @@ import "dotenv/config"
 import express from "express"
 import { dbConnect } from "./db.js"
 import tokenValidation from "./middlewares/tokenValidation.js"
+import cors from "cors"
 
 const app = express()
 const PORT = process.env.SERVER_PORT
@@ -11,6 +12,7 @@ const PORT = process.env.SERVER_PORT
 console.log(process.env.ANYTHING)
 
 app.use(express.json())
+app.use(cors())
 
 import router from "./controllers/users.js"
 import bookRouter from "./controllers/books.js"
