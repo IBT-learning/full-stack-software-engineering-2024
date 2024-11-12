@@ -3,81 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML and CSS Final Project</title>
+    <title>Home - Wanderlust Travel Blog Site</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="site">
-        <!-- header -->
-        <header id="header">
-            <span id="title"> Travel Blog Site </span>
-            <img src="images/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Avatar" class="avatar">
-        </header>
+    <!-- Navigation -->
+    <nav>
+        <h1>Wanderlust Travel Blog Site</h1>
+        <ul>
+            <li><a href="login.html">Sign in</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
 
-        <!-- Side Navigation Bar -->
-        <aside id="sidebar">
-            <h4>Menu</h4>
-            <span class="topic">Home</span>
-            <span class="topic">Write</span>
-            <span class="topic">Profile</span>
-        </aside>
-
-        <!-- Content Area -->
-        <div id="content">
-
-        <!-- Start Picture -->    
-            <div class="container">
-                <h1>See the world through the lens of others.</h1>
-            </div>
-
-        <!-- Blog Card and Gallery -->
-            <div id="blogcard">
-                <div class="card">
-                  <img
-                    src="images/masai-mara-16-Luxury-Kenya-Safaris.jpg"
-                    alt="Masaai Mara, Kenya"
-                   />
-                  <span>
-                    The Masaai Mara features a stunning kaleidoscope of wild and rugged landscapes, warm and welcoming people and an exciting array of creatures.
-                  </span>
+    <!-- Main Content -->
+    <main class="container">
+        <section class="blog-posts">
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/Greece Santorini.jpg" alt="Santorini, Greece" class="user-icon">
+                    <h3>The Blue City: Greece</h3>
+                    <span>Nov 10, 2024</span>
+                    <span>Idris</span>
                 </div>
-
-                <div class="card">
-                    <img
-                      src="images/Greece Santorini.jpg"
-                      alt="Santorini, Greece"
-                     />
-                    <span>Santorini, one of the most iconic islands in Greece, is renowned for its stunning landscapes, unique architecture, and rich history. 
-                    </span>
+                <p> Aenean sollicitudin, lorem quis bibendum auctor, nisi elit... </p>
+            </article>
+            
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/masai-mara-kenya.jpg" alt="Maasai Mara, Kenya" class="user-icon">
+                    <h3> Let's go to the Mara!</h3>
+                    <span>Nov 8, 2024</span>
+                    <span>Wonder</span>
                 </div>
+                <p>Curabitur non nulla sit amet nisl tempus convallis quis...</p>
+            </article>
 
-                <div class="card">
-                    <img
-                      src="images/Top-Travel-Destinations.jpg"
-                      alt="Top-Travel-Destinations"
-                     />
-                    <span>Thailand, often referred to as the "Land of Smiles," is one of Southeast Asia's most captivating travel destinations. 
-                    </span>
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/Travel-Destinations.jpg" alt="Magical Thailand" class="user-icon">
+                    <h3>Thailand</h3>
+                    <span>Oct 10, 2024</span>
+                    <span>James Lee</span>
                 </div>
+                <p> Aenean sollicitudin, lorem quis bibendum auctor, nisi elit... </p>
+            </article>
 
-                <div class="card">
-                    <img
-                      src="images/Travel-Destinations.jpg"
-                      alt="Bali, Indonesia"
-                     />
-                    <span>Bali, often referred to as the "Island of the Gods," is one of the most enchanting destinations in Indonesia
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/coast.jpg" alt="Diani, Kenya" class="user-icon">
+                    <h3>Diani, Ukunda</h3>
+                    <span>June 10, 2024</span>
+                    <span>Morgan</span>
                 </div>
-            </div>
+                <p> Aenean sollicitudin, lorem quis bibendum auctor, nisi elit... </p>
+            </article>
 
-            <!--Footer-->
-                <footer id="footer">
-                    <a href="">Top Travel Destinations in Canada</a>
-                    <a href="">Top Travel Destinations in Europe</a>
-                    <a href="">Top Travel Destinations in Africe</a>
-                    <a href="">Top Travel Destinations in USA</a>
-                </footer>   
-        </div>
-    </div>
-    
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/longpoint.jpg" alt="Longpoint Island" class="user-icon">
+                    <h3>The Longpoint Island</h3>
+                    <span>May 10, 2024</span>
+                    <span> Ritchie </span>
+                </div>
+                <p> Aenean sollicitudin, lorem quis bibendum auctor, nisi elit... </p>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/dubai.jpeg" alt="Dubai, UAE" class="user-icon">
+                    <h3>Dubai: The Desert turned City</h3>
+                    <span>July 10, 2024</span>
+                    <span>Lesley</span>
+                </div>
+                <p> Aenean sollicitudin, lorem quis bibendum auctor, nisi elit... </p>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/cappadocia.jpeg" alt="Cappadocia" class="user-icon">
+                    <h3>A city of hills and bolders </h3>
+                    <span>Nov 10, 2024</span>
+                    <span>Logan</span>
+                </div>
+                <p> Aenean sollicitudin, lorem quis bibendum auctor, nisi elit... </p>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/Switzerland.jpeg" alt="Switzerland" class="user-icon">
+                    <h3> 30 Fun Facts about Switzerland </h3>
+                    <span>Aug 03, 2024</span>
+                    <span> Sage </span>
+                </div>
+                <p> Aenean sollicitudin, lorem quis bibendum auctor, nisi elit... </p>
+            </article>
+
+        </section>
+    </main>
 </body>
 </html>

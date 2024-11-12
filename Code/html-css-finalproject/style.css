@@ -1,103 +1,174 @@
-body{
+/* General Reset */
+* {
     margin: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img{
-    width: 100%;
-    border-radius: 10px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F1FAEE;
+    color: #3E4E50;
+    line-height: 1.6;
 }
 
-#site{
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: min-content 1fr 1fr 1fr;
-    grid-template-areas:
-        "header header"
-        "sidebar blogcard"
-        "footer footer";
-
-}
-
-
-#header{
-    grid-area: header;
+/* Navigation */
+nav {
+    background-color: #3E4E50;
+    color: #F4F4F9;
     display: flex;
-    justify-content: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 1000;
-    font-size: xx-large;
-    background-color:#0A0708;
-    color: #ffffff;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
-.avatar{
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #F4F4F9;
+    text-decoration: none;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Blog Posts */
+.blog-posts, .user-posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.post {
+    background-color: #F4F4F9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-icon, .profile-photo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-  }
-
-#sidebar{
-    grid-area: sidebar;
-    background-color: #B2D2A4;
 }
 
-.container{
-    position: relative;
+/* Profile */
+.profile {
     text-align: center;
-
+    margin-bottom: 2rem;
 }
 
-h1{
-    background-image:url(images/longpoint.jpg);
-    background-size: cover;
-    color: #ffffff;
-    height: 20vh;
-    position: relative;
-
+.profile-photo {
+    width: 100px;
+    height: 100px;
 }
 
-#blogcard{
+/* General Reset for Login Page */
+.login-body {
     display: flex;
-    grid-area: blogcard;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F1FAEE;
 }
 
-span{
-    margin-right: 2em;
-}
-
-.topic {
-    white-space: nowrap;
-    padding: 0 0.5em;
-}
-
-.card {
-    border: 2px;
-    margin: 1em;
+/* Login Form Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #F4F4F9;
     border-radius: 10px;
-    box-sizing: content-box;
-    flex-grow: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card >img{
-    height: 20vh;
-    width: auto;
-}
-
-footer{
-    grid-area: footer;
+/* Login Form */
+.login-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding: 0.5rem;
-    background-attachment: fixed;
-    background-color: #6bab61;
+    gap: 1rem;
 }
 
-a{
-    color: #ffffff;
+.login-form h2 {
+    text-align: center;
+    color: #3E4E50;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Fields */
+.login-form label {
+    font-weight: 600;
+    color: #3E4E50;
+}
+
+.login-form input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form input:focus {
+    border-color: #E63946;
+    outline: none;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #E63946;
+    color: #F4F4F9;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #C5303D;
+}
+
+/* Extra Links */
+.extra-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.extra-links a {
+    color: #3E4E50;
     text-decoration: none;
-    font-size: 1 rem;
-    padding: 1px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .blog-posts, .user-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-posts, .user-posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
