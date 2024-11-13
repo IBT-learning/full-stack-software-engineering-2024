@@ -1,0 +1,25 @@
+#theme {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  color: #22223b;
+}
+
+.container {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0 10px;
+  margin: 10px;
+  max-width: max-content;
+  text-align: center;
+  color: #22223b;
+}
+
+.banner_switch > button {
+  padding: 5px 15px;
+  font-weight: 400;
+  border: none;
+  border-radius: 2px;
+}
