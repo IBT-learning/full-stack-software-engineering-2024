@@ -1,0 +1,157 @@
+[
+    {
+        "userId": 1,
+        "Id": 1,
+        "title": "dive into the deepest ocean to see the biggest whale",
+        "completed": "false"
+    },
+    {
+        "userId": 1,    
+        "id": 3,
+        "title": "visit the best hotels in the world",
+        "completed": "True"
+    },
+    {
+        "userId": 1,
+        "Id": 4,
+        "title": "watch chelseafc play live at stamford bridge",
+        "completed": "false"
+    },
+    {
+        "userId": 1,
+        "Id": 3,
+        "title": "drive a bmw e345 2023 model",
+        "completed": "True"
+    },
+    {
+        "userId": 1,
+        "Id": 5,
+        "title": "fly a plane sitting with the pilot in the cockpit",
+        "completed": "True"
+    },
+
+    {
+        "userId": 2,
+        "Id": 6,
+        "title": "manchester united is a finished club",
+        "completed": "false"
+    },
+    {
+        "userId": 2,    
+        "id": 7,
+        "title": "Ten Hag is a fraud",
+        "completed": "True"
+    },
+    {
+        "userId": 2,
+        "Id": 8,
+        "title": "Antony is not a professional footballer",
+        "completed": "false"
+    },
+    {
+        "userId": 2,
+        "Id": 9,
+        "title": "Old trafford is a theatre of defeat",
+        "completed": "True"
+    },
+    {
+        "userId": 2,
+        "Id": 10,
+        "title": "Ineos is finished",
+        "completed": "True"
+    },
+
+    {
+        "userId": 3,
+        "Id": 11,
+        "title": "ArsenalFC is not winning any trophy this season",
+        "completed": "false"
+    },
+    {
+        "userId": 3,    
+        "id": 12,
+        "title": "Manchester city own them",
+        "completed": "True"
+    },
+    {
+        "userId": 3,
+        "Id": 13,
+        "title": "Mikel Arteta is a bottle manager",
+        "completed": "false"
+    },
+    {
+        "userId": 3,
+        "Id": 14,
+        "title": "Raheem sterling will ruin them",
+        "completed": "false"
+    },
+    {
+        "userId": 3,
+        "Id": 15,
+        "title": "ChelseaFc is the pride of london",
+        "completed": "True"
+    },
+
+    {
+        "userId": 4,
+        "Id": 16,
+        "title": "I love Chelsea Fc, Blues forever",
+        "completed": "True"
+    },
+    {
+        "userId": 4,    
+        "id": 17,
+        "title": "Premier leage is the best league in the world",
+        "completed": "True"
+    },
+    {
+        "userId": 4,
+        "Id": 18,
+        "title": "Chelsea Fc is the biggest club in London",
+        "completed": "True"
+    },
+    {
+        "userId": 4,
+        "Id": 19,
+        "title": "Rival fans got nothing on Chelsea, hahaha",
+        "completed": "True"
+    },
+    {
+        "userId": 4,
+        "Id": 20,
+        "title": "We are winning the conference league with Enzo Maresca",
+        "completed": "True"
+    },
+
+    {
+        "userId": 5,
+        "Id": 21,
+        "title": "manchester united is a finished club",
+        "completed": "false"
+    },
+    {
+        "userId": 5,    
+        "id": 22,
+        "title": "Ten Hag is a fraud",
+        "completed": "True"
+    },
+    {
+        "userId": 5,
+        "Id": 23,
+        "title": "Antony is not a professional footballer",
+        "completed": "false"
+    },
+    {
+        "userId": 5,
+        "Id": 24,
+        "title": "Old trafford is a theatre of defeat",
+        "completed": "True"
+    },
+    {
+        "userId": 5,
+        "Id": 25,
+        "title": "Ineos is finished",
+        "completed": "True"
+    }
+     
+]
