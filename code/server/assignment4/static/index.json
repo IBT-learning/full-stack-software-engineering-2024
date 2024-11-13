@@ -1,0 +1,75 @@
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "Bathing",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "Washing",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "Cleaning",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 4,
+        "title": "cooking",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 5,
+        "title": "watching a movie",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 6,
+        "title": "Read a book",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 7,
+        "title": "Study sofware engineering",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 8,
+        "title": "submitted all assignments",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 9,
+        "title": "Play with friends and family",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 10,
+        "title": "Prepare dinner",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 11,
+        "title": "Wash dishes",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 12,
+        "title": "Go to bed",
+        "completed": true
+    }
+    
+]
