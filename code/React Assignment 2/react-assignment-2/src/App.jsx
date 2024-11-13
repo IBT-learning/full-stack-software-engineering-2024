@@ -1,13 +1,12 @@
-import { useState } from 'react'
+import React from 'react';
+import TodoApp from './components/ToDoApp';
 
-import './App.css'
+function App() {
+    return (
+        <div className="App">
+            <TodoApp />
+        </div>
+    );
+}
 
-
-
-  return (
-    <>
-    </>
-  )
-
-
-export default App
+export default App;
