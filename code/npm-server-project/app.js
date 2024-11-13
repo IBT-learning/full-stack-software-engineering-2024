@@ -1,7 +1,14 @@
+sammykareem-server-assignment-2
 console.log('practise npm')
 
 import chalk from "chalk"
 const log = console.log;
+
+import chalk from "chalk"
+
+const log = console.log;
+
+
 log(chalk.bold("hello"))
 log(chalk.red("Hello world!"))
 log(chalk.blue.bgWhiteBright.bold("Hello world!"))
