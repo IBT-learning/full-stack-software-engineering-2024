@@ -9,7 +9,7 @@ const Header = ({
   handleChange, 
   SelectedTag, 
   handleDarkMode,
-  handleLightMode
+  handleLightMode,
 }) => {
 
   return (
