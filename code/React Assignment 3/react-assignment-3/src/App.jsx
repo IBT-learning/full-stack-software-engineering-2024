@@ -1,28 +1,34 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(1)
-  const [currentUser, setCurrentUser] = useState({})
+  const[tags, setTags] = useState([])
+  const [selectedTag, setSelectedTag] = useState('')
+  const [quote, setQuote] = useState('');
 
   useEffect(() => {
-    if (count > 10){
-      setCount(1)
-      return
-    }
-
-    fetch(``)
+    fetch(`https://quoteslate.vercel.app/api/tags`)
     .then((res) => res.json())
-    .then((data) => setCurrentUser(data))
+    .then((data) => setTags(data))
     .catch((err) => console.warn(err))
-  })
+  }, [tags]);
 
   return (
     <>
-    <h1>
-  <button  onClick={()=> setCount(count+1)}>{count}</button>
-  </h1>
+    <div className="Quote-App">
+      <h1>Random Quotes</h1>
+      <select onChange={(e) => setSelectedTag(e.target.value)}
+      value={selectedTag}
+      >
+        <option value="">Select a tag</option>
+        {tags.map((tag, index) =>(
+          <option key={index} value={tag}>
+            {tag}
+          </option>
+        ))}
+      </select>
+    </div>
     </>
   )
 }
