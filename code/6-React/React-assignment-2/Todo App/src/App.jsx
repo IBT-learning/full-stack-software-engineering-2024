@@ -5,7 +5,6 @@ import ContentList from './components/ContentList';
 import AddContent from './components/AddContent';
 import Footer from './components/Footer';
 
-
 function App() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("todoList")) || []
@@ -53,7 +52,7 @@ function App() {
         taskLength={taskLength} />
 
       <AddContent
-        task={newTask}
+        newTask={newTask}
         setNewTask={setNewTask}
         handleSubmit={handleSubmit} />
 

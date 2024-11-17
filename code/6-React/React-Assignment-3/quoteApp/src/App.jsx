@@ -1,10 +1,12 @@
 import './index.css';
 import Header from './components/Header';
-
-import { useState, useEffect } from 'react';
 import QuoteTag from './components/QuoteTag';
-import QuoteCard from './components/QuoteCard';
+import SearchBox from './components/SearchBox';
 import InputField from './components/InputField';
+import QuoteCard from './components/QuoteCard';
+
+import React from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -16,9 +18,16 @@ function App() {
   const [tagName, setTagName] = useState("");
   const [count, setCount] = useState(0);
   const [multipleQuotes, setMultipleQuotes] = useState([]);
-
+  const [search, setSearch] = useState("");
+  const [authorsList, setAuthorsList] = useState("");
+  const [searchResult, setSearchResult] = useState("");
+  const [authorName, setAuthorName] = useState("");
+ 
   const API_URL1 = "https://quoteslate.vercel.app/api/tags";
   const API_URL2 =  "https://quoteslate.vercel.app/api/quotes/random";
+  const API_URL3 = 'https://quoteslate.vercel.app/api/authors';
+  const API_URL4 = "https://quoteslate.vercel.app/api/quotes/random"
+
   
   useEffect(() => {
 
@@ -35,19 +44,30 @@ function App() {
       } 
     }
      
-    fetchTags()
+    fetchTags();
   }, [])
 
   useEffect(() => {
     const fetchRandomQuote = async () => {
       try {
         if (!selectedTag) return;
-          const response = await fetch (`${API_URL2}?tags=${selectedTag}`);
+          const response = await fetch 
+          (`${API_URL2}?tags=${selectedTag}`);
           if (!response.ok) throw new Error("Please try again");
           const data = await response.json();
-          setRandomQuote('');
           setRandomQuote(data);
           setIsError(false);
+      } catch (error) {
+        setIsError(error.message);
+      }
+    }
+    setRandomQuote('');
+    fetchRandomQuote();
+}, [selectedTag])
+
+  useEffect(() => {
+    const fetchRandomQuote = async () => {
+      try {
         if (count) {
             const response = await fetch (`${API_URL2}?count=${count}`);
             if (!response.ok) throw new Error("Please try again");
@@ -56,7 +76,8 @@ function App() {
             setIsError(false);
           }
         if (count && selectedTag) {
-            const response = await fetch (`${API_URL2}?tags=${selectedTag}&count=${count}`);
+            const response = await fetch 
+            (`${API_URL2}?tags=${selectedTag}&count=${count}`);
             if (!response.ok) throw new Error("Please try again");
             const data = await response.json();
             setMultipleQuotes(data);
@@ -66,12 +87,44 @@ function App() {
         setIsError(error.message);
       }
     }
-    setRandomQuote('');
     setCount("");
     setMultipleQuotes("");
-
-    fetchRandomQuote()
+    setAuthorName("");
+    fetchRandomQuote();
   }, [selectedTag, count])
+
+  useEffect(() => {
+    const fetchAuthorsApi = async () => {
+        try {
+          if (!authorName) {
+            const response = await fetch(API_URL3);
+            if (!response.ok) throw new Error("Error fetching data");
+            const data = await response.json();
+            setAuthorsList(data);
+          }
+        if (authorName) {
+            const response = await fetch(`${API_URL4}?authors=${encodeURIComponent(authorName)}`);
+            if (!response.ok) throw new Error("Error fetching data")
+            const data = await response.json();
+            setRandomQuote(data);
+            setIsError(false)
+        } 
+        } catch (error) {
+          console.log(`${error.message}`);
+          setIsError(error.message)
+        }
+    }
+    setMultipleQuotes("");
+
+    fetchAuthorsApi();
+  }, [authorName])
+
+  useEffect(() => {
+    const authors = Object.keys(authorsList).map((key) => key);
+    const result = authors.filter((author) => 
+        author.toLowerCase().includes(search))
+        setSearchResult(result);
+  }, [search, authorsList])
 
   const handleDarkMode = () => {
     setDarkMode(true)
@@ -95,13 +148,18 @@ const handleClick = (index) => {
    setTagName(tagname);
  }
 
-  return (
+ const handleClickAuthor = (index) => {
+     const name = searchResult[index];
+     setAuthorName(name);
+ }
+
+  return ( 
   <>
-    <div
-      className='wrapper'
+    <div className='wrapper'
       style={{
         background: darkMode ? "#0c0c0ce3": "#f7f2f2",
         transition: "1.0s"}}>
+
         <Header
           darkMode={darkMode}
           availableTags={availableTags}
@@ -111,45 +169,55 @@ const handleClick = (index) => {
           handleLightMode={handleLightMode}
         />
 
-        <InputField 
+       <section className='input-container'>
+          <InputField
+          darkMode={darkMode} 
           count={count}
           setCount={setCount}
-        />
+          />
+          <SearchBox
+          darkMode={darkMode}
+          search={search}
+          setSearch={setSearch}
+          searchResult={searchResult}
+          handleClickAuthor={handleClickAuthor} />
+        </section>
 
         <QuoteTag 
           isError={isError} 
           selectedTag={selectedTag}
-          quoteData={randomQuote}
+          tagName={tagName}
+          randomQuote={randomQuote}
           darkMode={darkMode}
-          handleClick={handleClick}/>
+          handleClick={handleClick}
+          setIsError={setIsError}
+          setRandomQuote={setRandomQuote}
+        />
 
-        <main style={{
-              background: darkMode ? "#302e2ecc": "#f0f8ffde", 
-              color: darkMode ? "#f0f8ffde": "#302e2ecc",
-              transition: "1s"}}>
-          {!selectedTag &&
-          <p className="user-message">
-                  Pls select a tag to get your favourite quote(s) here.
-                  PS: Hold down the ctrl key(on window) and cmd key(on mac) 
-                  to select multiple tags.
-            </p>}
-             {randomQuote &&
-               <QuoteCard 
-                  quoteData={randomQuote} 
-                  tagName={selectedTag} />}
+  <main style= {{
+        background: darkMode ? "#302e2ecc": "#e9e1e1bb", 
+        color: darkMode ? "#f0f8ffde": "#302e2ecc",
+        transition: "1s",
+    }}>
+  {!selectedTag && !authorName && !count ?
+    (<p className="user-message">
+        Pls select a tag to get your favourite quote(s) here.<br/>
+        PS: Hold down the ctrl key(on window) and cmd key(on mac) 
+        to select multiple tags.
+      </p>) : ""}
+  
+    {randomQuote &&
+       <QuoteCard quoteData={randomQuote} tagName={selectedTag} />}
 
-                {multipleQuotes.length > 1 && (
-                  multipleQuotes.slice(1).map((quote) => (
-                  <>
-                    <QuoteCard 
-                      key={quote.id} 
-                      quoteData={quote} 
-                      tagName={selectedTag} />
-                  </>
-                  ))
-                )}
-          </main>
-      </div>
+    {multipleQuotes?.length > 1 &&  
+      multipleQuotes.slice(1).map((quote) => (
+            <QuoteCard 
+              key={quote.id} 
+              quoteData={quote} 
+              tagName={selectedTag} />
+          ))}
+    </main>
+    </div>
    </>
   )
 }

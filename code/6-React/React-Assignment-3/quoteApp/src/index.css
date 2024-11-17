@@ -5,12 +5,14 @@
 }
 html{
     font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     min-height: 100vh;
     width: auto;
     display: flex;
 }
+
 #root{
     width: 100%;
     min-height: 100vh;
@@ -19,6 +21,7 @@ body{
     align-items: center;
     background: #0c0c0ce3;
 }
+
 .wrapper{
     min-width: 300px;
     max-width: 800px;
@@ -29,19 +32,19 @@ body{
     justify-content: flex-start;
     flex-direction: column;
     gap: 30px;
+    padding: 0 .5rem;
 }
 
 .header{
-    width: 100%;
-    height: 80px;
+    min-width: 100%;
+    min-height: 80px;
     display: flex;
     gap: 15px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
 }
 .header h1{
-      font-size: 2.5rem;
+   font-size: 2rem;
    background: linear-gradient(240deg, #f3a411e7 10%, #f505a5ea 100%);
    background-clip: text;
   -webkit-background-clip: text;
@@ -52,25 +55,25 @@ body{
 }
 .select-container {
    position: relative;
-   width: 150px;
+   width: 9rem;
 }
 .select-container label{
     position: absolute;
     left: -999999px;
 }
 .select-container select{
-    width: 150px;
+    width: 9rem;
     height: 35px;
     border: none;
     border-radius: 10px;
-    padding: 0 12px;
+    padding: 0 .1rem;
     font-size: 1rem;
     cursor: pointer;
     overflow: hidden;
 }
 
 .select-container select option {
-    width: 150px;
+    width: 100%;
     height: 35px;
     display: flex;
     align-items: center;
@@ -80,7 +83,6 @@ body{
 .select-container select option:checked{
     background-color: #df1ebee7;
     border: none;
-    padding: 15px;
 }
 
 .select-container select:hover{
@@ -88,7 +90,7 @@ body{
 }
 
 .theme-container{
-    width: 60px;
+    width: 65px;
     height: 35px;
     display: flex;
     align-items: center;
@@ -108,33 +110,108 @@ body{
     background: #242222cc";
 }
 
+.input-container{
+   width: 100%;
+   min-height: 2rem;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+   position: relative;
+}
+
+.search-box{
+    min-width: 40%;
+    min-height: 100%;
+    flex-grow: 1;
+}
+
+.search-box input[type="search"] {
+    width: 100%;
+    min-height: 2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-box input[type="search"]:hover{
+    border: 1px solid #f505a5ea;
+    transition: 1s;
+}
+
+.author-list{
+    min-width: 300px;
+    max-width: 100%;
+    background: #0e0d0df1;
+    list-style: none;
+    padding: .5rem;
+    max-height: 200px;
+    position: absolute;
+    top: 2.18rem;
+    left: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: .1rem;
+    color: #f0f8ffde;
+    z-index: 5;
+    overflow-y: scroll;
+    border-radius: 10px;
+ }
+
+ .author-list li{
+    cursor: pointer;
+    flex-grow: 1;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}  
+
+.author-list li:hover{
+    color: #302e2ecc;
+    background: #f0f8ffde;
+    border-radius: 5px;
+    animation: pulsate 2s 1;
+}
+
+@keyframes pulsate {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
 .count-input {
-    width: 300px;
-    height: 35px;
+    min-width: 40%;
+    min-height: 2rem;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px;
+    cursor: pointer;
 }
 
 .count-input input[type="number"] {
     width: 100%;
-    height: 100%;
+    min-height: 2rem;
     border-radius: 10px;
     border: unset;
-    background: #302e2ecc;
-    color: #f0f8ffde;
     outline: none;
+    padding: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.count-input button{
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
-    background-color: #16a708ea;
-    color: #f0f8ffde;
-    outline: none;
+.count-input input[type="number"]:hover{
+    border: 1px solid #f505a5ea;
 }
+
 .user-message{
     font-size: 1.5rem;
     margin: auto;
@@ -168,15 +245,14 @@ body{
     border-radius: 15px;
     margin: 5px 15px;
     padding: 0 5px;
+    border: none;
     border: 1px solid #df1ebee7;
     font-size: 1rem;
     cursor: pointer;
 }
 
 .tagname button:hover{
-    background: #ffffffe7;
-    color: #df1ebee7;
-    border: 2px solid #f3a411e7;
+    border: 1px solid #f3a411e7;
 }
 
 main {
@@ -192,7 +268,9 @@ main {
     cursor: pointer;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    z-index: 1;
 }
+
 .quote-card{
     width: 90%;
     min-height: 350px;

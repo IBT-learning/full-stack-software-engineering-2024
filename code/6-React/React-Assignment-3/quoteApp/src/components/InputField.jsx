@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const InputField = ({ setCount }) => {
+const InputField = ({ darkMode, setCount }) => {
 
   const [inputValue, setInputValue] = useState('');
 
@@ -15,14 +15,17 @@ const InputField = ({ setCount }) => {
      <>
      <form className="count-input" onSubmit={handleSubmit}>
         <label htmlFor="multiple"></label>
-        <input 
+        <input style= {{
+              background: darkMode ? "#302e2ecc": "#e9e1e1bb", 
+              color: darkMode ? "#f0f8ffde": "#302e2ecc",
+              transition: "1s",
+              }}
           type="number" 
           id='multiple'  
-          placeholder='Type number of quotes here...'
+          placeholder='Enter number of quotes here....'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button type="submit">Enter</button>
       </form>
    </>
   )
