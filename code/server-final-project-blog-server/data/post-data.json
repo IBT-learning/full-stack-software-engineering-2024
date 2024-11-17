@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "user": {
+      "id": 1,
+      "name": "Will Johnson",
+      "username": "will_j",
+      "profilePhoto": "../static/images/will-johnson.jpg"
+    },
+    "title": "Run with Friends",
+    "body": "Running solo can definitely have its moments of zen, but there’s nothing quite like having a buddy by your side when the going gets tough. Having that support system makes such a difference. When it’s just you, it’s easy to start making excuses and wanting to bail. But when you know someone’s counting on you to show up, it’s a whole other story. Plus, a little healthy competition never hurt anyone – having someone to push you to go that extra mile or pick up the pace can really work wonders.",
+    "date": "4 mins ago",
+    "image": "../static/images/will-johnson.jpg"
+  },
+  {
+    "id": 2,
+    "user": {
+      "id": 2,
+      "name": "Tony Sanchez",
+      "username": "tony_s",
+      "profilePhoto": "../static/images/tony-sanchez.jpg"
+    },
+    "title": "Training In the Heat Is Good For You",
+    "body": "As someone who’s been there, I can tell you that training in the heat isn’t just about being a glutton for punishment. Over time, it really helps your body adapt to those high temperatures. You start sweating more efficiently, your blood plasma volume increases, and you might even start to actually enjoy it – or at least, be able to tolerate it without feeling like you’re gonna pass out every time. It’s all about building up that heat tolerance. Your body gets smarter and better at handling the scorching weather. Sure, it’s not always fun in the moment, but trust me, it pays off in the long run. You’ll be able to push yourself harder, for longer, without feeling like you’re gonna melt.",
+    "date": "2 hrs ago",
+    "image": "../static/images/tony-sanchez.jpg"
+  },
+  {
+    "id": 3,
+    "user": {
+      "id": 3,
+      "name": "Julie Collins",
+      "username": "julie_c",
+      "profilePhoto": "../static/images/julie-collins.jpg"
+    },
+    "title": "The Best All-Round Men’s and Women’s Trail Shoes",
+    "body": "The HOKA Speedgoat 5 is quite frankly, a masterpiece of trail running engineering when it comes to combining, comfort with performance and style. Named for Karl Meltzer aka “The Speedgoat”, who holds the record for the most 100-mile ultra trail race wins and epitomizes the “go everywhere, run everything” attitude, these trail running shoes are designed to attack all kinds of technical trails and are the best trail running shoes right now; they’re also one of HOKA’s top performing running shoes I’ve tested.",
+    "date": "4 hrs ago",
+    "image": "../static/images/julie-collins.jpg"
+  },
+  {
+    "id": 4,
+    "user": {
+      "id": 4,
+      "name": "Ekene Mkhize",
+      "username": "ekene_m",
+      "profilePhoto": "../static/images/ekene-mkhize.jpg"
+    },
+    "title": "Best Calorie Counting App",
+    "body": "#MyFitnessPal -This app has made it to the top of the list simply because it has a food database that includes 3,282,000 different food types. When you need to keep track of the calories you’re consuming, you’ll want a quick and easy food database that you can reference. You’ll be able to setup your own digital diary for counting calories without having to resort to self-reporting that never seems to work. This app is also extremely flexible. If you’re like me, you like to try different foods and eat out at different restaurants all the time. You’ll need this kind of app if you love food, love eating but don’t love the weight gain that comes with it!",
+    "date": "12 hrs ago",
+    "image": "../static/images/ekene-mkhize.jpg"
+  },
+  {
+    "id": 5,
+    "user": {
+      "id": 1,
+      "name": "Will Johnson",
+      "username": "will_j",
+      "profilePhoto": "../static/images/will-johnson.jpg"
+    },
+    "title": "The 50k - a long marathon, or a short ultra?",
+    "body": "As I swallow a handful of ibuprofen and exchange stories with the other racers (Troy congratulated nearly every racer who finished), I've concluded a few things. First, the ultra is a very different animal than the marathon and under races. One shouldn't think of it as a 'marathon plus', but instead give it the respect it deserves as a full-blown endurance event. Second, I still have a lot to learn about the pacing and mental game of the ultra. The 'fast walk' is a crucial skill as well, and one that should be practiced. Troy and many of the others ran a very consistent race end-to-end, and were fully aware of their capabilities along the way. I've got some practicing to do, but I have no doubt I will be trying another 50k....or maybe a 50 miler....let the addiction begin...",
+    "date": "June 5, 2024",
+    "image": "../static/images/will-post2.jpg"
+  },
+  {
+    "id": 6,
+    "user": {
+      "id": 5,
+      "name": "James Olle",
+      "username": "james_o",
+      "profilePhoto": "../static/images/james-olle.jpg"
+    },
+    "title": "Shin Splints",
+    "body": "If your shins feel like they are on fire when you walk to the coffee pot, or run to the end of the driveway, there’s a chance you’ve got shin splints. When your muscles and tissues get overused, they become inflamed and irritated. This inflammation can come from an increase in volume, improper fitting or worn out shoes (lack of or too much support), and weak or imbalanced muscles. This is also common in track athletes due to the repetitive directional pull of the same muscles. Rest up. Gently massage your shins and apply ice for 10-15 minutes a few times per day to ease the inflammation. Stretch your ankles and shins by rotating your foot in circles while pressing your toes into the ground with your shoes on before and after activity.",
+    "date": "June 1, 2024",
+    "image": "../static/images/james-olle.jpg"
+  }
+]
