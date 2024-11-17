@@ -1,0 +1,110 @@
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "build a house of cards",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "explore the hidden valley",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "collect rare stamps",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "learn to play the ukulele",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 5,
+    "title": "create a new recipe",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 6,
+    "title": "solve a complex puzzle",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 7,
+    "title": "write a short story",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 8,
+    "title": "take a photography course",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 9,
+    "title": "paint a landscape",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 10,
+    "title": "start a vegetable garden",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 11,
+    "title": "complete a marathon",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 12,
+    "title": "build a treehouse",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 13,
+    "title": "learn basic coding",
+    "completed": false
+  },
+  {
+    "userId": 1,
+    "id": 14,
+    "title": "organize a charity event",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 15,
+    "title": "take a road trip",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 16,
+    "title": "finish reading a novel",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 17,
+    "title": "design a logo",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 18,
+    "title": "master public speaking",
+    "completed": false
+  }
+]
