@@ -45,29 +45,3 @@ export default QuoteCard;
 
 
 
-// import React from 'react'
-
-// const QuoteCard = ({ QuoteCard, randomQuote, tagName }) => {
-
-//   return ( 
-//         <>
-//           <div className='quote-card'>
-//               <h2>Quote</h2>
-//               <div className='tag'>
-//               <span>{QuoteCard ? `${QuoteCard.id}` : `#${randomQuote.id}`}</span>
-//               <span>#{tagName ? tagName : ""}
-//                 </span>
-//               </div>.
-//               <h3 style={(randomQuote.quote).length < 120 || (QuoteCard.quote).length < 120 ? 
-//                   {fontSize: "1.8rem", textAlign: "center"} : 
-//                   {fontSize: "1.3rem", textAlign: "center"}}>
-//                       {QuoteCard ? `"${QuoteCard.quote}"`
-//                       : `"${randomQuote.quote}"`}
-//                   </h3>
-//               <h5>{QuoteCard ? QuoteCard.author :  randomQuote.author}</h5>
-//             </div>
-//         </>
-//   )
-// }
-
-// export default QuoteCard
