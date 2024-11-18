@@ -1,0 +1,28 @@
+.dark-mode {
+    color:#ddd;
+    background-color: #333;
+}
+
+.container1 {
+
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container2 > button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+#banner {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
