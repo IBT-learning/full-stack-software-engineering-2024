@@ -1,0 +1,13 @@
+#books-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.book-card {
+  background-color: #def8ff;
+  border: 3px solid #024557;
+  border-radius: 0.6rem;
+  max-width: 10rem;
+  padding: 0.5rem;
+}
