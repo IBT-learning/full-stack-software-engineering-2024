@@ -12,4 +12,4 @@ In that file, write tests for each of these endpoints:
 
 1. `/about` — sends a static string, use .toBe() to compare
 1. `/greet/:userName` — sends a template string that greets each person by name. You will need at least two requests and two assertions to check that it works with different inputs.
-1. `/favorite` — this one uses query strings! Again you'll need to make at least two requests and two assertions to make sure it responds to different query strings. You should also check what happens if the query string is missing!
+1. `/favorite` — this one uses query strings. Again, you'll need to make at least two requests and two assertions to make sure it responds to different query strings. You should also check what happens if the query string is missing.
