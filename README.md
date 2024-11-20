@@ -12,6 +12,12 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
+### Testing and Deployment
+
+| Week | Topic                     | Link                                                                                      |
+| ---- | ------------------------- | ----------------------------------------------------------------------------------------- |
+| 29   | Automated testing: Server | [Writing automated server tests](./7-test-and-deploy/assignments/testing-assignment-1.md) |
+
 ### React
 
 | Week | Topic                            | Link                                                                       |
