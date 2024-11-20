@@ -12,7 +12,7 @@ export const pizzaToppings = {
     price: 3.5,
   },
   peppers: {
-    name: "red bell pepper",
+    name: "red bell peppers",
     vegetarian: true,
     inStock: true,
     price: 1.0,
@@ -34,6 +34,7 @@ export const pizzaPrices = {
   },
 
   getPrice(toppings, size) {
+    // TODO: out of stock!
     // check if topping exists, throw error if not
     toppings.forEach((topping) => {
       if (!pizzaToppings[topping])
@@ -43,6 +44,12 @@ export const pizzaPrices = {
     // check if size exists, throw error if not
     if (!this.basePrices[size])
       throw new Error(`${size} is not a size we offer`)
+
+    // check if toppings are in stock
+    toppings.forEach((topping) => {
+      if (!pizzaToppings[topping].inStock)
+        throw new Error(`${topping} is out of stock`)
+    })
 
     // calculate price
     const addOns = toppings.reduce((cost, toppingKey) => {
