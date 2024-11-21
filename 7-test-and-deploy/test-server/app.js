@@ -1,6 +1,7 @@
 import express from "express"
-const app = express()
+import cors from "cors"
 import { pizzaToppings, pizzaPrices } from "./utils/pizza.js"
+const app = express()
 
 /* AUTOMATED TESTING
 
@@ -38,6 +39,7 @@ fake data to your real database!)
 
 */
 
+app.use(cors())
 app.use(express.json())
 
 app.get("/toppings", (req, res) => {
