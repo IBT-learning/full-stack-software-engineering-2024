@@ -1,0 +1,43 @@
+/* Center the header and button on the page, both vertically and horizontally
+Change the font of the banner
+Give the buttons a font size of 1.5rem and a padding of 0.5rem */
+
+body{
+    background-color: lightgray;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 4px rgba(82, 81, 81, 0.803), 
+    0 0 4px rgb(0, 0, 0), 
+    2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode{
+    background-color: darkgray; 
+    color: rgb(0, 0, 0); 
+    text-shadow: 2px 2px 4px rgba(213, 213, 213, 0.9);
+}
+
+
+h1{
+    font-size:40px ;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div{
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    border: 2px solid bisque;  
+}
+
+button{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius:50%;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+

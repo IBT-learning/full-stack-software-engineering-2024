@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(247, 224, 224);
+}
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 500%;
+    font-style: italic; 
+    padding-bottom: 0%;
+}
+
+h3,i{
+    font-size: 1.9rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+p{
+    font-size: 3.5rem;
+    margin-top: 5%;
+}
+
+button{
+    background-color: rgb(248, 0, 0);
+    width: 10%;
+    font-size: 2.5rem;
+    padding: 20px 20px;
+    border-radius: 15%;
+
+}
+
+div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.1rem;
+
+}

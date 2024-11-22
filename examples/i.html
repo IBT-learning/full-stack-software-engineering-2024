@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    <script>
+        const person = {
+            name: ["Floxy", "Lyons"],
+            age: 32,
+            bio(){
+                console.log(`${this.name[0]} ${this.name[1]} is ${this.age }`)
+            },
+
+            introduceSelf(){
+                console.log(`Hi I am ${this.name}`)
+            },
+            
+        };
+        const myDataName = "height";
+            const myDataValue = "1.75m";
+            person[myDataName] = myDataValue;
+    
+</script>
+
+
+function logProperty(propertyName) {
+  console.log(person[propertyName]);
+}
+
+logProperty("name");
+// ["Bob", "Smith"]
+logProperty("age");
+// 32
+    </script>
+  </body>
+
+</html>
+
+const cat = {
+    name: 'Bertie',
+    breed: 'Cymric',
+    color: 'white',
+    greeting: function() {
+        console.log('Meow!');
+    }
+}
+
+// Put your code here
+const catName = cat["name"];
+cat.greeting();
+cat["color"] = "black";
