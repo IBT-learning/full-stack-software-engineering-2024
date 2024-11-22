@@ -15,13 +15,19 @@
             <li><a href="">Selected Topic1</a></li>
             <li><a href="">Selected Topic2</a></li>
             <li><a href="">Selected Topic3</a></li>
-            <li><a href="">More</a></li>
+            <li><b><a href="">More</a></b></li>
         </ul>
 
     </div>
     
+    
     <div id="share-ideas">
-        <p id="share-button" onclick="window.location.href='write-post.html'">Share your ideas...</p>
+        <span id="share-button" onclick="window.location.href='write-post.html'">Share your ideas...✏️</span>
+        <div><a href="user-profile.html" class="profile-icon" style="margin-left: 220%">
+            <span>Floxy</span>
+        </a></div>
+        
+    
     </div>
     
 
@@ -30,29 +36,22 @@
         <input type="text" id="search-input" placeholder="Search..." onkeypress="handleKeyPress(event)">
     </div>
     
-    <script>
-        function searchFunction() {
-            var query = document.getElementById('search-input').value.trim();
-            if (query !== "") {
-                window.location.href = '/search?q=' + encodeURIComponent(query);
-            } else {
-                alert('Please enter a search term.');
-            }
-        }
-    </script>
-    
     
     
     <div id="home">
-        <div class="home-content">
+        <div class="home-content" style="padding-top: 2%;">
             <div class="user">
                 <span>Username </span>
                 <a href="">Follow+</a>
             </div>
 
-            <p><h4>What is Lorem Ipsum?</h4></p>
-            <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...</p>
-            
+        <div>
+            <h4>What is Lorem Ipsum?</h4>
+            <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
+            <span style="margin-left: 0.3%;"><img src="images/pic.png" alt="img"></span>
+            </p>
+        </div>
+
             <div class="home-buttons">
                 <p>Date</p>
                 <ul>
@@ -78,8 +77,12 @@
                 </p>
             </div>
 
-            <p><h4>What is Lorem Ipsum?</h4></p>
-            <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...</p>
+            <div>
+                <h4>What is Lorem Ipsum?</h4>
+                <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
+                <span style="margin-left: 0.3%;"><img src="images/pic.png" alt="img"></span>
+                </p>
+            </div>
 
             <div class="home-buttons">
                 <p>Date</p>
@@ -102,8 +105,13 @@
                     <a href="">Follow+</a>
                 </p>
             </div>
-           <p><h4>What is Lorem Ipsum?</h4></p>
-            <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...</p>
+
+            <div>
+                <h4>What is Lorem Ipsum?</h4>
+                <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
+                <span style="margin-left: 0.3%;"><img src="images/pic.png" alt="img"></span>
+                </p>
+            </div>
 
             <div class="home-buttons">
                 <p>Date</p>
@@ -125,8 +133,14 @@
                 <span>Username </span>
                     <a href="">Follow+</a>
             </div>
-            <p><h4>What is Lorem Ipsum?</h4></p>
-            <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...</p>
+            
+            <div>
+                <h4>What is Lorem Ipsum?</h4>
+                <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...
+                <span style="margin-left: 0.3%;"><img src="images/pic.png" alt="img"></span>
+                </p>
+            </div>
+
             <div class="home-buttons">
                 <p>Date</p>
                 <ul>
@@ -148,30 +162,30 @@
 
         <div class="trend-topics">
             <h3>Trending Blogs</h3>
-
-            <div class="user">
-                <span style="margin-right: 120%;">Username </span>
+        
+            <div class="blog">
+                <span>Username </span>
                 <a href="">Follow+</a>
             </div>
-            <div>
-                 <span style="margin-top: 600000%;">Topic/Subject</span>
+            <h5 style="margin-top: 0%;">Topic/Subject</h5>
+
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
             </div>
+            <h5 style="margin-top: 0%;">Topic/Subject</h5>
 
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
+            <h5 style="margin-top: 0%;">Topic/Subject</h5>
 
-
-    
-            <p>Username</p>
-            <a href="">Follow+</a>
-            <p>Topic/Subject</p>
-        
-   
-            <p>Username</p>
-            <a href="">Follow+</a>
-            <p>Topic/Subject</p>
-    
-            <p>Username</p>
-            <a href="">Follow+</a>
-            <p>Topic/Subject</p>
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
+            <h5 style="margin-top: 0%;">Topic/Subject</h5>
 
             <a href="">See All...</a>
         </div>
@@ -181,48 +195,65 @@
         <div class="trend-follow">
             <h3>Popular People to Follow</h3>
 
-            <p>Username</p>
-            <a href="">Follow+</a>
+            <div class="blog" style="margin-top: 0%;">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
 
-            <p>Username</p>
-            <a href="">Follow+</a>
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
 
-            <p>Username</p>
-            <a href="">Follow+</a>
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
 
-            <p>Username</p>
-            <a href="">Follow+</a>
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
 
-            <p>Username</p>
-            <a href="">Follow+</a>
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
 
-            <p>Username</p>
-            <a href="">Follow+</a>
+            <div class="blog">
+                <span>Username </span>
+                <a href="">Follow+</a>
+            </div>
         </div>
 
 
     <br>
         <div class="trend-company">
             <h3>The Company</h3>
-
-            <p><a href="">About</a></p>
-            <p><a href="">Our Official Blog</a></p>
-            <p><a href="">Support</a></p>
-
-    <br>
-            <p><a href="">Featured</a></p>
-            <p><a href="">links</a></p>
-            <p><a href="">links</a></p>
-            <p><a href="">links</a></p>
-            <p><a href="">links</a></p>
-    <br>
-            <p><u>Connect Us</u></p>
-            <p><a href="">IG</a></p>
-            <p><a href="">FB</a></p>
-            <p><a href="">LINKEDLN</a></p>
-            <p><a href="">TWITTER</a></p>
-            <p><a href="">YT</a></p>
-
+            <nav>
+                <div class="nav-section">
+                    <h4 style="margin-bottom: 0;"> About Us</h4>
+                    <a href="#">Our Official Blog</a>
+                    <a href="#">Support</a>
+                </div>
+           
+                <div class="nav-section">
+                    <h4 style="margin-bottom: 0;"> Featured Links</h4>
+                    <a href="#">Lorem Ipsum</a>
+                    <a href="#">Lorem Ipsum</a>
+                    <a href="#">Lorem Ipsum</a>
+                    <a href="#">Lorem Ipsum</a>
+                </div>
+           
+                <div class="nav-section">
+                    <h4 style="margin-bottom: 0;"> Connect With Us</h4> 
+                    <a href="#">IG</a>  <a href="#">FB</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">YT</a>
+                </div>
+            </nav>
+            
         </div>
 
     </div>
