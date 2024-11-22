@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 
 const router = express.Router()
 
-import Recipe from "../modeels/Recipe.js"
+import Recipe from "../models/Recipe.js"
 
 router.get ("/", async (req, res) => {
     const recipe = await Recipe.find()
