@@ -17,7 +17,7 @@ const recipeDb = async() => {
 
 recipeDb()
 
-
+//Get all (return all documents)
 myRouter.get("/", async (req, res) => {
     try {
       const myRecipe = await Recipe.find();
@@ -29,6 +29,7 @@ myRouter.get("/", async (req, res) => {
     }
   });
 
+  //Get one by ID (return a single document)
 myRouter.get("/find/:recipeId", async(req,res)=>{
     if (mongoose.Types.ObjectId.isValid(req.params.recipeId)){
         const myRecipe = await Recipe.findOne({_id:req.params.recipeId})
@@ -38,6 +39,7 @@ myRouter.get("/find/:recipeId", async(req,res)=>{
     }
 })
 
+//Update an existing document by ID
 myRouter.put("/update/:recipeId", async (req, res) => {
     try {
       const myRecipe = await Recipe.updateOne({ _id: req.params.recipeId }, req.body);
@@ -53,6 +55,19 @@ myRouter.put("/update/:recipeId", async (req, res) => {
     }
   });
 
+  // Create a new document (add a new document to the database)
+  myRouter.post("/create", async (req, res) => {
+    try {
+      const newRecipe = new Recipe(req.body); 
+      await newRecipe.save();
+      res.status(201).send("Recipe created successfully");
+    } catch (err) {
+      console.error(err);
+      res.status(400).send("Error occured while creating recipe");
+    }
+  });
+
+  //Update an existing document by ID
   myRouter.put("/findandupdate/:recipeId", async (req, res) => {
     const myRecipe = await Recipe.findOneAndUpdate({_id: req.params.recipeId}, req.body);
   
@@ -64,6 +79,7 @@ myRouter.put("/update/:recipeId", async (req, res) => {
     }
   });
 
+  //Delete an existing document by ID
   myRouter.delete("/delete/:recipeId", async (req, res) => {
     const myRecipe = await Recipe.deleteOne({ _id: req.params.recipeId });
   
