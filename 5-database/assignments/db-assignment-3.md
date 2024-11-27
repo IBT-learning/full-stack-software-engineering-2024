@@ -16,7 +16,7 @@ Make sure your validation is fully working, and only valid users can access the 
 
 If only users who created a recipe can make changes, that means our Schema needs to be updated to start recording who created each recipe. Each Recipe will have a `createdBy` field that stored an ObjectId, which represents a user in the database. (This is called a "foreign key", where a key from another collection is stored as a field on our documents.)
 
-1. Add a field to the User schema that looks like this:
+1. Add a field to the Recipe schema that looks like this:
    - `createdBy: mongoose.Schema.ObjectId` (it doesn't need more because we don't need to specify any other constraints on this field)
 1. Change your Create endpoint to add the validated user's `_id` to the Recipe object before you save it.
    - How do you know what the validated user's `_id` is? Try adding the user object to the `req` during the `tokenValidation` middelware. Remember that middlewares always have access to the request and response objects, and can modify them! Those modifications will then be received by the next function in the call stack.
