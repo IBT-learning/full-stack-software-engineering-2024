@@ -1,8 +1,8 @@
-# Testing Assignment #3: Writing Automated Client Tests
+# Testing Assignment #2: Writing Automated Client Tests
 
 In this assignment you'll use `vitest` and `react-testing-library` to write automated tests for an old assignment.
 
-### My First Server Assignment
+### Testing React To-Do App
 
 Let's revisit your [React To-Do App](../../6-react/assignments/react-assignment-2.md).
 

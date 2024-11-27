@@ -2,7 +2,7 @@
 
 In this assignment you'll use `vitest` and `supertest` to write automated tests for an old assignment.
 
-### My First Server Assignment
+### Testing My First Server Assignment
 
 We're revisiting [My First Server Assignment](../../4-server/assignments/server-assignment-2.md), in which you set up four simple endpoints that return strings.
 
