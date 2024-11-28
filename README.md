@@ -12,6 +12,15 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
+### React
+
+| Week | Topic                            | Link                                                                       |
+| ---- | -------------------------------- | -------------------------------------------------------------------------- |
+| 25   | Intro to React                   | [Controlling Data with State](./6-react/assignments/react-assignment-1.md) |
+| 26   | Lifting state to parent          | [To-do app](./6-react/assignments/react-assignment-2.md)                   |
+| 27   | useEffect / fetching remote data | [Quotation generator](./6-react/assignments/react-assignment-3.md)         |
+| 28   | React Router                     | [Client for Recipe API](./6-react/assignments/react-assignment-4.md)       |
+
 ### Databases
 
 | Week | Topic                       | Link                                                                           |
@@ -20,6 +29,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 21   | Using the MongoDB driver    | [MongoDB practice](./5-database/assignments/db-assignment-1.md)                |
 | 22   | Mongoose Schemas            | [Create a CRUD app with Mongoose](./5-database/assignments/db-assignment-2.md) |
 | 23   | User Authentication         | [Add users to your recipe app](./5-database/assignments/db-assignment-3.md)    |
+| 24   | Database Final Project      | [Database Final Project](.5-database/assignments/db-final-project.md)          |
 
 ### Server
 
