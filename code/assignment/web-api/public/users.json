@@ -1,0 +1,37 @@
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "Americanah",
+        "completed": true
+    },
+
+    {
+       "userId": 1,
+        "id": 2,
+        "title": "Dear Ijeawale",
+        "completed": false
+    },
+
+    {
+        "userId": 1,
+         "id": 3,
+         "title": "The Half of a Yellow Sun",
+         "completed": true
+     },
+
+     {
+        "userId": 1,
+         "id": 4,
+         "title": "Purple Hibiscus",
+         "completed": true
+     },
+
+     
+     {
+        "userId": 1,
+         "id": 5,
+         "title": "The Gods Must Be Crazy",
+         "completed": false
+     }
+]

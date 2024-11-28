@@ -4,7 +4,10 @@ notes/
 notes.*
 .vscode/
 .vite/
+<<<<<<< HEAD
 
 
 node_modules/
+=======
+>>>>>>> vi
 
