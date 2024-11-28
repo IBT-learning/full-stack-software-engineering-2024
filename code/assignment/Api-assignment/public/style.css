@@ -1,0 +1,30 @@
+body{
+    height: auto;
+}
+.dark{
+    background-color: #505050 ;
+    color: white;
+}
+.light{
+    background-color: #cccccc;
+    height: fit-content;
+    color: black;
+}
+h1{
+    text-align : center;
+    justify-content: center;
+}
+.btn{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+button{
+   font-size: 1.5rem;
+   padding: 0.5rem; 
+}
+.banner{
+    font: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

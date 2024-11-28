@@ -13,7 +13,11 @@ Your app will need to use `useEffect` twice:
 - Fetch "Get Available Tags" once when the app loads
 - Fetch "Get a Quote by Tags" whenever a new tag is selected
 
+<<<<<<< HEAD
+Use a `<select>` element with one `<option>` for each tag that you got from the API call. Listen for changes on the `<select>` element, and when a new tag is selected from the drop-down list, save that tag to state. This should automatically cause a new random quote to be fetched.
+=======
 Use a `<select>` element with one `<option>` for each tag that you got from the API call. Listen for changes on the `<select>` element, and when a new tag is selected from the drop-down list, save that tag to state. This should automically cause a new random quote to be fetched.
+>>>>>>> e531b511898fd93ba899bddd5838b5d71313dfe9
 
 > Tip: You will need three separate state variables here
 
