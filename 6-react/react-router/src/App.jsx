@@ -18,6 +18,7 @@ import {
   RouterProvider,
 } from "react-router-dom"
 
+<<<<<<< HEAD
 import { createContext, useEffect, useState } from "react"
 
 import { TOKEN_KEY } from "./constants/authConstants"
@@ -25,6 +26,10 @@ import { TOKEN_KEY } from "./constants/authConstants"
 import AboutLayout from "./layouts/AboutLayout"
 import AppLayout from "./layouts/AppLayout"
 import BookLayout from "./layouts/BookLayout"
+=======
+import AboutLayout from "./layouts/AboutLayout"
+import AppLayout from "./layouts/AppLayout"
+>>>>>>> e531b511898fd93ba899bddd5838b5d71313dfe9
 
 import About from "./pages/about/About"
 import Books from "./pages/Books"
@@ -42,7 +47,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<AppLayout />}>
       <Route path="/" element={<Home />} />
       <Route path="contact" element={<Contact />} />
+<<<<<<< HEAD
       <Route path="books" element={<BookLayout />}>
+=======
+      <Route path="books">
+>>>>>>> e531b511898fd93ba899bddd5838b5d71313dfe9
         <Route path="" element={<Books />} />
         {/* URL parameters are delineated with a colon, just like in Express */}
         <Route path=":id" element={<BookDetail />} />
@@ -57,6 +66,7 @@ const router = createBrowserRouter(
   )
 )
 
+<<<<<<< HEAD
 // This is a "context" object that will keep track of state across the whole app
 // it can be accessed by any component that it's provided to
 export const UserContext = createContext("")
@@ -79,6 +89,10 @@ function App() {
       <RouterProvider router={router} />
     </UserContext.Provider>
   )
+=======
+function App() {
+  return <RouterProvider router={router} />
+>>>>>>> e531b511898fd93ba899bddd5838b5d71313dfe9
 }
 
 export default App

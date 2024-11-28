@@ -12,13 +12,6 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 
 ## Assignments
 
-### Testing and Deployment
-
-| Week | Topic                     | Link                                                                                      |
-| ---- | ------------------------- | ----------------------------------------------------------------------------------------- |
-| 30   | Automated testing: Server | [Writing automated server tests](./7-test-and-deploy/assignments/testing-assignment-1.md) |
-| 31   | Automated testing: Client | [Writing automated client tests](./7-test-and-deploy/assignments/testing-assignment-2.md) |
-
 ### React
 
 | Week | Topic                            | Link                                                                       |
@@ -27,7 +20,6 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 26   | Lifting state to parent          | [To-do app](./6-react/assignments/react-assignment-2.md)                   |
 | 27   | useEffect / fetching remote data | [Quotation generator](./6-react/assignments/react-assignment-3.md)         |
 | 28   | React Router                     | [Client for Recipe API](./6-react/assignments/react-assignment-4.md)       |
-| 29   | Putting it all together          | [React Final Project](./6-react/assignments/react-final-project.md)        |
 
 ### Databases
 
