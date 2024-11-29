@@ -1,0 +1,22 @@
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.dark-mode {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.switch-button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
