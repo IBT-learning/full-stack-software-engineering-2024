@@ -1,64 +1,85 @@
-#wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.flex-parent {
-    /* style properties */
-    background-color: lightblue;
-    height: 40vh;
-    border: 10px solid navy;
 
-    /* flexbox properties */
+.challenge-1 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-
-    /* justify-content: space-evenly; */
-    align-items: center;
-    /* align-content: space-between; */
-
-    /* row-gap: 1em; */
-    /* column-gap: 1em; */
-    gap: 1em 3em;
 }
 
-.box {
-    /* style properties */
-    height: 100px;
-    width: 100px;
-    background-color: orchid;
-    border: 2px solid navy;
-    border-radius: 10%;
-    font-size: 3em;
-    color: white;
+.challenge-2 {
+    display: flex;
+    flex-direction: row-reverse;
 
-    /* flex properties */
+}
+
+.challenge-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+.challenge-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.challenge-5 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 
+Tip: This is called the "child selector". 
+It selects all .bubble elements that are direct
+children of .challenge-6 elements. 
+*/
+.challenge-6 .bubble {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#one {
-    font-size: 1em;
-    flex-shrink: 3;
-    align-self: flex-end;
+.challenge-7 {
+    display: flex;
+    flex-direction: row;
 }
 
-#two {
-    order: 3;
-    flex-grow: 2;
+
+.challenge-7 .red {
+    flex-grow: 1;
 }
 
-#four {
-    order: 1;
-    flex-grow: 2;
+.challenge-8 {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
-#six {
-    order: -1;
+.challenge-8 .red {
+margin-left: auto;
+    
 }
 
-#eight {
-    align-self: flex-start;
+/* DO NOT CHANGE ANYTHING BELOW HERE */
+
+.bubble {
+    height: 5em;
+    width: 5em;
+    color: white;
+    border-radius: 50%;
+    border: 0.1em solid black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
 }
