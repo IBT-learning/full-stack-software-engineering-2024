@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .complete-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .complete-btn.completed {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>User To-Do List</h1>
+    <label for="userSelect">Select User:</label>
+    <select id="userSelect">
+        <option value="1">User 1</option>
+        <option value="2">User 2</option>
+        <option value="3">User 3</option>
+        <option value="4">User 4</option>
+        <option value="5">User 5</option>
+        <option value="6">User 6</option>
+        <option value="7">User 7</option>
+        <option value="8">User 8</option>
+        <option value="9">User 9</option>
+        <option value="10">User 10</option>
+    </select>
+
+    <ul id="to-do-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
