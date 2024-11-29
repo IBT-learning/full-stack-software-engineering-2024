@@ -1,9 +1,10 @@
 import express from "express"
 import mongoose from "mongoose"
-
+import tokenValidator from "../middleware/tokenValidator.js"
 const router = express.Router()
 
 import Recipe from "../models/Recipe.js"
+import User from "../models/User.js"
 
 router.get ("/", async (req, res) => {
     const recipe = await Recipe.find()
@@ -23,40 +24,67 @@ router.get ("/find/:recipeId", async (req, res) => {
     recipe ? res.json(recipe): res.status(404).send("Recipe not found")
 })
 
-router.post("/", async (req, res) => {
+router.post("/create", tokenValidator, async (req, res) => {
     try {
-        const newRecipe = new Recipe(req.body)
+        const {title, author, instructions, ingredients } = req.body
+        const createdBy = req.user._id
+
+        const newRecipe = new Recipe({
+            title,
+            author,
+            instructions,
+            ingredients,
+            createdBy,
+        })
         await newRecipe.save()
-        res.send(`${req.body.title} recipe successfully added`)
+       return res.send(`${req.body.title} recipe successfully added`)
     }catch(err){
         res.status(404).send("New recipe could not be addded")
     }
    
 })
 
-router.put("/add/:recipeId", async(req, res) => {
-   if (mongoose.Types.ObjectId.isValid(req.params.recipeId)){
-        const find = { _id: req.params.recipeId }
+router.put("/update/:recipeId", tokenValidator, async(req, res) => {
+    const { recipeId } = req.params
+   if (mongoose.Types.ObjectId.isValid(recipeId)){
+    const recipe = await Recipe.findById(recipeId)
+    if(!recipe){
+        return res.status(404).send("recipe not found")
+    }
+
+    if (String(recipe.createdBy)  !== String(req.user._id)){
+        return res.status(401).send("User not authorized to update recipe")
+    }
+        const find = { _id: recipeId }
         const body = req.body
         const options = {
             upsert: false
         }
-        const recipe = await Recipe.updateOne(find, body)
-        if (recipe.modifiedCount === 1){
-            res.send ("Recipe successfully updated")
+        const updatedRecipe = await Recipe.updateOne(find, body)
+        if (updatedRecipe.modifiedCount === 1){
+          return  res.send ("Recipe successfully updated")
         } else{
-            res.status(404).send("recipe update failed")
+           return res.status(404).send("recipe update failed")
         }
    } else {
-        res.status(404).send ("The recipe with this Id does not exist in the database")
+       return res.status(404).send ("The recipe with the id cannot be found in the database")
    }
 })
 
-router.delete("/delete/:recipeId", async(req, res) => {
-    if (mongoose.Types.ObjectId.isValid(req.params.recipeId)){
-        const find = { _id: req.params.recipeId }
-        const recipe = await Recipe.deleteOne(find)
-        if (recipe.deletedCount === 1){
+router.delete("/delete/:recipeId", tokenValidator, async(req, res) => {
+    const { recipeId } = req.params
+    if (mongoose.Types.ObjectId.isValid(recipeId)){
+       
+        const recipe = await Recipe.findById(recipeId)
+        if (!recipe){
+            return res.status(404).send("recipe not found")
+        }
+        if (String(recipe.createdBy) !== String(req.user._id)){
+            return res.status(401).send("User not authorized to delete recipe")
+        }
+        const find = { _id: recipeId }
+        const deleteRecipe = await Recipe.deleteOne(find)
+        if (deleteRecipe.deletedCount === 1){
             res.send("Recipe successfully deleted")
         } else {
             res.status(404).send ("Recipe could not be deleted")
@@ -66,4 +94,23 @@ router.delete("/delete/:recipeId", async(req, res) => {
     }
 
 })
+
+//extra challenge 
+    router.get("/return/:userId", tokenValidator, async(req, res) => {
+        try{
+            const userId  = req.user._id
+            if (mongoose.Types.ObjectId.isValid(userId)){
+                const userRecipe = await Recipe.find({createdBy: userId})
+                if (!userRecipe){
+                    return res.status(404).send("user has no recipe in database")
+                }
+                res.json(userRecipe)
+            } else{
+                return res.status(404).send("Invalid user ID")
+            }
+        } catch (err){
+            res.status(404).send(err)
+        }
+       
+    })
 export default router
