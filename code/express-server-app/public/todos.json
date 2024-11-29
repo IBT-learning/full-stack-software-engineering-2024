@@ -1,0 +1,21 @@
+[
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Buy groceries",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "Walk the dog",
+      "completed": true
+    },
+    {
+      "userId": 2,
+      "id": 3,
+      "title": "Do the laundry",
+      "completed": false
+    }
+  ]
+  
