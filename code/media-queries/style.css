@@ -1,0 +1,82 @@
+/* This page uses the same styles from the Combining CSS Grid & Flexbox lesson */
+/* Plus ... */
+
+/* tablet layout */
+@media screen and (max-width: 1024px) {
+    #wrapper {
+        grid-template-columns: min-content 1fr;
+        grid-template-areas:
+            "header header"
+            "contents main"
+            "contents tips"
+            "footer footer";
+        gap: 0.5rem;
+    }
+
+    #contents {
+        margin-left: 0.5rem;
+    }
+
+    #main {
+        margin-right: 0.5rem;
+    }
+
+    #tips {
+        margin-right: 0.5rem;
+    }
+}
+
+/* phone layout */
+@media screen and (max-width: 500px) {
+    #wrapper {
+        grid-template-columns: unset;
+        grid-template-areas:
+            "header"
+            "contents"
+            "main"
+            "tips"
+            "footer";
+        gap: 0;
+    }
+
+    #header {
+        flex-direction: column;
+    }
+
+    #contents {
+        margin: 0;
+        flex-direction: row;
+        font-size: 0.8em;
+        justify-content: space-evenly;
+    }
+
+    #contents > h4 {
+        display: none;
+    }
+
+    .topic {
+        padding: 0;
+    }
+
+    #main {
+        padding: 0 1rem;
+    }
+
+    #tips {
+        margin: 0.5rem;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0.5rem;
+    }
+
+    #footer > a {
+        margin: 0.2rem;
+    }
+
+    a {
+        font-weight: 100;
+    }
+}
