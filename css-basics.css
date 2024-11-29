@@ -1,0 +1,33 @@
+body {
+    background-color: aquamarine;
+}
+h1 {
+    font-weight: 500px;
+    color: blue;
+}
+
+img {
+padding: 2px;
+margin: 40px;
+}
+
+.red-text {
+    color: red;
+}
+
+#block-wrapper {
+    background-color: bisque;
+
+}
+ a {
+    text-decoration: none;
+ }
+ .link1 {
+    color: yellow;
+
+ }
+ .image-resize {
+    height: 300px;
+    width: 400px;
+    border: 10px solid blue;
+ }
