@@ -1,0 +1,111 @@
+@media screen and (min-width: 750px) {
+
+    #pagewrapper {
+        display: grid;
+        
+    
+    
+        
+    }
+ 
+    
+}    
+
+
+
+#profile {
+    background-color: #f9b8b6;
+    padding: 1em;
+    margin: 1em;
+}
+
+#profile > img {
+    outline: 0.3rem solid #fff;
+    margin: 0.5rem 0;
+    border: 3px;
+    padding: 0.5rem;
+    
+    
+    
+}
+
+#profile > span {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+#gallery{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); 
+    padding: 10px;
+
+
+
+
+}
+    
+        
+
+
+.card-right {
+    grid-template-rows: max-content, 200px 1fr; ;
+    border: 3px solid #006d9e;
+    background-color: #fff;
+    margin: 0.2rem;
+    padding: 0.5rem
+    
+}
+
+        
+
+.card-image {
+    width: 100%
+    
+    
+
+    
+       
+    
+}
+        
+
+
+.card {
+    grid-template-rows: max-content 200px 1fr; ;
+    border: 3px solid #006d9e;
+    background-color: #fff;
+    width: 400px;
+    border-bottom: 10px;
+    border-radius: 2px;
+    margin: 3px;
+    
+      
+    
+    
+}
+
+.card-image {        
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+
+  
+
+    
+}
+
+img {
+    width: 100%
+    
+    
+    
+}
+
+header {
+    background-color: #a7cddf;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
