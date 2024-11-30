@@ -1,28 +1,14 @@
 import express from "express"
-import jwt from "jsonwebtoken"
+
 import mongoose from "mongoose"
 const booksRouter = express.Router()
-
+import tokenValidation from "../middlewares/tokenValidation.js"
 import Book from "../models/Book.js"
 
-const JWT_KEY = "this is a secret key"
-const tokenValidation = ( req, res, next) => {
-    const token = req.headers.authorization
-    if (!token){
-        res.status(401).send("authorization missing")
-    } else {
-        //verify token
-        const payload = jwt.verify(token, JWT_KEY)
-        if (!payload){
-            res.satus(401).send("user not authorized")
-        } else {
-            next()
-        }
-    }
-}
 
 
-booksRouter.get("/", tokenValidation, async (req, res) => {
+
+booksRouter.get("/",  async (req, res) => {
     const books = await Book.find()
     res.send(books)
 })

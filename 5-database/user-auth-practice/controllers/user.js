@@ -6,20 +6,22 @@ import jwt from "jsonwebtoken"
 
 const router = express.Router()
 
-const SALT = 12
-const JWT_KEY = "this is a secret key"
+const SALT = process.env.SALT
+const JWT_KEY = process.env.JWT_KEY
 router.post("/register", async (req, res) => {
     try {
+        console.log("request body: ", req.body)
         const { username, email, password} = req.body
-    const newUser = new User({
-        username,
-        email,
-        password: bcrypt.hashSync(password, SALT)
-    })
-    await newUser.save()
-    res.send(`new user ${req.body.username} added`)
+        const newUser = new User({
+            username,
+            email,
+            password: bcrypt.hashSync(password, parseInt(SALT))
+        })
+        await newUser.save()
+        res.send(`new user ${req.body.username} added`)
     } catch (err){
-        res.status(404).send(err)
+        console.error("Error while registering user")
+        res.status(404).json({error: "Failed to register user", details: err.message})
     }
     
 })

@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 
-const JWT_KEY = "this is a secret key"
+const JWT_KEY = process.env.JWT_KEY
 const tokenValidation = ( req, res, next) => {
     try {
         const token = req.headers.authorization

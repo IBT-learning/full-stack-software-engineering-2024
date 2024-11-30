@@ -6,8 +6,17 @@ const Book = new mongoose.Schema (
     title:{
         type: String,
         required: true,
-        maxLength: 100,
+        maxLength: [100, "Title must be 100 characters or less"],
         trim: true,
+        // validate: {
+        //     validator: (value) => {
+        //     if (value.includes("Love")) {
+        //         return true
+        //     }
+        //     return false
+        // },
+        // message: "Title has to be a book about love"
+    //}
     },
     author: {
         type: String,
