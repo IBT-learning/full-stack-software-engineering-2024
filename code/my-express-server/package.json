@@ -1,0 +1,19 @@
+{
+  "name": "my-express-server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "supertest": "^6.3.4",
+    "vitest": "^0.34.6"
+  },
+  "description": ""
+}

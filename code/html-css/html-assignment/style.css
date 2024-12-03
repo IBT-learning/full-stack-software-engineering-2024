@@ -1,0 +1,53 @@
+.margin {
+    margin: 5px;
+
+}
+.no-link{
+    text-decoration: none;
+}
+
+.no-link:hover{
+    color: blue;
+}
+
+.border {
+    border: 1px solid black;
+    padding:10px;
+    margin-top: 8px;
+    
+}
+
+#border {
+    border: 1px solid black;
+    padding:10px;
+    margin-top: 8px;
+}
+
+body {
+    background: #e0f1b0;
+    margin: 7px;
+    font-size: 20px;
+}
+
+.img-height {
+    height: 300px;
+    width: 500px;
+    padding-top: 4px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.gap {
+    gap: 15px;
+}
+
+.max-width {
+    max-width: 500px;
+}

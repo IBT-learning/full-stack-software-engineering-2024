@@ -1,0 +1,139 @@
+/* Same as your provided CSS */
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+body {
+  font-family: 'Product Sans';
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 1rem;
+}
+
+.navbar .logo img {
+  width: 5rem;
+}
+
+.navbar .profile-picture img {
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+}
+
+.post {
+  margin: 2rem;
+  border: 1px solid rgb(179, 174, 174);
+  border-radius: 10px;
+}
+
+.blog-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+.blog-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.blog-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-pic img {
+  border-radius: 50%;
+  width: 2rem;
+}
+
+.post-img img {
+  width: 22rem;
+  height: 17rem;
+  object-fit: cover;
+}
+
+.blog-summary {
+  padding: 0 2rem;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.user-img img {
+  width: 25rem;
+}
+
+.user-bio {
+  font-size: 1.8rem;
+  margin-left: 2rem;
+}
+
+.recent-header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .blog {
+    grid-template-columns: auto auto;
+  }
+
+  .post-img img {
+    width: 100%;
+    height: 16rem;
+  }
+
+  .user-bio {
+    font-size: 1.3rem;
+  }
+
+  .recent-header {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .blog {
+    grid-template-columns: auto;
+  }
+
+  .user-profile {
+    flex-direction: column;
+  }
+
+  .user-bio {
+    margin: 0 10%;
+  }
+
+  .recent-header {
+    font-size: 2.5rem;
+  }
+}
