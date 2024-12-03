@@ -10,7 +10,7 @@ function App() {
 
   // Fetch tags once on component load
   useEffect(() => {
-    fetch("https://quoteslate.vercel.app/tags")
+    fetch("https://quoteslate.vercel.app/api/tags")
       .then(response => response.json())
       .then(data => setTags(data))
       .catch(error => console.error("Error fetching tags:", error));
@@ -19,7 +19,7 @@ function App() {
   // Fetch quote by selected tag
   useEffect(() => {
     if (selectedTag) {
-      fetch(`https://quoteslate.vercel.app/random?tags=${selectedTag}`)
+      fetch(`https://quoteslate.vercel.app/api/quotes/random?tags=${selectedTag}`)
         .then(response => response.json())
         .then(data => setQuote(data.quote || "No quotes found."))
         .catch(error => console.error("Error fetching quote:", error));
