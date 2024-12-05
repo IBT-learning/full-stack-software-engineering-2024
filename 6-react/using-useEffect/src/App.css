@@ -1,0 +1,42 @@
+body {
+  font-size: 0.8em;
+}
+
+button {
+  margin: 0.5rem;
+}
+
+.posts-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.post-card {
+  padding: 1rem;
+  border: 3px solid navy;
+  width: 100%;
+}
+
+.card-title {
+  font-weight: 900;
+}
+
+.comment-link {
+  font-size: 0.65rem;
+  color: rgb(28, 67, 86);
+}
+
+.comment-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.comment {
+  font-size: 0.6rem;
+  padding: 0.5rem;
+}

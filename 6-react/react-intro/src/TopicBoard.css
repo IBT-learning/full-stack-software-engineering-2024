@@ -1,0 +1,31 @@
+/* 
+It's a good practice to keep CSS scoped to the elements it's relevant to.
+Make a new CSS file for every component that needs its own CSS.
+The CSS rules will be applied only to the component where it is imported
+and all of that component's children.
+In this example, these styles apply to TopicBoard and TopicCard, but not App.
+*/
+
+.topic-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.topic-card {
+  height: 10rem;
+  width: 10rem;
+  background-color: #ddd;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.rating {
+  font-size: 1rem;
+}

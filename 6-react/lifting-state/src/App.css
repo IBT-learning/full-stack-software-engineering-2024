@@ -1,0 +1,28 @@
+.category-wrapper {
+  display: flex;
+  gap: 1em;
+}
+
+.category-box {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  border: 3px solid navy;
+  margin-top: 2rem;
+  max-width: 10rem;
+  padding: 0.3rem;
+}
+
+.title {
+  align-self: center;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.short {
+  font-size: 0.7rem;
+}
+
+.long {
+  font-size: 0.9rem;
+}
