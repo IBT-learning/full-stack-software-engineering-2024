@@ -1,0 +1,47 @@
+.recipe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 1em;
+
+}
+
+.create-btn {
+    display: inline-block;
+    margin: 1.5rem 0;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0b29d3;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .create-btn:hover {
+    background-color: #03197a;
+  }
+  
+
+.recipe .title {
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 80px;
+    width: 100px;
+    padding: 20px;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .recipe .title a {
+    text-decoration: none;
+    color: #2903929c;
+    transition: color 0.3s ease-in-out;
+    font-style: bold;
+  }
