@@ -1,0 +1,71 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Recipe detail container */
+  #recipe-detail {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  #recipe-detail h1 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Recipe details */
+  #recipe-detail p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  #recipe-detail strong {
+    color: #240166;
+    font-weight: bold;
+  }
+  
+  /* Button */
+  #recipe-detail button {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  #recipe-detail button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .edit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
