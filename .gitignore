@@ -9,7 +9,7 @@ notes.*
 notes.*
 
 .vscode/
-
+.env
 node_modules/
 <<<<<<< HEAD
 =======
