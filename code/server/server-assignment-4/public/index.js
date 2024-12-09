@@ -7,7 +7,7 @@ selectUser.addEventListener("change", () => {
   const fetchTodos = async () => {
     const res = await fetch(
       // `https://jsonplaceholder.typicode.com/todos?userId=${selectUserValue}`
-      `data/todo-data.json`
+      `/todos?userId=${selectUserValue}`
     );
 
     const toDos = await res.json();
