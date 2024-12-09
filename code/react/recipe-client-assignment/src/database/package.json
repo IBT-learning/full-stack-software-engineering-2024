@@ -1,5 +1,5 @@
 {
-  "name": "db-assignment-2",
+  "name": "database",
   "version": "1.0.0",
   "main": "app.js",
   "type": "module",
@@ -13,7 +13,7 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1",
-    "mongoose": "^8.7.0"
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4"
   }
 }

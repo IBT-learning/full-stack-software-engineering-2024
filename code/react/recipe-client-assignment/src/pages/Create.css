@@ -1,0 +1,88 @@
+/* Container for the Create component */
+.create-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 45px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling */
+  .create-title {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Form styling */
+  .create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Form group for labels and inputs */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Labels */
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Text inputs */
+  .form-input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-input:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Textareas */
+  .form-textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1b00b4;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1f0164;
+    transform: scale(1.05);
+  }
+  
+  
+  
