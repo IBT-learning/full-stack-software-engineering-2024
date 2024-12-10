@@ -1,5 +1,6 @@
 * {
     background-color: #AFDDE5;
+    display: block;
 }
 header{
     display: flex;
@@ -9,6 +10,37 @@ header{
     height: 10%;
     border-radius: 50%;
 }
-.follow {
+
+input{
+    background-color: transparent;
+    border: 0px solid;
+    height: 10em;
+    width: 70%;
+    color: gray;
+}
+button{
+    cursor: pointer;
+}
+.post{
+    border-radius: 20px;
+    width: 50px;
+    height: 20px;
+    border: 0px solid;
+    background-color: black;
+    color: antiquewhite;
+    margin-top: 1em;
+}
+.usercomment{
     display: flex;
+    gap: 1em;
+    display: none;
+}
+.profile-img{
+    width: 30px;
+    height: 20%;
+    margin-top: 1em;
+    border-radius: 50%;
+}
+small{
+    margin-top: 3px;
 }

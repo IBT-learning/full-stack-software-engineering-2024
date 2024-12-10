@@ -1,0 +1,14 @@
+* {
+    background-color: #AFDDE5;
+}
+header{
+    display: flex;
+}
+ .profile-pic{
+    width: 5%;
+    height: 10%;
+    border-radius: 50%;
+}
+.follow {
+    display: flex;
+}
