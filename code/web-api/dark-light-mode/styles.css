@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    }
+    
+    #banner {
+    font-size: 2rem;
+    }
+    
+    button {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .dark-mode {
+        background-color: darkgray;
+        color: black;
+    }
+    
+    .light-mode {
+        background-color: lightgray;
+        color: white;
+    }
