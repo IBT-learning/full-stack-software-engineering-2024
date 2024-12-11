@@ -20,10 +20,17 @@ You will make two web pages, so each page will be a separate html file. I sugges
 
 Both pages must have
 
+<<<<<<< HEAD
 -   mobile-first responsive designs with at least mobile and desktop versions
 -   layouts using grid and/or flexbox
 -   a matching color scheme (I recommend taking the time to use a color palette generator to come up with something nice)
 -   use at least one custom font (from Google Fonts or any other source)
+=======
+- mobile-first responsive designs with at least mobile and desktop versions
+- layouts using grid and/or flexbox
+- a matching color scheme (I recommend taking the time to use a color palette generator to come up with something nice)
+- use at least one custom font (from Google Fonts or any other source)
+>>>>>>> 8f8e60016886992755c740bfa18e83953eafaa70
 
 #### Home page
 
@@ -31,9 +38,15 @@ This will be the landing page for the site. Assume the user is logged in.
 
 The page should include at least navigation to the user profile, and several recent blog posts from different users. Each blog post should have:
 
+<<<<<<< HEAD
 -   a timestamp
 -   a username
 -   text (either the full post or the first line, etc)
+=======
+- a timestamp
+- a username
+- text (either the full post or the first line, etc)
+>>>>>>> 8f8e60016886992755c740bfa18e83953eafaa70
 
 #### User Profile page
 
@@ -41,6 +54,7 @@ This page will have some kind of bio. You decide what information is stored in t
 
 In addition to the bio, include several of the user's most recent posts. (I won't notice or care whether these match the ones from the home page, the content is just a placeholder!)
 
+<<<<<<< HEAD
 ### Extra challenges (optional):
 
 -   make some of the posts have images in them
@@ -48,3 +62,12 @@ In addition to the bio, include several of the user's most recent posts. (I won'
 -   give the current user's posts an edit icon
     -   not all of the posts should be from the same user, so decide who the currently logged in user is
 -   include a tablet version as well as the mobile and desktop versions
+=======
+### Extra challenges (optional)
+
+- make some of the posts have images in them
+- give each post a small user icon (such as a photo thumbnail) that is different for each user
+- give the current user's posts an edit icon
+  - not all of the posts should be from the same user, so decide who the currently logged in user is
+- include a tablet version as well as the mobile and desktop versions
+>>>>>>> 8f8e60016886992755c740bfa18e83953eafaa70

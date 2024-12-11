@@ -1,4 +1,13 @@
+.env
+
 notes/
 notes.*
 
+<<<<<<< HEAD
 .vscode/
+=======
+.vscode/
+.vite/
+
+node_modules/
+>>>>>>> 8f8e60016886992755c740bfa18e83953eafaa70
