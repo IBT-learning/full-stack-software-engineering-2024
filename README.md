@@ -20,6 +20,7 @@ This is the central repository for IBT Learning's Full Stack Software Engineerin
 | 21   | Using the MongoDB driver    | [MongoDB practice](./5-database/assignments/db-assignment-1.md)                |
 | 22   | Mongoose Schemas            | [Create a CRUD app with Mongoose](./5-database/assignments/db-assignment-2.md) |
 | 23   | User Authentication         | [Add users to your recipe app](./5-database/assignments/db-assignment-3.md)    |
+| 23   | Database Final Project      | [Database Final Project](./5-database/assignments/db-final-project.md)         |
 
 ### Server
 
