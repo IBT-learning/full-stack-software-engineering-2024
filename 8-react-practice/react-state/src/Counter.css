@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.count-component{
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 4rem;
+}
+button{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    width: 3.5em;
+    height: 3em;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}

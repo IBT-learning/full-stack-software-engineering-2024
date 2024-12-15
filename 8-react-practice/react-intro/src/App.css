@@ -1,0 +1,21 @@
+.topic-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.topic-card{
+  height: 7rem;
+  width: 9rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #dddd;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.rating{
+  font-size: 1rem;
+}
