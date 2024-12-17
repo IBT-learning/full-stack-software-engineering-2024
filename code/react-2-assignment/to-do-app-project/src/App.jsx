@@ -17,8 +17,6 @@ function App() {
   // ]
   const [task, setTask] = useState([])
 
-  {console.log(task)} //REMOVE THIS LINE WHEN DONE
-
   return (
     <>
     <div className='body'>
