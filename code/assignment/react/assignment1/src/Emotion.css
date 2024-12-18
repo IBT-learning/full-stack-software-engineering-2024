@@ -1,0 +1,28 @@
+.emoji-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+
+}
+.emoji-button{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    height: 3rem;
+    width: 4rem;
+    font-size: 30px;
+    gap: 1rem;
+    border-radius: 5px;
+    background-color: beige;
+}
+button:hover{
+    background-color: antiquewhite;
+}
+.description{
+    font: 400;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    ;
+}
