@@ -1,3 +1,14 @@
+.env
+
 notes/
+
 notes.md
 node_modules
+
+notes.*
+
+.vscode/
+.vite/
+
+node_modules/
+
