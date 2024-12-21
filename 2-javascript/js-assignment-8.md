@@ -27,7 +27,7 @@ const prices = [
   { product: "stuffed animal", price: 15, inStock: false },
   { product: "jacket", price: 75, inStock: false },
   { product: "keychain", price: 4, inStock: true },
-];
+]
 ```
 
 - Use `.filter()` to create an array with only the product objects that cost less than $20
@@ -40,6 +40,6 @@ const prices = [
 - The sale is only for products that cost more than $10. Rewrite the previous map to only change the prices for items with prices above $10.
 - We're making an ad for the sale. Make an array of strings that read, for example, "shoes are on sale for only $37.50!"
 
-#### Extra challenges
+#### Extra challenges (optional)
 
 - Can you use `.reduce()` to join all the strings from the previous together into one long string?
