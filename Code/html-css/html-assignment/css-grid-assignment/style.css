@@ -1,0 +1,43 @@
+#wrapper {
+    display: grid;
+    font-size: 2em;
+    gap: 1rem;
+    grid-template-columns: 10rem 4fr 1fr;
+   
+}
+
+#header {
+    grid-column: 1/4;
+}
+
+#left {
+    grid-column: 1/1;
+
+}
+
+#right {
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+}
+
+#main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#footer {
+   grid-row: 4/4;
+   grid-column: 1/4;
+}
+
+/* DO NOT CHANGE ANYTHING BELOW THIS LINE  */
+#wrapper > * {
+    background-color: #ddd;
+    min-height: 15vh;
+    padding: 0.5em;
+}
+
+article {
+    height: 85vh;
+}

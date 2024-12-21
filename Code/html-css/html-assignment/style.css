@@ -1,0 +1,36 @@
+body{
+    background-color: #fffdfc;
+}
+
+h1, h2, h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#unique {
+    background-color: orange;
+    border: 50;
+    max-width: 100%;
+}
+
+.class {
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+img{
+    height: 200;
+    padding-block: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a{
+    color: orange;
+    font-family: Verdana;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color: orangered;
+}
