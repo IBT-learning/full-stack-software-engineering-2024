@@ -1,0 +1,17 @@
+.task {
+    padding: 10px;
+    margin: 10px auto;
+    width: 300px;
+    border-radius: 5px;
+    background-color: #f8d7da;
+    color: #721c24;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .task.completed {
+    text-decoration: line-through;
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
