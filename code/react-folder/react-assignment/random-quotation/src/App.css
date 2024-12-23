@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border: 1px wheat solid;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  max-width: 700px;
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.author {
+  font-size: 1.2rem;
+}
+#tag-buttons-container {
+  display: flex;
+  max-width: 850px;
+  justify-content: center;
+  /* margin-top: 20px; */
+  flex-wrap:wrap;
+  flex-direction: row-reverse;
+  justify-content:space-evenly;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}
+
+#tag-buttons {
+  margin: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+}
+
+#tag-buttons:hover {
+  background-color: azure;
+  color: #007bff;;
+}
+
+#tag-buttons:active {
+  background-color: #33bb1134
+}
+
+.get-quote-button {
+  padding-top: 1px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: cornflowerblue;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid cornflowerblue;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-quote-button:hover {
+  background-color: wheat;
+}
