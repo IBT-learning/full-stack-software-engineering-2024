@@ -1,0 +1,39 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure content is on top */
+  background: linear-gradient(#35b9d6, #3a7bd5, #b360da);
+}
+
+.background::before,
+.background::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+
+.background::before {
+  background: linear-gradient(#c74dff, #00d2ff, #3a7bd5);
+  top: 30%;
+  left: 10%;
+  opacity: 0.5;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.background::after {
+  background: linear-gradient(to top, #f9d423, #c74dff, #35b9d6, #35b9d6);
+  top: 20%;
+  right: 10%;
+  opacity: 0.5;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+}
