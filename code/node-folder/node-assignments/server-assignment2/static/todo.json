@@ -1,0 +1,602 @@
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "Start the day with gratitude",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "Make a healthy breakfast",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "Take a 30-minute walk",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 4,
+        "title": "Read a chapter of a book",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 5,
+        "title": "Practice mindfulness meditation",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 6,
+        "title": "Plan goals for the week",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 7,
+        "title": "Connect with a friend",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 8,
+        "title": "Cook a new healthy recipe",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 9,
+        "title": "Spend time on a hobby",
+        "completed": false
+    },
+    {
+        "userId": 1,
+        "id": 10,
+        "title": "Reflect on today's achievements",
+        "completed": true
+    },
+    {
+        "userId": 2,
+        "id": 1,
+        "title": "Write down three things you're thankful for",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 2,
+        "title": "Take a moment to breathe deeply",
+        "completed": true
+    },
+    {
+        "userId": 2,
+        "id": 3,
+        "title": "Volunteer for a local charity",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 4,
+        "title": "Create a vision board",
+        "completed": true
+    },
+    {
+        "userId": 2,
+        "id": 5,
+        "title": "Enjoy a relaxing bath",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 6,
+        "title": "Watch a motivational talk",
+        "completed": true
+    },
+    {
+        "userId": 2,
+        "id": 7,
+        "title": "Try out a new workout routine",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 8,
+        "title": "Write a letter to your future self",
+        "completed": true
+    },
+    {
+        "userId": 2,
+        "id": 9,
+        "title": "Explore a new place in your city",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 10,
+        "title": "End the day with positive affirmations",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 1,
+        "title": "Start a gratitude journal",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 2,
+        "title": "Learn something new today",
+        "completed": false
+    },
+    {
+        "userId": 3,
+        "id": 3,
+        "title": "Plant a tree or flowers",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 4,
+        "title": "Help someone in need",
+        "completed": false
+    },
+    {
+        "userId": 3,
+        "id": 5,
+        "title": "Create a playlist of your favorite songs",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 6,
+        "title": "Dance like nobody's watching",
+        "completed": false
+    },
+    {
+        "userId": 3,
+        "id": 7,
+        "title": "Spend time in nature",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 8,
+        "title": "Draw or paint something uplifting",
+        "completed": false
+    },
+    {
+        "userId": 3,
+        "id": 9,
+        "title": "Write a poem or story",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 10,
+        "title": "Make a list of your dreams",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 1,
+        "title": "Cook a favorite meal",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 2,
+        "title": "Reach out to a loved one",
+        "completed": true
+    },
+    {
+        "userId": 4,
+        "id": 3,
+        "title": "Take a relaxing walk in the park",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 4,
+        "title": "Do a random act of kindness",
+        "completed": true
+    },
+    {
+        "userId": 4,
+        "id": 5,
+        "title": "Watch the sunrise or sunset",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 6,
+        "title": "Write down your goals for the month",
+        "completed": true
+    },
+    {
+        "userId": 4,
+        "id": 7,
+        "title": "Attend a local event or workshop",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 8,
+        "title": "Spend quality time with family",
+        "completed": true
+    },
+    {
+        "userId": 4,
+        "id": 9,
+        "title": "Reflect on personal growth",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 10,
+        "title": "Create a list of things that inspire you",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 1,
+        "title": "Practice gratitude every morning",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 2,
+        "title": "Try a new healthy smoothie recipe",
+        "completed": false
+    },
+    {
+        "userId": 5,
+        "id": 3,
+        "title": "Go for a bike ride",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 4,
+        "title": "Do yoga or stretching exercises",
+        "completed": false
+    },
+    {
+        "userId": 5,
+        "id": 5,
+        "title": "Listen to an inspiring podcast",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 6,
+        "title": "Create a budget plan",
+        "completed": false
+    },
+    {
+        "userId": 5,
+        "id": 7,
+        "title": "Attend a virtual class on something interesting",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 8,
+        "title": "Spend time journaling your thoughts",
+        "completed": false
+    },
+    {
+        "userId": 5,
+        "id": 9,
+        "title": "Plan a weekend adventure",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 10,
+        "title": "Celebrate small wins",
+        "completed": false
+    },
+    {
+        "userId": 6,
+        "id": 1,
+        "title": "Create a list of things that make you happy",
+        "completed": false
+    },
+    {
+        "userId": 6,
+        "id": 2,
+        "title": "Try a new hobby or craft",
+        "completed": true
+    },
+    {
+        "userId": 6,
+        "id": 3,
+        "title": "Spend time with a pet",
+        "completed": false
+    },
+    {
+        "userId": 6,
+        "id": 4,
+        "title": "Write a letter of appreciation to someone",
+        "completed": true
+    },
+    {
+        "userId": 6,
+        "id": 5,
+        "title": "Explore a new book genre",
+        "completed": false
+    },
+    {
+        "userId": 6,
+        "id": 6,
+        "title": "Volunteer at a local shelter",
+        "completed": true
+    },
+    {
+        "userId": 6,
+        "id": 7,
+        "title": "Plan a picnic in the park",
+        "completed": false
+    },
+    {
+        "userId": 6,
+        "id": 8,
+        "title": "Create a list of quotes that inspire you",
+        "completed": true
+    },
+    {
+        "userId": 6,
+        "id": 9,
+        "title": "Start a DIY project at home",
+        "completed": false
+    },
+    {
+        "userId": 6,
+        "id": 10,
+        "title": "Reflect on your favorite memories",
+        "completed": true
+    },
+    {
+        "userId": 7,
+        "id": 1,
+        "title": "Do a digital detox for a day",
+        "completed": true
+    },
+    {
+        "userId": 7,
+        "id": 2,
+        "title": "Visit a museum or art gallery",
+        "completed": false
+    },
+    {
+        "userId": 7,
+        "id": 3,
+        "title": "Join a book club or discussion group",
+        "completed": true
+    },
+    {
+        "userId": 7,
+        "id": 4,
+        "title": "Try a new type of cuisine",
+        "completed": false
+    },
+    {
+        "userId": 7,
+        "id": 5,
+        "title": "Listen to music that uplifts you",
+        "completed": true
+    },
+    {
+        "userId": 7,
+        "id": 6,
+        "title": "Start a positive habit",
+        "completed": false
+    },
+    {
+        "userId": 7,
+        "id": 7,
+        "title": "Plan a road trip",
+        "completed": true
+    },
+    {
+        "userId": 7,
+        "id": 8,
+        "title": "Try meditation or deep breathing exercises",
+        "completed": false
+    },
+    {
+        "userId": 7,
+        "id": 9,
+        "title": "Explore a local park or nature reserve",
+        "completed": true
+    },
+    {
+        "userId": 7,
+        "id": 10,
+        "title": "Write down your life goals",
+        "completed": false
+    },
+    {
+        "userId": 8,
+        "id": 1,
+        "title": "Spend time in nature and reflect",
+        "completed": true
+    },
+    {
+        "userId": 8,
+        "id": 2,
+        "title": "Do something creative today",
+        "completed": false
+    },
+    {
+        "userId": 8,
+        "id": 3,
+        "title": "Attend a workshop on a new skill",
+        "completed": true
+    },
+    {
+        "userId": 8,
+        "id": 4,
+        "title": "Have a movie night with friends",
+        "completed": false
+    },
+    {
+        "userId": 8,
+        "id": 5,
+        "title": "Create a self-care routine",
+        "completed": true
+    },
+    {
+        "userId": 8,
+        "id": 6,
+        "title": "Write down your achievements",
+        "completed": false
+    },
+    {
+        "userId": 8,
+        "id": 7,
+        "title": "Explore a new genre of music",
+        "completed": true
+    },
+    {
+        "userId": 8,
+        "id": 8,
+        "title": "Spend an afternoon crafting",
+        "completed": false
+    },
+    {
+        "userId": 8,
+        "id": 9,
+        "title": "Organize a charity event",
+        "completed": true
+    },
+    {
+        "userId": 8,
+        "id": 10,
+        "title": "Reflect on your goals for the future",
+        "completed": false
+    },
+    {
+        "userId": 9,
+        "id": 1,
+        "title": "Plan a creative project",
+        "completed": false
+    },
+    {
+        "userId": 9,
+        "id": 2,
+        "title": "Spend time decluttering",
+        "completed": true
+    },
+    {
+        "userId": 9,
+        "id": 3,
+        "title": "Write down your dream vacation",
+        "completed": false
+    },
+    {
+        "userId": 9,
+        "id": 4,
+        "title": "Do something spontaneous",
+        "completed": true
+    },
+    {
+        "userId": 9,
+        "id": 5,
+        "title": "Explore a new recipe",
+        "completed": false
+    },
+    {
+        "userId": 9,
+        "id": 6,
+        "title": "Join a fitness class",
+        "completed": true
+    },
+    {
+        "userId": 9,
+        "id": 7,
+        "title": "Spend an hour on self-care",
+        "completed": false
+    },
+    {
+        "userId": 9,
+        "id": 8,
+        "title": "Organize a game night",
+        "completed": true
+    },
+    {
+        "userId": 9,
+        "id": 9,
+        "title": "Write a short story or poem",
+        "completed": false
+    },
+    {
+        "userId": 9,
+        "id": 10,
+        "title": "Reflect on what you're proud of",
+        "completed": true
+    },
+    {
+        "userId": 10,
+        "id": 1,
+        "title": "Set aside time for a hobby",
+        "completed": true
+    },
+    {
+        "userId": 10,
+        "id": 2,
+        "title": "Plan a weekend getaway",
+        "completed": false
+    },
+    {
+        "userId": 10,
+        "id": 3,
+        "title": "Create a gratitude list",
+        "completed": true
+    },
+    {
+        "userId": 10,
+        "id": 4,
+        "title": "Take a moment for deep breathing",
+        "completed": false
+    },
+    {
+        "userId": 10,
+        "id": 5,
+        "title": "Write down your aspirations",
+        "completed": true
+    },
+    {
+        "userId": 10,
+        "id": 6,
+        "title": "Share kindness with a stranger",
+        "completed": false
+    },
+    {
+        "userId": 10,
+        "id": 7,
+        "title": "Participate in a local event",
+        "completed": true
+    },
+    {
+        "userId": 10,
+        "id": 8,
+        "title": "Have a self-care day",
+        "completed": false
+    },
+    {
+        "userId": 10,
+        "id": 9,
+        "title": "Create a list of things you love",
+        "completed": true
+    },
+    {
+        "userId": 10,
+        "id": 10,
+        "title": "Reflect on your personal growth journey",
+        "completed": false
+    }
+]
