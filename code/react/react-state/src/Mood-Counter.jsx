@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './App.css';
+import PropTypes from 'prop-types'
 
 function MoodCounter({ name }) {  
+  
   const [mood, setMood] = useState({ description: '', emoji: '' });
 
   const moods = [
@@ -13,6 +15,7 @@ function MoodCounter({ name }) {
     { emoji: '😔', description: 'sad' },
     
   ];
+
 
 
   const moodEmoji = (description, emoji) => {
@@ -33,6 +36,14 @@ function MoodCounter({ name }) {
     </>
   );
 }
+
+/*
+ * Adding this ensures the name prop is validated as a required string, 
+  helping catch errors early and improving code reliability.
+  */
+MoodCounter.propTypes = {
+  name: PropTypes.string.isRequired, 
+};
 
 export default MoodCounter;
 
