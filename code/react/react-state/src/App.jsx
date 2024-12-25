@@ -11,8 +11,6 @@ function App() {
       <MoodCounter name = "Alex" />
       <MoodCounter name = "Mary" />
 
-
-
     </>
   )
 }

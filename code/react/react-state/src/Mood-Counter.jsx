@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './App.css';
+import PropTypes from 'prop-types'
 
 function MoodCounter({ name }) {  
+  
   const [mood, setMood] = useState({ description: '', emoji: '' });
 
   const moods = [
@@ -13,6 +15,7 @@ function MoodCounter({ name }) {
     { emoji: '😔', description: 'sad' },
     
   ];
+
 
 
   const moodEmoji = (description, emoji) => {
@@ -33,6 +36,14 @@ function MoodCounter({ name }) {
     </>
   );
 }
+
+/*
+ * Adding this ensures the name prop is validated as a required string, 
+  helping catch errors early and improving code reliability.
+  */
+MoodCounter.propTypes = {
+  name: PropTypes.string.isRequired, 
+};
 
 export default MoodCounter;
 
@@ -76,5 +87,5 @@ Now, using a loop, render each of these emojis along with an onClick event liste
 Now that we're back in the front-end, it's time to keep flexing our CSS skills! Can you use flexbox to make the emojis nicely aligned, spaced, and centered on the page?
 
 Extra challenge (optional)
-This component displays one person's mood. Could you reuse it to display several different people, each with their own mood state? Try passing a prop into the component and displaying a person's name as part of the mood statement, such as "Ani is feeling excited today" and "Ayo is feeling sleepy today."
+This component displays one person's mood. Could you reuse it to display several different people, each with their own mood state? Try passing a prop into the component and displaying a person's name as part of the mood statement, such as "Ani is feeling excited today" and "Ayo is feeling sleepy today. "
  */
