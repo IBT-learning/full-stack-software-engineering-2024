@@ -197,7 +197,8 @@ footer {
     }
 
     #logo-img {
-        width: 100%;
+        /* width: auto; */
+        height: auto;
     }
 
     #logo {
@@ -281,7 +282,7 @@ footer {
         }
 
         #logo-img {
-            width: 100%;
+            width: auto;
             height: auto;
         }
 
@@ -290,7 +291,6 @@ footer {
             padding: 1em;
             float:left;
         }
-    
         
         main {
             grid-area: main;
