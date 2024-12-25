@@ -1,0 +1,23 @@
+/* extra challenge #2 */
+.dark {
+    background-color: #a9a9a9;
+    color: #ffffff;
+}
+.light {
+    background-color: #d3d3d3;
+    color: #000000;
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#banner {
+    font-family: 'Gill Sans';
+    font-weight: bolder;
+}
+#mode-btn {
+    font-size: 1.5rem;
+    padding: 0.5rem
+}
