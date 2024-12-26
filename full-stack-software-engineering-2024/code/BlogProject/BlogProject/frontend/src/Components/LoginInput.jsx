@@ -29,7 +29,7 @@ const LoginInput = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  const { setAuth, setIsAuth } = useGlobalContext();
+  const { setAuth, setIsAuth, auth } = useGlobalContext();
 
   const [email, setEmail] = useState("");
   const [emailFocus, setEmailFocus] = useState(null);
@@ -77,15 +77,14 @@ const LoginInput = () => {
           const result = await res.json();
           const token = result.data.token;
           const user = result.data.user;
-          const msg = result.msg;
-          const success = result.success;
           Cookie.set("auth_token", token, {
             sameSite: "none",
             secure: true,
             expires: 2,
           });
+          setAuth(user);
+          localStorage.setItem("auth_user", JSON.stringify(user));
           setIsAuth(true);
-          setAuth({ user, msg, success });
           setEmail("");
           setPassword("");
           navigate(from, { replace: true });

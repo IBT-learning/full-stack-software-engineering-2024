@@ -1,8 +1,8 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
-import SigninInput from "../AppComponents/SigninInput.jsx";
-import AuthFooter from "../AppComponents/AuthFooter.jsx";
-import BgPattern from "../AppComponents/BgPattern.jsx";
+import SigninInput from "../Components/SigninInput.jsx";
+import AuthFooter from "../Components/AuthFooter.jsx";
+import BgPattern from "../Components/BgPattern.jsx";
 
 const RegisterPage = () => {
   const text = [

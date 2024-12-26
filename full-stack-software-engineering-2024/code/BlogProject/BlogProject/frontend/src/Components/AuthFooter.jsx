@@ -1,20 +1,10 @@
 import React from "react";
 import { Heading, VStack, Button } from "@chakra-ui/react";
 import { buttonStyle } from "../Utils/styles";
-import useGlobalContext from "../Context/useGlobalContext";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
 const AuthFooter = ({ head, subHead, btnText }) => {
-  const { setAuthToken, setIsAuth } = useGlobalContext();
   const navigate = useNavigate();
-
-  const handleLogOut = () => {
-    Cookies.remove("auth_token");
-    setAuthToken("");
-    setIsAuth(false);
-    navigate("/login");
-  };
 
   return (
     <VStack
@@ -51,7 +41,7 @@ const AuthFooter = ({ head, subHead, btnText }) => {
         mt="3"
         marginBlockEnd={2}
         sx={buttonStyle}
-        onClick={handleLogOut}
+        onClick={() => navigate("/login")}
       >
         {btnText}
       </Button>
