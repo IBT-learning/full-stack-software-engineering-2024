@@ -5,14 +5,11 @@ import {
   Heading,
   Text,
   Button,
-  useColorMode,
   Divider,
   useColorModeValue,
   IconButton,
   HStack,
   VStack,
-  Stack,
-  StackDivider,
 } from "@chakra-ui/react";
 import {
   IoCreateOutline,
@@ -96,7 +93,7 @@ const Aside = () => {
       {/* Sidebar view on large screens */}
       <Box
         display={{ base: "none", sm: "none", md: "block" }}
-        maxW="250px"
+        minW="250px"
         overflow={"hidden"}
         h="full"
         bg={bg}
@@ -109,9 +106,10 @@ const Aside = () => {
         <Divider />
 
         <Flex direction="column" w="full" align={"flex-start"} py="2">
-          {icons.map((icon) => (
+          {icons.map((icon, index) => (
             <Button
               variant="ghost"
+              key={index}
               size="lg"
               leftIcon={icon.icon}
               pl="3"
@@ -179,12 +177,15 @@ const Aside = () => {
             <>
               <IconButton
                 w="80%"
+                key={icon.icon}
                 icon={icon.icon}
                 size={"lg"}
                 bg={useColorModeValue("gray.200", "gray.700")}
                 onClick={() => navigate(icon.link)}
               />
-              <Text textAlign={"center"}>{icon.text}</Text>
+              <Text textAlign={"center"} key={icon.text}>
+                {icon.text}
+              </Text>
               <Divider />
             </>
           ))}

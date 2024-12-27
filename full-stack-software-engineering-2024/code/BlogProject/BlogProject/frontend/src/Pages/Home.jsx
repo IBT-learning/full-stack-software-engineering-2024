@@ -11,6 +11,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import Aside from "../Components/Aside.jsx";
+import { PostCard, MobilePostCard } from "../Components/PostCard.jsx";
 
 const HomePage = () => {
   const bg = useColorModeValue("gray.200", "gray.900");
@@ -29,18 +30,24 @@ const HomePage = () => {
       px={{ base: "2", sm: "4", md: "10" }}
       pt="2"
     >
-      <Flex gap="4">
+      <Flex gap="10">
         {/* Icon sidebar on large and medium screens */}
         <Aside />
-
+        <Box display={{ base: "none", sm: "none", md: "block" }}>
+          <Box display="flex" flexWrap="wrap" gap="6">
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+          </Box>
+        </Box>
         <Box
           display={{ base: "block", sm: "block", md: "none" }}
           border={"1px solid"}
           borderColor={useColorModeValue("gray.300", "gray.700")}
-          px={{ base: "2", sm: "4" }}
+          px={{ base: "2", sm: "" }}
           rounded={"md"}
-          w="full"
-          h="full"
+          w={{ base: "100%", sm: "80%" }}
           minH="100vh"
         >
           <Tabs isFitted variant="soft-rounded">
@@ -52,7 +59,12 @@ const HomePage = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <p>one!</p>
+                <Flex direction={"column"} gap="4">
+                  {<MobilePostCard />}
+                  {<MobilePostCard />}
+                  {<MobilePostCard />}
+                  {<MobilePostCard />}
+                </Flex>
               </TabPanel>
               <TabPanel>
                 <p>two!</p>
