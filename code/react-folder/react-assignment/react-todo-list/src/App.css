@@ -1,0 +1,133 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f0f0f0;
+  font-family: Trattatello, monospace, Georgia, serif;
+}
+
+.wrapper {
+  max-width: 1600;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 650;
+  text-align: center;
+}
+
+.done {
+  text-decoration: line-through;
+  color: red;
+}
+
+.done button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete {
+  background-color: coral;
+}
+
+.action {
+  display: flex;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 10px solid #f0f0f0;
+}
+span {
+  background-color: green;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+
+input {
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid yellowgreen;
+  padding: 10px;
+}
+
+button {
+  max-width: 100px;
+  border-radius: 10px;
+  border: 2px solid yellowgreen;
+  padding: 10px;
+  background-color: chartreuse;
+  color: black;
+  font-weight: 600;
+}
+
+button:hover, button:active {
+  cursor: pointer;
+  background-color: green;
+}
+
+.thead {
+  padding-top: 30px;
+  padding: auto;
+}
+
+.todo {
+ text-align: center;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ background-color: yellowgreen;
+}
+
+.table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin: auto;
+  border: 1px solid black; /* Defines a black border around the table */
+  table-layout: fixed; /* Allows columns to adjust based on content width */
+}
+
+td, th {
+  word-wrap: break-word; /* Breaks long text to prevent overflow */
+  white-space: normal; /* Ensures text can wrap */
+  padding: 10px; /* Padding for spacing inside cells */
+}
+
+.table th, .table td {
+  border: 1px solid #ddd; /* Adds a light gray border between columns and rows */
+  padding: 8px; /* Padding inside each cell for spacing */
+  text-align: left; /* Aligns text to the left inside cells */
+}
+
+.table th {
+  background-color: #f4f4f4; /* Light gray background for header row */
+  font-weight: bold; /* Makes header text bold */
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row colors for better readability */
+}
+
+.table tr:hover {
+  background-color: #f1f1f1; /* Changes the background color of rows when hovered */
+}
