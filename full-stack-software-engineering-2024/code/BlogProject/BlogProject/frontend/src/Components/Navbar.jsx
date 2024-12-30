@@ -220,7 +220,7 @@ const MobileNavbar = ({ auth, handleLogOut, textColor, bg }) => {
       <Divider />
       <Box h="3rem" px={{ base: "2", sm: "4", md: "10" }} py="2">
         <Text fontSize={"xl"} fontWeight={"semiBold"} letterSpacing={"wide"}>
-          {auth ? `Hi ${username}, Welcome🙌!` : "Hi User, Welecome!🙌"}
+          {auth ? `Hi ${username}, Welcome🙌!` : "Hi User, Welcome!🙌"}
         </Text>
       </Box>
       <Divider />
@@ -235,6 +235,7 @@ const MobileNavbar = ({ auth, handleLogOut, textColor, bg }) => {
         display={{ base: "block", sm: "none" }}
         overflow={"hidden"}
         transition={"all 0.3s ease-in-out"}
+        zIndex={99}
       >
         <Flex h="full" align={"center"} justify="space-evenly" gap="10">
           <IconButton
