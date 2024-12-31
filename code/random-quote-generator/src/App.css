@@ -1,0 +1,29 @@
+.app {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #b6b6c1;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+select {
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.quote {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}
