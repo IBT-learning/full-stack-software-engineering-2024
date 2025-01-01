@@ -25,6 +25,7 @@ import { useNavigate } from "react-router-dom";
 
 const Aside = () => {
   const bg = useColorModeValue("white", "gray.800");
+  const color = useColorModeValue("gray.600", "gray.300");
   const navigate = useNavigate();
 
   const icons = [
@@ -41,7 +42,7 @@ const Aside = () => {
     {
       icon: <IoCreateOutline />,
       text: "Create A Post",
-      link: "/post",
+      link: "/createpost",
     },
     {
       icon: <IoBookmarkOutline />,
@@ -97,6 +98,7 @@ const Aside = () => {
         overflow={"hidden"}
         h="full"
         bg={bg}
+        color={color}
         rounded={"md"}
         px="4"
       >
@@ -167,6 +169,7 @@ const Aside = () => {
         overflow={"hidden"}
         h="full"
         bg={bg}
+        color={color}
         rounded={"md"}
         pt="4"
         px="2"

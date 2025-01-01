@@ -20,6 +20,7 @@ import {
   FaSignInAlt,
   FaSignOutAlt,
   FaSun,
+  FaRegUserCircle,
 } from "react-icons/fa";
 import { useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
@@ -27,7 +28,6 @@ import { CgMenuRight } from "react-icons/cg";
 import {
   IoCreateOutline,
   IoSearchOutline,
-  IoSettingsOutline,
   IoBookmarkOutline,
   IoHomeOutline,
 } from "react-icons/io5";
@@ -247,14 +247,14 @@ const MobileNavbar = ({ auth, handleLogOut, textColor, bg }) => {
           <IconButton
             variant={"ghost"}
             _hover={{ bg: "purple.500" }}
-            icon={<IoBookmarkOutline size="25" color="purple" />}
-            onClick={() => navigate("/bookmark")}
+            icon={<FaRegUserCircle size="25" color="purple" />}
+            onClick={() => navigate("/profile/:username")}
           />
           <IconButton
             variant={"ghost"}
             _hover={{ bg: "purple.500" }}
             icon={<IoCreateOutline size="27" color="purple" />}
-            onClick={() => navigate("/post")}
+            onClick={() => navigate("/createpost")}
           />
           <IconButton
             variant={"ghost"}
@@ -265,7 +265,8 @@ const MobileNavbar = ({ auth, handleLogOut, textColor, bg }) => {
           <IconButton
             variant={"ghost"}
             _hover={{ bg: "purple.500" }}
-            icon={<IoSettingsOutline size="25" color="purple" />}
+            icon={<IoBookmarkOutline size="25" color="purple" />}
+            onClick={() => navigate("/bookmark")}
           />
         </Flex>
       </Box>

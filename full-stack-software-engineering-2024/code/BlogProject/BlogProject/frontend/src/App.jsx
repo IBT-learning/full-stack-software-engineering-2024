@@ -8,7 +8,7 @@ import ProfilePage from "./Pages/Profile";
 import PostPage from "./Pages/Post";
 import Bookmark from "./Pages/Bookmark";
 import Search from "./Pages/Search";
-import Posts from "./Pages/Posts";
+import CreatePost from "./Pages/CreatePost";
 import Missing from "./Pages/Missing";
 import {
   createBrowserRouter,
@@ -35,7 +35,7 @@ const router = createBrowserRouter(
         </Route>
 
         <Route element={<RequireAuth />}>
-          <Route path="/post" element={<Posts />} />
+          <Route path="/createpost" element={<CreatePost />} />
         </Route>
 
         <Route element={<RequireAuth />}>
@@ -58,7 +58,8 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  const { setAuthToken, setIsAuth, isAuth, setAuth } = useGlobalContext();
+  const { setAuthToken, setIsAuth, isAuth, authToken, setAuth } =
+    useGlobalContext();
 
   useEffect(() => {
     const savedToken = Cookies.get("auth_token");
@@ -66,8 +67,9 @@ function App() {
     setAuthToken(savedToken);
     setAuth(JSON.parse(savedUser));
     setIsAuth(true);
-    console.log("hello user");
   }, []);
+
+  console.log(authToken);
 
   return (
     <>

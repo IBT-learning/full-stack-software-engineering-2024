@@ -43,12 +43,6 @@ export const createAccount = async (req, res) => {
     });
     // generateTokenAndCookie(newUser._id, res);
     const token = jwt.sign({ newUser }, JWT_SECRET, { expiresIn: "14d" });
-    res.cookie("jwt", token, {
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-      sameSite: "None",
-      secure: true,
-    });
-
     await newUser.save();
     res.status(201).json({
       success: "true",
@@ -77,11 +71,6 @@ export const userLogin = async (req, res) => {
     }
     // generateTokenAndCookie(user._id, res);
     const token = jwt.sign({ user }, JWT_SECRET, { expiresIn: "14d" });
-    res.cookie("jwt", token, {
-      expiresIn: "2d",
-      sameSite: "None",
-      secure: true,
-    });
     res.status(200).json({
       success: "true",
       msg: "Login successful",
@@ -103,3 +92,13 @@ export const userLogOut = async (req, res) => {
     res.status(500).json({ "server error": error.message });
   }
 };
+
+// export const getMe = async (req, res) => {
+//   try {
+//     const user = await User.findById(req.user._id).select("-password");
+//     res.status(200).json(user);
+//   } catch (error) {
+//     console.log(`error in getMe controller: ${error}`);
+//     res.status(500).json({ "server error": error.message });
+//   }
+// };

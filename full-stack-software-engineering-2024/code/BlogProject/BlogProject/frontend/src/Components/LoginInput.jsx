@@ -29,7 +29,7 @@ const LoginInput = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  const { setAuth, setIsAuth, auth } = useGlobalContext();
+  const { setAuth, setIsAuth, setAuthToken } = useGlobalContext();
 
   const [email, setEmail] = useState("");
   const [emailFocus, setEmailFocus] = useState(null);
@@ -73,15 +73,17 @@ const LoginInput = () => {
           },
           body: JSON.stringify({ email, password }),
         });
+        const result = await res.json();
         if (res.ok) {
-          const result = await res.json();
           const token = result.data.token;
           const user = result.data.user;
           Cookie.set("auth_token", token, {
             sameSite: "none",
+            httpOnly: true,
             secure: true,
             expires: 2,
           });
+          setAuthToken(token);
           setAuth(user);
           localStorage.setItem("auth_user", JSON.stringify(user));
           setIsAuth(true);
@@ -89,7 +91,7 @@ const LoginInput = () => {
           setPassword("");
           navigate(from, { replace: true });
         } else {
-          setErrorMsg("Login failed");
+          setErrorMsg(result.msg || "Login failed");
         }
       } catch (error) {
         console.error(error.message);

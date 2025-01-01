@@ -1,5 +1,5 @@
-import React from "react";
-import { Flex, Button, useColorModeValue } from "@chakra-ui/react";
+import React, { useContext } from "react";
+import { Flex, Button } from "@chakra-ui/react";
 import {
   MdOutlineFavoriteBorder,
   MdFavorite,
@@ -7,16 +7,12 @@ import {
   MdOutlineBookmarkBorder,
 } from "react-icons/md";
 import { FaRegComment } from "react-icons/fa";
+import postCardContext from "./PostCard";
 
-const InteractionBtn = ({
-  post,
-  noOfLikes,
-  liked,
-  bookmarked,
-  setbookmarked,
-  handleLike,
-}) => {
-  const color = useColorModeValue("gray.600", "gray.300");
+const InteractionBtn = () => {
+  const { liked, setLiked, bookmarked, setbookmarked, color } =
+    useContext(postCardContext);
+
   return (
     <Flex flexWrap="nowrap" alignItems={"flex-start"} pb="2">
       <Button
@@ -31,10 +27,10 @@ const InteractionBtn = ({
           )
         }
         color={color}
-        onClick={() => handleLike(post._id, index)}
+        onClick={() => setLiked((v) => !v)}
         iconSpacing={"1"}
       >
-        {`${noOfLikes} Likes`}
+        {liked ? "UnLike" : "Like"}
       </Button>
       <Button
         variant="ghost"

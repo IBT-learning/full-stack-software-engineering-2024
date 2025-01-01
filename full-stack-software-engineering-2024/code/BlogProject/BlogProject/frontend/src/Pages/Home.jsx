@@ -155,13 +155,9 @@ const HomePage = () => {
                           <Skeleton mt="4" h="14"></Skeleton>
                         </Box>
                       ))
-                    : posts.map((post, index) => (
+                    : posts.map((post) => (
                         <Provider>
-                          <MobilePostCard
-                            post={post}
-                            key={post._id}
-                            index={index}
-                          />
+                          <MobilePostCard post={post} key={post._id} />
                         </Provider>
                       ))}
                 </Flex>
@@ -173,6 +169,7 @@ const HomePage = () => {
           </Tabs>
         </Box>
       </Flex>
+      <Box h="20"></Box>
     </Box>
   );
 };
