@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import {
   VStack,
   Card,
@@ -14,12 +14,17 @@ import {
   IconButton,
   Divider,
   useColorModeValue,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { useNavigate } from "react-router-dom";
 import InteractionBtn from "./InteractionBtn";
+import useGlobalContext from "../Context/useGlobalContext";
 
 const postCardContext = createContext();
 
@@ -28,6 +33,18 @@ export const Provider = ({ children }) => {
   const [bookmarked, setbookmarked] = useState(false);
   const bg = useColorModeValue("white", "gray.800");
   const color = useColorModeValue("gray.600", "gray.300");
+  const { posts, setPost, auth } = useGlobalContext();
+  const navigate = useNavigate();
+
+  const handleEdit = (postId) => {
+    const postToEdit = posts.find((post) => post._id === postId);
+    if (auth._id === postToEdit.user._id) {
+      setPost(postToEdit);
+      navigate(`/post/edit/${postId}`);
+    } else {
+      return;
+    }
+  };
 
   const formatDate = (dateOfPost) => {
     dayjs.extend(relativeTime);
@@ -45,6 +62,7 @@ export const Provider = ({ children }) => {
         bg,
         color,
         formatDate,
+        handleEdit,
       }}
     >
       {children}
@@ -55,15 +73,14 @@ export const Provider = ({ children }) => {
 export default postCardContext;
 
 const PostCard = ({ post }) => {
-  const { bg, color, formatDate } = useContext(postCardContext);
-
+  const { bg, color, formatDate, handleEdit } = useContext(postCardContext);
   const navigate = useNavigate();
 
   return (
     <>
       <Card maxW="md" bg={bg} color={color} cursor={"pointer"}>
         <CardHeader mt="-2" mb="-2">
-          <Flex flex="1" spacing="2">
+          <Flex flex="1" spacing="2" justifyContent="space-between">
             <Flex gap="4" alignItems="center" flexWrap="wrap">
               <Avatar
                 key={post?._id}
@@ -81,6 +98,32 @@ const PostCard = ({ post }) => {
                 </Text>
               </VStack>
             </Flex>
+            <Menu>
+              {({ isOpen }) => (
+                <>
+                  <MenuButton
+                    isActive={isOpen}
+                    as={Button}
+                    variant="ghost"
+                    size="lg"
+                    pr="-4"
+                    rightIcon={<BsThreeDotsVertical />}
+                  ></MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => handleEdit(post._id)}>
+                      Edit Post
+                    </MenuItem>
+                    <MenuItem
+                      onClick={() =>
+                        navigate(`/profile/${post?.user?.username}`)
+                      }
+                    >
+                      check profile
+                    </MenuItem>
+                  </MenuList>
+                </>
+              )}
+            </Menu>
           </Flex>
           <Divider />
           <Text
@@ -126,8 +169,7 @@ const PostCard = ({ post }) => {
 export { PostCard };
 
 const MobilePostCard = ({ post }) => {
-  const { bg, color, formatDate } = useContext(postCardContext);
-
+  const { bg, color, formatDate, handleEdit } = useContext(postCardContext);
   const navigate = useNavigate();
 
   return (
@@ -143,7 +185,7 @@ const MobilePostCard = ({ post }) => {
         variant={"elevated"}
         cursor="pointer"
       >
-        <Box border="1px solid" borderColor="gray.700" rounded="lg" w="full">
+        <Box w="full" border="1px solid" borderColor="gray.700" rounded="lg">
           <Image
             fit="cover"
             align="center"
@@ -186,11 +228,32 @@ const MobilePostCard = ({ post }) => {
                 </Box>
               </Flex>
 
-              <IconButton
-                variant="ghost"
-                icon={<BsThreeDotsVertical />}
-                size="lg"
-              />
+              <Menu>
+                {({ isOpen }) => (
+                  <>
+                    <MenuButton
+                      isActive={isOpen}
+                      as={Button}
+                      variant="ghost"
+                      size="lg"
+                      pr="-4"
+                      rightIcon={<BsThreeDotsVertical />}
+                    ></MenuButton>
+                    <MenuList>
+                      <MenuItem onClick={() => handleEdit(post._id)}>
+                        Edit Post
+                      </MenuItem>
+                      <MenuItem
+                        onClick={() =>
+                          navigate(`/profile/${post?.user?.username}`)
+                        }
+                      >
+                        check profile
+                      </MenuItem>
+                    </MenuList>
+                  </>
+                )}
+              </Menu>
             </Flex>
           </CardHeader>
 
@@ -222,7 +285,7 @@ const MobilePostCard = ({ post }) => {
               color={color}
               ml="4"
             >
-              {`Since ${formatDate(post.createdAt)}`}
+              {formatDate(post.createdAt)}
             </Text>
             <Box>
               <InteractionBtn post={post} />

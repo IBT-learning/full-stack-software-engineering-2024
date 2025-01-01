@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Image,
   Flex,
@@ -24,7 +24,6 @@ import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import useGlobalContext from "../Context/useGlobalContext";
 import { CiSquareRemove } from "react-icons/ci";
-import { useEffect } from "react";
 
 const CreatePost = () => {
   const [inputs, setInputs] = useState({ image: "", title: "", body: "" });
@@ -39,7 +38,7 @@ const CreatePost = () => {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (!file || !file.type.match(/image.*/)) {
-      setErrorMsg("please upload only an image file not more than 12MB");
+      setErrorMsg("please upload only an image file");
       return;
     }
     const reader = new FileReader();

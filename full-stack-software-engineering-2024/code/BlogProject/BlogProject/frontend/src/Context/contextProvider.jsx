@@ -7,6 +7,7 @@ export const ContextProvider = ({ children }) => {
   const [auth, setAuth] = useState({});
   const [isAuth, setIsAuth] = useState(false);
   const [posts, setPosts] = useState("");
+  const [post, setPost] = useState({});
 
   return (
     <globalContext.Provider
@@ -19,6 +20,8 @@ export const ContextProvider = ({ children }) => {
         setIsAuth,
         posts,
         setPosts,
+        post,
+        setPost,
       }}
     >
       {children}

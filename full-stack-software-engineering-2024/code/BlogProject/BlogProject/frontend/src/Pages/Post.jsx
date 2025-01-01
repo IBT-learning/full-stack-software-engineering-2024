@@ -28,10 +28,9 @@ import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
 const PostPage = () => {
-  const [post, setPost] = useState({});
   const [likedPost, setLikedPost] = useState(false);
   const [bookmarkedPost, setbookmarkedPost] = useState(false);
-  const { posts } = useGlobalContext();
+  const { posts, post, setPost } = useGlobalContext();
   const { postId } = useParams();
 
   const bg = useColorModeValue("gray.200", "gray.900");

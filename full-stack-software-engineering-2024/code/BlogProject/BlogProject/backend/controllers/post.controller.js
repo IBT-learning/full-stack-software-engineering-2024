@@ -1,3 +1,4 @@
+import { mongoose } from "../db.js";
 import Post from "../models/post.model.js";
 import User from "../models/user.model.js";
 
@@ -122,7 +123,9 @@ export const updateUserPost = async (req, res) => {
       { title, body, image },
       options
     );
-    res.status(200).json({ success: true, data: updatedPost });
+    res
+      .status(200)
+      .json({ msg: "post updated successfully", data: updatedPost });
   } catch (error) {
     console.log(`error in updateUserPost endpoint: ${error}`);
     res.status(500).json({ error: "internal server error" });
