@@ -10,5 +10,37 @@
     "author": "Danny Burrow",
     "ingredients": ["whole pork shoulder", "bbq spice mix"],
     "instructions": "Pat pork shoulder dry and liberally coat with salt and spices. Place on a rack in oven at 225F for 8-12 hours, until roast is fall-apart tender. Cool slightly, then shred. Mix with skimmed and strained pan drippings as desired. "
-  }
-]
+  },
+  {
+      "title": "Pilau",
+      "author": "Mercy",
+      "ingredients": ["2 cups basmati rice", "4 cups water", "1 onion, chopped", "2 tomatoes, chopped", "2 cloves garlic, minced", "1 tablespoon ginger, minced", "1 teaspoon cumin", "1 teaspoon coriander", "1 teaspoon turmeric", "Salt to taste", "2 tablespoons vegetable oil"],
+      "instructions": "Heat oil in a large pot and sauté onions until golden brown. Add garlic and ginger, and cook for 2 minutes. Stir in tomatoes and cook until soft. Add spices and rice, stirring to coat the rice. Pour in water and season with salt. Bring to a boil, then reduce heat, cover, and simmer for 20-25 minutes until rice is cooked. Fluff with a fork and serve."
+    },
+    {
+      "title": "Ugali",
+      "author": "Mercy",
+      "ingredients": ["2 cups maize flour (cornmeal)", "4 cups water", "a pinch of salt"],
+      "instructions": "Boil the water in a pot and add a pinch of salt. Gradually add the maize flour while stirring continuously to prevent lumps. Continue cooking and stirring until the mixture thickens and pulls away from the sides of the pot. Cook for an additional 5 minutes, then serve hot with vegetables or stew."
+    },
+    {
+      "title": "Nyama Choma",
+      "author": "Mercy",
+      "ingredients": ["2 kg meat (beef or goat)", "1 tablespoon salt", "1 tablespoon black pepper", "2 tablespoons vegetable oil", "Juice of 1 lemon", "Optional: spices like paprika or garlic powder"],
+      "instructions": "Marinate the meat with salt, black pepper, vegetable oil, lemon juice, and any optional spices for at least 1 hour (or overnight for best results). Preheat a grill or charcoal barbecue. Grill the meat over medium heat, turning occasionally, until cooked through and slightly charred, about 15-20 minutes. Serve hot with kachumbari (a fresh tomato and onion salad)."
+    },
+    {
+      "title": "Sukuma Wiki (Collard Greens)",
+      "author": "Mercy",
+      "ingredients": ["1 bunch sukuma wiki (collard greens)", "2 tablespoons vegetable oil", "1 onion, chopped", "2 tomatoes, chopped", "Salt to taste"],
+      "instructions": "Heat oil in a pan over medium heat. Add the chopped onions and sauté until golden brown. Add the chopped tomatoes and cook until soft. Add the sukuma wiki and stir to combine. Cook for about 5-7 minutes until the greens are tender. Season with salt and serve with ugali."
+    },
+    {
+      "title": "Chicken Biryani",
+      "author": "Mercy",
+      "ingredients": ["1 kg chicken, cut into pieces", "2 cups basmati rice", "1 large onion, sliced", "2 tomatoes, chopped", "2 cloves garlic, minced", "1 tablespoon ginger, minced", "2-3 cups chicken broth", "1 tablespoon biryani spices", "Salt to taste", "2 tablespoons vegetable oil"],
+      "instructions": "In a pot, heat oil and sauté onions until golden. Add garlic and ginger, and cook for 2 minutes. Stir in tomatoes and cook until soft. Add chicken pieces and season with salt and biryani spices, cooking until the chicken is browned. Add rice and chicken broth, bringing to a boil. Reduce heat, cover, and simmer for about 20-25 minutes until rice is cooked. Fluff and serve hot."
+    }
+  ]
+  
+
