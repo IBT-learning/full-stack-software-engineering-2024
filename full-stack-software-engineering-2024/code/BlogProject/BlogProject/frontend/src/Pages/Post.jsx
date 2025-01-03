@@ -21,17 +21,18 @@ import {
   MdOutlineShare,
 } from "react-icons/md";
 import { FaRegComment } from "react-icons/fa";
-import { useParams } from "react-router-dom";
-import Aside from "../Components/Aside.jsx";
+import { IoMdArrowBack } from "react-icons/io";
+import { useParams, useNavigate } from "react-router-dom";
+import Aside from "../Components/Nav/Aside.jsx";
 import useGlobalContext from "../Context/useGlobalContext.jsx";
-import dayjs from "dayjs";
-import localizedFormat from "dayjs/plugin/localizedFormat";
+import { formattedDate } from "../Utils/styles.js";
 
 const PostPage = () => {
   const [likedPost, setLikedPost] = useState(false);
   const [bookmarkedPost, setbookmarkedPost] = useState(false);
   const { posts, post, setPost } = useGlobalContext();
   const { postId } = useParams();
+  const navigate = useNavigate();
 
   const bg = useColorModeValue("gray.200", "gray.900");
   const color = useColorModeValue("gray.600", "gray.300");
@@ -44,40 +45,44 @@ const PostPage = () => {
     getPostDetails();
   }, [postId]);
 
-  const formattedDate = () => {
-    dayjs.extend(localizedFormat);
-    const postDate = dayjs(post.createdAt).format("lll");
-    return postDate;
-  };
-
   return (
     <>
       {post && (
         <Flex
-          minH="100vh"
+          // minH="100vh"
           gap="4"
           bg={bg}
           px={{ base: "2", sm: "4", md: "10" }}
           pt="2"
         >
           <Aside />
-          <Flex direction="column" color={color}>
+          <Flex w="full" direction="column" align="flex-start" color={color}>
+            <Button
+              variant="unstyled"
+              leftIcon={<IoMdArrowBack />}
+              onClick={() => navigate(-1)}
+              color="purple.800"
+            >
+              Back
+            </Button>
             <Image
+              mt="-9"
               fit="cover"
-              align="top"
+              align="center"
               src={
                 post?.image ||
                 "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
               }
               alt="Chakra UI"
-              h={{ base: "25%", sm: "25%", md: "30%" }}
+              h="15rem"
               w="full"
             />
             <Flex
               direction="column"
+              w="full"
               h="70%"
               gap="4"
-              mt="-10"
+              mt="-5"
               bg={useColorModeValue("gray.100", "gray.800")}
               borderTopRadius="3xl"
               px="4"
@@ -108,7 +113,7 @@ const PostPage = () => {
                     FOLLOW
                   </Badge>
                   <Text fontStyle="italic" fontWeight="semiBold">
-                    {formattedDate()}
+                    {formattedDate(post?.createdAt)}
                   </Text>
                 </Box>
               </Flex>
@@ -116,7 +121,7 @@ const PostPage = () => {
 
               {/* body container */}
               <Flex h="100%" direction="column" gap="4">
-                <Box minH="80%">
+                <Box>
                   <Heading
                     mt="-2"
                     mb="4"

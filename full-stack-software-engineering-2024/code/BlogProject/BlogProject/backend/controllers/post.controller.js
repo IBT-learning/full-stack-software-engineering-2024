@@ -25,7 +25,11 @@ export const createPost = async (req, res) => {
     });
 
     await newPost.save();
-    return res.status(201).json({ success: true, data: newPost });
+    return res.status(201).json({
+      success: true,
+      msg: "post published successfully",
+      data: newPost,
+    });
   } catch (error) {
     console.log(`error in createpost endpoint: ${error}`);
     res.status(500).json({ error: "internal server error" });
@@ -123,9 +127,11 @@ export const updateUserPost = async (req, res) => {
       { title, body, image },
       options
     );
-    res
-      .status(200)
-      .json({ msg: "post updated successfully", data: updatedPost });
+    res.status(200).json({
+      success: true,
+      msg: "post updated successfully",
+      data: updatedPost,
+    });
   } catch (error) {
     console.log(`error in updateUserPost endpoint: ${error}`);
     res.status(500).json({ error: "internal server error" });
@@ -152,7 +158,7 @@ export const deleteUserPost = async (req, res) => {
         .json({ error: "unauthorised access to delete post" });
     }
     await Post.findByIdAndDelete({ _id: postId });
-    return res.status(200).json({ success: "post deleted successfully" });
+    return res.status(200).json({ msg: "post deleted successfully" });
   } catch (error) {
     console.log(`error in deleteUserPost endpoint: ${error.error}`);
     res.status(500).json({ error: "internal server error" });

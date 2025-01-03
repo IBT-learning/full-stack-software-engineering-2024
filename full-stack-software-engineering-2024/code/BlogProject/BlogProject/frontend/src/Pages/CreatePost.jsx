@@ -4,12 +4,10 @@ import {
   Flex,
   Box,
   Heading,
-  Avatar,
   IconButton,
   Divider,
   Text,
   Button,
-  Badge,
   VStack,
   useColorModeValue,
   Input,
@@ -17,37 +15,40 @@ import {
   List,
   ListItem,
   ListIcon,
-  HStack,
+  useToast,
 } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import useGlobalContext from "../Context/useGlobalContext";
 import { CiSquareRemove } from "react-icons/ci";
+import { uploadImage } from "../Utils/styles";
 
 const CreatePost = () => {
   const [inputs, setInputs] = useState({ image: "", title: "", body: "" });
   const [titleFocus, setTitleFocus] = useState(false);
   const [bodyFocus, setBodyFocus] = useState(false);
   const [imagePreview, setImagePreview] = useState("");
+  const [loading, setLoading] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
 
   const navigate = useNavigate();
   const { authToken, posts, setPosts } = useGlobalContext();
+  const toast = useToast();
 
-  const handleImageUpload = (event) => {
-    const file = event.target.files[0];
-    if (!file || !file.type.match(/image.*/)) {
-      setErrorMsg("please upload only an image file");
-      return;
-    }
-    const reader = new FileReader();
-    reader.onloadend = (event) => {
-      const imageUrl = event.target.result;
+  const handleImageUpload = async (event) => {
+    try {
+      const imageUrl = await uploadImage(event);
       setImagePreview(imageUrl);
       setInputs({ ...inputs, image: imageUrl });
-    };
-    reader.readAsDataURL(file);
+    } catch (error) {
+      toast({
+        title: "Error",
+        status: "error",
+        description: error.message,
+        duration: 5000,
+      });
+    }
   };
 
   const bg = useColorModeValue("gray.200", "gray.900");
@@ -74,6 +75,7 @@ const CreatePost = () => {
   ];
 
   const handlePublishPost = async (inputs) => {
+    setLoading(true);
     try {
       const response = await fetch("http://localhost:5000/api/post/create", {
         method: "POST",
@@ -85,9 +87,16 @@ const CreatePost = () => {
       });
       const data = await response.json();
       if (response.ok) {
+        setLoading(false);
         setPosts([...posts, data.data]);
         setInputs({});
         navigate("/");
+        toast({
+          title: "Success",
+          status: "success",
+          description: data.msg,
+          duration: 5000,
+        });
       }
       if (!response.ok) {
         throw new Error(setErrorMsg(data.error) || "Encountered an error");
@@ -174,7 +183,7 @@ const CreatePost = () => {
           />
 
           <Button colorScheme="blue" onClick={() => handlePublishPost(inputs)}>
-            Publish Post
+            {!loading ? "Publish Post" : "Loading..."}
           </Button>
         </Flex>
 

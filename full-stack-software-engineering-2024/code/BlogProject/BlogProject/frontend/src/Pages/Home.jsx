@@ -13,10 +13,12 @@ import {
   SkeletonCircle,
   SimpleGrid,
 } from "@chakra-ui/react";
-import Aside from "../Components/Aside.jsx";
-import { PostCard, MobilePostCard } from "../Components/PostCard.jsx";
+import Aside from "../Components/Nav/Aside.jsx";
+import { PostCard, MobilePostCard } from "../Components/Post/PostCard.jsx";
 import useGlobalContext from "../Context/useGlobalContext.jsx";
-import { Provider } from "../Components/PostCard.jsx";
+import { Provider } from "../Components/Post/PostCard.jsx";
+import DesktopViewSkeleton from "../Components/skeletons/DesktopView.jsx";
+import MobileViewSkeleton from "../Components/skeletons/MobileView.jsx";
 
 const HomePage = () => {
   const { posts, setPosts } = useGlobalContext();
@@ -66,35 +68,7 @@ const HomePage = () => {
         {/* Component Loading posts for larger screens */}
         <Box display={{ base: "none", sm: "none", md: "block" }}>
           {loading ? (
-            [...Array(9)].map((_, index) => (
-              <>
-                <SimpleGrid
-                  h="350px"
-                  minChildWidth={"300px"}
-                  key={index}
-                  padding="2"
-                  boxShadow="lg"
-                  bg={bg}
-                  rounded="lg"
-                >
-                  <SkeletonCircle size="12" />
-                  <SkeletonText
-                    mt="4"
-                    mb="2"
-                    noOfLines={2}
-                    spacing="4"
-                    skeletonHeight="3"
-                  />
-                  <Skeleton mt="4" h="32"></Skeleton>
-                  <SkeletonText
-                    mt="4"
-                    noOfLines={3}
-                    spacing="2"
-                    skeletonHeight="3"
-                  />
-                </SimpleGrid>
-              </>
-            ))
+            <DesktopViewSkeleton />
           ) : (
             <SimpleGrid minChildWidth="md" gap="2">
               {posts?.map((post) => (
@@ -125,41 +99,15 @@ const HomePage = () => {
             <TabPanels>
               <TabPanel>
                 <Flex direction={"column"} gap="4">
-                  {loading
-                    ? [...Array(6)].map((_, index) => (
-                        <Box
-                          bg={bg}
-                          mb={{ base: "2", sm: "4" }}
-                          p={{ base: "2", sm: "4" }}
-                          rounded="lg"
-                          key={index}
-                          h={{ base: "12rem", sm: "16rem" }}
-                        >
-                          <Box>
-                            <SkeletonCircle
-                              mt={{ base: "1", sm: "2" }}
-                              size={{ base: "8", sm: "12" }}
-                            ></SkeletonCircle>
-                            <SkeletonText
-                              ml={{ base: "10", sm: "14" }}
-                              mt={{ base: "-7", sm: "-9" }}
-                              skeletonHeight={2}
-                              noOfLines={2}
-                            ></SkeletonText>
-                          </Box>
-                          <SkeletonText
-                            mt={{ base: "6", sm: "12" }}
-                            noOfLines={3}
-                            skeletonHeight={2}
-                          ></SkeletonText>
-                          <Skeleton mt="4" h="14"></Skeleton>
-                        </Box>
-                      ))
-                    : posts.map((post) => (
-                        <Provider>
-                          <MobilePostCard post={post} key={post._id} />
-                        </Provider>
-                      ))}
+                  {loading ? (
+                    <MobileViewSkeleton />
+                  ) : (
+                    posts.map((post) => (
+                      <Provider>
+                        <MobilePostCard post={post} key={post._id} />
+                      </Provider>
+                    ))
+                  )}
                 </Flex>
               </TabPanel>
               <TabPanel>

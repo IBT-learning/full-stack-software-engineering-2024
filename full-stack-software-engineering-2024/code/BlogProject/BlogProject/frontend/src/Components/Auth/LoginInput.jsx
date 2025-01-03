@@ -10,12 +10,13 @@ import {
   InputRightElement,
   FormControl,
   FormLabel,
+  useToast,
 } from "@chakra-ui/react";
 import { buttonStyle, inputStyle } from "../Utils/styles.js";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Cookie from "js-cookie";
 import useGlobalContext from "../Context/useGlobalContext.jsx";
-import AuthHeader from "./AuthHeader.jsx";
+import AuthHeader from "./Auth/AuthHeader.jsx";
 
 const LoginInput = () => {
   const header = ["SignIn To Account", "signin"];
@@ -26,6 +27,7 @@ const LoginInput = () => {
   const inputRef = useRef();
   const location = useLocation();
   const navigate = useNavigate();
+  const toast = useToast();
 
   const from = location.state?.from?.pathname || "/";
 
@@ -90,6 +92,12 @@ const LoginInput = () => {
           setEmail("");
           setPassword("");
           navigate(from, { replace: true });
+          toast({
+            title: "Success",
+            status: "success",
+            description: result.msg,
+            duration: 3000,
+          });
         } else {
           setErrorMsg(result.msg || "Login failed");
         }

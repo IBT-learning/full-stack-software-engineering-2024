@@ -1,24 +1,22 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FaEye, FaEyeSlash, FaCheckCircle } from "react-icons/fa";
 import {
-  IconButton,
   Flex,
-  Heading,
   VStack,
   Button,
   Text,
-  HStack,
   Input,
   InputGroup,
   InputRightElement,
   FormControl,
   FormLabel,
+  useToast,
 } from "@chakra-ui/react";
 import { inputStyle, buttonStyle } from "../Utils/styles.js";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import useGlobalContext from "../Context/useGlobalContext.jsx";
-import AuthHeader from "./AuthHeader.jsx";
+import AuthHeader from "./Auth/AuthHeader.jsx";
 
 const SigninInput = () => {
   const [show, setShow] = useState(false);
@@ -28,6 +26,7 @@ const SigninInput = () => {
   const { setAuth, setIsAuth } = useGlobalContext();
   const navigate = useNavigate();
   const inputRef = useRef("");
+  const toast = useToast();
 
   const [username, setUsername] = useState("");
   const [validUsername, setValidUsername] = useState(false);
@@ -83,25 +82,29 @@ const SigninInput = () => {
           },
           body: JSON.stringify({ username, email, password }),
         });
+        const result = await res.json();
         if (res.ok) {
-          const result = await res.json();
           const token = result.data.token;
           const user = result.data.newUser;
-          const msg = result.msg;
-          const success = result.success;
           Cookies.set("auth_token", token, {
             expires: 2,
             sameSite: "None",
             secure: true,
           });
           setIsAuth(true);
-          setAuth({ user, msg, success });
+          setAuth({ user });
           setUsername("");
           setEmail("");
           setPassword("");
           navigate("/");
+          toast({
+            title: "Success",
+            status: "success",
+            description: result.msg,
+            duration: 3000,
+          });
         } else {
-          setErrorMsg("Error has occured, Registration failed");
+          setErrorMsg(result.error || "Error has occured, Try again");
         }
       } catch (err) {
         console.log(err.message);

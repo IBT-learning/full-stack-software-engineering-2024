@@ -31,7 +31,7 @@ import {
   IoBookmarkOutline,
   IoHomeOutline,
 } from "react-icons/io5";
-import useGlobalContext from "../Context/useGlobalContext";
+import useGlobalContext from "../../Context/useGlobalContext";
 import Cookies from "js-cookie";
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
   const bg = useColorModeValue("purple", "purple.400");
   const textColor = useColorModeValue("blue.200", "purple.300");
 
-  const { setAuthToken, setIsAuth, setAuth, auth } = useGlobalContext();
+  const { setAuthToken, setIsAuth, isAuth, setAuth, auth } = useGlobalContext();
 
   const handleLogOut = () => {
     Cookies.remove("auth_token", { sameSite: "none", secure: true });
@@ -88,30 +88,42 @@ const Navbar = () => {
           </HStack>
 
           <HStack>
-            <Button
-              variant={"outline"}
-              colorScheme="purple"
-              rounded={"xl"}
-              onClick={() => navigate("login")}
-            >
-              SignIn
-            </Button>
+            {auth ? (
+              ""
+            ) : (
+              <Button
+                variant={"outline"}
+                colorScheme="purple"
+                rounded={"xl"}
+                onClick={() => navigate("login")}
+              >
+                SignIn
+              </Button>
+            )}
             <Button
               variant="solid"
               colorScheme="purple"
               _dark={{ bg: "purple.400" }}
               rounded={"xl"}
-              onClick={() => navigate("signup")}
+              onClick={() => navigate(isAuth ? "/createpost" : "signup")}
             >
-              Create An Account
+              {auth ? "Create a post" : "Create An Account"}
             </Button>
-            <IconButton
-              variant={"outline"}
-              colorScheme="purple"
-              rounded="xl"
-              icon={<FaSignOutAlt />}
-              onClick={handleLogOut}
-            />
+
+            {!auth ? (
+              ""
+            ) : (
+              <Button
+                variant={"outline"}
+                colorScheme="purple"
+                rounded="xl"
+                leftIcon={<FaSignOutAlt />}
+                onClick={handleLogOut}
+              >
+                Sign Out
+              </Button>
+            )}
+
             <Button
               variant={"outline"}
               colorScheme="purple"
@@ -182,9 +194,17 @@ const MobileNavbar = ({ auth, handleLogOut, textColor, bg }) => {
                     _hover={{ bg: bg, color: "black" }}
                     bg={useColorModeValue("gray.500", "gray.800")}
                     icon={<FaPlusSquare />}
+                    onClick={() => navigate("/createpost")}
+                  >
+                    Create a post
+                  </MenuItem>
+                  <MenuItem
+                    _hover={{ bg: bg, color: "black" }}
+                    bg={useColorModeValue("gray.500", "gray.800")}
+                    icon={<FaPlusSquare />}
                     onClick={() => navigate("/signup")}
                   >
-                    Create An Account
+                    Create Account
                   </MenuItem>
                   <MenuItem
                     _hover={{ bg: bg, color: "black" }}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   Image,
@@ -7,19 +7,18 @@ import {
   Heading,
   IconButton,
   Divider,
-  Text,
   Button,
   VStack,
   useColorModeValue,
   Input,
   Textarea,
-  Toast,
 } from "@chakra-ui/react";
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import useGlobalContext from "../Context/useGlobalContext";
 import { CiSquareRemove } from "react-icons/ci";
 import { useToast } from "@chakra-ui/react";
+import { uploadImage } from "../Utils/styles";
 
 const EditPost = () => {
   const { posts, setPosts, post, setPost, authToken } = useGlobalContext();
@@ -29,12 +28,14 @@ const EditPost = () => {
     image: post.image,
   });
   const [newImagePreview, setNewImagePreview] = useState("");
+  const [loading, setLoading] = useState(null);
   const toast = useToast();
 
   const { postId } = useParams();
   const navigate = useNavigate();
 
   const handlePublishPost = async (editedInputs) => {
+    setLoading(true);
     const { title, body, image } = editedInputs;
     try {
       const response = await fetch(
@@ -59,13 +60,14 @@ const EditPost = () => {
       }
       if (response.ok) {
         setPosts([...posts, data.data || post]);
+        setLoading(false);
+        navigate("/");
         toast({
           title: "Success",
           description: data.msg,
           status: "success",
           duration: 5000,
         });
-        navigate("/");
         setPost({});
       }
     } catch (error) {
@@ -85,26 +87,20 @@ const EditPost = () => {
     },
   };
 
-  const handleChangeImage = (event) => {
-    const file = event.target.files[0];
-    if (!file || !file.type.match(/image.*/)) {
-      return toast({
-        title: "Warning",
-        status: "warning",
-        description: "only a small size image file is acceptable",
+  const handleChangeImage = async (event) => {
+    try {
+      const imageUrl = await uploadImage(event);
+      setNewImagePreview(imageUrl);
+      setEditedInputs({ ...editedInputs, image: imageUrl || post.image });
+    } catch (error) {
+      toast({
+        title: "Error",
+        status: "error",
+        description: error.message,
         duration: 5000,
       });
     }
-    const reader = new FileReader();
-    reader.onloadend = (event) => {
-      const imageUrl = event.target.result;
-      setNewImagePreview(imageUrl);
-      setEditedInputs({ ...editedInputs, image: imageUrl || post.image });
-    };
-    reader.readAsDataURL(file);
   };
-
-  console.log(editedInputs);
 
   return (
     <Box p="4" bg={bg} color={color}>
@@ -143,6 +139,7 @@ const EditPost = () => {
                 w="90%"
                 h="full"
                 objectFit="fit"
+                align="center"
                 src={newImagePreview}
                 alt="Image Preview"
               />
@@ -182,22 +179,9 @@ const EditPost = () => {
             colorScheme="blue"
             onClick={() => handlePublishPost(editedInputs)}
           >
-            Publish Edited Post
+            {!loading ? "Publish Edited Post" : "Loading..."}
           </Button>
         </Flex>
-
-        {/* <Box w="30%" p="4" bg="gray.800" rounded="lg">
-          {errorMsg && (
-            <VStack alignItems="center" justifyContent="center" h="full">
-              <Text fontSize="2xl" color="red.400">
-                Error Encountered:
-              </Text>
-              <Text color="red.400" fontSize={"xl"} textAlign="center">
-                {errorMsg}
-              </Text>
-            </VStack>
-          )}
-        </Box> */}
       </Flex>
     </Box>
   );

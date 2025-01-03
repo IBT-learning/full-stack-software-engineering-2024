@@ -9,34 +9,35 @@ export const createAccount = async (req, res) => {
     const { username, email, password } = req.body;
 
     if (!username || !email || !password) {
-      return res.status(400).json({ msg: "fields cannot be empty" });
+      return res.status(400).json({ error: "fields cannot be empty" });
     }
 
     const existingUser = await User.findOne({ username });
     if (existingUser) {
-      return res.status(400).json({ msg: "username already exist" });
+      return res.status(400).json({ error: "username already exist" });
     }
     const emailRegex =
       /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     const validEmail = emailRegex.test(email);
     if (!validEmail) {
-      return res.status(400).json({ msg: "please provide a valid email" });
+      return res.status(400).json({ error: "please provide a valid email" });
     }
 
     const existingEmail = await User.findOne({ email });
     if (existingEmail) {
-      res.status(402).json({ msg: "email has already been used" });
+      res.status(402).json({ error: "email has already been used" });
     }
 
     if (password.length < 6 || password.length > 15) {
       res.status(400).json({
-        msg: "password length should not be less than 6 characters",
+        error: "password length should not be less than 6 characters",
       });
     }
     const saltRounds = 10;
     const hashPassword = await bcrypt.hash(password, saltRounds);
 
     const newUser = new User({
+      profilename: "",
       username,
       email,
       password: hashPassword,
@@ -73,7 +74,7 @@ export const userLogin = async (req, res) => {
     const token = jwt.sign({ user }, JWT_SECRET, { expiresIn: "14d" });
     res.status(200).json({
       success: "true",
-      msg: "Login successful",
+      msg: "Login successfully",
       data: { user, token },
     });
     console.log(`${user.username} login successful`);
@@ -92,13 +93,3 @@ export const userLogOut = async (req, res) => {
     res.status(500).json({ "server error": error.message });
   }
 };
-
-// export const getMe = async (req, res) => {
-//   try {
-//     const user = await User.findById(req.user._id).select("-password");
-//     res.status(200).json(user);
-//   } catch (error) {
-//     console.log(`error in getMe controller: ${error}`);
-//     res.status(500).json({ "server error": error.message });
-//   }
-// };
