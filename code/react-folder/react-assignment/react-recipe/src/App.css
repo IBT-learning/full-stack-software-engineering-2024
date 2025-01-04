@@ -1,0 +1,107 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color:sienna;
+    /* text-align: center; */
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: aliceblue;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header-link {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid rgba(167, 30, 30, 0.827); */
+    /* border: 1px solid green; */
+    /* padding: 10px; */
+    margin: auto;
+    gap: 2px;
+    max-width: 1000px;
+    text-align: center;
+    align-content: center;
+    background-color:#f4f7f9;
+}
+
+.card-body {
+    display: flex;
+    justify-content:space-between;
+    border: 1px solid rgba(45, 200, 228, 0.827);
+    border-radius: 10px;
+    margin: 10px;
+    /* text-align: center; */
+    align-items: center;
+    padding: 15px;
+}
+.card-body a, .header a{
+    text-decoration: none;
+    color: #f39c12;
+}
+
+.recipes-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.recipes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 700px;
+    padding: 4px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-width: 300px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    text-align: center;
+    max-width: 700px;
+    padding: 2.5px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    gap: 20px;
+}
