@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 const PORT = 4000;
-const url = "mongodb://localhost:27017/";
+const url = "mongodb://localhost:27017/Recipes.Recipes";
 const client = new MongoClient(url);
 
 const main = async () => {
