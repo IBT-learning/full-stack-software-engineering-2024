@@ -1,0 +1,171 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: rgb(235, 63, 0);
+}
+
+.title {
+    text-align: center;
+    color: rgb(26, 9, 3);
+}
+
+.links {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(43, 11, 0);
+    font-size: 23px;
+    padding: 8px;
+}
+
+.links .active {
+    background-color: rgb(100, 35, 11);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+
+main {
+    /* border: 2px dotted red; */
+    flex: 1;
+}
+
+.footer {
+    font-size: 17px;
+    color: rgb(92, 27, 4);
+    /* background-color: rgb(38, 190, 38); */
+    padding: 5px;
+    margin: 5px;
+    align-self: center;
+}
+
+.outlet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {
+    margin: 0;
+    padding: 15px;
+    font-size: 28px;
+    color: rgb(92, 27, 4);
+}
+
+.intro {
+    margin: 0;
+    padding: 20px;
+    color: rgb(63, 37, 28);
+}
+
+.recipe-titles {
+    padding: 5px;
+    text-align: center;
+    color: rgb(63, 37, 28); 
+}
+
+.recipe-title{
+    color: rgb(26, 9, 3);
+}
+
+.author {
+    font-size: 16px;
+}
+
+.recipe-wrapper {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingredients, .instructions {
+    font-size: 19px;
+}
+
+.main-info {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(63, 37, 28);
+}
+
+.info{
+    text-align: center;
+    color: rgb(63, 37, 28);
+}
+
+.create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.one, .two, .three, .four {
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(26, 9, 3);;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(63, 37, 28);
+    background-color: rgb(26, 9, 3);
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.success-message {
+    text-align: center;
+    color: rgb(196, 52, 0);
+}
+
+.error-message{
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+
+.edit {
+    font-size: 19px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+
+.delete {
+    font-size: 19px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    padding: 10px;
+}
+
+.delete-btn {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(63, 37, 28);
+    background-color: rgb(255, 0, 0);
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
