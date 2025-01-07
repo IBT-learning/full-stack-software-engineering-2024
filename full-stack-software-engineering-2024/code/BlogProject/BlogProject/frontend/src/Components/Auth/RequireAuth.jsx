@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, useLocation, Navigate } from "react-router-dom";
-import useGlobalContext from "../Context/useGlobalContext";
+import useGlobalContext from "../../Context/useGlobalContext.jsx";
 
 const RequireAuth = () => {
   const { isAuth } = useGlobalContext();

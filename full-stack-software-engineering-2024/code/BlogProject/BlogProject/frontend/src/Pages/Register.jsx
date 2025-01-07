@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
-import SigninInput from "../Components/SigninInput.jsx";
-import AuthFooter from "../Components/AuthFooter.jsx";
+import SignupInput from "../Components/Auth/SignupInput.jsx";
+import AuthFooter from "../Components/Auth/AuthFooter.jsx";
 import BgPattern from "../Components/Auth/BgPattern.jsx";
 
 const RegisterPage = () => {
@@ -33,7 +33,7 @@ const RegisterPage = () => {
           zIndex={99}
         >
           {/* Lefthand side Input background  */}
-          <SigninInput />
+          <SignupInput />
 
           {/* Righthand side Input background */}
           <AuthFooter head={text[0]} subHead={text[1]} btnText={text[2]} />

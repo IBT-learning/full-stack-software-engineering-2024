@@ -1,6 +1,6 @@
 import React from "react";
 import { Heading, VStack, Button } from "@chakra-ui/react";
-import { buttonStyle } from "../Utils/styles";
+import { buttonStyle } from "../../Utils/styles";
 import { useNavigate } from "react-router-dom";
 
 const AuthFooter = ({ head, subHead, btnText }) => {

@@ -8,7 +8,7 @@ import {
   IconButton,
   Divider,
   Button,
-  VStack,
+  HStack,
   useColorModeValue,
   Input,
   Textarea,
@@ -39,7 +39,7 @@ const EditPost = () => {
     const { title, body, image } = editedInputs;
     try {
       const response = await fetch(
-        `http://localhost:5000/api/post/update/${postId}`,
+        `http://localhost:4000/api/post/update/${postId}`,
         {
           method: "PUT",
           headers: {
@@ -80,10 +80,10 @@ const EditPost = () => {
 
   const focusStyle = {
     _focus: {
-      bg: "gray.700",
+      bg: bg,
       border: "none",
       fontSize: "2xl",
-      color: "gray.100",
+      color: color,
     },
   };
 
@@ -103,7 +103,7 @@ const EditPost = () => {
   };
 
   return (
-    <Box p="4" bg={bg} color={color}>
+    <Box p="4" color={color}>
       <Flex
         gap="4"
         p="4"
@@ -112,20 +112,21 @@ const EditPost = () => {
         rounded="lg"
       >
         <Flex direction="column" gap="4">
-          <VStack mt="-4" alignItems="flex-start">
+          <HStack mt="" alignItems="flex-start">
             <Button
               variant="unstyled"
-              leftIcon={<IoMdArrowBack />}
+              size="lg"
+              leftIcon={<IoMdArrowBack size="22" />}
               onClick={() => navigate(-1)}
-            >
-              Back
-            </Button>
-            <Heading>Edit your Post</Heading>
-          </VStack>
+            ></Button>
+            <Heading>Edit Your Post</Heading>
+          </HStack>
           <Divider />
 
           <Flex w="full" alignItems="flex-start">
-            <Button fontSize="xl">Change post cover image</Button>
+            <Button fontSize="xl" color={color}>
+              Change post cover image
+            </Button>
             <Input
               opacity="0"
               ml="-100%"

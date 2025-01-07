@@ -25,7 +25,7 @@ const HomePage = () => {
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const POSTS_URL = "http://localhost:5000/api/post/getposts";
+  const POSTS_URL = "http://localhost:4000/api/post/getposts";
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -45,7 +45,7 @@ const HomePage = () => {
     fetchPosts();
   }, []);
 
-  const bg = useColorModeValue("gray.200", "gray.900");
+  const bg = useColorModeValue("white", "gray.900");
   const tabStyle = {
     _selected: {
       bg: useColorModeValue("purple.400", "purple.500"),
@@ -73,7 +73,7 @@ const HomePage = () => {
             <SimpleGrid minChildWidth="md" gap="2">
               {posts?.map((post) => (
                 <Provider>
-                  <PostCard key={post._id} post={post} />
+                  <PostCard key={post.title} post={post} />
                 </Provider>
               ))}
             </SimpleGrid>

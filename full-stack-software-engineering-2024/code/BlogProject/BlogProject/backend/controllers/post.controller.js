@@ -60,28 +60,19 @@ export const getAllPosts = async (req, res) => {
   }
 };
 
-export const getPostsByUser = async (req, res) => {
+export const getUserPosts = async (req, res) => {
   try {
-    const userId = req.user._id;
-    const userid = req.params.userid;
-
-    // validating the finder
-    const authUser = await User.findById(userId);
-    if (!authUser) {
-      return res
-        .status(402)
-        .json({ error: "access denied,authorization failed" });
-    }
+    const { userid } = req.params;
     // validating the params
     if (!mongoose.Types.ObjectId.isValid(userid)) {
-      return res.status(400).json({ error: "pls provide a valid input" });
+      return res.status(400).json({ error: "user identity not found" });
     }
     // checking if user exists
     const user = await User.findById(userid);
     if (!user) {
       return res.status(404).json({ error: "user not found" });
     } else {
-      const userPosts = await Post.findOne({
+      const userPosts = await Post.find({
         user: userid,
       })
         .sort({ createdAt: -1 })
@@ -90,12 +81,12 @@ export const getPostsByUser = async (req, res) => {
           select: "-password",
         });
       if (!userPosts) {
-        return res.status(404).json({ msg: "no post available" });
+        return res.status(404).json({ error: "no post available" });
       }
-      return res.status(200).json({ success: true, data: userPosts });
+      return res.status(200).json({ data: userPosts });
     }
   } catch (error) {
-    console.log(`error in getPostsByUser endpoint: ${error}`);
+    console.log(`error in getUserPosts endpoint: ${error}`);
     res.status(500).json({ error: "internal server error" });
   }
 };

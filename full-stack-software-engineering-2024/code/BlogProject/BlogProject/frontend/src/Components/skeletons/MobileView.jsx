@@ -1,12 +1,15 @@
 import React from "react";
 import {
-  SimpleGrid,
+  Box,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 const MobileViewSkeleton = () => {
+  const bg = useColorModeValue("gray.200", "gray.900");
+
   return [...Array(6)].map((_, index) => (
     <Box
       bg={bg}

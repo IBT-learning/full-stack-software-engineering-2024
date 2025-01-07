@@ -5,6 +5,7 @@ import { JWT_SECRET } from "../constants/constants.js";
 const protectRoute = async (req, res, next) => {
   try {
     const token = req.headers.authorization;
+    console.log(token);
 
     if (!token) {
       res.status(400).json({ error: "unauthorised user! Access denied" });

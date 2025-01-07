@@ -4,9 +4,12 @@ import {
   Skeleton,
   SkeletonCircle,
   SkeletonText,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 const DesktopViewSkeleton = () => {
+  const bg = useColorModeValue("gray.200", "gray.900");
+
   return [...Array(9)].map((_, index) => (
     <>
       <SimpleGrid

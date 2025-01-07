@@ -12,11 +12,12 @@ import {
   FormLabel,
   useToast,
 } from "@chakra-ui/react";
-import { buttonStyle, inputStyle } from "../Utils/styles.js";
+import { buttonStyle, inputStyle } from "../../Utils/styles.js";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Cookie from "js-cookie";
-import useGlobalContext from "../Context/useGlobalContext.jsx";
-import AuthHeader from "./Auth/AuthHeader.jsx";
+import useGlobalContext from "../../Context/useGlobalContext.jsx";
+import AuthHeader from "../Auth/AuthHeader.jsx";
+import Cookies from "js-cookie";
 
 const LoginInput = () => {
   const header = ["SignIn To Account", "signin"];
@@ -68,7 +69,7 @@ const LoginInput = () => {
       setErrorMsg("Email and password are required");
     } else {
       try {
-        const res = await fetch("http://localhost:5000/api/user/auth/login", {
+        const res = await fetch("http://localhost:4000/api/user/auth/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -79,9 +80,8 @@ const LoginInput = () => {
         if (res.ok) {
           const token = result.data.token;
           const user = result.data.user;
-          Cookie.set("auth_token", token, {
-            sameSite: "none",
-            httpOnly: true,
+          Cookies.set("auth_token", token, {
+            sameSite: "None",
             secure: true,
             expires: 2,
           });

@@ -9,6 +9,7 @@ import {
   Text,
   Button,
   VStack,
+  HStack,
   useColorModeValue,
   Input,
   Textarea,
@@ -56,10 +57,10 @@ const CreatePost = () => {
 
   const focusStyle = {
     _focus: {
-      bg: "gray.700",
+      bg: bg,
       border: "none",
       fontSize: "2xl",
-      color: "gray.100",
+      color: color,
     },
   };
 
@@ -77,7 +78,7 @@ const CreatePost = () => {
   const handlePublishPost = async (inputs) => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/api/post/create", {
+      const response = await fetch("http://localhost:4000/api/post/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,8 +87,8 @@ const CreatePost = () => {
         body: JSON.stringify({ inputs }),
       });
       const data = await response.json();
+      setLoading(false);
       if (response.ok) {
-        setLoading(false);
         setPosts([...posts, data.data]);
         setInputs({});
         navigate("/");
@@ -111,29 +112,30 @@ const CreatePost = () => {
   }, [inputs]);
 
   return (
-    <Box p="4" bg={bg} color={color}>
+    <Box p="4" color={color}>
       <Flex
         gap="4"
         p="4"
         border="1px solid"
-        borderColor={"gray.700"}
+        borderColor={useColorModeValue("gray.300", "gray.700")}
         rounded="lg"
       >
         <Flex direction="column" gap="4">
-          <VStack mt="-4" alignItems="flex-start">
+          <HStack mt="" alignItems="flex-start">
             <Button
               variant="unstyled"
-              leftIcon={<IoMdArrowBack />}
+              size="lg"
+              leftIcon={<IoMdArrowBack size="22" />}
               onClick={() => navigate(-1)}
-            >
-              Back
-            </Button>
-            <Heading>Write your Blog</Heading>
-          </VStack>
+            ></Button>
+            <Heading>Write Your Blog</Heading>
+          </HStack>
           <Divider />
 
           <Flex w="full" alignItems="flex-start">
-            <Button fontSize="xl">Upload post cover image</Button>
+            <Button fontSize="xl" color={color}>
+              Upload post cover image
+            </Button>
             <Input
               opacity="0"
               ml="-100%"
@@ -187,7 +189,7 @@ const CreatePost = () => {
           </Button>
         </Flex>
 
-        <Box w="30%" p="4" bg="gray.800" rounded="lg">
+        <Box w="30%" p="4" bg={bg} rounded="lg">
           {errorMsg && (
             <VStack alignItems="center" justifyContent="center" h="full">
               <Text fontSize="2xl" color="red.400">

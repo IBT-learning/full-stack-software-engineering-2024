@@ -18,9 +18,12 @@ export const getProfile = async (req, res) => {
 
 export const updateProfile = async (req, res) => {
   const userId = req.user._id;
-  const { username } = req.params;
+  const { userid } = req.params;
+  const { updatedInputs } = req.body;
   const {
-    displayName,
+    coverImg,
+    profileImg,
+    profilename,
     userName,
     Bio,
     gender,
@@ -28,13 +31,12 @@ export const updateProfile = async (req, res) => {
     location,
     currentPassword,
     newPassword,
-  } = req.body;
-  let { coverImg, profileImg } = req.body;
+  } = updatedInputs;
 
   try {
-    const user = await User.findOne({ username });
+    const user = await User.findById({ userid });
     if (!user) {
-      return res.status(404).json({ error: "profile not found" });
+      return res.status(404).json({ error: "user not found" });
     }
 
     if (userId.toString() !== user._id.toString()) {
@@ -59,35 +61,13 @@ export const updateProfile = async (req, res) => {
       if (newPassword.length < 6) {
         return res
           .status(400)
-          .json({ error: "Password must be at least 6 characters long" });
+          .json({ error: "Password must be at least 6 characters" });
       }
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(newPassword, salt);
     }
 
-    if (profileImg) {
-      if (user.profileimage) {
-        await cloudinary.uploader.destroy(
-          user.profileimage.split("/").pop().split(".")[0]
-        );
-      }
-
-      const uploadedResponse = await cloudinary.uploader.upload(profileImg);
-      profileImg = uploadedResponse.secure_url;
-    }
-
-    if (coverImg) {
-      if (user.coverimage) {
-        await cloudinary.uploader.destroy(
-          user.coverimage.split("/").pop().split(".")[0]
-        );
-      }
-
-      const uploadedResponse = await cloudinary.uploader.upload(coverImg);
-      coverImg = uploadedResponse.secure_url;
-    }
-
-    (user.displayname = displayName || user.displayname),
+    (user.profilename = profilename || user.profilename),
       (user.username = userName || user.username),
       (user.gender = gender || user.gender),
       (user.email = email || user.email),

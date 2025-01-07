@@ -69,19 +69,15 @@ const PostCard = ({ post }) => {
           <Flex flex="1" spacing="2" justifyContent="space-between">
             <Flex gap="4" alignItems="center" flexWrap="wrap">
               <Avatar
-                key={post?._id}
                 name={post?.user?.username}
-                src="https://bit.ly/sage-adebayo"
+                src={post?.user?.profileimage}
               />
 
               <VStack gap="1">
                 <Heading size="md">
                   {post?.user?.profilename || "Profile Name"}{" "}
                 </Heading>
-                <Text key={post?._id}>
-                  {" "}
-                  @{post?.user?.username || "username"}{" "}
-                </Text>
+                <Text> @{post?.user?.username || "username"} </Text>
               </VStack>
             </Flex>
             {/* side menu icon on the postcard header  */}
@@ -109,11 +105,8 @@ const PostCard = ({ post }) => {
               align="center"
               border="1px solid"
               borderColor={bg}
-              src={
-                post?.image ||
-                "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-              }
-              alt="Chakra UI"
+              src={post?.image}
+              alt="Post Image"
               h="40"
               w="full"
               onClick={() => navigate(`/posts/${post._id}`)}
@@ -164,10 +157,7 @@ const MobilePostCard = ({ post }) => {
             w={{ base: "8rem", sm: "10rem" }}
             h={{ base: "100%", sm: "100%" }}
             alignSelf={{ base: "", sm: "flex-start" }}
-            src={
-              post?.image ||
-              "https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-            }
+            src={post?.image}
             alt="Caffe Latte"
             rounded={"lg"}
             onClick={() => navigate(`/posts/${post._id}`)}
@@ -179,6 +169,7 @@ const MobilePostCard = ({ post }) => {
             ml={{ base: "-2", sm: "" }}
             mb={{ base: "-5", sm: "-2" }}
             mr={{ base: "-8", sm: "-6" }}
+            onClick={() => navigate(`/profile/${post?.user?._id}`)}
           >
             <Flex justifyContent="space-between">
               <Flex gap="3" alignItems="center" flexWrap="nowrap">
@@ -186,7 +177,7 @@ const MobilePostCard = ({ post }) => {
                   size={{ base: "xs", sm: "md" }}
                   key={post._id}
                   name={post?.user?.username || "profile name"}
-                  src="https://bit.ly/sage-adebayo"
+                  src={post?.user?.profileimage}
                 />
                 <Box>
                   <Heading size={{ base: "xs", sm: "sm" }}>

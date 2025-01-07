@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
-import LoginInput from "../Components/LoginInput.jsx";
-import AuthFooter from "../Components/AuthFooter.jsx";
+import LoginInput from "../Components/Auth/LoginInput.jsx";
+import AuthFooter from "../Components/Auth/AuthFooter.jsx";
 import BgPattern from "../Components/Auth/BgPattern.jsx";
 
 const LoginPage = () => {

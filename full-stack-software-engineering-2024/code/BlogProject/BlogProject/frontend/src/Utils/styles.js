@@ -39,13 +39,11 @@ export const uploadImage = async (event) => {
   if (!file || !file.type.match(/image.*/)) {
     throw new Error("Invalid file type: Please upload an image.");
   }
-
   const reader = new FileReader();
   return new Promise((resolve, reject) => {
     reader.onload = (event) => {
       resolve(event.target.result);
     };
-
     reader.onerror = (error) => {
       reject(error);
     };

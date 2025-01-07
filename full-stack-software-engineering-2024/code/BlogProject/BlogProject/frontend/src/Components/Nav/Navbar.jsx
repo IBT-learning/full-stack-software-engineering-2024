@@ -43,7 +43,7 @@ const Navbar = () => {
   const { setAuthToken, setIsAuth, isAuth, setAuth, auth } = useGlobalContext();
 
   const handleLogOut = () => {
-    Cookies.remove("auth_token", { sameSite: "none", secure: true });
+    Cookies.remove("auth_token");
     localStorage.removeItem("auth_user");
     setAuthToken("");
     setAuth("");
@@ -268,7 +268,7 @@ const MobileNavbar = ({ auth, handleLogOut, textColor, bg }) => {
             variant={"ghost"}
             _hover={{ bg: "purple.500" }}
             icon={<FaRegUserCircle size="25" color="purple" />}
-            onClick={() => navigate("/profile/:username")}
+            onClick={() => navigate(`/profile/${auth._id}`)}
           />
           <IconButton
             variant={"ghost"}

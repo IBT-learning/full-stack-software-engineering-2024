@@ -12,13 +12,13 @@ import {
   FormLabel,
   useToast,
 } from "@chakra-ui/react";
-import { inputStyle, buttonStyle } from "../Utils/styles.js";
+import { inputStyle, buttonStyle } from "../../Utils/styles.js";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import useGlobalContext from "../Context/useGlobalContext.jsx";
-import AuthHeader from "./Auth/AuthHeader.jsx";
+import useGlobalContext from "../../Context/useGlobalContext.jsx";
+import AuthHeader from "../Auth/AuthHeader.jsx";
 
-const SigninInput = () => {
+const SignupInput = () => {
   const [show, setShow] = useState(false);
 
   const header = ["Create An Account", "signup"];
@@ -75,7 +75,7 @@ const SigninInput = () => {
       setErrorMsg("All input fields are required");
     } else {
       try {
-        const res = await fetch("http://localhost:5000/api/user/auth/signup", {
+        const res = await fetch("http://localhost:4000/api/user/auth/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const SigninInput = () => {
       gap={4}
       bg={"whiteAlpha.900"}
     >
-      <AuthHeader signinHeader={header[0]} signinSub={header[1]} />
+      <AuthHeader signupHeader={header[0]} signupSub={header[1]} />
       <Flex
         direction="column"
         mt={-3}
@@ -266,4 +266,4 @@ const SigninInput = () => {
   );
 };
 
-export default SigninInput;
+export default SignupInput;

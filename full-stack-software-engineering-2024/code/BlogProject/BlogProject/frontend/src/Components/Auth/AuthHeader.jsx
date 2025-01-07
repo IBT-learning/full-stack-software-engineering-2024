@@ -4,7 +4,7 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IconButton, Heading, Text, HStack } from "@chakra-ui/react";
 
-const AuthHeader = ({ signinHeader, signinSub, loginHeader, loginSub }) => {
+const AuthHeader = ({ signupHeader, signupSub, loginHeader, loginSub }) => {
   return (
     <>
       <Heading
@@ -12,10 +12,10 @@ const AuthHeader = ({ signinHeader, signinSub, loginHeader, loginSub }) => {
         fontWeight={"bolder"}
         color={"blackAlpha.800"}
       >
-        {signinHeader} {loginHeader}
+        {signupHeader} {loginHeader}
       </Heading>
       <Text color={"blackAlpha.700"} letterSpacing={"wide"}>
-        {signinSub}
+        {signupSub}
         {loginSub} using social networks
       </Text>
       <HStack mt={"-2"}>

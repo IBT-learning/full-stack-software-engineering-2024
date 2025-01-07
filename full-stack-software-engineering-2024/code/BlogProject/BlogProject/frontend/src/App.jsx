@@ -18,7 +18,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Cookies from "js-cookie";
-import RequireAuth from "./Components/RequireAuth";
+import RequireAuth from "./Components/Auth/RequireAuth.jsx";
 import useGlobalContext from "./Context/useGlobalContext";
 
 const router = createBrowserRouter(
@@ -32,7 +32,7 @@ const router = createBrowserRouter(
 
         {/* protected routes */}
         <Route element={<RequireAuth />}>
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/profile/:userid" element={<ProfilePage />} />
         </Route>
 
         <Route element={<RequireAuth />}>

@@ -22,11 +22,14 @@ import { FaRegUser, FaXTwitter, FaTiktok, FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import useGlobalContext from "../../Context/useGlobalContext";
 
 const Aside = () => {
   const bg = useColorModeValue("white", "gray.800");
   const color = useColorModeValue("gray.600", "gray.300");
   const navigate = useNavigate();
+
+  const { auth } = useGlobalContext();
 
   const icons = [
     {
@@ -37,7 +40,7 @@ const Aside = () => {
     {
       icon: <FaRegUser />,
       text: "My Profile",
-      link: "/profile",
+      link: `/profile/${auth?._id}`,
     },
     {
       icon: <IoCreateOutline />,
@@ -150,11 +153,11 @@ const Aside = () => {
           </Text>
           <Divider />
           <HStack flexWrap={"wrap"}>
-            {socials.map((social) => (
+            {socials.map((social, index) => (
               <IconButton
                 variant={"ghost"}
                 size="lg"
-                key={social.icon}
+                key={index}
                 icon={social.icon}
                 color={social.color}
               />
@@ -208,7 +211,7 @@ const Aside = () => {
             <IconButton
               variant={"ghost"}
               size="lg"
-              key={social.icon}
+              key={social.color}
               icon={social.icon}
               color={social.color}
             />
