@@ -1,0 +1,34 @@
+{
+  "name": "my-db-2-recipes-routes-client-side",
+  "private": true,
+  "version": "0.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "node --watch ./src/APIs/app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "vite": "^6.0.1"
+  }
+}
