@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+div {
+  margin-top: 20px;
+}
