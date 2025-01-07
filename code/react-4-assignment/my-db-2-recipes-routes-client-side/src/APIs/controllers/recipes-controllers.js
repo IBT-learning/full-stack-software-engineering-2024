@@ -64,7 +64,7 @@ const updateRecipeById = async (req, res) => {
       // !findRecipeToUpdate[key] checks if findRecipeToUpdate does not have a value for
       // the current key.If findRecipeToUpdate[key] is undefined (i.e., the key doesn’t exist
       // in findRecipeToUpdate), the ! operator makes it true.
-      // If the key does exist in findRecipeToUpdate,
+      // If the key's value does exist in findRecipeToUpdate,
       // findRecipeToUpdate[key].toString() !== req.body[key].toString()
       // compares the values of findRecipeToUpdate[key] and req.body[key] by
       // converting both to strings using .toString().
