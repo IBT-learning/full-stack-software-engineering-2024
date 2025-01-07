@@ -74,11 +74,13 @@ const updateRecipeById = async (req, res) => {
       const isModified = Object.keys(req.body).some(
         (key) =>
           !findRecipeToUpdate[key] ||
-          findRecipeToUpdate[key].toString() !== req.body[key].toString()
+          findRecipeToUpdate[key].toString() !== req.body[key].toString() // the aim here is
+        // to check that any value in the req.body is !== to that in the recipe we are updating
+        // so we want isModified to return true
       );
 
+        // if no changes are detected, send error message
       if (!isModified) {
-        // No changes detected
         return res.status(400).json({
           message:
             "You either didn't make any changes or you didn't adhere to the schema",
