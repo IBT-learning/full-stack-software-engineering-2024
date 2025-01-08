@@ -1,0 +1,53 @@
+/* this is a CSS comment */
+
+/* 
+
+selector {
+    property: value;
+    property: value;
+}
+
+*/
+
+/* The element selector applies to every instance of that element */
+body {
+    background-color: beige;
+    color: brown;
+}
+
+h1 {
+    color: green;
+}
+
+span {
+    color: teal;
+    font-weight: 700;
+    margin: 30px;
+}
+
+img {
+    padding: 20px;
+    /* padding-left: 20px;
+    padding-top: 10px; */
+    margin: 10px;
+    border: 10px dashed darkcyan;
+    width: 400px !important;
+}
+
+/* class selector, applies to any element with this class */
+
+.orange-text {
+    color: orange;
+}
+
+.gray-background {
+    background-color: gray;
+}
+
+/* id selector, applies only to the single element with this id */
+
+#block-wrapper {
+    background-color: bisque;
+    margin: 15px;
+    padding: 15px;
+}

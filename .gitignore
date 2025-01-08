@@ -1,2 +1,9 @@
+.env
+
 notes/
-notes.md
+notes.*
+
+.vscode/
+.vite/
+
+node_modules/

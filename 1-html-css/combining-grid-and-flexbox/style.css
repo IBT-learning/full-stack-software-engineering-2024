@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background-color: #ebf2fa;
+    font-size: 1.2em;
+    color: #381d2a;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: min-content 1fr min-content min-content;
+    grid-template-areas:
+        "header header header"
+        "contents main ."
+        "contents main tips"
+        "footer footer footer";
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+#header {
+    grid-area: header;
+    background-color: #05668d;
+    padding: 0.5rem;
+    color: #ebf2fa;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#contents {
+    grid-area: contents;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    background-color: #66a182;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#main {
+    grid-area: main;
+}
+
+.topic {
+    white-space: nowrap;
+    padding: 0 0.5em;
+}
+
+#contents > h4 {
+    text-decoration: underline;
+    padding: 0.5em 0;
+}
+
+#tips {
+    grid-area: tips;
+    height: fit-content;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: #427aa1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    color: #05668d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navigation a {
+    color: #ebf2fa;
+    margin: 0.5rem;
+}
+
+a:hover {
+    color: #f7a072;
+}
+
+#tips {
+    background-color: #f4f8fc;
+    padding: 1rem;
+    border: 3px solid #66a182;
+    margin-right: 1rem;
+    min-width: 7em;
+}
+
+h4 {
+    margin: 0;
+}

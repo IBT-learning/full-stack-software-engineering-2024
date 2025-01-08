@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms & Inherent Events</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- 
+    http://127.0.0.1:5500/3-web-apis/inherent-events/(a url will go here)?beans=black-beans&filling=asada&toppings=cheese&toppings=crema&delivery=%3A%29+
+    
+    -->
+
+    <!-- if a form has a submit button, clicking the button will cause
+        an http request with the designated method to the url specified by "action" 
+    -->
+    <h1>Burrito Order Form</h1>
+    <form
+      action="https://webhook.site/731e49a0-50e1-4245-9aad-f4f48f6ad6cf"
+      method="post"
+    >
+      <!-- https://webhook.site/731e49a0-50e1-4245-9aad-f4f48f6ad6cf?beans=pinto-beans&filling=nopales&salsa=salsa&cilantro=cilantro&delivery=%3A%29+ -->
+      <h4>Beans</h4>
+      <div>
+        <label for="pinto">Pinto Beans</label>
+        <input type="radio" id="pinto" value="pinto-beans" name="beans" />
+      </div>
+      <div>
+        <label for="black">Black Beans</label>
+        <input type="radio" id="black" value="black-beans" name="beans" />
+      </div>
+
+      <h4>Filling</h4>
+      <div>
+        <label for="carnitas">Carnitas</label>
+        <input type="radio" id="carnitas" value="carnitas" name="filling" />
+      </div>
+      <div>
+        <label for="asada">Asada</label>
+        <input type="radio" id="asada" value="asada" name="filling" />
+      </div>
+      <div>
+        <label for="nopales">Nopales</label>
+        <input type="radio" id="nopales" value="nopales" name="filling" />
+      </div>
+
+      <h4>Toppings</h4>
+      <div>
+        <label for="cheese">Cheese</label>
+        <input type="checkbox" id="cheese" value="cheese" name="cheese" />
+      </div>
+      <div>
+        <label for="crema">Crema</label>
+        <input type="checkbox" id="crema" value="crema" name="crema" />
+      </div>
+      <div>
+        <label for="salsa">Salsa</label>
+        <input type="checkbox" id="salsa" value="salsa" name="salsa" />
+      </div>
+      <div>
+        <label for="cilantro">Cilantro</label>
+        <input type="checkbox" id="cilantro" value="cilantro" name="cilantro" />
+      </div>
+
+      <h4>Delivery Instructions</h4>
+      <div>
+        <input type="textarea" id="delivery" name="delivery" />
+      </div>
+
+      <input type="submit" id="submit" value="Submit Order" />
+    </form>
+
+    <!-- links are an example of an inherent event -->
+    <a href="https://www.google.com" id="tricks">
+      This definitely goes to Google
+    </a>
+  </body>
+</html>

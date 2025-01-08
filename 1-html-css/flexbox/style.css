@@ -1,0 +1,64 @@
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-parent {
+    /* style properties */
+    background-color: lightblue;
+    height: 40vh;
+    border: 10px solid navy;
+
+    /* flexbox properties */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* justify-content: space-evenly; */
+    align-items: center;
+    /* align-content: space-between; */
+
+    /* row-gap: 1em; */
+    /* column-gap: 1em; */
+    gap: 1em 3em;
+}
+
+.box {
+    /* style properties */
+    height: 100px;
+    width: 100px;
+    background-color: orchid;
+    border: 2px solid navy;
+    border-radius: 10%;
+    font-size: 3em;
+    color: white;
+
+    /* flex properties */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    font-size: 1em;
+    flex-shrink: 3;
+    align-self: flex-end;
+}
+
+#two {
+    order: 3;
+    flex-grow: 2;
+}
+
+#four {
+    order: 1;
+    flex-grow: 2;
+}
+
+#six {
+    order: -1;
+}
+
+#eight {
+    align-self: flex-start;
+}
