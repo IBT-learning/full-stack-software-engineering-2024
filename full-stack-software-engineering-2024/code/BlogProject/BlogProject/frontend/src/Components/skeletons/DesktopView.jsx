@@ -14,12 +14,14 @@ const DesktopViewSkeleton = () => {
     <>
       <SimpleGrid
         h="350px"
-        minChildWidth={"md"}
+        minChildWidth="22rem"
         key={index}
         padding="2"
         boxShadow="lg"
         bg={bg}
         rounded="lg"
+        rowGap="4"
+        columnGap="6"
       >
         <SkeletonCircle size="12" />
         <SkeletonText

@@ -27,7 +27,14 @@ import { uploadImage } from "../../Utils/styles";
 import useGlobalContext from "../../Context/useGlobalContext";
 import { IoMdArrowBack } from "react-icons/io";
 
-const EditProfile = ({ isOpen, onClose, initialFocus, finalFocus, userid }) => {
+const EditProfile = ({
+  isOpen,
+  onClose,
+  initialFocus,
+  finalFocus,
+  userid,
+  setUserProfile,
+}) => {
   const [coverImage, setCoverImage] = useState("");
   const [profileImage, setProfileImage] = useState("");
   const [updatedProfile, setUpdatedProfile] = useState({
@@ -114,6 +121,7 @@ const EditProfile = ({ isOpen, onClose, initialFocus, finalFocus, userid }) => {
           duration: 5000,
         });
       } else {
+        setUserProfile(data.updatedProfile);
         localStorage.removeItem("auth_user");
         setAuth(data.updatedProfile);
         localStorage.setItem("auth_user", JSON.stringify(updatedProfile));

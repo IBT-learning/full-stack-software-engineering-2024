@@ -70,10 +70,10 @@ const HomePage = () => {
           {loading ? (
             <DesktopViewSkeleton />
           ) : (
-            <SimpleGrid minChildWidth="md" gap="2">
+            <SimpleGrid minChildWidth="22rem" rowGap="4" columnGap="6">
               {posts?.map((post) => (
                 <Provider>
-                  <PostCard key={post.title} post={post} />
+                  <PostCard key={post?.title} post={post} />
                 </Provider>
               ))}
             </SimpleGrid>

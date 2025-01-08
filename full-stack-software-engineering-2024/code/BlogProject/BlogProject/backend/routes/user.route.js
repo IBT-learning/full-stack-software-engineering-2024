@@ -10,8 +10,8 @@ import protectRoute from "../middlewares/protectRoute.js";
 
 const router = express.Router();
 
-router.get("/profile/:username", protectRoute, getProfile);
-router.put("/update/:username", protectRoute, updateProfile);
-router.delete("/delete/:username", protectRoute, deleteProfile);
+router.get("/profile/:userid", protectRoute, getProfile);
+router.put("/update/:userid", protectRoute, updateProfile);
+router.delete("/delete/:userid", protectRoute, deleteProfile);
 
 export default router;

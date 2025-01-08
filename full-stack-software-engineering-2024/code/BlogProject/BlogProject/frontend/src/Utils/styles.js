@@ -53,6 +53,6 @@ export const uploadImage = async (event) => {
 
 export const formattedDate = (dateOfPost) => {
   dayjs.extend(localizedFormat);
-  const postDate = dayjs(dateOfPost).format("lll");
+  const postDate = dayjs(dateOfPost).format("ll");
   return postDate;
 };

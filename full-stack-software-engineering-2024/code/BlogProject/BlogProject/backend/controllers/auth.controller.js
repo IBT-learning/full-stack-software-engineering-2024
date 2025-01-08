@@ -71,7 +71,9 @@ export const userLogin = async (req, res) => {
       return res.status(404).json({ msg: "Incorrect Password" });
     }
     // generateTokenAndCookie(user._id, res);
-    const token = jwt.sign({ user }, JWT_SECRET, { expiresIn: "14d" });
+    const token = jwt.sign({ payload: user._id }, JWT_SECRET, {
+      expiresIn: "3d",
+    });
     res.status(200).json({
       success: "true",
       msg: "Login successfully",

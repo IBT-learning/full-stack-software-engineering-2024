@@ -70,7 +70,11 @@ function App() {
   const { setAuthToken, setIsAuth, setAuth } = useGlobalContext();
 
   useEffect(() => {
-    const savedToken = Cookies.get("auth_token");
+    const savedToken = Cookies.get("auth_token", {
+      sameSite: "None",
+      secure: true,
+      expires: 2,
+    });
     const savedUser = localStorage.getItem("auth_user");
     setAuthToken(savedToken);
     setAuth(JSON.parse(savedUser));

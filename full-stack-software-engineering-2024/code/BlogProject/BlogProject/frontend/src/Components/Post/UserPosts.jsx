@@ -1,28 +1,39 @@
 import React from "react";
-import { Flex, Text, Image, Box, VStack, IconButton } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Image,
+  Box,
+  VStack,
+  IconButton,
+  Badge,
+} from "@chakra-ui/react";
 import image from "../../assets/placeholderImage.webp";
 import { FaRegComment } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
+import { formattedDate } from "../../Utils/styles";
 
 const UserPosts = ({ userPosts }) => {
   return (
     <Flex
       gap="2"
       p="2"
-      maxH="8rem"
+      maxH="9rem"
       rounded="base"
       flexWrap="nowrap"
       border="1px solid"
       borderColor="gray.700"
       justifyContent="space-between"
     >
-      <Box w="30rem">
-        <Text fontSize="2xl" fontWeight="bold">
+      <Flex h="full" flexWrap="wrap" alignItems="center">
+        <Text mt="-2" fontSize="xl" fontWeight="bold">
           {userPosts?.title}
         </Text>
-      </Box>
+        <Badge>posted on {formattedDate(userPosts?.createdAt)}</Badge>
+      </Flex>
       <Image
         w="7rem"
+        flexGrow="1"
         rounded="lg"
         src={userPosts.image || image}
         alt="post image"

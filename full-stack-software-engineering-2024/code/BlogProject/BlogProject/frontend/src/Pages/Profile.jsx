@@ -30,21 +30,24 @@ import { formattedDate } from "../Utils/styles.js";
 import { useParams, useNavigate } from "react-router-dom";
 
 const ProfilePage = () => {
+  const [userProfile, setUserProfile] = useState("");
   const [userPosts, setUserPosts] = useState("");
-  const { auth } = useGlobalContext();
+  const [authUser, setAuthUser] = useState(false);
+
+  const { authToken, auth } = useGlobalContext();
   const navigate = useNavigate();
   const toast = useToast();
 
   const userInfo = [
-    { key: "Email", info: auth?.email },
-    { key: "Gender", info: auth?.gender },
+    { key: "Email", info: userProfile?.email },
+    { key: "Gender", info: userProfile?.gender },
     {
       key: "Location",
-      info: auth?.location,
+      info: userProfile?.location,
     },
     {
       key: "Bio",
-      info: auth?.Bio,
+      info: userProfile?.Bio,
     },
   ];
 
@@ -65,14 +68,38 @@ const ProfilePage = () => {
   };
 
   useEffect(() => {
+    const fetchUserProfile = async () => {
+      const response = await fetch(
+        `http://localhost:4000/api/user/profile/${userid}`,
+        {
+          headers: {
+            "Content-Type": "application.json",
+            authorization: authToken,
+          },
+        }
+      );
+      const data = await response.json();
+      if (response.ok) {
+        setUserProfile(data.data);
+      } else {
+        toast({
+          title: "Error",
+          status: "error",
+          description: data.error,
+          duration: 5000,
+        });
+      }
+    };
+    fetchUserProfile();
+  }, [userid]);
+
+  useEffect(() => {
     const fetchUserPosts = async () => {
       try {
         const response = await fetch(
           `http://localhost:4000/api/post/getposts/${userid}`
         );
         const data = await response.json();
-        console.log(data);
-
         if (!response.ok) {
           toast({
             title: "Error",
@@ -90,16 +117,20 @@ const ProfilePage = () => {
     fetchUserPosts();
   }, [userid]);
 
-  console.log(userPosts);
+  useEffect(() => {
+    if (userid === auth?._id.toString()) {
+      setAuthUser(true);
+    }
+  }, [userid]);
 
   return (
     <Box
-      maxw="100vw"
       border="1px solid"
       ref={finalRef}
       borderColor="gray.700"
       bg={bg}
       color={color}
+      transition={"all 0.3s ease-in-out"}
     >
       <Flex w="full" direction="column" gap="2">
         <VStack alignItems="flex-start">
@@ -117,47 +148,66 @@ const ProfilePage = () => {
             mr="-100%"
             w="full"
             fit="cover"
-            src={auth?.coverimage || image}
+            src={userProfile?.coverimage || image}
             alt="Cover Image"
           />
 
           <Flex p="2" gap="4" w="full">
             <Avatar
-              name={auth?.profilename || "Profile Image"}
-              src={auth?.profileimage}
+              name={userProfile?.profilename || "Profile Image"}
+              src={userProfile?.profileimage}
               alt="profile image"
             />
             <Flex w="full" justifyContent="space-between">
               <Box>
-                <Text fontSize="xl">{auth?.profilename || "Profile Name"}</Text>
-                <Text>@{auth?.username}</Text>
+                <Text fontSize="xl">
+                  {userProfile?.profilename || "Profile Name"}
+                </Text>
+                <Text>@{userProfile?.username || "@username"}</Text>
               </Box>
-              <Button
-                size="lg"
-                px="8"
-                mr="6"
-                alignSelf="flex-end"
-                rounded="3xl"
-                onClick={onOpen}
-                bg={Btn}
-                sx={hoverStyle}
-              >
-                Edit Profile
-              </Button>
 
+              {authUser ? (
+                <Button
+                  size="lg"
+                  px="8"
+                  mr="6"
+                  alignSelf="flex-end"
+                  rounded="3xl"
+                  onClick={onOpen}
+                  bg={Btn}
+                  sx={hoverStyle}
+                >
+                  Edit Profile
+                </Button>
+              ) : (
+                <Button
+                  size="lg"
+                  px="8"
+                  mr="6"
+                  alignSelf="flex-end"
+                  rounded="3xl"
+                  bg={Btn}
+                  sx={hoverStyle}
+                >
+                  FOLLOW
+                </Button>
+              )}
               <EditProfile
                 isOpen={isOpen}
                 onClose={onClose}
                 initialFocus={initialRef}
                 finalFocus={finalRef}
                 userid={userid}
+                setUserProfile={setUserProfile}
               />
             </Flex>
           </Flex>
           <Divider />
-          <Text px="4">{`Member since ${formattedDate(auth?.createdAt)}`}</Text>
+          <Text px="4">{`Member since ${formattedDate(
+            userProfile?.createdAt
+          )}`}</Text>
           <Text fontSize="xl" textAlign="left" px="4">
-            {auth?.Bio}
+            {userProfile?.Bio}
           </Text>
         </VStack>
         <HStack px="4" gap="8">

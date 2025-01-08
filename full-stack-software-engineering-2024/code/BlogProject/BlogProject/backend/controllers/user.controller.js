@@ -1,15 +1,22 @@
 import bcrypt from "bcrypt";
 import User from "../models/user.model.js";
+import mongoose from "mongoose";
 
 export const getProfile = async (req, res) => {
   try {
-    const { username } = req.params;
+    const { userid } = req.params;
+    const { userId } = req.user._id.toString;
 
-    const user = await User.findOne({ username }).select("-password");
+    let user = await User.findById(userid).select("-password");
     if (!user) {
       return res.status(400).json({ error: "user profile not found" });
     }
-    return res.status(200).json({ success: true, data: user });
+    if (userId === user._id.toString()) {
+      const authUser = user;
+      res.status(200).json({ success: true, data: authUser });
+    } else {
+      return res.status(200).json({ success: true, data: user });
+    }
   } catch (error) {
     console.log(`error in getProfile endpoint: ${error}`);
     res.status(500).json({ error: "internal server error" + error.message });
@@ -34,7 +41,7 @@ export const updateProfile = async (req, res) => {
   } = updatedInputs;
 
   try {
-    const user = await User.findById({ userid });
+    const user = await User.findById(userid);
     if (!user) {
       return res.status(404).json({ error: "user not found" });
     }
@@ -88,10 +95,10 @@ export const updateProfile = async (req, res) => {
 export const deleteProfile = async (req, res) => {
   try {
     const userId = req.user._id;
-    const { username } = req.params;
+    const { userid } = req.params;
     const { password } = req.body;
 
-    const user = await User.findOne({ username });
+    const user = await User.findById(userid);
     if (!user) {
       return res.status(404).json({ error: "user not found" });
     }

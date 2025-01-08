@@ -43,7 +43,11 @@ const Navbar = () => {
   const { setAuthToken, setIsAuth, isAuth, setAuth, auth } = useGlobalContext();
 
   const handleLogOut = () => {
-    Cookies.remove("auth_token");
+    Cookies.remove("auth_token", {
+      sameSite: "None",
+      secure: true,
+      expires: 0,
+    });
     localStorage.removeItem("auth_user");
     setAuthToken("");
     setAuth("");

@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardBody,
   Flex,
+  Badge,
   Box,
   Text,
   Avatar,
@@ -64,8 +65,12 @@ const PostCard = ({ post }) => {
 
   return (
     <>
-      <Card maxW="md" bg={bg} color={color} cursor={"pointer"}>
-        <CardHeader mt="-2" mb="-2">
+      <Card bg={bg} color={color} cursor={"pointer"}>
+        <CardHeader
+          mt="-2"
+          mb="-2"
+          onClick={() => navigate(`/profile/${post?.user?._id}`)}
+        >
           <Flex flex="1" spacing="2" justifyContent="space-between">
             <Flex gap="4" alignItems="center" flexWrap="wrap">
               <Avatar
@@ -73,8 +78,8 @@ const PostCard = ({ post }) => {
                 src={post?.user?.profileimage}
               />
 
-              <VStack gap="1">
-                <Heading size="md">
+              <VStack gap="1" alignItems="flex-start">
+                <Heading size="sm">
                   {post?.user?.profilename || "Profile Name"}{" "}
                 </Heading>
                 <Text> @{post?.user?.username || "username"} </Text>
@@ -84,18 +89,17 @@ const PostCard = ({ post }) => {
             <OptionButton postId={post._id} />
           </Flex>
           <Divider />
-          <Text
+          <Badge
             py="1"
             fontStyle="oblique"
             fontWeight="semibold"
-            textAlign={"right"}
+            float={"right"}
           >
-            {formatDate(post?.createdAt)}
-          </Text>
-          <Divider />
+            Posted {formatDate(post?.createdAt)}
+          </Badge>
         </CardHeader>
         <CardBody
-          mt="-4"
+          mt="-8"
           mb="-4"
           onClick={() => navigate(`/posts/${post._id}`)}
         >
@@ -104,6 +108,7 @@ const PostCard = ({ post }) => {
               fit="cover"
               align="center"
               border="1px solid"
+              rounded="base"
               borderColor={bg}
               src={post?.image}
               alt="Post Image"
@@ -111,7 +116,7 @@ const PostCard = ({ post }) => {
               w="full"
               onClick={() => navigate(`/posts/${post._id}`)}
             />
-            <Heading fontSize={"lg"} mt="2" mb="2">
+            <Heading fontSize={"lg"} mb="2">
               {post?.title}
             </Heading>
           </Flex>
