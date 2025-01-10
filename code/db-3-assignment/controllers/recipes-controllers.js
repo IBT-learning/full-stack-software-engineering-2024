@@ -41,7 +41,14 @@ const createRecipe = async (req, res) => {
       author,
       instructions,
       ingredients,
-      createdBy: userId,
+      createdBy: userId, // the createdBy field is not included manually
+      // by the user in the request body. Instead, the server automatically assigns
+      // this field based on the authenticated user's details (e.g., from a JWT token or session).
+      // This ensures:
+      // Data integrity (users can only create resources associated with their account).
+      // Simplified API requests for the user.
+      // By extracting the user ID from the JWT or session, the backend guarantees that
+      // the createdBy field accurately reflects the resource's creator.
     });
 
     await addRecipe.save();
@@ -52,7 +59,7 @@ const createRecipe = async (req, res) => {
       );
   } catch (error) {
     console.log(error);
-    res.status(422).json({ message: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
 
@@ -71,10 +78,12 @@ const updateRecipeById = async (req, res) => {
         // if recipe exists check if
         // the createdBy field matches the user's id in the req.user object
         // if it doesn't, send unauthorized error message
+        // the value is createdBy is an object so we convert it to
+        // string to ensure same type comparison
       } else if (findRecipeToUpdate.createdBy.toString() !== req.user.userId) {
         res.status(401).send("You are not authorized to update that recipe");
         // if it matches, compare fields in req.body with
-        // the existing document
+        // the existing document and check for meaningful changes
       } else {
         // Object.keys(req.body) retrieves an array of all the keys (property names)
         // in the req.body object.
@@ -84,8 +93,10 @@ const updateRecipeById = async (req, res) => {
         // The callback function evaluates whether a specific key's value in req.body differs
         // from the corresponding value in findRecipeToUpdate
         // !findRecipeToUpdate[key] checks if findRecipeToUpdate does not have a value for
-        // the current key.If findRecipeToUpdate[key] is undefined (i.e., the key doesn’t exist
-        // in findRecipeToUpdate), the ! operator makes it true.
+        // the current key. If findRecipeToUpdate[key] is undefined (i.e., the key doesn’t exist
+        // in the object we are trying to update ie the findRecipeToUpdate), the ! operator makes it true.
+        // If the key doesn't exist, it will safely return true and skip the comparison.
+        // This prevents errors when comparing values in req.body with non-existent values in findRecipeToUpdate.
         // If the key's value does exist in findRecipeToUpdate,
         // findRecipeToUpdate[key].toString() !== req.body[key].toString()
         // compares the values of findRecipeToUpdate[key] and req.body[key] by
@@ -154,8 +165,7 @@ const deleteRecipeById = async (req, res) => {
         // if it matches then delete the recipe
       } else {
         const deleteRecipe = await RecipeModel.deleteOne(
-          { _id: req.params.recipeId },
-          req.body
+          { _id: req.params.recipeId }
         );
         // if delete was successful send success message
         if (deleteRecipe.deletedCount === 1) {
