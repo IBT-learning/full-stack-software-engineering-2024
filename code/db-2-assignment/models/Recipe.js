@@ -28,5 +28,5 @@ const recipeSchema = new mongoose.Schema({
 export default mongoose.model("recipe", recipeSchema)
 // recipe represents the name of the model in my default
 // model export and it can be named anything on import
-// it all represents my db collection which is pluralized
+// it also represents my db collection which is pluralized
 // by the db by default 
