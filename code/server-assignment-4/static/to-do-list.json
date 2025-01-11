@@ -1,0 +1,62 @@
+[
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "HTML class",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "CSS class",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "Grid class",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "Form class",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "title": "Flexbox class",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 6,
+      "title": "Responsive class",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 7,
+      "title": "Introduction to Javascript class",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 8,
+      "title": "Javascript Expressions class",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 9,
+      "title": "Functions class",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 10,
+      "title": "Loops class",
+      "completed": true
+    }
+  ]
