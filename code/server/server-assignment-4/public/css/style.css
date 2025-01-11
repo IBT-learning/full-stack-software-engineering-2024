@@ -1,0 +1,61 @@
+body{
+    background-color: #0e0d0d;
+  }
+  #select-user{
+    width: 20%;
+    height: 1.5rem;
+    font-size: 16px;
+    border-radius: 5px ;
+  }
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    color: #e4eeeb;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+  #to-do-list {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 2rem;
+    list-style-type: none;
+  }
+  
+  .to-do-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e4eeeb;
+    color: #3a0d03;
+    padding: 0 0.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+  }
+  
+  .list-text{
+    width: 75%;
+  
+  }
+  
+  .incomplete-button {
+    background-color: #cd1313;
+    color: #e4eeeb;
+    font-size: 1rem;
+    height: 3rem;
+    padding: 5px;
+    border-radius: 10px;
+    width: 25%;
+  }
+  
+  .button {
+    background-color: #0e0d0d;
+    color: #e4eeeb;
+    font-size: 1rem;
+    height: 3rem;
+    padding: 5px;
+    border-radius: 10px;
+    width: 25%;
+  }

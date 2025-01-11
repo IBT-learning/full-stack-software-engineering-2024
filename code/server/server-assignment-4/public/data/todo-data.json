@@ -1,0 +1,92 @@
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "Read Quran",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "Morning Workout",
+        "completed": true
+    },
+    {
+        "userId": 1,
+        "id": 3,
+        "title": "Do a project",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 4,
+        "title": "Make breakfast",
+        "completed": true
+    },
+    {
+        "userId": 2,
+        "id": 5,
+        "title": "Personal Care",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 6,
+        "title": "Nap",
+        "completed": false
+    },
+    {
+        "userId": 3,
+        "id": 7,
+        "title": "Nap",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 8,
+        "title": "laundry",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 9,
+        "title": "dishes",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 10,
+        "title": "Taking vitamins",
+        "completed": false
+    },
+    {
+        "userId": 4,
+        "id": 11,
+        "title": "Drink water",
+        "completed": true
+    },
+    {
+        "userId": 4,
+        "id": 12,
+        "title": "Yoga Exercise",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 13,
+        "title": "Read Quran",
+        "completed": true
+    },
+    {
+        "userId": 5,
+        "id": 14,
+        "title": "Memorise A Quran Verse",
+        "completed": false
+    },
+    {
+        "userId": 5,
+        "id": 15,
+        "title": "Learn on Duolingo",
+        "completed": true
+    }
+]

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <title>HTML basic elements</title>
+        <!-- Three ways of including CSS -->
+        <!-- least useful: inline CSS -->
+        <!-- middle useful: a style tag in the header -->
+        <!-- most useful: a linked external style sheet -->
+        <link rel="stylesheet" href="css-basics.css" />
+    </head>
+    <body>
+        <!-- this is a comment, the browser will read it  -->
+        <!-- but not attempt to interpret it -->
+
+        <!-- html element, or html tag. delineated with angle brackets -->
+        <h1>heading one</h1>
+        <h2>heading two</h2>
+        <h6 class="orange-text">heading six</h6>
+
+        <p class="gray-background">paragraph</p>
+
+        <div>division</div>
+        <span>span</span><span>another span</span><span>a third span</span>
+        <pre class="orange-text gray-background">pre-formatted</pre>
+
+        <!-- an attribute changes what the element does -->
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+            MDN Web Docs HTML Element Reference
+        </a>
+
+        <!-- img is an example of an empty tag, or void tag. Also called "self-closing" -->
+        <img
+            src="https://media.giphy.com/media/goKgmdgnBfbYhsZFy9/giphy.gif?cid=790b7611znsnve3hcpek0f0sg9iqv0kzov4kky46s12hqts9&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+            alt="this is going to be us!"
+        />
+
+        <img
+            style="width: 500px; border: 5px solid red"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Latarnia_morska_w_Kolobrzegu.jpg"
+            alt="Kołobrzeg Lighthouse on the Polish Baltic coast"
+        />
+
+        <!-- horizontal rule -->
+        <hr />
+
+        <!-- these element types require nesting -->
+        <ol>
+            <li>thing 3</li>
+            <li class="orange-text">thing 1</li>
+            <li>thing 2</li>
+        </ol>
+
+        <ul>
+            <li>thing 1</li>
+            <li>thing 2</li>
+            <li class="orange-text">thing 3</li>
+        </ul>
+
+        <!-- we can also any amount of nesting! -->
+        <div id="block-wrapper">
+            <h3 class="orange-text">This header is inside a div!</h3>
+            <p>
+                A paragraph usually won't have block elements inside it but
+                might have inline elements such as <span>span</span> or
+                <a href="">anchor tags</a>
+            </p>
+        </div>
+    </body>
+</html>
