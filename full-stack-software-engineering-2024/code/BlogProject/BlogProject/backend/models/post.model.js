@@ -6,7 +6,7 @@ const PostSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
-      maxLength: 60,
+      maxLength: 100,
     },
     body: {
       type: String,
@@ -40,13 +40,6 @@ const PostSchema = new mongoose.Schema(
           ref: User,
           required: true,
         },
-      },
-    ],
-    bookmarks: [
-      {
-        type: mongoose.Schema.ObjectId,
-        ref: "Post",
-        default: [],
       },
     ],
   },

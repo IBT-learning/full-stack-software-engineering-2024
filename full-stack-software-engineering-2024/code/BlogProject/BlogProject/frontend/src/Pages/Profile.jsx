@@ -33,6 +33,7 @@ const ProfilePage = () => {
   const [userProfile, setUserProfile] = useState("");
   const [userPosts, setUserPosts] = useState("");
   const [authUser, setAuthUser] = useState(false);
+  const [following, setFollowing] = useState("");
 
   const { authToken, auth } = useGlobalContext();
   const navigate = useNavigate();
@@ -123,6 +124,46 @@ const ProfilePage = () => {
     }
   }, [userid]);
 
+  useEffect(() => {
+    const prevState = localStorage.getItem("following");
+    setFollowing(prevState);
+  }, []);
+
+  const handleFollowBtn = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:4000/api/user/following/${userid}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: authToken,
+          },
+        }
+      );
+      const data = await response.json();
+      if (response.ok) {
+        setFollowing(data.data);
+        localStorage.setItem("following", data.data);
+        toast({
+          title: "Success",
+          status: "success",
+          description: data.msg,
+          duration: 2000,
+        });
+      } else {
+        toast({
+          title: "Error",
+          status: "error",
+          description: data.error,
+          duration: 3000,
+        });
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <Box
       border="1px solid"
@@ -168,8 +209,7 @@ const ProfilePage = () => {
 
               {authUser ? (
                 <Button
-                  size="lg"
-                  px="8"
+                  px="4"
                   mr="6"
                   alignSelf="flex-end"
                   rounded="3xl"
@@ -181,15 +221,15 @@ const ProfilePage = () => {
                 </Button>
               ) : (
                 <Button
-                  size="lg"
-                  px="8"
+                  px="4"
                   mr="6"
                   alignSelf="flex-end"
                   rounded="3xl"
                   bg={Btn}
                   sx={hoverStyle}
+                  onClick={handleFollowBtn}
                 >
-                  FOLLOW
+                  {following.toUpperCase()}
                 </Button>
               )}
               <EditProfile
@@ -212,10 +252,14 @@ const ProfilePage = () => {
         </VStack>
         <HStack px="4" gap="8">
           <Button bg={Btn} sx={hoverStyle}>
-            1.3k Followers
+            {userProfile?.followers?.length > 1
+              ? `${userProfile?.followers?.length} Followers`
+              : `${userProfile?.followers?.length} Follower`}
           </Button>
           <Button bg={Btn} sx={hoverStyle}>
-            24 Followings
+            {userProfile?.followings?.length > 1
+              ? `${userProfile?.followings?.length} followings`
+              : `${userProfile?.followings?.length} Following`}
           </Button>
         </HStack>
         <Divider />
@@ -250,6 +294,7 @@ const ProfilePage = () => {
                     </>
                   ))}
                 </Flex>
+                <Box h="8"></Box>
               </TabPanel>
               <TabPanel>
                 <SimpleGrid minChildWidth="25rem" gap="4">

@@ -67,7 +67,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  const { setAuthToken, setIsAuth, setAuth } = useGlobalContext();
+  const { setAuthToken, setAuth } = useGlobalContext();
 
   useEffect(() => {
     const savedToken = Cookies.get("auth_token", {
@@ -78,7 +78,6 @@ function App() {
     const savedUser = localStorage.getItem("auth_user");
     setAuthToken(savedToken);
     setAuth(JSON.parse(savedUser));
-    setIsAuth(true);
   }, []);
 
   return (

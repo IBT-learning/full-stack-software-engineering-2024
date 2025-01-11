@@ -32,7 +32,7 @@ const LoginInput = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  const { setAuth, setIsAuth, setAuthToken } = useGlobalContext();
+  const { setAuth, setAuthToken } = useGlobalContext();
 
   const [email, setEmail] = useState("");
   const [emailFocus, setEmailFocus] = useState(null);
@@ -88,7 +88,6 @@ const LoginInput = () => {
           setAuthToken(token);
           setAuth(user);
           localStorage.setItem("auth_user", JSON.stringify(user));
-          setIsAuth(true);
           setEmail("");
           setPassword("");
           navigate(from, { replace: true });

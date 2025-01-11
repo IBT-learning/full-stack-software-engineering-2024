@@ -3,10 +3,10 @@ import { Outlet, useLocation, Navigate } from "react-router-dom";
 import useGlobalContext from "../../Context/useGlobalContext.jsx";
 
 const RequireAuth = () => {
-  const { isAuth } = useGlobalContext();
+  const { auth } = useGlobalContext();
   const location = useLocation();
 
-  return isAuth ? (
+  return auth ? (
     <Outlet />
   ) : (
     <Navigate to="/login" state={{ from: location }} replace={true} />

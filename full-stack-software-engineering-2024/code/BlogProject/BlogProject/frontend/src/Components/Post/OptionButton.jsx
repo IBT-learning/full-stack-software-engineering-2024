@@ -80,7 +80,7 @@ const OptionButton = ({ postId }) => {
             <MenuItem onClick={() => handleEdit(postId)}>
               <FaEdit size="20" color="blue" /> Edit Post
             </MenuItem>
-            <MenuItem onClick={() => navigate(`/profile`)}>
+            <MenuItem onClick={() => navigate(`/profile/${post?.user?._id}`)}>
               <FaUserAlt size="20" color="purple" /> Check Profile
             </MenuItem>
             <MenuItem onClick={() => handleDelete(postId)}>

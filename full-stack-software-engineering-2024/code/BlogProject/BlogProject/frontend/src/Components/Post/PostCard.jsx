@@ -11,14 +11,8 @@ import {
   Avatar,
   Heading,
   Image,
-  Button,
-  IconButton,
   Divider,
   useColorModeValue,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
 } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -29,8 +23,6 @@ import OptionButton from "./OptionButton.jsx";
 const postCardContext = createContext();
 
 export const Provider = ({ children }) => {
-  const [liked, setLiked] = useState(null);
-  const [bookmarked, setbookmarked] = useState(false);
   const bg = useColorModeValue("white", "gray.800");
   const color = useColorModeValue("gray.600", "gray.300");
 
@@ -43,10 +35,6 @@ export const Provider = ({ children }) => {
   return (
     <postCardContext.Provider
       value={{
-        liked,
-        setLiked,
-        bookmarked,
-        setbookmarked,
         bg,
         color,
         formatDate,

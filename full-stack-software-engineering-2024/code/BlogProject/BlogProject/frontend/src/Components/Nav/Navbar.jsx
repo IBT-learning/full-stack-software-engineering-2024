@@ -51,7 +51,6 @@ const Navbar = () => {
     localStorage.removeItem("auth_user");
     setAuthToken("");
     setAuth("");
-    setIsAuth(false);
     navigate("/login");
   };
 

@@ -7,10 +7,7 @@ import {
   TabPanels,
   TabPanel,
   Flex,
-  Skeleton,
   useColorModeValue,
-  SkeletonText,
-  SkeletonCircle,
   SimpleGrid,
 } from "@chakra-ui/react";
 import Aside from "../Components/Nav/Aside.jsx";

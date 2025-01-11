@@ -155,3 +155,98 @@ export const deleteUserPost = async (req, res) => {
     res.status(500).json({ error: "internal server error" });
   }
 };
+
+export const likeOrUnlikePost = async (req, res) => {
+  try {
+    const { postId } = req.params;
+    const userId = req.user._id;
+
+    const postToLike = await Post.findById(postId);
+    if (!postToLike) {
+      res.status(404).json({ error: "post not found" });
+    }
+    // check if user already liked post
+    const likedPost = postToLike.likes.includes(userId);
+    if (likedPost) {
+      // unlike the post
+      await Post.findByIdAndUpdate(
+        { _id: postId },
+        { $pull: { likes: userId } }
+      );
+      const updatedLikes = postToLike.likes.filter(
+        (id) => id.toString() !== userId.toString()
+      );
+      res.status(200).json({ updatedLikes });
+    } else {
+      // like the post
+      postToLike.likes.push(userId);
+
+      await postToLike.save();
+      const updatedLikes = postToLike.likes;
+      res.status(200).json({ updatedLikes });
+    }
+  } catch (error) {
+    console.error("error in likeUnlikePost endPoint:" + error);
+    res.status(500).json({ error: error.message });
+  }
+};
+
+export const saveToOrRemoveFromBookmark = async (req, res) => {
+  try {
+    const { postId } = req.params;
+    const { userId } = req.user._id;
+
+    const post = await Post.findById(postId);
+    if (!post) {
+      res.status(404).json({ error: "post not found" });
+    }
+    const user = await User.findById(userId);
+    if (!user) {
+      res.status(404).json({ error: "user not found" });
+    }
+    const bookmarkedPost = user.bookmarks.includes(postId);
+
+    if (bookmarkedPost) {
+      // remove from bookmark list
+      await findByIdAndUpdate(userId, { $pull: { bookmarks: postId } });
+      const updatedList = user.bookmarks.filter(
+        (id) => id.toString() !== postId
+      );
+      res.status(200).json({ data: updatedList });
+    } else {
+      // add to bookmark list
+      user.bookmarks.push(postId);
+      await user.save();
+      const updatedList = user.bookmarks;
+      res.status(200).json({ data: updatedList });
+    }
+  } catch (error) {
+    console.error("error in saveToBookmark endPoint: " + error);
+    res.status(500).json({ "server error": error.message });
+  }
+};
+
+export const getBookmarkedPosts = async (req, res) => {
+  const { userid } = req.params;
+
+  try {
+    const user = await User.findById(userid);
+    if (!user) {
+      res.status(404).json({ error: "user not found" });
+    }
+    const bookmarkedPosts = await Post.find({ _id: { $in: user.bookmarks } })
+      .sort({ createdAt: -1 })
+      .populate({
+        path: user,
+        select: "-password",
+      });
+    if (bookmarkedPosts.length === 0) {
+      res.status(200).json({ msg: "Your Bookmark List is Empty" });
+    } else {
+      res.status(200).json({ data: bookmarkedPosts });
+    }
+  } catch (error) {
+    console.error("error in getBookmarkedPosts endPoint: " + error);
+    res.status(500).json({ "server error": error.message });
+  }
+};

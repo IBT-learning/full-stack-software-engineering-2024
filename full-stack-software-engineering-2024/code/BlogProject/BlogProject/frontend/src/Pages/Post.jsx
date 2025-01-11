@@ -28,9 +28,9 @@ import useGlobalContext from "../Context/useGlobalContext.jsx";
 import { formattedDate } from "../Utils/styles.js";
 
 const PostPage = () => {
-  const [likedPost, setLikedPost] = useState(false);
   const [bookmarkedPost, setbookmarkedPost] = useState(false);
-  const { posts, post, setPost } = useGlobalContext();
+  const { posts, post, setPost, likesCount, setLikesCount, authToken } =
+    useGlobalContext();
   const { postId } = useParams();
   const navigate = useNavigate();
 
@@ -39,22 +39,48 @@ const PostPage = () => {
 
   useEffect(() => {
     const getPostDetails = () => {
-      const postToView = posts.find((post) => post._id === postId);
+      const postToView = posts?.find((post) => post?._id === postId);
       setPost(postToView);
     };
     getPostDetails();
   }, [postId]);
 
+  const handleLikedPost = async (postid) => {
+    try {
+      const response = await fetch(
+        `http://localhost:4000/api/post/like/${postId}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: authToken,
+          },
+        }
+      );
+      const data = await response.json();
+      const count = data.updatedLikes.length;
+
+      if (response.ok) {
+        if (postid === postId) {
+          setLikesCount(count);
+        }
+      } else {
+        toast({
+          title: "Error",
+          description: data.error,
+          status: "error",
+          duration: 2000,
+        });
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <>
       {post && (
-        <Flex
-          // minH="100vh"
-          gap="4"
-          bg={bg}
-          px={{ base: "2", sm: "4", md: "10" }}
-          pt="2"
-        >
+        <Flex gap="4" bg={bg} px={{ base: "2", sm: "4", md: "10" }} pt="2">
           <Aside />
           <Flex w="full" direction="column" align="flex-start" color={color}>
             <Button
@@ -69,10 +95,7 @@ const PostPage = () => {
               mt="-9"
               fit="cover"
               align="center"
-              src={
-                post?.image ||
-                "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-              }
+              src={post?.image}
               alt="Chakra UI"
               h="15rem"
               w="full"
@@ -98,7 +121,7 @@ const PostPage = () => {
                 <Flex gap="4" flexWrap="wrap" alignItems="center">
                   <Avatar
                     name={post?.user?.username}
-                    src="https://bit.ly/sage-adebayo"
+                    src={post?.user?.profileimage}
                     size={{ base: "sm", sm: "md", md: "lg" }}
                   />
                   <VStack gap="-1">
@@ -144,19 +167,19 @@ const PostPage = () => {
                   bg={useColorModeValue("purple.300", "purple.400")}
                   rounded="3xl"
                 >
-                  <VStack gap="-1" onClick={() => setLikedPost((v) => !v)}>
+                  <VStack gap="-1" onClick={() => handleLikedPost(post._id)}>
                     <IconButton
                       variant="ghost"
                       color={color}
                       icon={
-                        likedPost ? (
+                        likesCount >= 1 ? (
                           <MdFavorite size="28" color="red" />
                         ) : (
                           <MdOutlineFavoriteBorder size="28" />
                         )
                       }
                     />
-                    <Text fontSize="xs">500 Likes</Text>
+                    <Text fontSize="xs">{`${likesCount} Likes`}</Text>
                   </VStack>
                   <VStack gap="-1">
                     <IconButton

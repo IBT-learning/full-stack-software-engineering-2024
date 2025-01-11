@@ -6,6 +6,9 @@ import {
   getUserPosts,
   updateUserPost,
   deleteUserPost,
+  likeOrUnlikePost,
+  saveToOrRemoveFromBookmark,
+  getBookmarkedPosts,
 } from "../controllers/post.controller.js";
 
 const router = express.Router();
@@ -13,7 +16,10 @@ const router = express.Router();
 router.post("/create", protectRoute, createPost);
 router.get("/getposts", getAllPosts);
 router.get("/getposts/:userid", getUserPosts);
+router.get("/bookmarkedPosts/:userid", protectRoute, getBookmarkedPosts);
 router.put("/update/:postId", protectRoute, updateUserPost);
+router.post("/like/:postId", protectRoute, likeOrUnlikePost);
+router.post("/bookmark/:postId", protectRoute, saveToOrRemoveFromBookmark);
 router.delete("/delete/:postId", protectRoute, deleteUserPost);
 
 export default router;

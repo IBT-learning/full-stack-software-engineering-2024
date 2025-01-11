@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import { Flex, Button } from "@chakra-ui/react";
 import {
   MdOutlineFavoriteBorder,
@@ -7,38 +7,44 @@ import {
   MdOutlineBookmarkBorder,
 } from "react-icons/md";
 import { FaRegComment } from "react-icons/fa";
-import postCardContext from "./PostCard";
+import { useNavigate } from "react-router-dom";
 
-const InteractionBtn = () => {
-  const { liked, setLiked, bookmarked, setbookmarked, color } =
-    useContext(postCardContext);
+const InteractionBtn = ({ post }) => {
+  const [bookmarked, setbookmarked] = useState(false);
+  const [comment, setComment] = useState("");
+  const navigate = useNavigate();
 
   return (
-    <Flex flexWrap="nowrap" alignItems={"flex-start"} pb="2">
+    <Flex
+      flexWrap="nowrap"
+      alignItems={"flex-start"}
+      pb="2"
+      onClick={() => navigate(`/posts/${post._id}`)}
+    >
       <Button
         variant="ghost"
         flex="1"
         size={{ base: "xs", sm: "sm", md: "md" }}
         leftIcon={
-          liked ? (
+          post.likes.length >= 1 ? (
             <MdFavorite size="22" />
           ) : (
             <MdOutlineFavoriteBorder size={22} />
           )
         }
-        color={color}
-        onClick={() => setLiked((v) => !v)}
-        iconSpacing={"1"}
+        color=""
+        iconSpacing="1"
+        onClick={() => navigate(`/posts/${post._id}`)}
       >
-        {liked ? "UnLike" : "Like"}
+        {`${post.likes.length} Likes`}
       </Button>
       <Button
         variant="ghost"
         flex="1"
         size={{ base: "xs", sm: "sm", md: "md" }}
         leftIcon={<FaRegComment size="18" />}
-        color={color}
-        iconSpacing={"1"}
+        color=""
+        iconSpacing="1"
       >
         0 Comments
       </Button>
@@ -53,9 +59,9 @@ const InteractionBtn = () => {
             <MdOutlineBookmarkBorder size="22" />
           )
         }
-        color={color}
+        color={""}
         onClick={() => setbookmarked((v) => !v)}
-        iconSpacing={"1"}
+        iconSpacing="1"
       >
         Bookmark
       </Button>
