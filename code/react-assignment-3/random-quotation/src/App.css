@@ -1,0 +1,18 @@
+div {
+  text-align: center;
+  margin: 20px;
+  background-color: aqua;
+  
+}
+
+select {
+  margin: 10px;
+  padding: 5px;
+  background-color: blueviolet;
+}
+
+p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  
+}
