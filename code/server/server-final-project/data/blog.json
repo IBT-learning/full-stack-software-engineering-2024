@@ -1,39 +1,38 @@
 [
-    {
-      "id": 1,
-      "userId": 1,
-      "title": "Software Development Life Cycle",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing...",
-      "blogWriter": "Web Genius",
-      "posterIcon": "images/icon1.jpg",
-      "blogImg": "images/sdlc.jpg"
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "title": "Java vs JavaScript",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing...",
-      "blogWriter": "Techgurl",
-      "posterIcon": "images/icon2.jpg",
-      "blogImg": "images/javajs.png"
-    },
-    {
-      "id": 3,
-      "userId": 3,
-      "title": "Components of Java",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing...",
-      "blogWriter": "Brainie",
-      "posterIcon": "images/icon3.jpg",
-      "blogImg": "images/java.jpg"
-    },
-    {
-      "id": 4,
-      "userId": 4,
-      "title": "Software Development Languages",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing...",
-      "blogWriter": "App Crafter",
-      "posterIcon": "images/icon4.jpg",
-      "blogImg": "images/programming.png"
-    }
-    
-  ]
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Software Development Life Cycle",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...",
+    "blogWriter": "Web Genius",
+    "posterIcon": "images/icon1.jpg",
+    "blogImg": "images/sdlc.jpg"
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "title": "Java vs JavaScript",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...",
+    "blogWriter": "Techgurl",
+    "posterIcon": "images/icon2.jpg",
+    "blogImg": "images/javajs.png"
+  },
+  {
+    "id": 3,
+    "userId": 3,
+    "title": "Components of Java",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...",
+    "blogWriter": "Brainie",
+    "posterIcon": "images/icon3.jpg",
+    "blogImg": "images/java.jpg"
+  },
+  {
+    "id": 4,
+    "userId": 4,
+    "title": "Software Development Languages",
+    "body": "Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...Lorem ipsum dolor sit amet consectetur adipisicing...",
+    "blogWriter": "App Crafter",
+    "posterIcon": "images/icon4.jpg",
+    "blogImg": "images/programming.png"
+  }
+]

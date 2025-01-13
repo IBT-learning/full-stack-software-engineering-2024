@@ -15,50 +15,59 @@ const fetchPosts = async () => {
 };
 
 const showPosts = (blogPost) => {
+  // Create container for each blog post and add a class list
   const postContainer = document.createElement("div");
-  postContainer.classList.add("post-container");
+  postContainer.classList.add("post");
 
+  // Create the title element
   const titleElement = document.createElement("h3");
   titleElement.innerText = blogPost.title;
 
+  // Create the element for the main blog-content
+  const contentElement = document.createElement("div");
+  contentElement.classList.add("content");
+
+  // Create the body element that you will add to the main content element
   const bodyElement = document.createElement("p");
   bodyElement.innerText = blogPost.body;
+  bodyElement.classList.add("content-p");
 
+  // Create the image element for the content
+  const blogImage = document.createElement("img");
+  blogImage.src = `http://localhost:4000/${blogPost.blogImg}`;
+  blogImage.alt = "Blog Image";
+  blogImage.classList.add("content-img");
+
+  // Place the body and the image inside the contentElement
+  contentElement.appendChild(bodyElement);
+  contentElement.appendChild(blogImage);
+
+  // Create a div for the user information
   const userElement = document.createElement("div");
   userElement.classList.add("poster");
-  
+
+  // Create an image element for the user icon
+  const userIcon = document.createElement("img");
+  userIcon.classList.add("icon");
+  userIcon.src = `http://localhost:4000/${blogPost.posterIcon}`;
+  userIcon.alt = "Poster Icon";
+
+  // Create a span element fpr the username
   const userName = document.createElement("span");
   userName.innerText = blogPost.blogWriter;
-  
-  const userIcon = document.createElement("img");
-  userElement.classList.add("icon");
-  userIcon.src = `http://localhost:4000/${blogPost.posterIcon}`;
-  userIcon.alt = "Poster Icon"
-  
-  userElement.appendChild(userName)
-  userElement.appendChild(userIcon)
-  
-  const blogImage = document.createElement("img");
-  userElement.classList.add("content");
-  blogImage.src = `http://localhost:4000/${blogPost.blogImg}`;
-  blogImage.alt = "Blog Image"
-  
+
+  // Place both the user icon and the user image in the user-info div
+  userElement.appendChild(userName);
+  userElement.appendChild(userIcon);
+
+  // Place all the post divs inside the individual postContainer
   postContainer.appendChild(titleElement);
-  postContainer.appendChild(bodyElement);
   postContainer.appendChild(userElement);
+  postContainer.appendChild(bodyElement);
+  // postContainer.appendChild(blogImage);
 
-  document.querySelector(".content").appendChild(postContainer);
-
-  // postTitle.innerText = blogPost.title;
-
-  // postParagragh.innerText = blogPost.body;
-
-  // username.innerText = blogPost.blogWriter
-
-  // username.innerText = data.username
-
-  //   console.log(username.innerText);
-  //   console.log(postParagragh.innerText);
+  // Create a larger container for all the blog containers
+  document.querySelector(".blog-post").appendChild(postContainer);
 };
 
 fetchPosts();
