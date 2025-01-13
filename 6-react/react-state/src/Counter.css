@@ -1,0 +1,21 @@
+.counter-component {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: rgb(65, 65, 201);
+  color: #fff;
+  border: 0;
+  border-radius: 20%;
+  height: 2em;
+  width: 2em;
+  font-size: 2em;
+}
+
+span {
+  font-size: 3em;
+  margin: 0.5em;
+}
