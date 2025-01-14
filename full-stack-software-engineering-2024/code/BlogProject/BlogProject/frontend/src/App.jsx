@@ -52,7 +52,7 @@ const router = createBrowserRouter(
         </Route>
 
         <Route element={<RequireAuth />}>
-          <Route path="/bookmark" element={<Bookmark />} />
+          <Route path="/bookmark/:postId" element={<HomePage />} />
         </Route>
 
         <Route element={<RequireAuth />}>

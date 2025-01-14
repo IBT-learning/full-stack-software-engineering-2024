@@ -12,6 +12,7 @@ import {
   Badge,
   VStack,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
 import {
   MdOutlineFavoriteBorder,
@@ -29,18 +30,32 @@ import { formattedDate } from "../Utils/styles.js";
 
 const PostPage = () => {
   const [bookmarkedPost, setbookmarkedPost] = useState(false);
-  const { posts, post, setPost, likesCount, setLikesCount, authToken } =
-    useGlobalContext();
+  const {
+    setBookmarkList,
+    bookmarkList,
+    posts,
+    post,
+    setPost,
+    likesCount,
+    setLikesCount,
+    authToken,
+    auth,
+  } = useGlobalContext();
   const { postId } = useParams();
   const navigate = useNavigate();
+  const toast = useToast();
 
   const bg = useColorModeValue("gray.200", "gray.900");
   const color = useColorModeValue("gray.600", "gray.300");
 
   useEffect(() => {
     const getPostDetails = () => {
-      const postToView = posts?.find((post) => post?._id === postId);
-      setPost(postToView);
+      if (posts) {
+        const postToView = posts?.find((post) => post?._id === postId);
+        setLikesCount(postToView.likes.length);
+        setBookmarkList(postToView.bookmarks.length);
+        setPost(postToView);
+      }
     };
     getPostDetails();
   }, [postId]);
@@ -70,6 +85,44 @@ const PostPage = () => {
           description: data.error,
           status: "error",
           duration: 2000,
+        });
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const handleBookmarkList = async (postid) => {
+    try {
+      const response = await fetch(
+        `http://localhost:4000/api/post/bookmark/${postId}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            authorization: authToken,
+          },
+        }
+      );
+      const data = await response.json();
+      if (!response.ok) {
+        toast({
+          title: "Error",
+          status: "error",
+          description: data.error,
+          duration: 2000,
+          position: "top",
+        });
+      } else {
+        if (postid === postId) {
+          setBookmarkList(data.data);
+        }
+        toast({
+          title: "Success",
+          status: "success",
+          description: data.msg,
+          duration: 2000,
+          position: "top",
         });
       }
     } catch (error) {
@@ -118,7 +171,13 @@ const PostPage = () => {
                 alignItems="center"
                 h="10%"
               >
-                <Flex gap="4" flexWrap="wrap" alignItems="center">
+                <Flex
+                  gap="4"
+                  flexWrap="wrap"
+                  alignItems="center"
+                  cursor="pointer"
+                  onClick={() => navigate(`/profile/${post?.user?._id}`)}
+                >
                   <Avatar
                     name={post?.user?.username}
                     src={post?.user?.profileimage}
@@ -172,14 +231,14 @@ const PostPage = () => {
                       variant="ghost"
                       color={color}
                       icon={
-                        likesCount >= 1 ? (
+                        likesCount ? (
                           <MdFavorite size="28" color="red" />
                         ) : (
                           <MdOutlineFavoriteBorder size="28" />
                         )
                       }
                     />
-                    <Text fontSize="xs">{`${likesCount} Likes`}</Text>
+                    <Text fontSize="xs">{`${likesCount}  likes`}</Text>
                   </VStack>
                   <VStack gap="-1">
                     <IconButton
@@ -189,19 +248,22 @@ const PostPage = () => {
                     />
                     <Text fontSize="xs">Comment</Text>
                   </VStack>
-                  <VStack gap="-1" onClick={() => setbookmarkedPost((v) => !v)}>
+                  <VStack gap="-1" onClick={() => handleBookmarkList(post._id)}>
                     <IconButton
                       variant="ghost"
                       color={color}
                       icon={
-                        bookmarkedPost ? (
-                          <MdBookmarkAdded size="28" color="black" />
+                        bookmarkList.length &&
+                        bookmarkList.some((id) => id === auth._id) ? (
+                          <MdBookmarkAdded size="28" color="white" />
                         ) : (
                           <MdOutlineBookmarkBorder size="28" />
                         )
                       }
                     />
-                    <Text fontSize="xs">Bookmark Post</Text>
+                    <Text fontSize="xs">
+                      {`${post?.bookmarks?.length} Bookmarks`}
+                    </Text>
                   </VStack>
                   <VStack gap="-1">
                     <IconButton

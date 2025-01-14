@@ -32,6 +32,7 @@ import { useParams, useNavigate } from "react-router-dom";
 const ProfilePage = () => {
   const [userProfile, setUserProfile] = useState("");
   const [userPosts, setUserPosts] = useState("");
+  const [bookmark, setBookmark] = useState("");
   const [authUser, setAuthUser] = useState(false);
   const [following, setFollowing] = useState("");
 
@@ -164,6 +165,37 @@ const ProfilePage = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchBookmarkedPosts = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:4000/api/post/bookmarked/${userid}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              authorization: authToken,
+            },
+          }
+        );
+        const data = await response.json();
+        if (!response.ok) {
+          toast({
+            title: "Error",
+            status: "error",
+            description: data.error,
+            duration: 3000,
+          });
+        } else {
+          setBookmark(data.data);
+        }
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+    fetchBookmarkedPosts();
+  }, []);
+
   return (
     <Box
       border="1px solid"
@@ -193,7 +225,7 @@ const ProfilePage = () => {
             alt="Cover Image"
           />
 
-          <Flex p="2" gap="4" w="full">
+          <Flex p="2" gap="4" w="full" cursor="pointer">
             <Avatar
               name={userProfile?.profilename || "Profile Image"}
               src={userProfile?.profileimage}
@@ -269,7 +301,7 @@ const ProfilePage = () => {
             <TabList>
               <Tab>About</Tab>
               <Tab>Posts</Tab>
-              <Tab>Bookmark List</Tab>
+              {authUser && <Tab>Bookmark List</Tab>}
             </TabList>
             <TabIndicator
               mt="-1.5px"
@@ -297,15 +329,21 @@ const ProfilePage = () => {
                 <Box h="8"></Box>
               </TabPanel>
               <TabPanel>
-                <SimpleGrid minChildWidth="25rem" gap="4">
+                <SimpleGrid minChildWidth="25rem" gap="1">
                   {userPosts.length &&
                     userPosts?.map((posts) => (
                       <UserPosts key={posts._id} userPosts={posts} />
                     ))}
                 </SimpleGrid>
               </TabPanel>
+
               <TabPanel>
-                <p>three!</p>
+                <SimpleGrid minChildWidth="25rem">
+                  {bookmark &&
+                    bookmark?.map((posts) => (
+                      <UserPosts key={posts._id} userPosts={posts} />
+                    ))}
+                </SimpleGrid>
               </TabPanel>
             </TabPanels>
           </Tabs>

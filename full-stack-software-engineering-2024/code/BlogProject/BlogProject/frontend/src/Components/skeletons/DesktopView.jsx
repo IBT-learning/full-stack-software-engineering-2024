@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  SimpleGrid,
+  Box,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
@@ -10,12 +10,10 @@ import {
 const DesktopViewSkeleton = () => {
   const bg = useColorModeValue("gray.200", "gray.900");
 
-  return [...Array(9)].map((_, index) => (
+  return (
     <>
-      <SimpleGrid
+      <Box
         h="350px"
-        minChildWidth="22rem"
-        key={index}
         padding="2"
         boxShadow="lg"
         bg={bg}
@@ -33,9 +31,9 @@ const DesktopViewSkeleton = () => {
         />
         <Skeleton mt="4" h="32"></Skeleton>
         <SkeletonText mt="4" noOfLines={3} spacing="2" skeletonHeight="3" />
-      </SimpleGrid>
+      </Box>
     </>
-  ));
+  );
 };
 
 export default DesktopViewSkeleton;

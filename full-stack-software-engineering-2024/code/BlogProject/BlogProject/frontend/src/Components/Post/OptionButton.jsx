@@ -12,7 +12,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaTrashAlt, FaEdit, FaUserAlt } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
 
-const OptionButton = ({ postId }) => {
+const OptionButton = ({ postId, postUser }) => {
   const { posts, setPosts, setPost, auth, authToken } = useGlobalContext();
   const navigate = useNavigate();
   const { postID } = useParams();
@@ -80,7 +80,7 @@ const OptionButton = ({ postId }) => {
             <MenuItem onClick={() => handleEdit(postId)}>
               <FaEdit size="20" color="blue" /> Edit Post
             </MenuItem>
-            <MenuItem onClick={() => navigate(`/profile/${post?.user?._id}`)}>
+            <MenuItem onClick={() => navigate(`/profile/${postUser}`)}>
               <FaUserAlt size="20" color="purple" /> Check Profile
             </MenuItem>
             <MenuItem onClick={() => handleDelete(postId)}>

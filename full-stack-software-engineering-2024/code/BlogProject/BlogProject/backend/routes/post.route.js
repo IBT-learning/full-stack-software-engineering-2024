@@ -16,7 +16,7 @@ const router = express.Router();
 router.post("/create", protectRoute, createPost);
 router.get("/getposts", getAllPosts);
 router.get("/getposts/:userid", getUserPosts);
-router.get("/bookmarkedPosts/:userid", protectRoute, getBookmarkedPosts);
+router.get("/bookmarked/:userid", protectRoute, getBookmarkedPosts);
 router.put("/update/:postId", protectRoute, updateUserPost);
 router.post("/like/:postId", protectRoute, likeOrUnlikePost);
 router.post("/bookmark/:postId", protectRoute, saveToOrRemoveFromBookmark);

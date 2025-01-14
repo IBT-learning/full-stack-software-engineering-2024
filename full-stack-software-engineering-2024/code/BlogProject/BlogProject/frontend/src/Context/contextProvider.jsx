@@ -8,6 +8,7 @@ export const ContextProvider = ({ children }) => {
   const [posts, setPosts] = useState("");
   const [post, setPost] = useState({});
   const [likesCount, setLikesCount] = useState(0);
+  const [bookmarkList, setBookmarkList] = useState("");
 
   return (
     <globalContext.Provider
@@ -22,6 +23,8 @@ export const ContextProvider = ({ children }) => {
         setPost,
         likesCount,
         setLikesCount,
+        bookmarkList,
+        setBookmarkList,
       }}
     >
       {children}

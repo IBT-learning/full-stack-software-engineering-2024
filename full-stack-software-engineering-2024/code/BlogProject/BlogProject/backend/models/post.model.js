@@ -29,6 +29,13 @@ const PostSchema = new mongoose.Schema(
         default: [],
       },
     ],
+    bookmarks: [
+      {
+        type: mongoose.Schema.ObjectId,
+        ref: "User",
+        default: [],
+      },
+    ],
     comments: [
       {
         text: {

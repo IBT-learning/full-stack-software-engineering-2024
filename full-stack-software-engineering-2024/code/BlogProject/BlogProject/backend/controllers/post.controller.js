@@ -194,7 +194,7 @@ export const likeOrUnlikePost = async (req, res) => {
 export const saveToOrRemoveFromBookmark = async (req, res) => {
   try {
     const { postId } = req.params;
-    const { userId } = req.user._id;
+    const userId = req.user._id;
 
     const post = await Post.findById(postId);
     if (!post) {
@@ -205,20 +205,33 @@ export const saveToOrRemoveFromBookmark = async (req, res) => {
       res.status(404).json({ error: "user not found" });
     }
     const bookmarkedPost = user.bookmarks.includes(postId);
+    const postBookmarked = post.bookmarks.includes(userId);
 
-    if (bookmarkedPost) {
+    if (bookmarkedPost || postBookmarked) {
       // remove from bookmark list
-      await findByIdAndUpdate(userId, { $pull: { bookmarks: postId } });
-      const updatedList = user.bookmarks.filter(
-        (id) => id.toString() !== postId
+      await User.findByIdAndUpdate(userId, { $pull: { bookmarks: postId } });
+      await Post.findByIdAndUpdate(
+        { _id: postId },
+        { $pull: { bookmarks: userId } }
       );
-      res.status(200).json({ data: updatedList });
+      const updatedList = post.bookmarks.filter(
+        (id) => id.toString() !== userId.toString()
+      );
+      res.status(200).json({
+        msg: "Removed From Bookmark",
+        data: updatedList,
+      });
     } else {
       // add to bookmark list
       user.bookmarks.push(postId);
+      post.bookmarks.push(userId);
       await user.save();
-      const updatedList = user.bookmarks;
-      res.status(200).json({ data: updatedList });
+      await post.save();
+      const updatedList = post.bookmarks;
+      res.status(200).json({
+        msg: "Added to Bookmark",
+        data: updatedList,
+      });
     }
   } catch (error) {
     console.error("error in saveToBookmark endPoint: " + error);
@@ -228,22 +241,29 @@ export const saveToOrRemoveFromBookmark = async (req, res) => {
 
 export const getBookmarkedPosts = async (req, res) => {
   const { userid } = req.params;
+  const userId = req.user._id;
 
   try {
     const user = await User.findById(userid);
     if (!user) {
       res.status(404).json({ error: "user not found" });
     }
-    const bookmarkedPosts = await Post.find({ _id: { $in: user.bookmarks } })
-      .sort({ createdAt: -1 })
-      .populate({
-        path: user,
-        select: "-password",
-      });
-    if (bookmarkedPosts.length === 0) {
-      res.status(200).json({ msg: "Your Bookmark List is Empty" });
+
+    if (userid === userId.toString()) {
+      const bookmarkedPosts = await Post.find({ _id: { $in: user.bookmarks } })
+        .sort({ createdAt: -1 })
+        .populate({
+          path: "user",
+          select: "-password",
+        });
+      if (bookmarkedPosts.length === 0) {
+        res.status(200).json({ msg: "Your Bookmark List is Empty" });
+      } else {
+        res.status(200).json({ data: bookmarkedPosts });
+      }
     } else {
-      res.status(200).json({ data: bookmarkedPosts });
+      res.status(200).json([]);
+      return;
     }
   } catch (error) {
     console.error("error in getBookmarkedPosts endPoint: " + error);

@@ -65,7 +65,11 @@ const HomePage = () => {
         {/* Component Loading posts for larger screens */}
         <Box display={{ base: "none", sm: "none", md: "block" }}>
           {loading ? (
-            <DesktopViewSkeleton />
+            <SimpleGrid minChildWidth="22rem" rowGap="4" columnGap="6">
+              {[...Array(9)].map((_, index) => (
+                <DesktopViewSkeleton key={index} />
+              ))}
+            </SimpleGrid>
           ) : (
             <SimpleGrid minChildWidth="22rem" rowGap="4" columnGap="6">
               {posts?.map((post) => (
@@ -89,7 +93,7 @@ const HomePage = () => {
           <Tabs isFitted variant="soft-rounded">
             <TabList my="0.5em" fontSize={"lg"}>
               <Tab sx={tabStyle}>For you</Tab>
-              <Tab sx={tabStyle}>Trending</Tab>
+              <Tab sx={tabStyle}>Bookmark</Tab>
               <Tab sx={tabStyle}>Followings</Tab>
               <Tab sx={tabStyle}>Followers</Tab>
             </TabList>

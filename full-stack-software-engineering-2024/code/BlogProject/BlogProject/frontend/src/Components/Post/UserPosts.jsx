@@ -12,8 +12,10 @@ import image from "../../assets/placeholderImage.webp";
 import { FaRegComment } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
 import { formattedDate } from "../../Utils/styles";
+import { useNavigate } from "react-router-dom";
 
 const UserPosts = ({ userPosts }) => {
+  const navigate = useNavigate();
   return (
     <>
       <Flex
@@ -25,6 +27,8 @@ const UserPosts = ({ userPosts }) => {
         border="1px solid"
         borderColor="gray.700"
         justifyContent="space-between"
+        cursor="pointer"
+        onClick={() => navigate(`/posts/${userPosts._id}`)}
       >
         <Flex h="full" flexWrap="wrap" alignItems="center">
           <Text mt="-2" fontSize="xl" fontWeight="bold">

@@ -162,10 +162,14 @@ const MobilePostCard = ({ post }) => {
             ml={{ base: "-2", sm: "" }}
             mb={{ base: "-5", sm: "-2" }}
             mr={{ base: "-8", sm: "-6" }}
-            onClick={() => navigate(`/profile/${post?.user?._id}`)}
           >
             <Flex justifyContent="space-between">
-              <Flex gap="3" alignItems="center" flexWrap="nowrap">
+              <Flex
+                gap="3"
+                alignItems="center"
+                flexWrap="nowrap"
+                onClick={() => navigate(`/profile/${post?.user?._id}`)}
+              >
                 <Avatar
                   size={{ base: "xs", sm: "md" }}
                   key={post._id}
@@ -182,7 +186,7 @@ const MobilePostCard = ({ post }) => {
                 </Box>
               </Flex>
               {/* side menu icon on the postcards */}
-              <OptionButton postId={post._id} />
+              <OptionButton postId={post._id} postUser={post?.user?._id} />
             </Flex>
           </CardHeader>
 
