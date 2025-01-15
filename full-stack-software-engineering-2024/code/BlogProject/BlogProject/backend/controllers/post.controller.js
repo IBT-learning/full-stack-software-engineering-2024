@@ -270,3 +270,28 @@ export const getBookmarkedPosts = async (req, res) => {
     res.status(500).json({ "server error": error.message });
   }
 };
+
+export const CommentOnPost = async (req, res) => {
+  const { postId } = req.params;
+  const userId = req.user._id;
+  const { text } = req.body;
+
+  try {
+    const post = await Post.findById(postId);
+    if (!post) {
+      return res.status(404).json({ error: "post not found" });
+    }
+
+    if (!text) {
+      return res.status(401).json({ error: "comment text is required" });
+    }
+
+    const comment = { user: userId, text };
+    post.comments.push(comment);
+    await post.save();
+    res.status(200).json({ success: true, data: post });
+  } catch (error) {
+    console.error("error in commentOnPost endPoint: " + error);
+    res.status(500).json({ "server error": error.message });
+  }
+};

@@ -11,8 +11,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useGlobalContext from "../../Context/useGlobalContext";
 
 const InteractionBtn = ({ post }) => {
-  const [comment, setComment] = useState("");
-  const { auth, bookmarkList, setBookmarkList, authToken } = useGlobalContext();
+  const { setBookmarkList, authToken } = useGlobalContext();
   const navigate = useNavigate();
   const { postId } = useParams();
   const toast = useToast();
@@ -81,8 +80,9 @@ const InteractionBtn = ({ post }) => {
         leftIcon={<FaRegComment size="18" />}
         color=""
         iconSpacing="1"
+        onClick={() => navigate(`/comments/${post._id}`)}
       >
-        0 Comments
+        {post?.comments?.length} Comments
       </Button>
 
       <Button

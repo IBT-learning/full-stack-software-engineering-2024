@@ -13,6 +13,10 @@ import {
   VStack,
   useColorModeValue,
   useToast,
+  FormControl,
+  FormLabel,
+  Textarea,
+  HStack,
 } from "@chakra-ui/react";
 import {
   MdOutlineFavoriteBorder,
@@ -27,9 +31,13 @@ import { useParams, useNavigate } from "react-router-dom";
 import Aside from "../Components/Nav/Aside.jsx";
 import useGlobalContext from "../Context/useGlobalContext.jsx";
 import { formattedDate } from "../Utils/styles.js";
+import Comments from "../Components/Post/Comments.jsx";
 
 const PostPage = () => {
-  const [bookmarkedPost, setbookmarkedPost] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [comment, setComment] = useState("");
+  const [followStatus, setFollowStatus] = useState("");
+
   const {
     setBookmarkList,
     bookmarkList,
@@ -54,6 +62,8 @@ const PostPage = () => {
         const postToView = posts?.find((post) => post?._id === postId);
         setLikesCount(postToView.likes.length);
         setBookmarkList(postToView.bookmarks.length);
+        const prevState = localStorage.getItem("following");
+        setFollowStatus(prevState);
         setPost(postToView);
       }
     };
@@ -130,6 +140,42 @@ const PostPage = () => {
     }
   };
 
+  const handleComment = () => {
+    setIsOpen((isOpen) => !isOpen);
+  };
+
+  const handlePostComment = async (text) => {
+    try {
+      const response = await fetch(
+        `http://localhost:4000/api/post/comment/${postId}`,
+        {
+          method: "POST",
+          body: JSON.stringify({ text }),
+          headers: {
+            "Content-Type": "application/json",
+            authorization: authToken,
+          },
+        }
+      );
+      const data = await response.json();
+      if (response.ok) {
+        console.log(data.data);
+        setPost(data.data);
+        setComment("");
+        setIsOpen(!isOpen);
+      } else {
+        toast({
+          title: "Error",
+          status: "error",
+          description: data.error,
+          duration: 3000,
+        });
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
   return (
     <>
       {post && (
@@ -156,7 +202,6 @@ const PostPage = () => {
             <Flex
               direction="column"
               w="full"
-              h="70%"
               gap="4"
               mt="-5"
               bg={useColorModeValue("gray.100", "gray.800")}
@@ -181,28 +226,36 @@ const PostPage = () => {
                   <Avatar
                     name={post?.user?.username}
                     src={post?.user?.profileimage}
-                    size={{ base: "sm", sm: "md", md: "lg" }}
+                    size={{ base: "md", sm: "md", md: "lg" }}
                   />
-                  <VStack gap="-1">
+                  <VStack gap="1" align="flex-start">
                     <Heading size="sm">
                       {post?.user?.profilename?.toUpperCase() || "Profile Name"}{" "}
                     </Heading>
                     <Text> @{post?.user?.username || "username"} </Text>
                   </VStack>
                 </Flex>
-                <Box>
-                  <Badge bg="purple.300" px="3">
-                    FOLLOW
+                <VStack gap="-3">
+                  <Badge
+                    rounded="xl"
+                    mr="2"
+                    bg="purple.500"
+                    px="4"
+                    py="1"
+                    cursor="pointer"
+                    onClick={() => navigate(`/profile/${post?.user?._id}`)}
+                  >
+                    {followStatus.toUpperCase()}
                   </Badge>
                   <Text fontStyle="italic" fontWeight="semiBold">
                     {formattedDate(post?.createdAt)}
                   </Text>
-                </Box>
+                </VStack>
               </Flex>
               <Divider />
 
               {/* body container */}
-              <Flex h="100%" direction="column" gap="4">
+              <Flex direction="column" gap="4">
                 <Box>
                   <Heading
                     mt="-2"
@@ -219,7 +272,7 @@ const PostPage = () => {
                 <Flex
                   justifyContent="space-between"
                   px="6"
-                  mb="4"
+                  mb=""
                   py="2"
                   w="full"
                   h="4rem"
@@ -245,8 +298,9 @@ const PostPage = () => {
                       variant="ghost"
                       color={color}
                       icon={<FaRegComment size="25" />}
+                      onClick={handleComment}
                     />
-                    <Text fontSize="xs">Comment</Text>
+                    <Text fontSize="xs">{`${post?.comments?.length} Comments`}</Text>
                   </VStack>
                   <VStack gap="-1" onClick={() => handleBookmarkList(post._id)}>
                     <IconButton
@@ -271,10 +325,41 @@ const PostPage = () => {
                       color={color}
                       icon={<MdOutlineShare size="28" />}
                     />
-                    <Text fontSize="xs">Share This</Text>
+                    <Text fontSize="xs">Share Post</Text>
                   </VStack>
                 </Flex>
+
+                {/* Comment Box open/close on click */}
+                {isOpen && (
+                  <>
+                    <Box
+                      border="1px solid"
+                      borderColor="gray.700"
+                      p="2"
+                      rounded="lg"
+                    >
+                      <FormControl>
+                        <FormLabel>Post your Comment</FormLabel>
+                        <Textarea
+                          placeholder="Write your comment here..."
+                          value={comment}
+                          onChange={(e) => setComment(e.target.value)}
+                        ></Textarea>
+                      </FormControl>
+                      <HStack mt="2">
+                        <Button
+                          bg={"purple.500"}
+                          onClick={() => handlePostComment(comment)}
+                        >
+                          Post Comment
+                        </Button>
+                        <Button onClick={() => setIsOpen(!isOpen)}>Back</Button>
+                      </HStack>
+                    </Box>
+                  </>
+                )}
               </Flex>
+              <Comments comments={post?.comments} />
             </Flex>
           </Flex>
         </Flex>

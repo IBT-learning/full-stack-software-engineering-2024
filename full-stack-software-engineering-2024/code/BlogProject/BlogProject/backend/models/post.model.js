@@ -18,20 +18,20 @@ const PostSchema = new mongoose.Schema(
       default: "",
     },
     user: {
-      type: mongoose.Types.ObjectId,
-      ref: User,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
       required: true,
     },
     likes: [
       {
-        type: mongoose.Types.ObjectId,
-        ref: User,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
         default: [],
       },
     ],
     bookmarks: [
       {
-        type: mongoose.Schema.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         default: [],
       },
@@ -43,8 +43,8 @@ const PostSchema = new mongoose.Schema(
           required: true,
         },
         user: {
-          type: mongoose.Schema.ObjectId,
-          ref: User,
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "User",
           required: true,
         },
       },
