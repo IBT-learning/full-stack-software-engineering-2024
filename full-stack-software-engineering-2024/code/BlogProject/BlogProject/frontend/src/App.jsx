@@ -11,6 +11,7 @@ import PostPage from "./Pages/Post";
 import Search from "./Pages/Search";
 import CreatePost from "./Pages/CreatePost";
 import EditPost from "./Pages/EditPost";
+import UserPosts from "./Components/Post/UserPosts.jsx";
 import Missing from "./Pages/Missing";
 
 import {
@@ -22,6 +23,7 @@ import {
 import Cookies from "js-cookie";
 import RequireAuth from "./Components/Auth/RequireAuth.jsx";
 import useGlobalContext from "./Context/useGlobalContext";
+import BookmarkPage from "./Pages/Bookmark.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +57,10 @@ const router = createBrowserRouter(
 
         <Route element={<RequireAuth />}>
           <Route path="/bookmark/:postId" element={<HomePage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/bookmarkList" element={<BookmarkPage />} />
         </Route>
 
         <Route element={<RequireAuth />}>

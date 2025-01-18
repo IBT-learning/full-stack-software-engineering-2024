@@ -49,6 +49,8 @@ const Navbar = () => {
       expires: 0,
     });
     localStorage.removeItem("auth_user");
+    localStorage.removeItem("bookmark");
+    localStorage.removeItem("following");
     setAuthToken("");
     setAuth("");
     navigate("/login");

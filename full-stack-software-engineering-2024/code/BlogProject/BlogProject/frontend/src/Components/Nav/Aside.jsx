@@ -50,7 +50,7 @@ const Aside = () => {
     {
       icon: <IoBookmarkOutline />,
       text: "My Bookmark List",
-      link: "/bookmark",
+      link: `/bookmarkList`,
     },
     {
       icon: <IoSearchOutline />,

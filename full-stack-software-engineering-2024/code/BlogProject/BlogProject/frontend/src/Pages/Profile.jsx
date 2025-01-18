@@ -38,7 +38,7 @@ const ProfilePage = () => {
   const [authUser, setAuthUser] = useState(false);
   const [following, setFollowing] = useState("");
 
-  const { authToken, auth } = useGlobalContext();
+  const { authToken, auth, posts } = useGlobalContext();
   const navigate = useNavigate();
   const toast = useToast();
 
@@ -95,7 +95,7 @@ const ProfilePage = () => {
       }
     };
     fetchUserProfile();
-  }, [userid]);
+  }, []);
 
   useEffect(() => {
     const fetchUserPosts = async () => {
@@ -128,8 +128,17 @@ const ProfilePage = () => {
   }, [userid]);
 
   useEffect(() => {
-    const prevState = localStorage.getItem("following");
-    setFollowing(prevState);
+    if (userid === auth?._id) {
+      const prevState = localStorage.getItem("following");
+      setFollowing(prevState);
+    } else {
+      const post = posts.find((post) => post.user._id.toString() === userid);
+      if (post?.user?.followers?.includes(auth._id)) {
+        setFollowing("FOLLOWING");
+      } else {
+        setFollowing("FOLLOW");
+      }
+    }
   }, []);
 
   const handleFollowBtn = async () => {
@@ -189,8 +198,10 @@ const ProfilePage = () => {
             duration: 3000,
           });
         } else {
-          setBookmark(data.data);
-          localStorage.setItem("bookmark", JSON.stringify(data.data));
+          if (userid === auth?._id) {
+            setBookmark(data.data);
+            localStorage.setItem("bookmark", JSON.stringify(data.data || []));
+          }
         }
       } catch (error) {
         console.error(error.message);
@@ -292,8 +303,8 @@ const ProfilePage = () => {
             onClick={() => navigate(`/followings/${userProfile._id}`)}
           >
             {userProfile?.followers?.length > 1
-              ? `${userProfile?.followers?.length} Followings`
-              : `${userProfile?.followers?.length} Followings`}
+              ? `${userProfile?.followers?.length} Followers`
+              : `${userProfile?.followers?.length} Followers`}
           </Button>
           <Button
             bg={Btn}
@@ -301,8 +312,8 @@ const ProfilePage = () => {
             onClick={() => navigate(`/followers/${userProfile._id}`)}
           >
             {userProfile?.followings?.length > 1
-              ? `${userProfile?.followings?.length} followers`
-              : `${userProfile?.followings?.length} Followers`}
+              ? `${userProfile?.followings?.length} followings`
+              : `${userProfile?.followings?.length} Followings`}
           </Button>
         </HStack>
         <Divider />

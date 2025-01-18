@@ -70,7 +70,7 @@ const FollowersDetails = () => {
             </Text>
           </Flex>
           <Divider />
-          <Flex>
+          <Flex direction="column" align="flex-start" mt="2">
             {followersList.length ? (
               followersList.map((user) => (
                 <>
