@@ -140,7 +140,7 @@ const PostPage = () => {
     }
   };
 
-  const handleComment = () => {
+  const openCommentBox = () => {
     setIsOpen((isOpen) => !isOpen);
   };
 
@@ -159,7 +159,6 @@ const PostPage = () => {
       );
       const data = await response.json();
       if (response.ok) {
-        console.log(data.data);
         setPost(data.data);
         setComment("");
         setIsOpen(!isOpen);
@@ -298,7 +297,7 @@ const PostPage = () => {
                       variant="ghost"
                       color={color}
                       icon={<FaRegComment size="25" />}
-                      onClick={handleComment}
+                      onClick={openCommentBox}
                     />
                     <Text fontSize="xs">{`${post?.comments?.length} Comments`}</Text>
                   </VStack>

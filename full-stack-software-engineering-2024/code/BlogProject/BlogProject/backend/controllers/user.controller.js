@@ -167,3 +167,36 @@ export const followOrUnfollowUser = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+export const getFollowersAndFollowingsUsers = async (req, res) => {
+  const userId = req.user._id;
+  const { userid } = req.params;
+
+  try {
+    let user = "";
+    if (userid === userId.toString()) {
+      user = await User.findById(userId);
+    } else {
+      user = await User.findById(userid);
+    }
+
+    if (!user) {
+      return res.status(404).json({ error: "user not found" });
+    }
+
+    const usersFollowing = await User.find({
+      _id: { $in: user.followers },
+    }).select("-password");
+
+    const usersFollower = await User.find({
+      _id: { $in: user.followings },
+    }).select("-password");
+
+    res
+      .status(200)
+      .json({ followings: usersFollowing, followers: usersFollower });
+  } catch (error) {
+    console.error({ "Error in getFollowers Endpoint": error.message });
+    res.status(500).json({ error: error.message });
+  }
+};

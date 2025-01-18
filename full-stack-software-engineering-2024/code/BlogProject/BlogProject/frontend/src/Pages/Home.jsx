@@ -16,13 +16,19 @@ import useGlobalContext from "../Context/useGlobalContext.jsx";
 import { Provider } from "../Components/Post/PostCard.jsx";
 import DesktopViewSkeleton from "../Components/skeletons/DesktopView.jsx";
 import MobileViewSkeleton from "../Components/skeletons/MobileView.jsx";
+import FollowersDetails from "../Components/Profile/FollowersDetails.jsx";
+import FollowingsDetails from "../Components/Profile/FollowingsDetails.jsx";
+import UserPosts from "../Components/Post/UserPosts.jsx";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-  const { posts, setPosts } = useGlobalContext();
+  const { posts, setPosts, auth } = useGlobalContext();
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
+  const [bookmarks, setBookmarks] = useState("");
 
   const POSTS_URL = "http://localhost:4000/api/post/getposts";
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -42,7 +48,13 @@ const HomePage = () => {
     fetchPosts();
   }, []);
 
+  useEffect(() => {
+    const savedBookmarks = localStorage.getItem("bookmark");
+    setBookmarks(JSON.parse(savedBookmarks) || "");
+  }, []);
+
   const bg = useColorModeValue("white", "gray.900");
+  const color = useColorModeValue("gray.900", "gray.300");
   const tabStyle = {
     _selected: {
       bg: useColorModeValue("purple.400", "purple.500"),
@@ -92,10 +104,26 @@ const HomePage = () => {
         >
           <Tabs isFitted variant="soft-rounded">
             <TabList my="0.5em" fontSize={"lg"}>
-              <Tab sx={tabStyle}>For you</Tab>
-              <Tab sx={tabStyle}>Bookmark</Tab>
-              <Tab sx={tabStyle}>Followings</Tab>
-              <Tab sx={tabStyle}>Followers</Tab>
+              <Tab sx={tabStyle} color={color}>
+                For you
+              </Tab>
+              <Tab sx={tabStyle} color={color}>
+                Bookmark
+              </Tab>
+              <Tab
+                sx={tabStyle}
+                color={color}
+                onClick={() => navigate(`/getfollowers/${auth._id}`)}
+              >
+                Followings
+              </Tab>
+              <Tab
+                sx={tabStyle}
+                color={color}
+                onClick={() => navigate(`/getfollowers/${auth._id}`)}
+              >
+                Followers
+              </Tab>
             </TabList>
             <TabPanels>
               <TabPanel>
@@ -112,7 +140,19 @@ const HomePage = () => {
                 </Flex>
               </TabPanel>
               <TabPanel>
-                <p>two!</p>
+                <SimpleGrid minChildWidth="25rem">
+                  {bookmarks &&
+                    bookmarks.length &&
+                    bookmarks?.map((posts) => (
+                      <UserPosts key={posts._id} userPosts={posts} />
+                    ))}
+                </SimpleGrid>
+              </TabPanel>
+              <TabPanel>
+                <FollowingsDetails />
+              </TabPanel>
+              <TabPanel>
+                <FollowersDetails />
               </TabPanel>
             </TabPanels>
           </Tabs>

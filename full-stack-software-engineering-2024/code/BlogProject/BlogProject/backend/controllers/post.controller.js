@@ -277,7 +277,10 @@ export const CommentOnPost = async (req, res) => {
   const { text } = req.body;
 
   try {
-    const post = await Post.findById(postId);
+    const post = await Post.findById(postId).sort({ createdAt: -1 }).populate({
+      path: "user",
+      select: "-password",
+    });
     if (!post) {
       return res.status(404).json({ error: "post not found" });
     }

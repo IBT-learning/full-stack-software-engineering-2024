@@ -5,12 +5,14 @@ import HomePage from "./Pages/Home";
 import RegisterPage from "./Pages/Register";
 import LoginPage from "./Pages/Login";
 import ProfilePage from "./Pages/Profile";
+import FollowersDetails from "./Components/Profile/FollowersDetails.jsx";
+import FollowingsDetails from "./Components/Profile/FollowingsDetails.jsx";
 import PostPage from "./Pages/Post";
-import Comments from "./Components/Post/Comments.jsx";
 import Search from "./Pages/Search";
 import CreatePost from "./Pages/CreatePost";
 import EditPost from "./Pages/EditPost";
 import Missing from "./Pages/Missing";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -20,7 +22,6 @@ import {
 import Cookies from "js-cookie";
 import RequireAuth from "./Components/Auth/RequireAuth.jsx";
 import useGlobalContext from "./Context/useGlobalContext";
-import Post from "../../backend/models/post.model.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -58,6 +59,18 @@ const router = createBrowserRouter(
 
         <Route element={<RequireAuth />}>
           <Route path="/comments/:postId" element={<PostPage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/getfollowers/:userId" element={<HomePage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/followers/:userId" element={<FollowersDetails />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/followings/:userId" element={<FollowingsDetails />} />
         </Route>
 
         <Route element={<RequireAuth />}>

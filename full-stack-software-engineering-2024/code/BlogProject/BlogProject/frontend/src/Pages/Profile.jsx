@@ -27,6 +27,8 @@ import useGlobalContext from "../Context/useGlobalContext";
 import EditProfile from "../Components/Profile/EditProfile";
 import UserPosts from "../Components/Post/UserPosts.jsx";
 import { formattedDate } from "../Utils/styles.js";
+import FollowersDetails from "../Components/Profile/FollowersDetails.jsx";
+import FollowingsDetails from "../Components/Profile/FollowingsDetails.jsx";
 import { useParams, useNavigate } from "react-router-dom";
 
 const ProfilePage = () => {
@@ -188,6 +190,7 @@ const ProfilePage = () => {
           });
         } else {
           setBookmark(data.data);
+          localStorage.setItem("bookmark", JSON.stringify(data.data));
         }
       } catch (error) {
         console.error(error.message);
@@ -283,15 +286,23 @@ const ProfilePage = () => {
           </Text>
         </VStack>
         <HStack px="4" gap="8">
-          <Button bg={Btn} sx={hoverStyle}>
+          <Button
+            bg={Btn}
+            sx={hoverStyle}
+            onClick={() => navigate(`/followings/${userProfile._id}`)}
+          >
             {userProfile?.followers?.length > 1
-              ? `${userProfile?.followers?.length} Followers`
-              : `${userProfile?.followers?.length} Follower`}
+              ? `${userProfile?.followers?.length} Followings`
+              : `${userProfile?.followers?.length} Followings`}
           </Button>
-          <Button bg={Btn} sx={hoverStyle}>
+          <Button
+            bg={Btn}
+            sx={hoverStyle}
+            onClick={() => navigate(`/followers/${userProfile._id}`)}
+          >
             {userProfile?.followings?.length > 1
-              ? `${userProfile?.followings?.length} followings`
-              : `${userProfile?.followings?.length} Following`}
+              ? `${userProfile?.followings?.length} followers`
+              : `${userProfile?.followings?.length} Followers`}
           </Button>
         </HStack>
         <Divider />
@@ -344,6 +355,12 @@ const ProfilePage = () => {
                       <UserPosts key={posts._id} userPosts={posts} />
                     ))}
                 </SimpleGrid>
+              </TabPanel>
+              <TabPanel>
+                <FollowersDetails />
+              </TabPanel>
+              <TabPanel>
+                <FollowingsDetails />
               </TabPanel>
             </TabPanels>
           </Tabs>
