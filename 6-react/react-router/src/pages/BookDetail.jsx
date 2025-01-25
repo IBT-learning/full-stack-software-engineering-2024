@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { UserContext } from "../App"
 
 function BookDetail() {
   const [book, setBook] = useState({})
+
+  const { token } = useContext(UserContext)
 
   // useParams is a hook provided by React Router
   // it pulls all url params into a JS object we can destructure
@@ -10,7 +13,11 @@ function BookDetail() {
   const url = `http://localhost:4000/books/find/${bookId}`
 
   useEffect(() => {
-    fetch(url)
+    fetch(url, {
+      headers: {
+        authorization: token,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setBook(data))
       .catch((err) => console.error(err))
