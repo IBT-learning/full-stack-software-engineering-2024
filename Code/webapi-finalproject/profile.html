@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - My Travel Blog Site</title>
+    <title>Profile - Wanderlust Travel Blog Site</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <h1>Wanderlust Travel Blog Site</h1>
         <ul>
@@ -21,23 +20,76 @@
     <main class="container">
         <section class="profile">
             <img src="images/profilepic.jpg" alt="Profile Photo" class="profile-photo">
-            <h2>Welcome Back Idris Elba</h2>
-            <p>Bio: Passionate writer and travel enthusiast. Sharing thoughts one post at a time.</p>
+            <h2 id="welcome-message">Welcome Back</h2>
+            <p id="bio">Bio: </p>
         </section>
 
         <!-- User's Posts -->
-        <section class="user-posts">
-            <article class="post">
-                <h3>My First Travel Blog</h3>
-                <span>Nov 8, 2024</span>
-                <p> Curabitur non nulla sit amet nisl tempus convallis quis... </p>
-            </article>
-            <article class="post">
-                <h3>The Blue City: Greece</h3>
-                <span>Nov 10, 2024</span>
-                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit...</p>
-            </article>
+        <section class="user-posts" id="user-posts">
+            <!-- User posts will be dynamically inserted here -->
         </section>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                alert('You need to log in first.');
+                window.location.href = 'login.html';
+                return;
+            }
+
+            try {
+                // Decode the token to get the user ID
+                const payload = JSON.parse(atob(token.split('.')[1]));
+                const userId = payload.id;
+
+                // Fetch user details
+                const userResponse = await fetch(`http://localhost:4000/user/login/67936f42b702e50ef1de5a32`, {
+                    headers: {
+                        authorization: `Bearer ${token}`
+                    }
+                });
+
+                if (!userResponse.ok) {
+                    throw new Error('Failed to fetch user details');
+                }
+
+                const user = await userResponse.json();
+                document.getElementById('welcome-message').textContent = `Welcome Back ${user.username}`;
+                document.getElementById('bio').textContent = `Bio: ${user.bio}`;
+
+                // Fetch user's posts
+                const postsResponse = await fetch(`http://localhost:4000/post?userId=67936f42b702e50ef1de5a32`, {
+                    headers: {
+                        authorization: `Bearer ${token}`
+                    }
+                });
+
+                if (!postsResponse.ok) {
+                    throw new Error('Failed to fetch user posts');
+                }
+
+                const posts = await postsResponse.json();
+                const userPostsContainer = document.getElementById('user-posts');
+
+                posts.forEach(post => {
+                    const postElement = document.createElement('article');
+                    postElement.classList.add('post');
+
+                    postElement.innerHTML = `
+                        <h3>${post.title}</h3>
+                        <span>${new Date(post.createdAt).toLocaleDateString()}</span>
+                        <p>${post.content}</p>
+                    `;
+
+                    userPostsContainer.appendChild(postElement);
+                });
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to load profile. Please try again later.');
+            }
+        });
+    </script>
 </body>
 </html>
