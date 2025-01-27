@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Wanderlust Travel Blog Site </title>
+    <title>Login - Wanderlust Travel Blog Site</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="login-body">
     <div class="login-container">
-        <form class="login-form" action="#" method="post">
+        <form class="login-form" id="login-form">
             <h2>Login to Wanderlust</h2>
 
             <!-- Username Field -->
@@ -31,5 +31,41 @@
             </div>
         </form>
     </div>
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+           document.getElementById('login-form').addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                try {
+                    const response = await fetch('http://localhost:4000/user/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username, password })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Login failed');
+                    }
+
+                    const data = await response.json();
+                    const token = data.token;
+
+                    // Store the token in localStorage or cookies
+                    localStorage.setItem('token', token);
+
+                    // Redirect to the blog page or another page
+                    window.location.href = 'index.html';
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Login failed. Please check your credentials and try again.');
+                }
+            });
+       });
+    </script>
 </body>
 </html>
