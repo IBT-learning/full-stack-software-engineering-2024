@@ -63,7 +63,7 @@ const PostPage = () => {
         setLikesCount(postToView.likes.length);
         setBookmarkList(postToView.bookmarks.length);
         const prevState = localStorage.getItem("following");
-        setFollowStatus(prevState);
+        setFollowStatus(prevState || "");
         setPost(postToView);
       }
     };

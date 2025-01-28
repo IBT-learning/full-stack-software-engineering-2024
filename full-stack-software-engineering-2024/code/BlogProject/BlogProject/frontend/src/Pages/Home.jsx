@@ -63,13 +63,7 @@ const HomePage = () => {
   };
 
   return (
-    <Box
-      minW="full"
-      minH="full"
-      bg={bg}
-      px={{ base: "2", sm: "4", md: "10" }}
-      pt="2"
-    >
+    <Box minW="full" minH="full" bg={bg} px={{ base: "2", xl: "10" }} pt="2">
       <Flex gap="6">
         {/* Icon sidebar on large and medium screens */}
         <Aside />
@@ -77,13 +71,23 @@ const HomePage = () => {
         {/* Component Loading posts for larger screens */}
         <Box display={{ base: "none", sm: "none", md: "block" }}>
           {loading ? (
-            <SimpleGrid minChildWidth="22rem" rowGap="4" columnGap="6">
+            <SimpleGrid
+              maxW="850px"
+              minChildWidth="350px"
+              rowGap="4"
+              columnGap="6"
+            >
               {[...Array(9)].map((_, index) => (
                 <DesktopViewSkeleton key={index} />
               ))}
             </SimpleGrid>
           ) : (
-            <SimpleGrid minChildWidth="22rem" rowGap="4" columnGap="6">
+            <SimpleGrid
+              maxW="850px"
+              minChildWidth="350px"
+              rowGap="6"
+              columnGap="4"
+            >
               {posts?.map((post) => (
                 <Provider>
                   <PostCard key={post?.title} post={post} />
@@ -115,14 +119,14 @@ const HomePage = () => {
                 color={color}
                 onClick={() => navigate(`/getfollowers/${auth._id}`)}
               >
-                Followings
+                Followers
               </Tab>
               <Tab
                 sx={tabStyle}
                 color={color}
                 onClick={() => navigate(`/getfollowers/${auth._id}`)}
               >
-                Followers
+                Followings
               </Tab>
             </TabList>
             <TabPanels>

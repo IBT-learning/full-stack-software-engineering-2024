@@ -189,7 +189,12 @@ const CreatePost = () => {
           </Button>
         </Flex>
 
-        <Box w="30%" p="4" bg={bg} rounded="lg">
+        <Box
+          w="30%"
+          p="4"
+          bg={useColorModeValue("gray.400", "blackAlpha.100")}
+          rounded="lg"
+        >
           {errorMsg && (
             <VStack alignItems="center" justifyContent="center" h="full">
               <Text fontSize="2xl" color="red.400">

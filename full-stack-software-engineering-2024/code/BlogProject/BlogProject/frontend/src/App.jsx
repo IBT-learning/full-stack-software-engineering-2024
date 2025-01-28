@@ -11,7 +11,6 @@ import PostPage from "./Pages/Post";
 import Search from "./Pages/Search";
 import CreatePost from "./Pages/CreatePost";
 import EditPost from "./Pages/EditPost";
-import UserPosts from "./Components/Post/UserPosts.jsx";
 import Missing from "./Pages/Missing";
 
 import {
@@ -84,7 +83,7 @@ const router = createBrowserRouter(
         </Route>
       </Route>
 
-      {/* catch all page */}
+      {/* catch all missing page */}
       <Route path="*" element={<Missing />} />
     </Route>
   )

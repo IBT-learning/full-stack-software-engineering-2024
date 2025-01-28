@@ -55,7 +55,7 @@ const Comments = ({ comments }) => {
               <Divider />
             </>
           ))}
-          <Box h="14"></Box>
+          <Box mb="4"></Box>
         </Flex>
       )}
     </>

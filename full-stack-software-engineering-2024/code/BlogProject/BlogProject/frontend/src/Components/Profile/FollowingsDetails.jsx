@@ -9,6 +9,7 @@ import {
   HStack,
   Text,
   useToast,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { IoMdArrowBack } from "react-icons/io";
 
@@ -18,6 +19,9 @@ const FollowingsDetails = () => {
   const { authToken } = useGlobalContext();
   const toast = useToast();
   const navigate = useNavigate();
+
+  const bg = useColorModeValue("white", "gray.800");
+  const color = useColorModeValue("gray.600", "gray.300");
 
   useEffect(() => {
     const fetchFollowingsDetails = async () => {
@@ -57,21 +61,33 @@ const FollowingsDetails = () => {
     <>
       {followingsList && (
         <>
-          <Flex align="center" gap="3" px="2">
+          <Flex
+            align="center"
+            gap="1"
+            px={{ sm: "4", xl: "10" }}
+            bg={bg}
+            color={color}
+          >
             <Button
               variant="unstyled"
               leftIcon={<IoMdArrowBack />}
               onClick={() => navigate(-1)}
-              color="white"
+              color={color}
             >
               Back
             </Button>
-            <Text fontSize="2xl" fontWeight="bold" px="2" py="2">
-              Followings
+            <Text color={color} fontSize="2xl" fontWeight="bold" px="2" py="2">
+              {`Followers (${followingsList.length})`}
             </Text>
           </Flex>
           <Divider />
-          <Flex direction="column" align="flex-start" mt="2">
+          <Flex
+            direction="column"
+            align="flex-start"
+            minH="100vh"
+            mt="2"
+            color={color}
+          >
             {followingsList.length ? (
               followingsList.map((user) => (
                 <>
@@ -80,7 +96,7 @@ const FollowingsDetails = () => {
                     key={user._id}
                     w="full"
                     gap="4"
-                    px="4"
+                    mx={{ sm: "4", xl: "10" }}
                     py="2"
                     align="flex-start"
                   >

@@ -4,7 +4,7 @@ import { Box } from "@chakra-ui/react";
 
 const Applayout = () => {
   return (
-    <Box minH={"100vh"} minW={"100vw"}>
+    <Box>
       <Outlet />
     </Box>
   );

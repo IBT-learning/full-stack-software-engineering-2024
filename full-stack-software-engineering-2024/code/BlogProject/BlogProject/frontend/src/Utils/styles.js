@@ -3,7 +3,7 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 
 export const inputStyle = {
   rounded: "xl",
-  bg: "green.400",
+  bg: "purple.400",
   opacity: "0.5",
   _placeholder: {
     color: "black",
@@ -18,14 +18,14 @@ export const inputStyle = {
 };
 
 export const buttonStyle = {
-  bgGradient: "linear(green.800, green.300, green.700)",
+  bgGradient: "linear(purple.800, purple.300, purple.700)",
   color: "blackAlpha.800",
   rounded: "3xl",
   fontSize: "lg",
   fontWeight: "semibold",
   letterSpacing: "wide",
   _hover: {
-    bgGradient: "linear(green.800, green.300, green.700)",
+    bgGradient: "linear(purple.800, purple.300, purple.700)",
     color: "whiteAlpha.800",
     opacity: 0.9,
     transform: "scale(1.08)",

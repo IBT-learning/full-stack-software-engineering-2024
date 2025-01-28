@@ -4,7 +4,6 @@ import {
   Flex,
   Image,
   Avatar,
-  VStack,
   Text,
   Button,
   TabList,
@@ -19,7 +18,6 @@ import {
   useDisclosure,
   useToast,
   useColorModeValue,
-  SimpleGrid,
 } from "@chakra-ui/react";
 import { IoMdArrowBack } from "react-icons/io";
 import image from "../assets/placeholderImage.webp";
@@ -70,7 +68,7 @@ const ProfilePage = () => {
       bg: useColorModeValue("purple.500", "purple.800"),
     },
   };
-
+  // fetch user profile details
   useEffect(() => {
     const fetchUserProfile = async () => {
       const response = await fetch(
@@ -96,7 +94,7 @@ const ProfilePage = () => {
     };
     fetchUserProfile();
   }, []);
-
+  // fetch user posts
   useEffect(() => {
     const fetchUserPosts = async () => {
       try {
@@ -120,13 +118,13 @@ const ProfilePage = () => {
     };
     fetchUserPosts();
   }, [userid]);
-
+  // get authenticated user
   useEffect(() => {
     if (userid === auth?._id.toString()) {
       setAuthUser(true);
     }
   }, [userid]);
-
+  // check if authenticated user is following user or not
   useEffect(() => {
     if (userid === auth?._id) {
       const prevState = localStorage.getItem("following");
@@ -141,6 +139,7 @@ const ProfilePage = () => {
     }
   }, []);
 
+  // handle following and unfollowing of users
   const handleFollowBtn = async () => {
     try {
       const response = await fetch(
@@ -175,7 +174,7 @@ const ProfilePage = () => {
       console.error(error.message);
     }
   };
-
+  // fetch posts that user bookmarked
   useEffect(() => {
     const fetchBookmarkedPosts = async () => {
       try {
@@ -212,15 +211,14 @@ const ProfilePage = () => {
 
   return (
     <Box
-      border="1px solid"
       ref={finalRef}
-      borderColor="gray.700"
       bg={bg}
       color={color}
-      transition={"all 0.3s ease-in-out"}
+      mt="4"
+      px={{ base: "", sm: "4", xl: "10" }}
     >
       <Flex w="full" direction="column" gap="2">
-        <VStack alignItems="flex-start">
+        <Flex direction="column" alignItems="flex-start">
           <Button
             variant="unstyled"
             leftIcon={<IoMdArrowBack />}
@@ -230,8 +228,8 @@ const ProfilePage = () => {
             Back
           </Button>
           <Image
-            mt="-12"
-            h="28"
+            mt="-10"
+            h="12rem"
             mr="-100%"
             w="full"
             fit="cover"
@@ -295,8 +293,18 @@ const ProfilePage = () => {
           <Text fontSize="xl" textAlign="left" px="4">
             {userProfile?.Bio}
           </Text>
-        </VStack>
+        </Flex>
         <HStack px="4" gap="8">
+          <Button
+            bg={Btn}
+            sx={hoverStyle}
+            onClick={() => navigate(`/followers/${userProfile._id}`)}
+          >
+            {" "}
+            {userProfile?.followings?.length > 1
+              ? `${userProfile?.followings?.length} followings`
+              : `${userProfile?.followings?.length} Followings`}
+          </Button>
           <Button
             bg={Btn}
             sx={hoverStyle}
@@ -306,19 +314,10 @@ const ProfilePage = () => {
               ? `${userProfile?.followers?.length} Followers`
               : `${userProfile?.followers?.length} Followers`}
           </Button>
-          <Button
-            bg={Btn}
-            sx={hoverStyle}
-            onClick={() => navigate(`/followers/${userProfile._id}`)}
-          >
-            {userProfile?.followings?.length > 1
-              ? `${userProfile?.followings?.length} followings`
-              : `${userProfile?.followings?.length} Followings`}
-          </Button>
         </HStack>
         <Divider />
 
-        <Box px="2" overflow="scroll">
+        <Box px="2" minH="100vh">
           <Tabs position="relative" variant="unstyled">
             <TabList>
               <Tab>About</Tab>
@@ -351,21 +350,21 @@ const ProfilePage = () => {
                 <Box h="8"></Box>
               </TabPanel>
               <TabPanel>
-                <SimpleGrid minChildWidth="25rem" gap="1">
+                <Flex flexWrap="wrap" flexGrow="1" gap="2">
                   {userPosts.length &&
                     userPosts?.map((posts) => (
                       <UserPosts key={posts._id} userPosts={posts} />
                     ))}
-                </SimpleGrid>
+                </Flex>
               </TabPanel>
 
               <TabPanel>
-                <SimpleGrid minChildWidth="25rem">
+                <Flex flexWrap="wrap" flexGrow="1" gap="2" w="full">
                   {bookmark &&
                     bookmark?.map((posts) => (
                       <UserPosts key={posts._id} userPosts={posts} />
                     ))}
-                </SimpleGrid>
+                </Flex>
               </TabPanel>
               <TabPanel>
                 <FollowersDetails />

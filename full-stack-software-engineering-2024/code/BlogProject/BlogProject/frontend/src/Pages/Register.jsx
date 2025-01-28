@@ -8,7 +8,8 @@ const RegisterPage = () => {
   const text = [
     "Welcome Back!",
     "Already sign up? jump right into enjoying the latest updates that you love the most!",
-    "Signin",
+    "LogIn",
+    "login",
   ];
 
   return (
@@ -16,8 +17,7 @@ const RegisterPage = () => {
       <Flex
         h={"100vh"}
         w={"100vw"}
-        bgGradient="linear(green.300, green.500, green.300)"
-        // bgGradient="linear( #5eb643, #6adb79, #d1e238)"
+        bgGradient="linear(purple.300, purple.500, purple.300)"
         align="center"
         justify="center"
         zIndex="-1"
@@ -36,7 +36,12 @@ const RegisterPage = () => {
           <SignupInput />
 
           {/* Righthand side Input background */}
-          <AuthFooter head={text[0]} subHead={text[1]} btnText={text[2]} />
+          <AuthFooter
+            head={text[0]}
+            subHead={text[1]}
+            btnText={text[2]}
+            link={text[3]}
+          />
         </Flex>
       </Flex>
     </>

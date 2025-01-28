@@ -14,6 +14,7 @@ const DesktopViewSkeleton = () => {
     <>
       <Box
         h="350px"
+        // w="350px"
         padding="2"
         boxShadow="lg"
         bg={bg}

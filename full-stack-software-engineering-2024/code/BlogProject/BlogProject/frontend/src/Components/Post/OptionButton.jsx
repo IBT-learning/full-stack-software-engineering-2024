@@ -24,7 +24,12 @@ const OptionButton = ({ postId, postUser }) => {
       setPost(postToEdit);
       navigate(`/post/edit/${postId}`);
     } else {
-      return;
+      toast({
+        title: "Warning",
+        status: "warning",
+        description: "Access Denied",
+        duration: 3000,
+      });
     }
   };
 

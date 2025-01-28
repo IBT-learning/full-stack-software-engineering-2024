@@ -7,6 +7,7 @@ import {
   VStack,
   IconButton,
   Badge,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import image from "../../assets/placeholderImage.webp";
 import { FaRegComment } from "react-icons/fa";
@@ -16,23 +17,31 @@ import { useNavigate } from "react-router-dom";
 
 const UserPosts = ({ userPosts }) => {
   const navigate = useNavigate();
+
+  const bg = useColorModeValue("white", "gray.800");
+  const color = useColorModeValue("gray.600", "gray.300");
+
   return (
     <>
       <Flex
         gap="2"
         p="2"
-        maxH="9rem"
+        maxW={{ base: "full", sm: "full", md: "550px" }}
+        maxH="10rem"
         rounded="base"
-        flexWrap="nowrap"
         border="1px solid"
-        borderColor="gray.700"
+        borderColor={useColorModeValue("gray.300", "gray.800")}
         justifyContent="space-between"
         cursor="pointer"
+        bg={useColorModeValue("whiteAlpha.200", "blackAlpha.300")}
+        color={color}
         onClick={() => navigate(`/posts/${userPosts._id}`)}
       >
-        <Flex h="full" flexWrap="wrap" alignItems="center">
+        <Flex flexWrap="wrap" alignItems="center">
           <Text mt="-2" fontSize="xl" fontWeight="bold">
-            {userPosts?.title}
+            {userPosts?.title.length > 60
+              ? userPosts.title.slice(0, 60) + "..."
+              : userPosts.title}
           </Text>
           <Badge>posted on {formattedDate(userPosts?.createdAt)}</Badge>
         </Flex>
@@ -46,7 +55,7 @@ const UserPosts = ({ userPosts }) => {
         <VStack
           gap="1"
           border="1px solid"
-          borderColor="gray.700"
+          borderColor={useColorModeValue("gray.300", "gray.800")}
           p="2"
           rounded="lg"
         >

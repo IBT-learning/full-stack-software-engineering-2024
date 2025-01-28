@@ -110,7 +110,7 @@ const Navbar = () => {
               colorScheme="purple"
               _dark={{ bg: "purple.400" }}
               rounded={"xl"}
-              onClick={() => navigate(isAuth ? "/createpost" : "signup")}
+              onClick={() => navigate(auth ? "/createpost" : "signup")}
             >
               {auth ? "Create a post" : "Create An Account"}
             </Button>
@@ -243,7 +243,7 @@ const MobileNavbar = ({ auth, handleLogOut, textColor, bg }) => {
       </Box>
       {/* User Welcome message */}
       <Divider />
-      <Box h="3rem" px={{ base: "2", sm: "4", md: "10" }} py="2">
+      <Box h="3rem" px={{ sm: "4", xl: "10" }} py="2">
         <Text fontSize={"xl"} fontWeight={"semiBold"} letterSpacing={"wide"}>
           {auth ? `Hi ${username}, Welcome🙌!` : "Hi User, Welcome!🙌"}
         </Text>

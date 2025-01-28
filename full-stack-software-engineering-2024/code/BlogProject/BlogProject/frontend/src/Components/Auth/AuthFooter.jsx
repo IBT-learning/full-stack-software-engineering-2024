@@ -3,15 +3,14 @@ import { Heading, VStack, Button } from "@chakra-ui/react";
 import { buttonStyle } from "../../Utils/styles";
 import { useNavigate } from "react-router-dom";
 
-const AuthFooter = ({ head, subHead, btnText }) => {
+const AuthFooter = ({ head, subHead, btnText, link }) => {
   const navigate = useNavigate();
 
   return (
     <VStack
       w={{ base: "100%", md: "40%" }}
       h={{ base: "30%", md: "full" }}
-      bgGradient="linear(to-t, green.800, green.400, green.600)"
-      //   pt="2"
+      bgGradient="linear(to-t, purple.800, purple.400, purple.600)"
       px={{ base: "6", md: "8" }}
       gap={{ base: "2", md: "6" }}
       justifyContent={{ base: "center", md: "center" }}
@@ -41,7 +40,7 @@ const AuthFooter = ({ head, subHead, btnText }) => {
         mt="3"
         marginBlockEnd={2}
         sx={buttonStyle}
-        onClick={() => navigate("/login")}
+        onClick={() => navigate(`/${link}`)}
       >
         {btnText}
       </Button>

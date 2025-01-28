@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { createContext, useContext } from "react";
 import {
   VStack,
   Card,
@@ -53,19 +53,19 @@ const PostCard = ({ post }) => {
 
   return (
     <>
-      <Card bg={bg} color={color} cursor={"pointer"}>
-        <CardHeader
-          mt="-2"
-          mb="-2"
-          onClick={() => navigate(`/profile/${post?.user?._id}`)}
-        >
+      <Card minW="" bg={bg} color={color} cursor={"pointer"}>
+        <CardHeader mt="-2" mb="-2">
           <Flex flex="1" spacing="2" justifyContent="space-between">
-            <Flex gap="4" alignItems="center" flexWrap="wrap">
+            <Flex
+              gap="4"
+              alignItems="center"
+              flexWrap="wrap"
+              onClick={() => navigate(`/profile/${post?.user?._id}`)}
+            >
               <Avatar
                 name={post?.user?.username}
                 src={post?.user?.profileimage}
               />
-
               <VStack gap="1" alignItems="flex-start">
                 <Heading size="sm">
                   {post?.user?.profilename || "Profile Name"}{" "}
@@ -73,7 +73,7 @@ const PostCard = ({ post }) => {
                 <Text> @{post?.user?.username || "username"} </Text>
               </VStack>
             </Flex>
-            {/* side menu icon on the postcard header  */}
+            {/* side menu icon on the md>> screen postcard header  */}
             <OptionButton postId={post._id} />
           </Flex>
           <Divider />
@@ -104,7 +104,7 @@ const PostCard = ({ post }) => {
               w="full"
               onClick={() => navigate(`/posts/${post._id}`)}
             />
-            <Heading fontSize={"lg"} mb="2">
+            <Heading fontSize={"lg"} mb="2" _hover={{ color: "blue.600" }}>
               {post?.title}
             </Heading>
           </Flex>
@@ -126,7 +126,6 @@ const MobilePostCard = ({ post }) => {
     <>
       <Card
         direction="row"
-        h={{ base: "12rem", sm: "16rem" }}
         ml="-4"
         p="2"
         bg={bg}
@@ -135,27 +134,6 @@ const MobilePostCard = ({ post }) => {
         variant={"elevated"}
         cursor="pointer"
       >
-        <Box
-          minW="8rem"
-          maxW="10rem"
-          border="1px solid"
-          borderColor="gray.700"
-          rounded="lg"
-        >
-          <Image
-            fit="cover"
-            align="center"
-            border="1px solid"
-            borderColor={bg}
-            w={{ base: "8rem", sm: "10rem" }}
-            h={{ base: "100%", sm: "100%" }}
-            alignSelf={{ base: "", sm: "flex-start" }}
-            src={post?.image}
-            alt="Caffe Latte"
-            rounded={"lg"}
-            onClick={() => navigate(`/posts/${post._id}`)}
-          />
-        </Box>
         <Flex direction="column">
           <CardHeader
             mt={{ base: "-7", sm: "-5" }}
@@ -176,7 +154,7 @@ const MobilePostCard = ({ post }) => {
                   name={post?.user?.username || "profile name"}
                   src={post?.user?.profileimage}
                 />
-                <Box>
+                <Box _hover={{ color: "blue.600" }}>
                   <Heading size={{ base: "xs", sm: "sm" }}>
                     {post?.user?.profilename || "Profile Name"}
                   </Heading>
@@ -185,7 +163,7 @@ const MobilePostCard = ({ post }) => {
                   </Text>
                 </Box>
               </Flex>
-              {/* side menu icon on the postcards */}
+              {/* side menu icon on the sm<< screen postcards */}
               <OptionButton postId={post._id} postUser={post?.user?._id} />
             </Flex>
           </CardHeader>
@@ -196,17 +174,29 @@ const MobilePostCard = ({ post }) => {
             mb="-4"
             onClick={() => navigate(`/posts/${post._id}`)}
           >
-            <Text
-              as="p"
-              fontSize={{ base: "md", sm: "xl" }}
-              fontStyle={"oblique"}
-              fontWeight={"semibold"}
-              textAlign={"left"}
-              mt={{ base: "-5", sm: "-4" }}
-              mb={{ base: "2", sm: "2" }}
-            >
-              {post?.title || "This is the title placeholder"}
-            </Text>
+            <Flex align="center" justify="center" mt="-2" gap="2">
+              <Text
+                fontSize={{ base: "md", sm: "xl" }}
+                fontWeight={"semibold"}
+                textAlign={"left"}
+                _hover={{ color: "blue.600" }}
+                mt={{ base: "-5", sm: "-4" }}
+                mb={{ base: "2", sm: "2" }}
+              >
+                {post?.title}
+              </Text>
+              <Image
+                fit="cover"
+                align="center"
+                border="1px solid"
+                borderColor={bg}
+                w={{ base: "5rem", sm: "10rem" }}
+                h={{ base: "5rem", sm: "7rem" }}
+                src={post?.image}
+                alt="post image"
+                rounded={"lg"}
+              />
+            </Flex>
           </CardBody>
           <Divider />
 
@@ -216,7 +206,7 @@ const MobilePostCard = ({ post }) => {
               fontWeight={"semibold"}
               fontStyle={"italic"}
               color={color}
-              ml="4"
+              ml="1"
             >
               {formatDate(post.createdAt)}
             </Text>
