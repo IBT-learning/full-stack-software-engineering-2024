@@ -1,0 +1,113 @@
+import React, { useEffect } from "react";
+import Applayout from "./Layouts/Applayout";
+import HomeLayout from "./Layouts/HomeLayout";
+import HomePage from "./Pages/Home";
+import RegisterPage from "./Pages/Register";
+import LoginPage from "./Pages/Login";
+import ProfilePage from "./Pages/Profile";
+import FollowersDetails from "./Components/Profile/FollowersDetails.jsx";
+import FollowingsDetails from "./Components/Profile/FollowingsDetails.jsx";
+import PostPage from "./Pages/Post";
+import Search from "./Pages/Search";
+import CreatePost from "./Pages/CreatePost";
+import EditPost from "./Pages/EditPost";
+import Missing from "./Pages/Missing";
+
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Cookies from "js-cookie";
+import RequireAuth from "./Components/Auth/RequireAuth.jsx";
+import useGlobalContext from "./Context/useGlobalContext";
+import BookmarkPage from "./Pages/Bookmark.jsx";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Applayout />}>
+      {/* public routes */}
+      <Route path="/signup" element={<RegisterPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/" element={<HomeLayout />}>
+        <Route index element={<HomePage />} />
+
+        {/* protected routes */}
+        <Route element={<RequireAuth />}>
+          <Route path="/profile/:userid" element={<ProfilePage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/createpost" element={<CreatePost />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/post/edit/:postId" element={<EditPost />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/post/delete/:postID" element={<HomePage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/posts/:postId" element={<PostPage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/bookmark/:postId" element={<HomePage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/bookmarkList" element={<BookmarkPage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/comments/:postId" element={<PostPage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/getfollowers/:userId" element={<HomePage />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/followers/:userId" element={<FollowersDetails />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/followings/:userId" element={<FollowingsDetails />} />
+        </Route>
+
+        <Route element={<RequireAuth />}>
+          <Route path="/search" element={<Search />} />
+        </Route>
+      </Route>
+
+      {/* catch all missing page */}
+      <Route path="*" element={<Missing />} />
+    </Route>
+  )
+);
+
+function App() {
+  const { setAuthToken, setAuth } = useGlobalContext();
+
+  useEffect(() => {
+    const savedToken = Cookies.get("auth_token", {
+      sameSite: "None",
+      secure: true,
+      expires: 2,
+    });
+    const savedUser = localStorage.getItem("auth_user");
+    setAuthToken(savedToken);
+    setAuth(JSON.parse(savedUser));
+  }, []);
+
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
+}
+
+export default App;

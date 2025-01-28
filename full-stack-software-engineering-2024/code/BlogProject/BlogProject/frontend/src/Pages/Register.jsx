@@ -1,0 +1,51 @@
+import React from "react";
+import { Flex } from "@chakra-ui/react";
+import SignupInput from "../Components/Auth/SignupInput.jsx";
+import AuthFooter from "../Components/Auth/AuthFooter.jsx";
+import BgPattern from "../Components/Auth/BgPattern.jsx";
+
+const RegisterPage = () => {
+  const text = [
+    "Welcome Back!",
+    "Already sign up? jump right into enjoying the latest updates that you love the most!",
+    "LogIn",
+    "login",
+  ];
+
+  return (
+    <>
+      <Flex
+        h={"100vh"}
+        w={"100vw"}
+        bgGradient="linear(purple.300, purple.500, purple.300)"
+        align="center"
+        justify="center"
+        zIndex="-1"
+      >
+        <BgPattern />
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          align={"center"}
+          overflow={"hidden"}
+          w={{ base: "85%", md: "70%" }}
+          h={{ base: "full", md: "80%" }}
+          boxShadow={"md"}
+          zIndex={99}
+        >
+          {/* Lefthand side Input background  */}
+          <SignupInput />
+
+          {/* Righthand side Input background */}
+          <AuthFooter
+            head={text[0]}
+            subHead={text[1]}
+            btnText={text[2]}
+            link={text[3]}
+          />
+        </Flex>
+      </Flex>
+    </>
+  );
+};
+
+export default RegisterPage;
