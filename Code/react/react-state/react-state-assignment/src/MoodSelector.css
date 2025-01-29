@@ -1,0 +1,24 @@
+.mood-selector {
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+.mood-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mood-button:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    margin: 10;
+    font-size: 2rem;
+    color: rgb(109, 109, 219);
+    font-family: 'Courier New', Courier, monospace;
+}
