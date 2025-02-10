@@ -13,6 +13,19 @@ function InputFields({ categories, content, setContent }) {
     setName("")
   }
 
+  const submitEnabled = type && name.trim().length > 0
+
+  // let submitButton
+  // if (submitEnabled) {
+  //   submitButton = <button onClick={handleSubmit}>Submit</button>
+  // } else {
+  //   submitButton = (
+  //     <button disabled onClick={handleSubmit}>
+  //       Submit
+  //     </button>
+  //   )
+  // }
+
   return (
     <>
       <input
@@ -42,7 +55,9 @@ function InputFields({ categories, content, setContent }) {
           <span>{c}</span>
         </li>
       ))}
-      <button onClick={handleSubmit}>Submit</button>
+      <button disabled={!submitEnabled} onClick={handleSubmit}>
+        Submit
+      </button>
     </>
   )
 }
