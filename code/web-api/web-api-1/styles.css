@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
