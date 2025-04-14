@@ -7,16 +7,23 @@ function ContentBox({ title, contentList, setContent, content }) {
     setContent(newContent)
   }
 
-  return (
-    <div className="category-box">
-      <span className="title">{title}</span>
-      {contentList.map((c) => (
-        <span key={c.name} onClick={() => removeItem(c)}>
-          {c.name}
-        </span>
-      ))}
-    </div>
-  )
+  if (contentList.length > 0) {
+    return (
+      <div className="category-box">
+        <span className="title">{title}</span>
+        {contentList.map((c) => (
+          <span
+            key={c.name}
+            title={c.name.length >= 15 && c.name}
+            onClick={() => removeItem(c)}
+            className={c.name.length >= 15 ? "short" : "long"}
+          >
+            {c.name.length < 15 ? c.name : `${c.name.slice(0, 15)}...`}
+          </span>
+        ))}
+      </div>
+    )
+  }
 }
 
 export default ContentBox

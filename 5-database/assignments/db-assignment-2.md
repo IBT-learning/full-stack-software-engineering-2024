@@ -28,8 +28,6 @@ Create a Schema with the following fields:
 
 What other requirements do you think should be set? What are reasonable `maxlength` values? Are they required? Should they have default values?
 
-> Note: I realized I made a mistake during the mongoose lesson, the validator is actually called `maxlength` not `maxLength`
-
 ### Connect to the mongodb server
 
 Now that your Schema is set, you can import it into your controller and start making queries. But first, you must connect to the database server.

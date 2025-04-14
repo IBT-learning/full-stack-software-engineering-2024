@@ -1,0 +1,72 @@
+.todo-app {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.head-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.head-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    flex: 1;
+}
+
+select {
+    padding: 8px;
+    font-size: 1rem;
+}
+
+.addtask-btn {
+    padding: 8px 12px;
+    font-size: 1rem;
+    background-color: #d1b3ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.not-started, .in-progress, .done {
+    width: 30%;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 8px;
+}
+
+.not-started h2 {
+    color: #a3a3a3;
+}
+
+.in-progress h2 {
+    color: #9396d4;
+}
+
+.done h2 {
+    color: #d18fee;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
