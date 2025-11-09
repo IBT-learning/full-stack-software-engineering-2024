@@ -1,0 +1,108 @@
+import { useState, useEffect } from 'react';
+
+const QuoteApp = () => {
+  const [tags, setTags] = useState([]); // To store available tags
+  const [selectedTag, setSelectedTag] = useState(''); // To store the selected tag
+  const [quote, setQuote] = useState(''); // To store the fetched quote
+
+  // Fetch available tags when the app loads
+  useEffect(() => {
+    const fetchTags = async () => {
+      try {
+        const response = await fetch('/api/get-available-tags'); // Replace with your API endpoint
+        const data = await response.json();
+        setTags(data.tags); // Assuming API returns { tags: ["tag1", "tag2"] }
+        setSelectedTag(data.tags[0]); // Set the first tag as default
+      } catch (error) {
+        console.error('Error fetching tags:', error);
+      }
+    };
+    fetchTags();
+  }, []);
+
+  // Fetch a new quote whenever the selected tag changes
+  useEffect(() => {
+    if (selectedTag) {
+      const fetchQuote = async () => {
+        try {
+          const response = await fetch(`/api/get-quote-by-tag?tag=${selectedTag}`); // Replace with your API endpoint
+          const data = await response.json();
+          setQuote(data.quote); // Assuming API returns { quote: "random quote" }
+        } catch (error) {
+          console.error('Error fetching quote:', error);
+        }
+      };
+      fetchQuote();
+    }
+  }, [selectedTag]);
+
+  // Handle tag selection
+  const handleTagChange = (event) => {
+    setSelectedTag(event.target.value);
+  };
+
+  return (
+    <div>
+      <h1>Random Quote Generator</h1>
+
+      {/* Dropdown for tags */}
+      <label htmlFor="tag-selector">Choose a tag:</label>
+      <select id="tag-selector" value={selectedTag} onChange={handleTagChange}>
+        {tags.map((tag, index) => (
+          <option key={index} value={tag}>
+            {tag}
+          </option>
+        ))}
+      </select>
+
+      {/* Display the fetched quote */}
+      <blockquote>
+        <p>{quote || 'Select a tag to get a quote'}</p>
+      </blockquote>
+    </div>
+  );
+};
+
+export default QuoteApp;
+
+
+
+
+/**React Assignment #3: Random quotations
+In this project, we'll use a free public API to generate random quotes by topic.
+
+The documentation for the API can be found here. The endpoints we will be using are "Get Available Tags" and "Get a Quote by Tags". Take a moment before you begin to familiarize yourself with the endpoints. They are both GET endpoints, so you will be able to hit them with your browser.
+
+The simplest version of this app can be done within the App component, with no further components. You are free to create more components if you would like to flex your muscles!
+
+Fetch remote data in your app
+Your app will need to use useEffect twice:
+
+Fetch "Get Available Tags" once when the app loads
+Fetch "Get a Quote by Tags" whenever a new tag is selected
+Use a <select> element with one <option> for each tag that you got from the API call. Listen for changes on the <select> element, and when a new tag is selected from the drop-down list, save that tag to state. This should automatically cause a new random quote to be fetched.
+
+Tip: You will need three separate state variables here
+
+Take a little time to style this page nicely. Remember, we are back in the front-end, it's always worth the effor to spend time giving an app a clean, professional appearance with a clear user interface.
+
+Extra challenges (optional)
+Choose any of these challenges to tackle, if you like.
+
+Select multiple tags
+The endpoint that gives us a random quote will work with multiple, comma-separated tags. The HTML select element has a multiple attribute that allows users to select multiple items from a dropdown list. Can you adjust our API call to work with multiple tags?
+
+It is possible to select a combination of tags that will return no quotations. (For example, empathy,fear will have no quotes.) Make sure the page can handle this outcome!
+
+Get multiple quotes
+Look at the last endpoint in the API documentation. You can see that it's possible to get multiple quotes at the same time. Start by getting three quotes instead of one. Now try one or both of the following challenges:
+
+Now that there are multiple quotes on the page, use a Quote component to display each quote. (It's okay if the component is very simple!)
+Introduce another input field where the user can select the number of quotes they would like to see. The API will support up to 50 at a time, I recommend offering the user no more than 10.
+Get quotes by author
+You'll notice the API offers two endpoints for getting quotes by author. There are too many authors in the database for a drop-down menu to work. Can you create a user input field where the user can search for authors, and then find quotes by a given author?
+
+This is definitely the trickiest one of the extra challenges. The API doesn't provide a way to search by partial match, so you'll have to choose between making the user type the author's name exactly as it appears in the database (including spaces) or providing the user with an author-search that is a separate step from generating quotes.
+
+(If you finish this challenge, can you combine it with the previous challenges, and get multiple quotes by an author, or search for quotes by tag and author?) */
+
